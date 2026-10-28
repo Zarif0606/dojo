@@ -48,6 +48,14 @@ def _seed_worlds():
 
 
 _seed_worlds()
+
+
+@app.get("/healthz")
+def healthz():
+    """Cheap uptime check (no model call, no cost) for a keep-alive monitor."""
+    return {"ok": True}
+
+
 threading.Thread(target=llm.warm_up, daemon=True).start()
 
 # ---------- basic abuse protection for a public demo: N model-backed requests per hour per visitor ----------

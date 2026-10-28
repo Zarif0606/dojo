@@ -72,7 +72,7 @@ Details that make it hold together:
 You need Python 3.10 or newer and a Nebius Token Factory API key (https://tokenfactory.nebius.com).
 
 ```bash
-git clone <this repo> && cd dojo
+git clone https://github.com/Zarif0606/dojo && cd dojo
 cp .env.example .env        # then add your key and the Nemotron model IDs from the Token Factory model list
 ./start.sh                  # opens http://localhost:8000 in Chrome or Edge
 ```

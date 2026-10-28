@@ -1,4 +1,4 @@
-# Dojo for Hugging Face Spaces (Docker). Only NEBIUS_API_KEY is a secret; everything else has a safe default here.
+# Dojo in Docker (Render, Hugging Face Spaces, anywhere). Listens on $PORT, default 7860. Only NEBIUS_API_KEY is a secret; everything else has a safe default here.
 FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 WORKDIR /app
@@ -20,4 +20,4 @@ ENV LLM_PROVIDER=nebius \
     RATE_LIMIT_PER_HOUR=60 WORLD_RATE_PER_HOUR=6 DAILY_CALL_CAP=1500 WORLD_BUILD_CAP=30 \
     KOKORO=off DOJO_DB=/tmp/dojo.db
 EXPOSE 7860
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860}"]

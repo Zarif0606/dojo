@@ -1,0 +1,27 @@
+/* Dojo-specific layout on top of style.css: the stage with the live director meters, notes, the "under the hood" panel. */
+main { max-width: 960px; }
+.about { width: 100%; max-width: 520px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .6rem .9rem; }
+
+.notes { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; }
+.chip-note { display: inline-block; font-size: .8rem; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 99px; padding: .15rem .75rem; max-width: 100%; overflow-wrap: anywhere; }
+
+.stage { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 1.2rem; align-items: center; margin-top: 1rem; }
+.stage .face-stage { margin: 0 auto; }
+.director { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.1rem; }
+.director h2 { font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: .8rem; }
+.dmeter { display: grid; gap: .25rem; margin-bottom: .7rem; font-size: .82rem; text-transform: capitalize; }
+.dmeter .track { height: 4px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.dmeter .fill { height: 100%; background: var(--ink); transform-origin: left; transition: transform .5s var(--ease-out), background-color .3s; }
+.dmeter .fill.low { background: var(--bad); } .dmeter .fill.high { background: var(--good); }
+.dstance { margin: .6rem 0 0; font-size: .85rem; color: var(--muted); min-height: 2.6em; }
+
+.hood { margin-top: .8rem; font-size: .88rem; max-width: 560px; width: 100%; }
+.hood summary { cursor: pointer; color: var(--muted); text-align: center; }
+.hood ul { list-style: none; padding: 0; margin: .5rem 0 0; display: grid; gap: .3rem; }
+.hood code { background: var(--surface-2); padding: .05rem .35rem; border-radius: 4px; font-size: .82em; }
+
+.memory { margin: 1rem 0 0; font-style: italic; color: var(--muted); }
+.foot { text-align: center; color: var(--muted); font-size: .8rem; padding: 0 1rem calc(2rem + env(safe-area-inset-bottom)); }
+.outcome.agreed { color: var(--good); } .outcome.walked_away { color: var(--bad); }
+
+@media (max-width: 760px) { .stage { grid-template-columns: 1fr; } }

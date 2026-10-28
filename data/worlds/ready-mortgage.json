@@ -1,0 +1,473 @@
+{
+ "title": "Mortgage broker",
+ "tagline": "Learn to match borrowers with the right loan and close compliant applications.",
+ "you_are": "a licensed mortgage broker",
+ "setting": "Conversations happen in a broker office, at a kitchen table, or on a scheduled call while the borrower reviews a loan estimate.",
+ "other_side": "borrowers",
+ "scenarios": [
+  {
+   "id": "first_inquiry",
+   "label": "First inquiry call",
+   "desc": "A borrower calls after seeing an online rate ad and wants to know if they qualify.",
+   "setup": "You answer the phone. The borrower says: Hi, I saw your 6.5 percent rate online. Can I get that with a 680 credit score?",
+   "skills": "Qualification screening and rate disclosure",
+   "scene": "phone",
+   "objective": "Collect a complete pre-qual picture and book a full application appointment.",
+   "place": "Broker office",
+   "moment": "Tuesday 10:15 am, bright morning light",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e8eaf0",
+     "floor": "#b8c0cc",
+     "accent": "#2d6cdf",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.2,
+      "color": "#5d4e3d"
+     },
+     {
+      "type": "screen",
+      "x": 0.3,
+      "z": 0.1,
+      "scale": 1.0,
+      "color": "#1a1a2e"
+     },
+     {
+      "type": "lamp",
+      "x": -0.4,
+      "z": 0.15,
+      "scale": 0.9,
+      "color": "#c9b896"
+     },
+     {
+      "type": "plant",
+      "x": -0.6,
+      "z": 0.05,
+      "scale": 1.1,
+      "color": "#3a5a40"
+     },
+     {
+      "type": "chair",
+      "x": 0.5,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#4a4a5a"
+     }
+    ]
+   }
+  },
+  {
+   "id": "kitchen_table_compar",
+   "label": "Kitchen table comparison",
+   "desc": "You sit with a borrower comparing two loan estimates side by side.",
+   "setup": "You slide the second estimate across the table. The borrower says: The payment is only forty dollars less but the closing costs are two grand higher. Why?",
+   "skills": "Cost breakdown and trade-off explanation",
+   "scene": "home",
+   "objective": "Help the borrower choose the loan that fits their cash position and stay date.",
+   "place": "Borrower dining room",
+   "moment": "Thursday 7:00 pm, warm lamp glow",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#f5e9d3",
+     "floor": "#c9b896",
+     "accent": "#d4a843",
+     "light": "#fff8e7"
+    },
+    "props": [
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.4,
+      "scale": 1.3,
+      "color": "#8b7355"
+     },
+     {
+      "type": "chair",
+      "x": -0.5,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#6b5b4a"
+     },
+     {
+      "type": "chair",
+      "x": 0.5,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#6b5b4a"
+     },
+     {
+      "type": "lamp",
+      "x": 0.4,
+      "z": 0.1,
+      "scale": 0.9,
+      "color": "#c9b896"
+     },
+     {
+      "type": "window",
+      "x": -0.6,
+      "z": 0,
+      "scale": 1.2,
+      "color": "#88aacc"
+     },
+     {
+      "type": "plant",
+      "x": 0.6,
+      "z": 0.05,
+      "scale": 1.0,
+      "color": "#3a5a40"
+     }
+    ]
+   }
+  },
+  {
+   "id": "conditional_approval",
+   "label": "Conditional approval hurdle",
+   "desc": "Underwriting returns conditions and the borrower threatens to walk.",
+   "setup": "You call the borrower. The borrower answers: You need another month of bank statements? I already sent everything. I am done.",
+   "skills": "Condition management and retention",
+   "scene": "phone",
+   "objective": "Calm the borrower, explain the condition clearly, and lock in the docs needed to clear to close.",
+   "place": "Broker office",
+   "moment": "Friday 4:30 pm, overcast sky",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#d0d4dc",
+     "floor": "#9aa0aa",
+     "accent": "#4a6fa5",
+     "light": "#e8ebef"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.2,
+      "color": "#5d4e3d"
+     },
+     {
+      "type": "screen",
+      "x": 0.3,
+      "z": 0.1,
+      "scale": 1.0,
+      "color": "#1a1a2e"
+     },
+     {
+      "type": "lamp",
+      "x": -0.4,
+      "z": 0.15,
+      "scale": 0.9,
+      "color": "#c9b896"
+     },
+     {
+      "type": "plant",
+      "x": -0.6,
+      "z": 0.05,
+      "scale": 1.1,
+      "color": "#3a5a40"
+     },
+     {
+      "type": "chair",
+      "x": 0.5,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#4a4a5a"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "first_inquiry",
+   "role": "First-time homebuyer",
+   "personality": "anxious and detail-hungry",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 28,
+   "angle": "Wants every fee explained before she shares a single document."
+  },
+  {
+   "scenario": "first_inquiry",
+   "role": "Self-employed contractor",
+   "personality": "confident but income-complex",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 42,
+   "angle": "Has three years of tax returns with big write-offs and refuses to explain them."
+  },
+  {
+   "scenario": "conditional_approval",
+   "role": "Move-up buyer with equity",
+   "personality": "analytical and cost-focused",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 39,
+   "angle": "Builds a spreadsheet live and challenges every basis point."
+  },
+  {
+   "scenario": "first_inquiry",
+   "role": "Divorced parent buying alone",
+   "personality": "guarded and cash-tight",
+   "difficulty": 4,
+   "gender": "f",
+   "age": 45,
+   "angle": "Needs seller credit for closing costs but the contract forbids it."
+  },
+  {
+   "scenario": "kitchen_table_compar",
+   "role": "Investor with four financed properties",
+   "personality": "impatient and portfolio-minded",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 52,
+   "angle": "Sees conditions as deal-breakers and has a backup lender on speed dial."
+  }
+ ],
+ "objections": [
+  "Your rate is a quarter point higher than the credit union quote I have",
+  "I do not want to pay points; just give me the par rate",
+  "Why do you need my ex-spouse’s decree if I am the only one on the loan?",
+  "The appraisal came in low and I am not bringing more cash",
+  "I already locked a rate with another lender; can you beat it today?",
+  "My bonus hits in March; can we close now and verify income later?",
+  "The seller is offering a two percent credit; why does that not lower my rate?",
+  "I read that brokers charge extra fees the bank does not; show me where that is disclosed"
+ ],
+ "rubric": [
+  {
+   "id": "loan_matching",
+   "label": "Loan matching",
+   "what": "Select the product that fits the borrower’s credit, cash, and stay horizon."
+  },
+  {
+   "id": "cost_transparency",
+   "label": "Cost transparency",
+   "what": "Explain every fee, point, and prepaid item on the loan estimate in plain language."
+  },
+  {
+   "id": "compliance_disclosure",
+   "label": "Compliance disclosure",
+   "what": "Deliver required TRID, RESPA, and state disclosures at the right moment without omission."
+  },
+  {
+   "id": "condition_management",
+   "label": "Condition management",
+   "what": "Turn underwriting conditions into a clear checklist and follow up until clear-to-close."
+  },
+  {
+   "id": "borrower_retention",
+   "label": "Borrower retention",
+   "what": "Address rate shock, doc fatigue, or competitor offers without overpromising."
+  },
+  {
+   "id": "pipeline_velocity",
+   "label": "Pipeline velocity",
+   "what": "Move the file from application to clear-to-close within the lock window."
+  }
+ ],
+ "live_meters": [
+  "cost_transparency",
+  "compliance_disclosure",
+  "borrower_retention"
+ ],
+ "pitfalls": [
+  "Quoting a rate without the matching APR or lock expiration.",
+  "Collecting documents before providing the initial loan estimate."
+ ],
+ "id": "ready-mortgage",
+ "line": "Selling mortgages as a mortgage broker",
+ "product": null,
+ "researched": false,
+ "personas": [
+  {
+   "id": "tara_whitaker-0",
+   "name": "Tara Whitaker",
+   "gender": "f",
+   "age": 28,
+   "scenario": "first_inquiry",
+   "role": "First-time homebuyer",
+   "personality": "anxious and detail-hungry",
+   "background": "She works part-time in marketing and has never owned a home before. Her parents emphasized careful budgeting, so she never wants a surprise cost.",
+   "cares_about": [
+    "hidden fees",
+    "rate stability",
+    "long‑term affordability"
+   ],
+   "pushbacks": [
+    "I see a quarter point more than the credit union’s quote; why?",
+    "I don’t want to pay points; just give me the par rate",
+    "Do you really need my ex‑spouse’s decree if I’m the only one on the loan?"
+   ],
+   "wins_over": [
+    "clear breakdown of every fee",
+    "a better rate than the other lender",
+    "straightforward documentation requirements"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "long",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 0,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "ivan_patel-1",
+   "name": "Ivan Patel",
+   "gender": "m",
+   "age": 42,
+   "scenario": "first_inquiry",
+   "role": "self employed contractor",
+   "personality": "confident but income complex",
+   "background": "Ivan has consistently reduced taxable income through deductions. He refuses to explain write-offs and trusts no one with his finances. He is preparing to refinance his home.",
+   "cares_about": [
+    "keeping cash flow stable",
+    "winning low rates",
+    "skipping extra paperwork"
+   ],
+   "pushbacks": [
+    "Your rate is a quarter point higher than the credit union quote I have",
+    "I do not want to pay points; just give me the par rate",
+    "Why do you need my ex spouse’s decree if I am the only one on the loan?"
+   ],
+   "wins_over": [
+    "a clear path to lower payments",
+    "minimal documentation requests",
+    "transparent rate breakdowns"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#6b4b6e"
+   },
+   "accent": "en-CA"
+  },
+  {
+   "id": "alfred_mcknight-2",
+   "name": "Alfred McKnight",
+   "gender": "m",
+   "age": 39,
+   "scenario": "conditional_approval",
+   "role": "move-up buyer with equity",
+   "personality": "analytical and cost-focused",
+   "background": "Alfred works at a community bank originating mortgages. He has moved up from a starter home using the equity built over several years. He balances spreadsheets and data when weighing offers.",
+   "cares_about": [
+    "loan interest savings",
+    "points added to rate",
+    "lock expiration timing"
+   ],
+   "pushbacks": [
+    "Your rate is a quarter point higher than the credit union quote I have",
+    "I do not want to pay points; just give me the par rate",
+    "Why do you need my ex-spouse’s decree if I am the only one on the loan?"
+   ],
+   "wins_over": [
+    "clear rate comparison",
+    "points explained in dollars saved",
+    "timely lock confirmation"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "eleanor_vance-3",
+   "name": "Eleanor Vance",
+   "gender": "f",
+   "age": 45,
+   "scenario": "first_inquiry",
+   "role": "Divorced parent buying alone",
+   "personality": "guarded and cash-tight",
+   "background": "Eleanor works as a school librarian and manages mortgage requests on her own after her divorce. She carefully budgets for closing costs and worries about overpaying while rebuilding financial independence.",
+   "cares_about": [
+    "low closing costs",
+    "no hidden fees",
+    "fair appraisal value"
+   ],
+   "pushbacks": [
+    "The rate you quoted is a quarter point higher than my credit union offer",
+    "I do not want to pay any points; please show me the par rate",
+    "Why do you need my ex spouse’s decree if I am the only one on the loan?"
+   ],
+   "wins_over": [
+    "a clear path to a lower closing cost price",
+    "a transparent rate sheet without points",
+    "a simple answer about my marital paperwork"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#6b4b6e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "lewis_greenfield-4",
+   "name": "Lewis Greenfield",
+   "gender": "m",
+   "age": 52,
+   "scenario": "kitchen_table_compar",
+   "role": "investor with four financed properties",
+   "personality": "impatient portfolio-minded",
+   "background": "Lewis has built a small rental portfolio over the last decade and now refinances to keep cash flowing. He watches numbers like a spreadsheet and moves quickly when a deal looks clean.",
+   "cares_about": [
+    "tight mortgage spreads",
+    "fast closing timelines",
+    "maintaining leverage ratios"
+   ],
+   "pushbacks": [
+    "Your rate is a quarter point higher than the credit union quote I have",
+    "I do not want to pay points; just give me the par rate",
+    "Why do you need my ex-spouse’s decree if I am the only one on the loan?"
+   ],
+   "wins_over": [
+    "he sees a clear path to a lower spread",
+    "he likes a loan that closes in under 10 days",
+    "he trusts a broker who provides the exact appraisal number"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#9a4d4d"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 2
+}

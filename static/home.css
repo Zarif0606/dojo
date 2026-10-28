@@ -1,0 +1,77 @@
+/* The start screen: a command-bar hero, a three-step strip, and even profession cards. Loads last. */
+main:has(#view-start:not([hidden])) { max-width: 1160px; }
+#view-start .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 2.5rem; align-items: center; padding: 1.2rem 0 2rem; border-bottom: 0; }
+#view-start .hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); line-height: .98; letter-spacing: -.02em; max-width: 14ch; margin: 0 0 1rem; }
+#view-start .hero .lede { font-size: 1.08rem; max-width: 52ch; margin: 0 0 1.6rem; }
+
+/* one command card: the situation, the build button, and the optional product */
+.hero .builder { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem .7rem; align-items: end; max-width: none; width: 100%; margin: 0 0 .9rem; padding: 1rem 1rem 1.05rem; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); }
+.hero .builder .fld { margin: 0; min-width: 0; }
+.hero .builder .fld > span:first-child { font-size: .74rem; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); }
+.hero .builder .fld em { font-style: normal; text-transform: none; letter-spacing: 0; opacity: .7; margin-left: .3rem; }
+.hero .builder input { font-size: 1.02rem; padding: .85rem 1.1rem; border-radius: 14px; border: 1px solid var(--line); background: var(--bg); }
+.hero .builder input:focus { border-color: var(--ink); }
+.hero .builder .fld.grow { grid-column: 1; grid-row: 1; }
+.hero .builder #btn-build { grid-column: 2; grid-row: 1; height: 3.1rem; border-radius: 14px; padding: 0 1.5rem; font-size: .98rem; white-space: nowrap; }
+.hero .builder .fld.prod { grid-column: 1 / -1; grid-row: 2; margin-top: .35rem; }
+.hero .builder .fld.prod input { padding: .65rem 1rem; font-size: .92rem; }
+.vwrap input#line { padding-right: 3.4rem; }
+.linemic { right: .5rem; }
+
+.hero .examples { max-width: none; gap: .4rem; margin: 0 0 .6rem; }
+.hero .examples button { font-size: .8rem; padding: .28rem .8rem; background: var(--surface); }
+.hero .hint:empty { display: none; }
+.hero .quick { margin: .5rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem; font-size: .84rem; }
+.quickgo { padding: .5rem 1.1rem; }
+
+/* the cast: three live characters on a quiet stage */
+#view-start .hero-cast { height: 400px; border-radius: 28px; border: 1px solid var(--line); background: radial-gradient(70% 60% at 50% 38%, color-mix(in srgb, var(--accent-soft) 70%, var(--surface)), var(--surface)); overflow: hidden; }
+#view-start .hc0 { left: 9%; top: 12%; --s: 150px; } #view-start .hc1 { right: 8%; top: 6%; --s: 176px; } #view-start .hc2 { left: 30%; top: 44%; --s: 138px; }
+#view-start .hcbar { position: absolute; left: 0; right: 0; bottom: 1.1rem; margin: 0; display: grid; justify-items: center; gap: .35rem; padding: 0 1rem; }
+
+/* three steps, as one calm line */
+.how { list-style: none; margin: .4rem 0 3rem; padding: 1.3rem 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6rem; border-top: 1px solid var(--line); counter-reset: none; }
+.how li { display: grid; grid-template-columns: auto 1fr; gap: .8rem; align-items: start; }
+.how b { font-family: var(--serif); font-weight: 400; font-size: 2.1rem; line-height: .9; color: var(--muted); }
+.how span { font-size: .88rem; color: var(--muted); line-height: 1.45; }
+.how strong { display: block; color: var(--ink); font-weight: 600; font-size: .95rem; margin-bottom: .15rem; }
+
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin: 0 0 1rem; }
+.sec-head .step { margin: 0; }
+.sec-head p { margin: 0; font-size: .88rem; }
+
+/* even cards: faces on top, title, a three-line blurb, and the meta pinned to the bottom */
+#view-start .worlds { grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); grid-auto-rows: 1fr; gap: .9rem; }
+#view-start .wcard { display: flex; flex-direction: column; align-items: flex-start; gap: .55rem; padding: 1.15rem 1.2rem 1rem; border-radius: 16px; }
+#view-start .wcard strong { font-size: 1.45rem; }
+#view-start .wcard > span:not(.wfaces):not(.wmeta) { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.45; }
+#view-start .wcard .wmeta { margin-top: auto; padding-top: .7rem; width: 100%; border-top: 1px solid var(--line); font-size: .73rem; }
+#view-start .wfaces i { width: 34px; height: 34px; }
+#custom-worlds-wrap .step { font-size: 1.1rem; color: var(--muted); margin-top: 2.6rem; }
+
+@media (max-width: 900px) {
+  #view-start .hero { grid-template-columns: 1fr; gap: 1.2rem; }
+  #view-start .hero-cast { order: -1; height: 230px; }
+  #view-start .hc0 { left: 6%; top: 10%; --s: 92px; } #view-start .hc1 { right: 6%; top: 6%; --s: 116px; } #view-start .hc2 { left: 36%; top: 40%; --s: 86px; }
+  .hero .builder { grid-template-columns: 1fr; } .hero .builder #btn-build, .hero .builder .fld.grow, .hero .builder .fld.prod { grid-column: 1; grid-row: auto; } .hero .builder #btn-build { width: 100%; }
+  .how { grid-template-columns: 1fr; gap: 1rem; }
+}
+#view-start .hero { align-items: stretch; }
+#view-start .hero-copy { align-self: center; }
+#view-start .hero-cast { height: auto; min-height: 440px; }
+#view-start .hc0 { top: 10%; } #view-start .hc1 { top: 7%; } #view-start .hc2 { top: 40%; }
+.hero .examples button:nth-child(n+5) { display: none; }
+@media (max-width: 900px) { #view-start .hero-cast { min-height: 0; height: 230px; } .hero .examples button:nth-child(n+4) { display: none; } }
+#view-start .hero-cast { align-self: stretch; }
+.hero .builder .fld.prod { display: grid; width: 100%; max-width: none; }
+.hero .builder .fld.prod input { width: 100%; max-width: none; }
+@media (max-width: 900px) {
+  #view-start .hero-cast { height: 250px; }
+  #view-start .hc0 { left: 7%; top: 8%; --s: 98px; } #view-start .hc1 { right: 7%; top: 5%; --s: 120px; } #view-start .hc2 { display: none; }
+  #view-start .hcbar { bottom: .8rem; }
+}
+#view-start .hero-cast { height: auto !important; min-height: 440px; }
+@media (max-width: 900px) { #view-start .hero-cast { height: 250px !important; min-height: 0; } }
+@media (min-width: 901px) {
+  #view-start .hc0 { left: 8%; top: 9%; --s: 200px; } #view-start .hc1 { right: 7%; top: 18%; --s: 220px; } #view-start .hc2 { left: 30%; top: 50%; --s: 190px; }
+}

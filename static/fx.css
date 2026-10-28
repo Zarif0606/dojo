@@ -1,0 +1,95 @@
+/* The premium layer: ambient light, spotlight cards, springy entrances, talking glow, view transitions, sound toggle.
+   Rules: animate only transform and opacity, hover effects only on real hover devices, everything calm under reduced motion. */
+:root { --spring: cubic-bezier(.34, 1.56, .64, 1); --glow-a: #f0d6ad; --glow-b: #cfe0c8; --shadow: 0 14px 34px -16px rgba(30, 24, 10, .35); }
+@media (prefers-color-scheme: dark) { :root { --glow-a: #4a3b1f; --glow-b: #23402f; --shadow: 0 14px 34px -14px rgba(0, 0, 0, .7); } }
+
+/* ambient light and film grain behind everything */
+body { position: relative; isolation: isolate; }
+body::before { content: ""; position: fixed; inset: -20vmax; z-index: -2; pointer-events: none; opacity: .55;
+  background: radial-gradient(38vmax 38vmax at 20% 18%, var(--glow-a), transparent 70%), radial-gradient(34vmax 34vmax at 82% 74%, var(--glow-b), transparent 70%);
+  animation: drift 38s ease-in-out infinite alternate; will-change: transform; }
+body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .05; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+@media (prefers-color-scheme: dark) { body::after { mix-blend-mode: screen; opacity: .04; } }
+@keyframes drift { from { transform: translate3d(-3vmax, -2vmax, 0) scale(1); } to { transform: translate3d(3vmax, 3vmax, 0) scale(1.12); } }
+.topbar { background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); }
+
+/* the hero arrives in three beats: headline, line, input */
+.hero h1 { animation: heroIn .9s var(--ease-out) both; }
+.hero .lede { animation: heroIn .9s var(--ease-out) .12s both; }
+.builder { animation: heroIn .9s var(--ease-out) .24s both; }
+.examples { animation: heroIn .9s var(--ease-out) .36s both; }
+@keyframes heroIn { from { opacity: 0; transform: translateY(14px); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
+.builder input { transition: box-shadow .25s var(--ease-out), border-color .15s; }
+.builder input:focus { box-shadow: 0 0 0 5px color-mix(in srgb, var(--ink) 9%, transparent), var(--shadow); }
+.btn.primary.big { position: relative; overflow: hidden; }
+.btn.primary.big::after { content: ""; position: absolute; inset: 0; transform: translateX(-120%); background: linear-gradient(100deg, transparent 30%, color-mix(in srgb, var(--accent-ink) 28%, transparent) 50%, transparent 70%); }
+@media (hover: hover) and (pointer: fine) { .btn.primary.big:hover:not(:disabled)::after { transform: translateX(120%); transition: transform .7s var(--ease-out); } }
+
+/* cards: spotlight under the cursor, a lift, and a spring when they appear */
+.wcard, .scenario, .persona { position: relative; transition: transform .22s var(--ease-out), box-shadow .22s var(--ease-out), border-color .15s, background-color .15s, opacity .3s; }
+@media (hover: hover) and (pointer: fine) {
+  .wcard:hover, .scenario:not(.skel):hover, .persona:not(.skel):hover { transform: translateY(-2px); box-shadow: var(--shadow); background-image: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--ink) 7%, transparent), transparent 70%); }
+  .scenario[aria-pressed="true"]:hover, .persona[aria-pressed="true"]:hover { background-image: radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--accent-ink) 14%, transparent), transparent 70%); }
+  .panel:hover, .director:hover { background-image: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--ink) 4%, transparent), transparent 70%); }
+}
+.wcard:active, .scenario:active, .persona:active { transform: scale(.98); transition-duration: 90ms; }
+.persona:not(.skel) { animation: castIn .6s var(--spring) both; }
+.persona .pface { animation: faceIn .7s var(--spring) .08s both; }
+@keyframes castIn { from { opacity: 0; transform: translateY(14px) scale(.94); } to { opacity: 1; transform: none; } }
+@keyframes faceIn { from { transform: scale(.4) rotate(-12deg); } to { transform: none; } }
+.entering .worlds > *, .entering .scenarios > .scenario:not(.skel) { animation: rise .5s var(--ease-out) both; }
+.entering .worlds > :nth-child(2), .entering .scenarios > :nth-child(2) { animation-delay: .06s; } .entering .worlds > :nth-child(3), .entering .scenarios > :nth-child(3) { animation-delay: .12s; }
+.entering .worlds > :nth-child(4), .entering .scenarios > :nth-child(4) { animation-delay: .18s; }
+.wfaces i { transition: transform .25s var(--spring); }
+@media (hover: hover) and (pointer: fine) { .wcard:hover .wfaces i { transform: translateY(-3px); } .wcard:hover .wfaces i:nth-child(2) { transition-delay: 30ms; } .wcard:hover .wfaces i:nth-child(3) { transition-delay: 60ms; } .wcard:hover .wfaces i:nth-child(4) { transition-delay: 90ms; } }
+
+/* building a world: a sweeping line under the title, and chips that pop in */
+#view-world .world-head { position: relative; }
+#view-world.building .world-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1rem; height: 2px; background: linear-gradient(90deg, transparent, var(--ink), transparent); transform-origin: left; animation: sweep 1.4s ease-in-out infinite; opacity: .5; }
+@keyframes sweep { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+.chip-note { animation: castIn .5s var(--spring) both; }
+.chip-note:nth-child(2n) { animation-delay: .04s; } .chip-note:nth-child(3n) { animation-delay: .08s; } .chip-note:nth-child(5n) { animation-delay: .12s; }
+.rubric li { animation: rise .45s var(--ease-out) both; } .rubric li:nth-child(2) { animation-delay: .05s; } .rubric li:nth-child(3) { animation-delay: .1s; } .rubric li:nth-child(4) { animation-delay: .15s; } .rubric li:nth-child(5) { animation-delay: .2s; } .rubric li:nth-child(6) { animation-delay: .25s; }
+
+/* the conversation: the scene reacts to the mood, and the face glows while talking */
+.scene-wrap { --mood: var(--ink); transition: box-shadow .4s var(--ease-out); }
+.scene-wrap[data-mood="happy"] { --mood: #3f8a5a; } .scene-wrap[data-mood="interested"] { --mood: #3f7fa8; } .scene-wrap[data-mood="annoyed"] { --mood: #c0503f; }
+.scene-wrap[data-mood="skeptical"] { --mood: #b9852f; } .scene-wrap[data-mood="confused"] { --mood: #8a63b5; } .scene-wrap[data-mood="thinking"] { --mood: #6f7b88; }
+.scene-wrap::before { content: ""; position: absolute; inset: 0; z-index: 0; background: radial-gradient(60% 80% at 50% 55%, color-mix(in srgb, var(--mood) 24%, transparent), transparent 70%); opacity: 0; transition: opacity .6s var(--ease-out); pointer-events: none; }
+.scene-wrap[data-mood]::before { opacity: 1; }
+.scene-wrap .scene-svg { transform: translate3d(calc(var(--px, 0) * -8px), calc(var(--py, 0) * -5px), 0) scale(1.04); transition: transform .5s var(--ease-out); }
+.scene-wrap .face-stage:not(.fig) { transition: transform .5s var(--ease-out), box-shadow .4s var(--ease-out), opacity .9s ease; transform: translate3d(calc(var(--px, 0) * 4px), calc(var(--py, 0) * 3px), 0); }
+.scene-wrap.talking .face-stage:not(.fig) { animation: talk 1.15s ease-in-out infinite; }
+@keyframes talk { 50% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--mood) 22%, transparent), 0 10px 40px color-mix(in srgb, var(--ink) 18%, transparent); } }
+.dmeter .fill { transition: transform .7s var(--spring), background-color .3s; }
+.line.owner:not(.thinking) { animation: bubbleIn .35s var(--ease-out) both; transform-origin: left bottom; }
+.line.agent { animation: bubbleIn .3s var(--ease-out) both; transform-origin: right bottom; }
+@keyframes bubbleIn { from { opacity: 0; transform: translateY(8px) scale(.96); } to { opacity: 1; transform: none; } }
+
+/* report: bars fill in one after another */
+.bar .fill { animation-delay: calc(var(--i, 0) * 70ms + .2s); }
+
+/* page changes: a quick fade with a little lift (View Transitions, where the browser has them) */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) { animation: vtOut .16s ease-in both; }
+  ::view-transition-new(root) { animation: vtIn .34s var(--ease-out) both; }
+  @keyframes vtOut { to { opacity: 0; transform: translateY(-4px); } }
+  @keyframes vtIn { from { opacity: 0; transform: translateY(10px); } }
+}
+
+/* sound toggle */
+.soundbtn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: transparent; display: grid; place-items: center; cursor: pointer; color: var(--ink); transition: border-color .15s, transform .15s var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .soundbtn:hover { border-color: var(--ink); } }
+.soundbtn:active { transform: scale(.92); }
+.soundbtn svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.soundbtn .off { display: none; } .soundbtn[aria-pressed="false"] .on { display: none; } .soundbtn[aria-pressed="false"] .off { display: block; }
+.soundbtn[aria-pressed="false"] { color: var(--muted); }
+.provider { margin-left: 0; }
+.topbar .soundbtn { margin-left: auto; } .topbar .provider { margin-left: .3rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  body::before, .scene-wrap.talking .face-stage, #view-world.building .world-head::after { animation: none; }
+  .hero h1, .hero .lede, .builder, .examples, .persona:not(.skel), .persona .pface, .chip-note, .rubric li { animation: none; }
+  .scene-wrap .scene-svg, .scene-wrap .face-stage { transform: none; }
+}

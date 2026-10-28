@@ -1,0 +1,58 @@
+/* Polish layer, loaded last: motion tokens, browser surfaces, touch behaviour. */
+:root { --ease-out: cubic-bezier(.23, 1, .32, 1); --ease-in-out: cubic-bezier(.77, 0, .175, 1); }
+
+/* browser surfaces carry the palette too */
+::selection { background: var(--ink); color: var(--accent-ink); }
+input, textarea { caret-color: var(--ink); }
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: .85; }
+* { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 99px; border: 3px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); background-clip: content-box; }
+a { text-underline-offset: .2em; text-decoration-thickness: 1px; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+.btn:focus-visible, .chip:focus-visible, .pill:focus-visible, .mq:focus-visible { border-radius: 99px; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline-offset: 1px; border-radius: var(--radius-sm); }
+
+/* numerals line up in tables, counters and scores */
+.counter strong, .stats strong, .hero-facts b, .overall, .hrow b, .bar b, .count, .lat, .speech strong, .quizline strong, .qcount, .qresult { font-variant-numeric: tabular-nums; }
+
+/* type: no one-word last lines, balanced headings */
+h1, h2, h3, .sec-title, .hero-title, .in-t { text-wrap: balance; }
+p, li, .lede, .hint, .lmeta { text-wrap: pretty; }
+
+/* long names and odd data never break a layout */
+.who, .biz, .lname, .lmeta, .mq-t b, .mq-t i, .face-name, h1, h2, h3 { overflow-wrap: anywhere; }
+.mq-t b, .mq-t i { overflow-wrap: normal; }
+
+/* press feedback: fast on press, snappy on release */
+.btn, .chip, .pill, .mood, .scenario, .persona, .seg-btn, .tab, .fetab, .counter button, .mic, .hrow, .navlink { transition-timing-function: var(--ease-out); }
+.btn:active:not(:disabled), .chip:active, .pill:active, .mood:active, .scenario:active, .persona:active, .seg-btn:active, .counter button:active, .choice:active:not(:disabled) { transform: scale(.97); transition-duration: 90ms; }
+.mic:active:not(:disabled) { transform: scale(.94); }
+
+/* touch devices */
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+button, a, input, select, summary, label { touch-action: manipulation; }
+.topbar { padding-left: max(1.6rem, env(safe-area-inset-left)); padding-right: max(1.6rem, env(safe-area-inset-right)); }
+.startbar { padding-bottom: calc(1rem + env(safe-area-inset-bottom)); }
+main { padding-bottom: calc(6rem + env(safe-area-inset-bottom)); }
+@media (pointer: coarse) {
+  .btn { min-height: 44px; }
+  .counter button { min-height: 36px; padding: .3rem .95rem; }
+  .chip, .pill, .mood, .seg-btn { min-height: 40px; }
+  .navlink, .fetab, .tab { padding-block: .6rem; }
+}
+@media (max-width: 640px) {
+  /* 16px inputs stop iOS from zooming the page when a field is focused */
+  input, select, textarea { font-size: 16px; }
+  .topbar { gap: 1rem; padding-inline: max(1rem, env(safe-area-inset-left)); }
+  h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .provider { display: none; }
+}
+
+/* filter rows never push the page sideways on a phone */
+.filters > * { min-width: 0; max-width: 100%; }
+.filters select { flex: 1 1 140px; }
+
+@media (max-width: 640px) { #view-today .report-grid { grid-template-columns: 1fr; } }
+main { overflow-x: clip; }

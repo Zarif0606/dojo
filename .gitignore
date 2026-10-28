@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/dojo.db
+.DS_Store
+.voice-venv/
+data/kokoro/
+
+founder/
+.claude/
+.voice-venv
+data/kokoro

@@ -1,0 +1,481 @@
+{
+ "title": "Medical device rep",
+ "tagline": "Learn to navigate clinical evidence, procurement committees, and long sales cycles to close hospital contracts.",
+ "you_are": "a medical device sales representative",
+ "setting": "Conversations happen in hospital corridors, procurement offices, and operating room hallways where clinicians evaluate technology between cases.",
+ "other_side": "clinicians and buyers",
+ "scenarios": [
+  {
+   "id": "first_demo_request",
+   "label": "First demo request",
+   "desc": "A surgeon asks for a hands-on trial after seeing a conference abstract.",
+   "setup": "You are Dr. Aris Thorne, an orthopedic surgeon scrolling emails between cases. You look up and say: ‘Saw your poster at AAOS. The tibial guide looks promising. Can we get a rep tray for a wet lab next Tuesday?’",
+   "skills": "Clinical credibility and trial logistics",
+   "scene": "office",
+   "objective": "Schedule a hands-on evaluation with the surgical team.",
+   "place": "Orthopedic surgeon lounge",
+   "moment": "Wednesday 11:15 am, fluorescent hum overhead",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#E8ECEF",
+     "floor": "#B0BEC5",
+     "accent": "#006064",
+     "light": "#F1F8E9"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.2,
+      "z": 0.1,
+      "scale": 1.2,
+      "color": "#78909C"
+     },
+     {
+      "type": "screen",
+      "x": 0.3,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#263238"
+     },
+     {
+      "type": "chair",
+      "x": -0.6,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#546E7A"
+     },
+     {
+      "type": "table",
+      "x": 0.6,
+      "z": 0.7,
+      "scale": 0.9,
+      "color": "#CFD8DC"
+     },
+     {
+      "type": "plant",
+      "x": -0.9,
+      "z": 0,
+      "scale": 0.8,
+      "color": "#6B8E23"
+     }
+    ]
+   }
+  },
+  {
+   "id": "value_analysis_revie",
+   "label": "Value analysis review",
+   "desc": "A value analysis committee challenges the cost per case versus the current standard.",
+   "setup": "You are Maya Chen, director of value analysis, flipping through a spreadsheet. You set it down and say: ‘Your device adds $1,200 per case. The clinical data shows non-inferiority, not superiority. Why should we switch?’",
+   "skills": "Health economics and evidence framing",
+   "scene": "office",
+   "objective": "Secure a formal value analysis submission with supporting data.",
+   "place": "Value analysis conference room",
+   "moment": "Tuesday 2:00 pm, projector fan whirring",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#DCE1E6",
+     "floor": "#9EAAB3",
+     "accent": "#455A64",
+     "light": "#E8EBF0"
+    },
+    "props": [
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.3,
+      "color": "#78909C"
+     },
+     {
+      "type": "screen",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.1,
+      "color": "#263238"
+     },
+     {
+      "type": "chair",
+      "x": -0.7,
+      "z": 0.8,
+      "scale": 1.0,
+      "color": "#546E7A"
+     },
+     {
+      "type": "chair",
+      "x": 0.7,
+      "z": 0.8,
+      "scale": 1.0,
+      "color": "#546E7A"
+     },
+     {
+      "type": "shelf",
+      "x": -0.9,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#78909C"
+     },
+     {
+      "type": "plant",
+      "x": 0.9,
+      "z": 0,
+      "scale": 0.8,
+      "color": "#6B8E23"
+     }
+    ]
+   }
+  },
+  {
+   "id": "contract_negotiation",
+   "label": "Contract negotiation",
+   "desc": "A procurement lead pushes for volume tiers, consignment terms, and indemnity clauses.",
+   "setup": "You are Marcus Webb, senior procurement manager, tapping a contract redline. You slide it across and say: ‘We need 15% tiered discounts, 90-day consignment, and mutual indemnity. Sign here and we push to P&T next month.’",
+   "skills": "Contract terms and stakeholder alignment",
+   "scene": "office",
+   "objective": "Agree on redline terms that protect margin and satisfy compliance.",
+   "place": "Procurement office",
+   "moment": "Thursday 4:30 pm, late light through blinds",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#F5E6C8",
+     "floor": "#C9B996",
+     "accent": "#8B6914",
+     "light": "#FFF8E7"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.1,
+      "z": 0.1,
+      "scale": 1.2,
+      "color": "#8B7355"
+     },
+     {
+      "type": "chair",
+      "x": -0.6,
+      "z": 0.7,
+      "scale": 1.0,
+      "color": "#6D5A3C"
+     },
+     {
+      "type": "screen",
+      "x": 0.4,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#263238"
+     },
+     {
+      "type": "cabinet",
+      "x": -0.9,
+      "z": 0,
+      "scale": 1.1,
+      "color": "#8B7355"
+     },
+     {
+      "type": "plant",
+      "x": 0.9,
+      "z": 0.1,
+      "scale": 0.9,
+      "color": "#6B8E23"
+     },
+     {
+      "type": "lamp",
+      "x": 0.7,
+      "z": 0.2,
+      "scale": 0.8,
+      "color": "#C9B996"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "first_demo_request",
+   "role": "Orthopedic surgeon",
+   "personality": "evidence-driven, time-pressed",
+   "difficulty": 2,
+   "gender": "m",
+   "age": 42,
+   "angle": "Wants peer-level data fast and will cancel if the rep tray arrives incomplete."
+  },
+  {
+   "scenario": "first_demo_request",
+   "role": "OR charge nurse",
+   "personality": "workflow-focused, skeptical",
+   "difficulty": 3,
+   "gender": "f",
+   "age": 38,
+   "angle": "Blocks products that add setup time or need special trays she doesn’t stock."
+  },
+  {
+   "scenario": "contract_negotiation",
+   "role": "Value analysis director",
+   "personality": "analytical, budget-accountable",
+   "difficulty": 4,
+   "gender": "f",
+   "age": 45,
+   "angle": "Requires published outcomes and budget impact models; rejects marketing claims."
+  },
+  {
+   "scenario": "first_demo_request",
+   "role": "CFO liaison",
+   "personality": "risk-averse, compliance-heavy",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 52,
+   "angle": "Flags any off-label language or missing FDA clearance letters instantly."
+  },
+  {
+   "scenario": "contract_negotiation",
+   "role": "Senior procurement manager",
+   "personality": "process-rigid, margin-focused",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 48,
+   "angle": "Uses GPO benchmarks to squeeze price and demands consignment for all new SKUs."
+  }
+ ],
+ "objections": [
+  "Your pivotal trial excluded obese patients and that’s half my panel",
+  "The 510(k) predicate device was recalled two years ago",
+  "We can’t stock another vendor-specific instrument tray",
+  "Your reps gave conflicting MRI compatibility answers last quarter",
+  "The GPO contract caps this category at 12% below your list price",
+  "Show me the real-world revision rate, not the registry subset you cherry-picked",
+  "If the rep isn’t in the OR for the first ten cases, we’re not switching",
+  "Your indemnity clause excludes reprocessing failures; that’s a deal-breaker"
+ ],
+ "rubric": [
+  {
+   "id": "clinical_fluency",
+   "label": "Clinical fluency",
+   "what": "Speaks the specialty’s language, cites relevant studies, and answers technique questions without deferring."
+  },
+  {
+   "id": "evidence_mapping",
+   "label": "Evidence mapping",
+   "what": "Matches each claim to the exact study design, population, and endpoint the buyer cares about."
+  },
+  {
+   "id": "value_modeling",
+   "label": "Value modeling",
+   "what": "Builds a cost-per-episode model with local inputs and defends assumptions against finance scrutiny."
+  },
+  {
+   "id": "regulatory_precision",
+   "label": "Regulatory precision",
+   "what": "States cleared indications, contraindications, and off-label boundaries accurately in every conversation."
+  },
+  {
+   "id": "stakeholder_navigation",
+   "label": "Stakeholder navigation",
+   "what": "Identifies surgeons, administrators, and supply chain roles and advances each on their own terms."
+  },
+  {
+   "id": "contract_discipline",
+   "label": "Contract discipline",
+   "what": "Negotiates terms that protect margin, ensure supply continuity, and pass legal review without surprises."
+  }
+ ],
+ "live_meters": [
+  "clinical_fluency",
+  "evidence_mapping",
+  "regulatory_precision"
+ ],
+ "pitfalls": [
+  "Promising off-label outcomes or citing abstracts as peer-reviewed publications.",
+  "Skipping the biomed engineer or sterile processing lead in the evaluation loop.",
+  "Committing to consignment terms that violate inventory accounting policies."
+ ],
+ "id": "ready-medical-devices",
+ "line": "Selling medical devices to clinics and hospitals",
+ "product": null,
+ "researched": false,
+ "personas": [
+  {
+   "id": "harlan_booth-0",
+   "name": "Harlan Booth",
+   "gender": "m",
+   "age": 42,
+   "scenario": "first_demo_request",
+   "role": "Orthopedic surgeon",
+   "personality": "evidence-driven, time-pressed",
+   "background": "He has spent 12 years in operating rooms, first as a resident and now as a private practice surgeon. He runs a high-volume joint replacement service and measures every pitch against peer-reviewed outcomes.",
+   "cares_about": [
+    "peer-reviewed outcomes",
+    "instrument reliability",
+    "cost transparency"
+   ],
+   "pushbacks": [
+    "Your pivotal trial excluded obese patients and that’s half my panel",
+    "The 510(k) predicate device was recalled two years ago",
+    "We can’t stock another vendor-specific instrument tray"
+   ],
+   "wins_over": [
+    "peer-reviewed outcomes",
+    "instrument reliability",
+    "cost transparency"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#8a5a3c"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "nora_hernandez-1",
+   "name": "Nora Hernandez",
+   "gender": "f",
+   "age": 38,
+   "scenario": "first_demo_request",
+   "role": "or charge nurse",
+   "personality": "workflow-focused, skeptical",
+   "background": "She runs triage for 18 surgeries a day and refuses anything that slows turnover. Colleagues say she knows every tray by feel.",
+   "cares_about": [
+    "patient safety",
+    "team efficiency",
+    "personal credibility"
+   ],
+   "pushbacks": [
+    "Your pivotal trial excluded obese patients and that’s half my panel",
+    "The 510(k) predicate device was recalled two years ago",
+    "We can’t stock another vendor-specific instrument tray"
+   ],
+   "wins_over": [
+    "demonstrates a tray that fits her existing workflow",
+    "shows data from a cohort that includes bariatric patients",
+    "offers a compatibility briefing that matches recent device updates"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#3f4f3f"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "patricia_o_donnell-2",
+   "name": "Patricia O’Donnell",
+   "gender": "f",
+   "age": 45,
+   "scenario": "contract_negotiation",
+   "role": "value analysis director",
+   "personality": "analytical budget accountable",
+   "background": "She oversees multi-disciplinary committee decisions ensuring fiscal responsibility across clinical services. Trained as a clinical nurse specialist she now translates cost data into procurement policy.",
+   "cares_about": [
+    "evidence based decision making",
+    "sustainable equipment lifecycle",
+    "team reputation for rigor"
+   ],
+   "pushbacks": [
+    "Our data shows outcomes vary with BMI our patient population mirrors real world practice",
+    "That recall never impacted our specific consumables or sterilization protocol",
+    "Our existing vendor provides comparable quality at a lower total cost of ownership"
+   ],
+   "wins_over": [
+    "peer reviewed meta analyses in stakeholder journals",
+    "transparent TCO modeling",
+    "demonstrated workflow compatibility"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#8a5a3c"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "david_chen-3",
+   "name": "David Chen",
+   "gender": "m",
+   "age": 52,
+   "scenario": "first_demo_request",
+   "role": "cfo liaison",
+   "personality": "risk averse, compliance driven",
+   "background": "Formerly led procurement for a mid sized health system after twelve years in hospital finance. Now advises vendors on contract alignment and regulatory fit. Speaks with quiet precision and files every email for audit.",
+   "cares_about": [
+    "contractual indemnity",
+    "audit trail completeness",
+    "pre market clearance documentation"
+   ],
+   "pushbacks": [
+    "Your pivotal trial excluded obese patients and that’s half my panel",
+    "The 510(k) predicate device was recalled two years ago",
+    "We can’t stock another vendor specific instrument tray"
+   ],
+   "wins_over": [
+    "clearly labeled liability language",
+    "full pre market documentation on file",
+    "consistent answers from clinical affairs"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "brendan_o_connor-4",
+   "name": "Brendan O’Connor",
+   "gender": "m",
+   "age": 48,
+   "scenario": "contract_negotiation",
+   "role": "senior procurement",
+   "personality": "process-driven, margin-protective",
+   "background": "He has spent two decades negotiating hospital contracts and knows every clause by heart. Running a large procurement team feels like conducting an orchestra where timing is everything.",
+   "cares_about": [
+    "gross margin",
+    "risk avoidance",
+    "team reputation"
+   ],
+   "pushbacks": [
+    "Your pivotal trial excluded obese patients and that’s half my panel",
+    "The 510(k) predicate device was recalled two years ago",
+    "We can’t stock another vendor-specific instrument tray"
+   ],
+   "wins_over": [
+    "consignment trails",
+    "real-world utilization data",
+    "tight integration with OR workflow"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 10
+}

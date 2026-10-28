@@ -1,0 +1,474 @@
+{
+ "title": "Real estate agent",
+ "tagline": "Learn to guide buyers from first showing to signed contract with confidence and compliance.",
+ "you_are": "a licensed residential real estate agent",
+ "setting": "Conversations happen at open houses, private showings, coffee shops, and kitchen tables across the metro area.",
+ "other_side": "buyers",
+ "scenarios": [
+  {
+   "id": "open_house_first_con",
+   "label": "Open house first contact",
+   "desc": "Greet a walk-in visitor at a Saturday open house and uncover their real timeline.",
+   "setup": "You are hosting an open house for a three-bedroom colonial. A visitor pauses at the front door, glances at the spec sheet, and says: Thanks, I’ll just look around.",
+   "skills": "Rapid rapport and needs discovery",
+   "scene": "shop",
+   "objective": "Schedule a private showing or buyer consultation within the next week.",
+   "place": "Maple Street colonial open house",
+   "moment": "Saturday 11:15 am, bright spring light through front windows",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#f5f0e8",
+     "floor": "#d4c4b0",
+     "accent": "#2d5a3d",
+     "light": "#fff8e7"
+    },
+    "props": [
+     {
+      "type": "door",
+      "x": -0.8,
+      "z": 0,
+      "scale": 1.2,
+      "color": "#8b6b4a"
+     },
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.3,
+      "scale": 1.0,
+      "color": "#c9b896"
+     },
+     {
+      "type": "plant",
+      "x": 0.7,
+      "z": 0.1,
+      "scale": 1.1,
+      "color": "#3a5a3f"
+     },
+     {
+      "type": "banner",
+      "x": -0.5,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#2d5a3d"
+     },
+     {
+      "type": "shelf",
+      "x": 0.6,
+      "z": 0,
+      "scale": 0.9,
+      "color": "#b8a082"
+     }
+    ]
+   }
+  },
+  {
+   "id": "private_showing_obje",
+   "label": "Private showing objection handling",
+   "desc": "Walk a qualified buyer through a home they like but hesitate on price and condition.",
+   "setup": "You are mid-tour in a renovated craftsman with a pre-approved couple. The wife stops at the primary bath, taps the tile, and says: We love the layout but the roof is original and the price feels high for that risk.",
+   "skills": "Value justification and inspection framing",
+   "scene": "home",
+   "objective": "Keep them engaged and move toward a written offer with clear contingencies.",
+   "place": "Elm Avenue craftsman private showing",
+   "moment": "Tuesday 4:30 pm, golden hour through west-facing windows",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#efe8dd",
+     "floor": "#a8947a",
+     "accent": "#8b4513",
+     "light": "#fdf6eb"
+    },
+    "props": [
+     {
+      "type": "window",
+      "x": -0.7,
+      "z": 0,
+      "scale": 1.3,
+      "color": "#d8d0c0"
+     },
+     {
+      "type": "sofa",
+      "x": 0.3,
+      "z": 0.4,
+      "scale": 1.2,
+      "color": "#6b5b4a"
+     },
+     {
+      "type": "lamp",
+      "x": 0.6,
+      "z": 0.2,
+      "scale": 0.9,
+      "color": "#c9a84c"
+     },
+     {
+      "type": "plant",
+      "x": -0.4,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#4a6b3a"
+     },
+     {
+      "type": "rug",
+      "x": 0.0,
+      "z": 0.3,
+      "scale": 1.1,
+      "color": "#8b7355"
+     }
+    ]
+   }
+  },
+  {
+   "id": "kitchen_table_negoti",
+   "label": "Kitchen table negotiation close",
+   "desc": "Navigate a multiple-offer counteroffer at the seller’s kitchen table with your buyer.",
+   "setup": "You sit at the seller’s kitchen island with your buyer clients. Their agent just emailed a highest-and-best deadline. Your buyer exhales and says: We can stretch five thousand more but we need the appraisal gap covered and the closing cost credit.",
+   "skills": "Contract strategy and emotional steadiness",
+   "scene": "home",
+   "objective": "Structure a winning counteroffer that protects the buyer’s cash and inspection rights.",
+   "place": "Seller’s kitchen island negotiation",
+   "moment": "Wednesday 8:10 pm, warm under-cabinet lighting, rain on the window",
+   "visual": {
+    "sky": "night",
+    "palette": {
+     "wall": "#f0ebe0",
+     "floor": "#7a6b5a",
+     "accent": "#1a3a4a",
+     "light": "#fef9f0"
+    },
+    "props": [
+     {
+      "type": "window",
+      "x": -0.6,
+      "z": 0,
+      "scale": 1.2,
+      "color": "#2a3a4a"
+     },
+     {
+      "type": "counter",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.3,
+      "color": "#3a2f28"
+     },
+     {
+      "type": "chair",
+      "x": -0.4,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#5a4a3a"
+     },
+     {
+      "type": "chair",
+      "x": 0.4,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#5a4a3a"
+     },
+     {
+      "type": "lamp",
+      "x": 0.7,
+      "z": 0.1,
+      "scale": 0.8,
+      "color": "#c9a84c"
+     },
+     {
+      "type": "screen",
+      "x": 0.2,
+      "z": 0.1,
+      "scale": 0.9,
+      "color": "#1a1a2a"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "open_house_first_con",
+   "role": "first-time buyer browsing alone",
+   "personality": "polite but guarded researcher",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 28,
+   "angle": "She has a spreadsheet of comparables and will not share her budget until trust is earned."
+  },
+  {
+   "scenario": "private_showing_obje",
+   "role": "relocating executive on a tight timeline",
+   "personality": "decisive but skeptical of process",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 42,
+   "angle": "He needs to close in forty-five days and will test whether you can actually deliver speed."
+  },
+  {
+   "scenario": "kitchen_table_negoti",
+   "role": "detail-oriented engineer couple",
+   "personality": "analytical and risk-averse",
+   "difficulty": 4,
+   "gender": "f",
+   "age": 35,
+   "angle": "They will model every repair cost and walk if the inspection contingency feels weak."
+  },
+  {
+   "scenario": "open_house_first_con",
+   "role": "move-up buyer with a contingent sale",
+   "personality": "optimistic but financially stretched",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 39,
+   "angle": "Their equity is locked until their current home closes, so they need creative structuring."
+  },
+  {
+   "scenario": "private_showing_obje",
+   "role": "investor buyer with cash and multiple irons in fire",
+   "personality": "calm, ruthless on terms",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 52,
+   "angle": "He will use the appraisal gap as leverage and expects you to cave on closing costs."
+  }
+ ],
+ "objections": [
+  "The roof is original and the price feels high for that risk",
+  "We can stretch five thousand more but we need the appraisal gap covered and the closing cost credit",
+  "I’m not signing a buyer agency agreement until I see how you work",
+  "Our lender says the HOA reserves are underfunded so we need a price reduction",
+  "The inspection turned up knob-and-tube wiring and we want a full rewire credit",
+  "We love the house but the school district boundary changed last month",
+  "Our current home has not had an offer yet so we cannot go non-contingent",
+  "The seller’s disclosure mentions water in the crawl space and we want a warranty"
+ ],
+ "rubric": [
+  {
+   "id": "rapport_discovery",
+   "label": "Rapport & discovery",
+   "what": "Opens with genuine curiosity, uncovers timeline, motivation, and financial picture without interrogation."
+  },
+  {
+   "id": "value_justification",
+   "label": "Value justification",
+   "what": "Frames price against comparable sales, condition, and market data instead of defending the number."
+  },
+  {
+   "id": "inspection_framing",
+   "label": "Inspection framing",
+   "what": "Positions the inspection as a planning tool, not a renegotiation trigger, and sets clear contingency scope."
+  },
+  {
+   "id": "contract_strategy",
+   "label": "Contract strategy",
+   "what": "Structures offers and counteroffers with precise contingencies, timelines, and risk allocation for the buyer."
+  },
+  {
+   "id": "compliance_honesty",
+   "label": "Compliance & honesty",
+   "what": "Discloses material facts, avoids steering language, and documents every concession per license law."
+  },
+  {
+   "id": "emotional_steadiness",
+   "label": "Emotional steadiness",
+   "what": "Stays calm under deadline pressure, absorbs buyer anxiety, and keeps the conversation solution-focused."
+  }
+ ],
+ "live_meters": [
+  "rapport_discovery",
+  "value_justification",
+  "compliance_honesty"
+ ],
+ "pitfalls": [
+  "Steering buyers toward or away from neighborhoods based on protected classes.",
+  "Promising repairs or credits the seller has not authorized in writing.",
+  "Letting a buyer waive inspection without a signed advisory notice."
+ ],
+ "id": "ready-real-estate",
+ "line": "Selling homes as a real estate agent",
+ "product": null,
+ "researched": false,
+ "personas": [
+  {
+   "id": "iris_collins-0",
+   "name": "Iris Collins",
+   "gender": "f",
+   "age": 28,
+   "scenario": "open_house_first_con",
+   "role": "residential real estate agent",
+   "personality": "polite but guarded researcher",
+   "background": "She works nights at a boutique marketing firm and studies market analytics after hours. She prefers data over sales talk and keeps a notebook of every listing she visits.",
+   "cares_about": [
+    "risk assessment",
+    "market value",
+    "long term value"
+   ],
+   "pushbacks": [
+    "The roof is original and the price feels high for that risk",
+    "We can stretch five thousand more but we need the appraisal gap covered and the closing cost credit",
+    "I’m not signing a buyer agency agreement until I see how you work"
+   ],
+   "wins_over": [
+    "detailed data sheets",
+    "transparent process",
+    "clear comparables"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 0,
+    "clothes": "#8a5a3c"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "leonard_hale-1",
+   "name": "Leonard Hale",
+   "gender": "m",
+   "age": 42,
+   "scenario": "private_showing_obje",
+   "role": "relocating executive",
+   "personality": "decisive but skeptical of process",
+   "background": "Leonard leads a rapidly growing tech division and is used to fast decisions.",
+   "cares_about": [
+    "timeline",
+    "risk",
+    "value"
+   ],
+   "pushbacks": [
+    "The original roof is a red flag; we need a price cut",
+    "We can stretch five thousand more, but the appraisal gap must be covered and the closing‑cost credit has to be guaranteed",
+    "I’m not signing a buyer agency agreement until I see how you work; show me your speed plan"
+   ],
+   "wins_over": [
+    "quick closing schedule",
+    "clear contingency plan",
+    "transparent pricing"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3f4f3f"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "daria_dewar-2",
+   "name": "Daria Dewar",
+   "gender": "f",
+   "age": 35,
+   "scenario": "kitchen_table_negoti",
+   "role": "detail-oriented engineer couple",
+   "personality": "analytical risk-averse",
+   "background": "Daria and her partner are engineers who move often for jobs. They settle in suburbs that need minimal renovation and avoid bidding wars.",
+   "cares_about": [
+    "inspection contingency strength",
+    "repair contingency for major defects",
+    "HOA financial health"
+   ],
+   "pushbacks": [
+    "We can negotiate but we need the appraisal gap covered and the closing cost credit",
+    "We will model every repair cost and walk if the inspection contingency feels weak",
+    "Our lender says the HOA reserves are underfunded so we need a price reduction"
+   ],
+   "wins_over": [
+    "the roof is original and the price feels high for that risk",
+    "inspection turned up knob-and-tube wiring and we want a full rewire credit",
+    "our lender says the HOA reserves are underfunded so we need a price reduction"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 1,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-CA"
+  },
+  {
+   "id": "freddy_chen-3",
+   "name": "Freddy Chen",
+   "gender": "m",
+   "age": 39,
+   "scenario": "open_house_first_con",
+   "role": "move-up buyer with a contingent sale",
+   "personality": "optimistic but financially stretched",
+   "background": "Freddy just sold his townhouse but settlement won’t happen until late summer. He’s looking for a larger home for his growing family but needs the sale proceeds to close. He’s polite and hopeful but visibly anxious about timing.",
+   "cares_about": [
+    "getting the right neighborhood",
+    "low maintenance yard",
+    "future resale value"
+   ],
+   "pushbacks": [
+    "The roof looks original and I can’t risk a surprise repair right after closing",
+    "Five thousand more might stretch me too thin. Can we adjust the gap coverage?",
+    "I need the appraisal gap covered before I sign any buyer agreement"
+   ],
+   "wins_over": [
+    "creative financing options",
+    "clear pricing breakdown",
+    "proof of fund flexibility"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#2f5d62"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "vicente_rojas-4",
+   "name": "Vicente Rojas",
+   "gender": "m",
+   "age": 52,
+   "scenario": "private_showing_obje",
+   "role": "investor buyer",
+   "personality": "calm ruthless on terms",
+   "background": "Vicente owns several rental properties across the metro area and is closing a big portfolio deal. He speaks fast when numbers matter and trusts only data.",
+   "cares_about": [
+    "tightening profit margins",
+    "securing below‑market valuations",
+    "minimizing future maintenance surprises"
+   ],
+   "pushbacks": [
+    "‘The roof’s original and the price feels high for that risk.’",
+    "‘We can stretch five thousand more but we need the appraisal gap covered and the closing‑cost credit.’",
+    "‘I’m not signing a buyer‑agency agreement until I see how you work.’"
+   ],
+   "wins_over": [
+    "clear breakdown of repair costs",
+    "swift, written concessions on appraisal gap",
+    "transparent closing‑cost credits"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#4f6f8f"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 3
+}

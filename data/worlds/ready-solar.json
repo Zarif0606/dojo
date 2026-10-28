@@ -1,0 +1,453 @@
+{
+ "title": "Solar sales rep",
+ "tagline": "Learn to turn cold knocks into signed solar contracts.",
+ "you_are": "a residential solar sales representative",
+ "setting": "Conversations happen on porches and driveways across suburban neighbourhoods, moving from first knock to kitchen-table close.",
+ "other_side": "homeowners",
+ "scenarios": [
+  {
+   "id": "cold_knock",
+   "label": "Cold knock introduction",
+   "desc": "Open a stranger at the door and earn permission to stay.",
+   "setup": "You stand on the front step of a suburban split-level. The homeowner opens the screen door, squints at your badge, and says: “Yeah? What’s this about?”",
+   "skills": "Door opening and permission framing",
+   "scene": "door",
+   "objective": "Earn two minutes to show the satellite roof image on your tablet.",
+   "place": "Maple Street porch",
+   "moment": "Saturday 10:15 am, bright spring sun",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#f5f0e8",
+     "floor": "#c9b896",
+     "accent": "#2d5a27",
+     "light": "#fff8e7"
+    },
+    "props": [
+     {
+      "type": "door",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.2,
+      "color": "#8b6b42"
+     },
+     {
+      "type": "plant",
+      "x": -0.7,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#3a5a2f"
+     },
+     {
+      "type": "banner",
+      "x": 0.6,
+      "z": 0.1,
+      "scale": 0.9,
+      "color": "#e8a838"
+     },
+     {
+      "type": "table",
+      "x": -0.3,
+      "z": 0.8,
+      "scale": 0.8,
+      "color": "#d4c4a8"
+     }
+    ]
+   }
+  },
+  {
+   "id": "kitchen_table",
+   "label": "Kitchen table proposal",
+   "desc": "Walk through design, incentives and finance with decision-makers present.",
+   "setup": "You sit at a pine kitchen table with both spouses. The wife taps the printed layout and says: “Show me how the tax credit actually hits our bank account.”",
+   "skills": "System sizing, incentive math and payment framing",
+   "scene": "home",
+   "objective": "Get verbal commitment on the 8.4 kW cash-or-loan choice.",
+   "place": "Harper kitchen",
+   "moment": "Tuesday 7:10 pm, golden hour through west windows",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#fdf6ec",
+     "floor": "#e8dcc8",
+     "accent": "#c45508",
+     "light": "#fff3e0"
+    },
+    "props": [
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.4,
+      "scale": 1.3,
+      "color": "#b8966e"
+     },
+     {
+      "type": "chair",
+      "x": -0.6,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#7a5c3a"
+     },
+     {
+      "type": "screen",
+      "x": 0.5,
+      "z": 0.1,
+      "scale": 1.1,
+      "color": "#1a1a2e"
+     },
+     {
+      "type": "plant",
+      "x": -0.8,
+      "z": 0.1,
+      "scale": 0.9,
+      "color": "#4a6b3f"
+     },
+     {
+      "type": "lamp",
+      "x": 0.7,
+      "z": 0.7,
+      "scale": 0.8,
+      "color": "#c8b088"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hoa_objection",
+   "label": "HOA and roof-age pushback",
+   "desc": "Handle the “my HOA won’t allow it” and “roof needs replacement first” objections.",
+   "setup": "The homeowner leans on the garage door frame, arms crossed, and states: “Board rejected my neighbour’s panels last month, and my shingles are fifteen years old.”",
+   "skills": "HOA packet navigation and roof-partner coordination",
+   "scene": "door",
+   "objective": "Schedule the roof inspection and deliver the HOA approval packet.",
+   "place": "Chen driveway",
+   "moment": "Thursday 4:50 pm, overcast with wind in the trees",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#d9dbe0",
+     "floor": "#6b7a8a",
+     "accent": "#3a4d6b",
+     "light": "#e8ebf0"
+    },
+    "props": [
+     {
+      "type": "house",
+      "x": 0.2,
+      "z": 0,
+      "scale": 1.5,
+      "color": "#c8cdd0"
+     },
+     {
+      "type": "car",
+      "x": -0.6,
+      "z": 0.5,
+      "scale": 1.2,
+      "color": "#4a4a5a"
+     },
+     {
+      "type": "tree",
+      "x": 0.8,
+      "z": 0.1,
+      "scale": 1.3,
+      "color": "#3d5a3d"
+     },
+     {
+      "type": "banner",
+      "x": -0.4,
+      "z": 0.3,
+      "scale": 0.8,
+      "color": "#e0c840"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "cold_knock",
+   "role": "First-time solar curious",
+   "personality": "polite but time-pressed",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 38,
+   "angle": "Wants the gist in thirty seconds before her toddler wakes."
+  },
+  {
+   "scenario": "cold_knock",
+   "role": "Retired engineer",
+   "personality": "analytical and sceptical",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 67,
+   "angle": "Will stress-test every production number you show."
+  },
+  {
+   "scenario": "kitchen_table",
+   "role": "Dual-income couple",
+   "personality": "collaborative but budget-tight",
+   "difficulty": 3,
+   "gender": "f",
+   "age": 42,
+   "angle": "Needs the loan payment to stay under their car note."
+  },
+  {
+   "scenario": "kitchen_table",
+   "role": "Cash buyer with rental portfolio",
+   "personality": "direct and ROI-obsessed",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 55,
+   "angle": "Demands IRR spreadsheet before signing anything."
+  },
+  {
+   "scenario": "hoa_objection",
+   "role": "HOA board veteran",
+   "personality": "procedural and risk-averse",
+   "difficulty": 5,
+   "gender": "f",
+   "age": 60,
+   "angle": "Knows every clause and will make you cite the statute."
+  }
+ ],
+ "objections": [
+  "My neighbour’s system looks ugly from the street",
+  "I’m not staying long enough to break even",
+  "The tax credit is a scam, the IRS will claw it back",
+  "My roof has five years left, I’m not re-roofing for panels",
+  "HOA bylaws section four point two forbids street-visible arrays",
+  "Your competitor quoted two grand less for the same kilowatts",
+  "I’ll just wait for the new Tesla roof tiles next year",
+  "Financing through you means a lien on my house, right?"
+ ],
+ "rubric": [
+  {
+   "id": "door_opening",
+   "label": "Door opening",
+   "what": "Earns permission to stay with a clear, benefit-first hook in under ten seconds."
+  },
+  {
+   "id": "site_qualification",
+   "label": "Site qualification",
+   "what": "Confirms roof orientation, shading, electrical panel and ownership in one smooth flow."
+  },
+  {
+   "id": "incentive_accuracy",
+   "label": "Incentive accuracy",
+   "what": "States federal, state and utility incentives with correct percentages, caps and timelines."
+  },
+  {
+   "id": "payment_framing",
+   "label": "Payment framing",
+   "what": "Presents cash, loan and PPA options side-by-side with true monthly cost and total ownership."
+  },
+  {
+   "id": "hoa_navigation",
+   "label": "HOA navigation",
+   "what": "Delivers the pre-built approval packet, cites statute, and schedules the board liaison call."
+  },
+  {
+   "id": "compliance_truth",
+   "label": "Compliance truth",
+   "what": "Never guarantees savings, never implies utility disconnection, discloses all fees and lien rights."
+  }
+ ],
+ "live_meters": [
+  "door_opening",
+  "incentive_accuracy",
+  "compliance_truth"
+ ],
+ "pitfalls": [
+  "Promising a specific dollar savings without a signed production guarantee.",
+  "Skipping the roof-age disclosure that triggers the re-roof clause in the contract.",
+  "Filing an HOA application before the homeowner signs the design approval page."
+ ],
+ "id": "ready-solar",
+ "line": "Selling rooftop solar door to door",
+ "product": null,
+ "researched": false,
+ "personas": [
+  {
+   "id": "talia_morrison-0",
+   "name": "Talia Morrison",
+   "gender": "f",
+   "age": 38,
+   "scenario": "cold_knock",
+   "role": "first-time solar curious",
+   "personality": "polite but time-pressed",
+   "background": "Lives on a quiet cul-de-sac with her husband and two young kids. She is a part-time bookkeeping assistant who is trying to make sustainable upgrades without blowing the family budget.",
+   "cares_about": [
+    "monthly energy bill",
+    "keeping the house comfortable",
+    "doing something for the environment"
+   ],
+   "pushbacks": [
+    "I wish i could talk longer but my toddler is about to wake up",
+    "I’m not staying long enough to break even",
+    "My neighbour’s system looks ugly from the street"
+   ],
+   "wins_over": [
+    "clear savings numbers",
+    "easy installation timeline",
+    "positive environmental impact"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "gideon_shaw-1",
+   "name": "Gideon Shaw",
+   "gender": "m",
+   "age": 67,
+   "scenario": "cold_knock",
+   "role": "Retired engineer",
+   "personality": "analytical and sceptical",
+   "background": "Gideon worked thirty‑five years designing photovoltaic mounting systems before retiring. He now walks the neighbourhood on foot, testing every claim a installer makes against his own spreadsheets.",
+   "cares_about": [
+    "system longevity",
+    "payback math",
+    "regulatory clarity"
+   ],
+   "pushbacks": [
+    "Your payback estimate ignores degradation rates, and it won’t hold up to a 600 kWh‑per‑day load",
+    "The tax credit is a temporary clause; the IRS can retroactively revoke it if you miss the filing window",
+    "If the HOA has a clause that bans visible arrays, your permit will be void on day one"
+   ],
+   "wins_over": [
+    "hard data",
+    "transparent cost breakdowns",
+    "clear warranty terms"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "ponytail",
+    "hairColor": "white",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 2,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "cory_sheffield-2",
+   "name": "Cory Sheffield",
+   "gender": "f",
+   "age": 42,
+   "scenario": "kitchen_table",
+   "role": "layout technician",
+   "personality": "collaborative but budget-tight",
+   "background": "Cory and her partner earn good money but every dollar gets tracked tightly. They’d rather save than spend on anything that feels like waste.",
+   "cares_about": [
+    "monthly loan payment staying below their car note",
+    "not letting the system look bulky on the roof",
+    "getting the paperwork done before tax season"
+   ],
+   "pushbacks": [
+    "I’m not tearing up my roof for a panel that might not save us much",
+    "If the tax credit disappears next year we’ll have paid extra for nothing",
+    "The roof looks odd enough already we can’t add something that doesn’t blend"
+   ],
+   "wins_over": [
+    "a payment that fits neatly inside their current budget",
+    "a design that matches the existing roof angles",
+    "a quick paperwork turnaround before the tax deadline"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 1,
+    "clothes": "#4f6f8f"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "rafael_goode-3",
+   "name": "Rafael Goode",
+   "gender": "m",
+   "age": 55,
+   "scenario": "kitchen_table",
+   "role": "cash buyer with rental portfolio",
+   "personality": "direct and ROI-obsessed",
+   "background": "Rafael owns three small apartments in the area. He sees solar as another income stream and wants clear numbers before he adds another contract.",
+   "cares_about": [
+    "annual cash flow",
+    "long-term asset value",
+    "tax efficiency"
+   ],
+   "pushbacks": [
+    "The payback period is longer than my renovation timeline, so I’m out",
+    "I need to see a verified IRR model before I commit to anything else",
+    "If the tax credit disappears next year, the math falls apart for me"
+   ],
+   "wins_over": [
+    "transparent financial projections",
+    "clear resale value data",
+    "guaranteed performance guarantees"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "olive",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 2,
+    "clothes": "#8a5a3c"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "lila_mendez-4",
+   "name": "Lila Mendez",
+   "gender": "f",
+   "age": 60,
+   "scenario": "hoa_objection",
+   "role": "HOA board veteran",
+   "personality": "procedural and risk-averse",
+   "background": "Serves on her neighborhood board for twelve years, once denied a condo conversion. Publishes a monthly checklist of violation rules.",
+   "cares_about": [
+    "sound finances",
+    "common-code consistency",
+    "current resale value"
+   ],
+   "pushbacks": [
+    "That array violates clause four two of the bylaws, plain and simple",
+    "How do you prove the panels won’t drop property values?",
+    "Show me the audit trail for your tax-credit filing"
+   ],
+   "wins_over": [
+    "honest turnaround times",
+    "pre-approved install kits",
+    "clear maintenance contracts"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "auburn",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 2,
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 4
+}

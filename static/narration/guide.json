@@ -1,0 +1,44 @@
+[
+ {
+  "title": "Describe the situation",
+  "text": "Welcome to Dojo. Start by describing a job or a situation, like selling cars, or a nervous first-time buyer. Type it in and press Build my world.",
+  "file": "/static/narration/step-1.wav",
+  "duration": 9.32
+ },
+ {
+  "title": "Watch the world build",
+  "text": "Nemotron models get to work. One large model plans the situations, the objections you will really hear, and a scoring rubric for your field. Five smaller models cast the people you will meet, each with a personality, a voice and a face.",
+  "file": "/static/narration/step-2.wav",
+  "duration": 13.91
+ },
+ {
+  "title": "Meet the prospect",
+  "text": "Now you meet them. The scene sets itself: a door opens, a phone rings, or a customer walks up. You are the seller, and the AI plays your prospect, reacting like a real person.",
+  "file": "/static/narration/step-3.wav",
+  "duration": 10.33
+ },
+ {
+  "title": "Talk out loud",
+  "text": "Tap the mic, or turn on hands-free, and just speak. Use headphones, so the mic does not hear the other person. You can always type instead.",
+  "file": "/static/narration/step-4.wav",
+  "duration": 7.87
+ },
+ {
+  "title": "Read their reactions",
+  "text": "While you talk, a director model scores every line on the skills of your field, and the prospect responds to it. Do well and they soften. Ramble or push, and they cross their arms, close up, or walk away.",
+  "file": "/static/narration/step-5.wav",
+  "duration": 11.52
+ },
+ {
+  "title": "Get coached",
+  "text": "When you finish, a coach model scores you against your world's rubric, quotes your own words, and writes the line you should have said. Next time, that prospect remembers your weakest habit.",
+  "file": "/static/narration/step-6.wav",
+  "duration": 9.86
+ },
+ {
+  "title": "You are ready",
+  "text": "That is it. Pick a ready-made sales profession, or describe your own situation. The speaker button in the top bar turns the interface sounds on or off. Good luck, and have fun.",
+  "file": "/static/narration/step-7.wav",
+  "duration": 10.28
+ }
+]

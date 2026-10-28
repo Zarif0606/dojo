@@ -1,0 +1,7 @@
+.env
+.venv
+.voice-venv
+data/kokoro
+data/dojo.db
+__pycache__
+.git

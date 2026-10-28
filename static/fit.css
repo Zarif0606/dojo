@@ -1,0 +1,90 @@
+/* Everything fits the window: no zooming out to find the mic or the input. Loads after world.css and help.css. */
+:root { --top: 68px; }
+body.fit main { max-width: 1400px; padding: .55rem 1rem .7rem; height: calc(100dvh - var(--top)); overflow: hidden; }
+body.fit .foot { display: none; }
+#view-session:not([hidden]) { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: .55rem; height: 100%; min-height: 0; }
+.s-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.s-top h1 { font-size: 1.55rem; margin: 0; } .s-top .muted { margin: 0; font-size: .82rem; } .s-top .notes { margin: .15rem 0 0; }
+.btn.danger.pulse { animation: pulse 1.4s infinite; }
+.arena { display: grid; grid-template-columns: minmax(0, 1fr) 20.5rem; gap: .75rem; min-height: 0; }
+.scene-wrap { height: 100%; min-height: 0; }
+.side { display: flex; flex-direction: column; gap: .55rem; min-height: 0; }
+.side .director { padding: .7rem .9rem; flex: none; } .side .director h2 { margin-bottom: .5rem; } .dmeter { margin-bottom: .4rem; }
+.side .transcript { flex: 1; min-height: 0; margin: 0; max-height: none; padding: .8rem; font-size: .92rem; }
+.dock { display: grid; grid-template-columns: auto minmax(0, .9fr) minmax(0, 1.1fr) auto; gap: .8rem; align-items: center; padding: .55rem .75rem; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.dock .mic { width: 60px; height: 60px; } .dock .mic svg { width: 26px; height: 26px; }
+.dock-mid { min-width: 0; display: grid; gap: .15rem; } .dock-mid .status { margin: 0; text-align: left; font-size: .85rem; } .dock-mid .interim { margin: 0; min-height: 1.2em; font-size: .85rem; color: var(--muted); font-style: italic; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dock .meter { width: 100%; }
+.dock .typebox { margin: 0; } .dock .typebox input { width: 100%; max-width: none; }
+.dock .voicebar { display: flex; gap: .7rem; align-items: center; flex-wrap: wrap; justify-content: flex-end; font-size: .82rem; margin: 0; }
+.dock .voicebar select { padding: .15rem .3rem; }
+.hood { position: relative; } .hood summary { cursor: pointer; color: var(--muted); } .hood-pop { position: absolute; right: 0; bottom: 2rem; width: 22rem; max-width: 80vw; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: .8rem 1rem; box-shadow: var(--shadow); z-index: 6; text-align: left; }
+.scene-wrap .scene { display: none; }
+.react-chip { position: absolute; left: 50%; top: .8rem; transform: translateX(-50%); z-index: 4; background: color-mix(in srgb, var(--surface) 88%, transparent); border: 1px solid var(--line); border-radius: 99px; padding: .2rem .9rem; font-size: .8rem; font-style: italic; opacity: 0; transition: opacity .3s, transform .3s var(--ease-out); pointer-events: none; }
+.react-chip.show { opacity: 1; transform: translate(-50%, 4px); }
+/* the film-style intro and closing card */
+.cine { position: absolute; inset: 0; z-index: 5; pointer-events: none; display: grid; place-items: center; visibility: hidden; }
+.cine.on { visibility: visible; pointer-events: auto; }
+.cine .bar { position: absolute; left: 0; right: 0; height: 0; background: #0c0b0a; transition: height .7s var(--ease-out); } .cine .top { top: 0; } .cine .bot { bottom: 0; }
+.cine.on .bar { height: 50%; } .cine.open .bar { height: 11%; } .cine.gone .bar { height: 0; }
+.cine-card { position: relative; text-align: center; color: #f3eee3; max-width: 34rem; padding: 0 1.4rem; opacity: 0; transform: translateY(10px); }
+.cine.on .cine-card { animation: cineIn .9s .35s var(--ease-out) forwards; } .cine.gone .cine-card, .cine.open .cine-card { animation: cineOut .5s forwards; }
+.cine-card small { display: block; letter-spacing: .16em; text-transform: uppercase; font-size: .72rem; opacity: .8; margin-bottom: .5rem; }
+.cine-card h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.05; margin: 0 0 .6rem; color: #f3eee3; }
+.cine-card p { margin: 0; font-size: 1.02rem; opacity: .92; }
+.cine-dots { display: inline-flex; gap: 6px; margin-top: 1rem; } .cine-dots i { width: 7px; height: 7px; border-radius: 50%; background: #f3eee3; animation: bpulse 1s ease-in-out infinite; } .cine-dots i:nth-child(2) { animation-delay: .15s; } .cine-dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes cineIn { to { opacity: 1; transform: none; } } @keyframes cineOut { to { opacity: 0; transform: translateY(-8px); } }
+.cine.outro .cine-card h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); }
+.cine.outro.agreed .cine-card h2 { color: #b9e7c4; } .cine.outro.walked_away .cine-card h2 { color: #f0b6a8; }
+/* start screen: the question and the input fit above the fold */
+#view-start .hero { padding: .2rem 0 1.4rem; gap: 1.2rem; }
+#view-start .hero h1 { font-size: clamp(1.9rem, 2.2vw + 2.4vh, 3.1rem); margin-bottom: .5rem; }
+#view-start .lede { margin-bottom: .9rem; font-size: .98rem; }
+.hero-cast { height: min(380px, 44vh); } .hcface { transform-origin: center; }
+.builder { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr) auto; gap: .6rem; align-items: end; max-width: 760px; margin: .8rem 0 .7rem; }
+.fld { display: grid; gap: .25rem; font-size: .78rem; color: var(--muted); } .fld input { width: 100%; font-size: .98rem; padding: .7rem 1rem; border-radius: 99px; }
+.startbar { align-items: end; } .prod { display: grid; gap: .2rem; font-size: .78rem; color: var(--muted); flex: 1; max-width: 30rem; } .prod input { font-size: .95rem; padding: .55rem .9rem; border-radius: 99px; } .prod small { min-height: 1.1em; }
+@media (max-height: 800px) { .hero-cast { height: 34vh; } main { padding-top: 1.6rem; } }
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; } .builder { grid-template-columns: 1fr; } .hero-cast { height: 150px; order: 0; } .hc0 { --s: 74px; } .hc1 { --s: 90px; top: 8px; } .hc2 { --s: 66px; top: 62px; left: 30%; } .hcline { font-size: .95rem; }
+  .arena { grid-template-columns: 1fr; grid-template-rows: 34dvh minmax(0, 1fr); gap: .5rem; } .scene-wrap { height: 100%; }
+  .side .director { padding: .4rem .6rem; } .side .director h2 { display: none; } #director { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; } .dstance { display: none; }
+  .s-top h1 { font-size: 1.15rem; } .s-top .muted, .s-top .notes { display: none; }
+  .dock { grid-template-columns: auto 1fr; gap: .5rem; padding: .45rem .55rem; } .dock .mic { width: 52px; height: 52px; } .dock .typebox, .dock .voicebar { grid-column: 1 / -1; } .dock .voicebar { justify-content: space-between; gap: .4rem; }
+}
+.scene-wrap.flat .scene { display: block; } .scene-wrap.flat .face-stage:not(.fig) { position: relative; }
+
+/* the two start fields always get real width */
+.hero-copy { min-width: 0; }
+.builder { width: 100%; }
+.builder .fld { display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; min-width: 0; justify-self: stretch; }
+.builder .fld input { display: block; width: 100%; min-width: 0; max-width: none; flex: none; box-sizing: border-box; }
+
+/* the hero characters scale with the window height, so the caption never sits on a face */
+.hero-cast { height: clamp(300px, 46vh, 400px) !important; }
+.hc0 { --s: clamp(96px, 15vh, 160px); left: 2%; top: 0; } .hc1 { --s: clamp(112px, 18vh, 190px); right: 0; top: 9%; } .hc2 { --s: clamp(84px, 13vh, 140px); left: 24%; top: 46%; }
+@media (max-width: 900px) { .hero-cast { height: 150px !important; } .hc0 { --s: 74px; } .hc1 { --s: 90px; top: 8px; } .hc2 { --s: 66px; top: 62px; left: 30%; } }
+
+/* product on its own row, then the situation with the build button: both fields get room to breathe */
+.builder { grid-template-columns: minmax(0, 1fr) auto; max-width: none; gap: .5rem .6rem; }
+.builder .fld:first-of-type { grid-column: 1 / -1; } .builder .fld.grow { grid-column: 1; }
+@media (max-width: 900px) { .builder { grid-template-columns: 1fr; } .builder .fld.grow, .builder .fld:first-of-type { grid-column: 1; } }
+
+/* anime scene: manga mood symbols, floating light, call screen */
+svg.anime { display: block; width: 100%; height: 100%; } .face-stage.fig svg { display: block; }
+svg.anime .fx { opacity: 0; transition: opacity .25s; }
+svg.anime[data-mood="happy"] .fx-happy, svg.anime[data-mood="annoyed"] .fx-annoyed, svg.anime[data-mood="confused"] .fx-confused, svg.anime[data-mood="skeptical"] .fx-skeptical, svg.anime[data-mood="thinking"] .fx-thinking, svg.anime.surprise .fx-surprise { opacity: 1; }
+svg.anime .tw { transform-box: fill-box; transform-origin: center; animation: tw 1.3s ease-in-out infinite; } @keyframes tw { 50% { transform: scale(.45) rotate(25deg); opacity: .55; } }
+svg.anime .vein { transform-box: fill-box; transform-origin: center; animation: vein .55s ease-in-out infinite alternate; } @keyframes vein { to { transform: scale(1.3); } }
+svg.anime .drop { animation: drop 1.7s ease-in infinite; } @keyframes drop { 0% { transform: translateY(-6px); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(12px); opacity: 0; } }
+svg.anime .mote { animation: mote 9s ease-in-out infinite; } @keyframes mote { 50% { transform: translateY(-28px); } }
+svg.anime .glint { animation: glint 5s ease-in-out infinite; } @keyframes glint { 0%, 70%, 100% { opacity: 0; transform: translateX(0); } 80% { opacity: .9; transform: translateX(26px); } }
+svg.anime .ring { fill: none; stroke: #fff; stroke-width: 3; opacity: 0; transform-origin: 500px 240px; } svg.anime.phone .ring { animation: callring 2.1s ease-out infinite; } svg.anime.phone.speaking .ring { animation-duration: 1.1s; }
+@keyframes callring { from { transform: scale(1); opacity: .5; } to { transform: scale(1.35); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { svg.anime .tw, svg.anime .vein, svg.anime .drop, svg.anime .mote, svg.anime .glint, svg.anime.phone .ring { animation: none; } }
+
+.cine-card { max-width: 42rem; } .cine-card p#cine-goal { font-size: 1.3rem; line-height: 1.4; opacity: 1; margin-top: .4rem; }
+.cine.on .cine-card { animation-duration: 1.1s; animation-delay: .5s; }
+.cine-skip { position: absolute; bottom: 14%; left: 0; right: 0; text-align: center; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: #f3eee3; opacity: .55; }
+
+.typebox { display: flex; gap: .5rem; align-items: center; } .typebox input { flex: 1; min-width: 0; } .btn.undo { padding: .4rem .9rem; font-size: .82rem; white-space: nowrap; } .btn.undo:disabled { opacity: .35; cursor: default; }

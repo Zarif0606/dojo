@@ -1,0 +1,467 @@
+{
+ "title": "Gym membership advisor",
+ "tagline": "Learn to sell gym memberships by matching real goals to the right plan and handling price pushback with confidence.",
+ "you_are": "a membership consultant at a mid-size fitness club",
+ "setting": "Conversations happen at the front desk, on the gym floor during tours, and on follow-up calls after a trial visit.",
+ "other_side": "prospects",
+ "scenarios": [
+  {
+   "id": "walk_in_tour",
+   "label": "Walk-in tour",
+   "desc": "A curious visitor asks for a quick look around before committing.",
+   "setup": "You are greeting a prospect who just walked through the glass doors. They say: Hi, I was passing by and wondered what you offer.",
+   "skills": "Needs discovery and facility storytelling",
+   "scene": "shop",
+   "objective": "Book a free trial visit for this week.",
+   "place": "FitZone reception",
+   "moment": "Tuesday 10:15 am, bright morning light through the front glass",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#E8F0F8",
+     "floor": "#B8C8D8",
+     "accent": "#2E7D32",
+     "light": "#FFFFFF"
+    },
+    "props": [
+     {
+      "type": "counter",
+      "x": 0.0,
+      "z": 0.1,
+      "scale": 1.2,
+      "color": "#6B7B8C"
+     },
+     {
+      "type": "screen",
+      "x": -0.6,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#1A1A2E"
+     },
+     {
+      "type": "plant",
+      "x": 0.7,
+      "z": 0.1,
+      "scale": 1.1,
+      "color": "#2D5A27"
+     },
+     {
+      "type": "banner",
+      "x": -0.8,
+      "z": 0.9,
+      "scale": 1.3,
+      "color": "#E84D2F"
+     },
+     {
+      "type": "chair",
+      "x": 0.4,
+      "z": 0.3,
+      "scale": 1.0,
+      "color": "#3A3A4A"
+     }
+    ]
+   }
+  },
+  {
+   "id": "trial_follow_up",
+   "label": "Trial follow-up call",
+   "desc": "A prospect finished a free workout and you call to convert them.",
+   "setup": "You are on the phone with someone who tried the gym yesterday. They answer: Hello, this is Jamie.",
+   "skills": "Closing and objection handling",
+   "scene": "phone",
+   "objective": "Secure a 12-month commitment today.",
+   "place": "FitZone sales office",
+   "moment": "Wednesday 7:20 pm, quiet evening with desk lamp glow",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#2C2C3A",
+     "floor": "#1E1E28",
+     "accent": "#E8A838",
+     "light": "#FFF3D8"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.3,
+      "color": "#2A2A3A"
+     },
+     {
+      "type": "lamp",
+      "x": -0.5,
+      "z": 0.1,
+      "scale": 0.9,
+      "color": "#D4A843"
+     },
+     {
+      "type": "screen",
+      "x": 0.3,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#0D0D14"
+     },
+     {
+      "type": "chair",
+      "x": -0.3,
+      "z": 0.4,
+      "scale": 1.0,
+      "color": "#1A1A24"
+     },
+     {
+      "type": "plant",
+      "x": 0.8,
+      "z": 0.1,
+      "scale": 0.8,
+      "color": "#1F3D1A"
+     }
+    ]
+   }
+  },
+  {
+   "id": "price_objection_clos",
+   "label": "Price objection close",
+   "desc": "A keen prospect loves the club but pushes hard on monthly cost.",
+   "setup": "You are at the membership desk with a prospect who just completed a trial. They say: I love it here but sixty-nine a month is steep.",
+   "skills": "Value framing and compliant discounting",
+   "scene": "shop",
+   "objective": "Close at standard rate or approved promo only.",
+   "place": "FitZone membership desk",
+   "moment": "Saturday 11:45 am, busy floor noise behind glass wall",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#F5E8D0",
+     "floor": "#D4C4A8",
+     "accent": "#C0392B",
+     "light": "#FFFAF0"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.15,
+      "scale": 1.2,
+      "color": "#8B6B4A"
+     },
+     {
+      "type": "screen",
+      "x": -0.4,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#1A1A2E"
+     },
+     {
+      "type": "banner",
+      "x": 0.7,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#C0392B"
+     },
+     {
+      "type": "chair",
+      "x": -0.5,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#5A4A3A"
+     },
+     {
+      "type": "plant",
+      "x": 0.85,
+      "z": 0.1,
+      "scale": 0.9,
+      "color": "#2D4A20"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "walk_in_tour",
+   "role": "First-time gym goer",
+   "personality": "nervous, curious, budget aware",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 28,
+   "angle": "Needs reassurance she will not feel judged and clear pricing upfront."
+  },
+  {
+   "scenario": "walk_in_tour",
+   "role": "Returning lifter after injury",
+   "personality": "knowledgeable, cautious, specific",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 35,
+   "angle": "Wants rack access and physio-friendly hours, checks contract freeze terms."
+  },
+  {
+   "scenario": "trial_follow_up",
+   "role": "Busy parent testing convenience",
+   "personality": "time pressed, practical, decisive",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 40,
+   "angle": "Needs childcare hours and quick sign-up, hates long calls."
+  },
+  {
+   "scenario": "trial_follow_up",
+   "role": "Comparison shopper with spreadsheet",
+   "personality": "analytical, skeptical, prepared",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 30,
+   "angle": "Has three competitor quotes, pushes on hidden fees and cancellation policy."
+  },
+  {
+   "scenario": "trial_follow_up",
+   "role": "Loyal member referring friend",
+   "personality": "affable, connected, expects favor",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 45,
+   "angle": "Demands staff rate for friend, tests compliance boundaries on discount limits."
+  }
+ ],
+ "objections": [
+  "Sixty-nine a month is more than my car payment",
+  "I can get a basic membership down the street for twenty-nine",
+  "What if I get injured or move away, am I locked in?",
+  "Your joining fee feels like a hidden tax",
+  "I only want mornings but your peak price covers all day",
+  "My friend got fifty percent off last month, match that",
+  "I need to ask my partner before I commit",
+  "The free trial was crowded, will it always be like that?"
+ ],
+ "rubric": [
+  {
+   "id": "needs_discovery",
+   "label": "Needs discovery",
+   "what": "Asks open questions about goals, schedule, and past barriers before pitching any plan."
+  },
+  {
+   "id": "facility_storytelling",
+   "label": "Facility storytelling",
+   "what": "Walks the prospect through zones linking equipment to their specific goals with vivid language."
+  },
+  {
+   "id": "trial_booking",
+   "label": "Trial booking",
+   "what": "Secures a concrete day and time for a free visit while excitement is high."
+  },
+  {
+   "id": "objection_handling",
+   "label": "Objection handling",
+   "what": "Acknowledges the concern, reframes value, and offers a compliant next step without improvising discounts."
+  },
+  {
+   "id": "compliant_closing",
+   "label": "Compliant closing",
+   "what": "Confirms the exact monthly rate, freeze policy, and cancellation terms before taking payment."
+  },
+  {
+   "id": "honesty_compliance",
+   "label": "Honesty compliance",
+   "what": "Never promises unapproved discounts, hides fees, or misrepresents contract length."
+  }
+ ],
+ "live_meters": [
+  "needs_discovery",
+  "objection_handling",
+  "honesty_compliance"
+ ],
+ "pitfalls": [
+  "Quoting a monthly price before the joining fee and annual maintenance charge.",
+  "Offering a friends-and-family rate that is not in the approved promo calendar.",
+  "Saying “no contract” when the agreement has a twelve-month term with early-exit fee."
+ ],
+ "id": "ready-gym",
+ "line": "Selling gym memberships",
+ "product": null,
+ "researched": false,
+ "personas": [
+  {
+   "id": "cara_mitchell-0",
+   "name": "Cara Mitchell",
+   "gender": "f",
+   "age": 28,
+   "scenario": "walk_in_tour",
+   "role": "First-time gym beginner",
+   "personality": "nervous curious budget aware",
+   "background": "Cara just moved to the city and is exploring ways to stay active. She works part-time in admin and values predictable monthly costs.",
+   "cares_about": [
+    "affordable monthly rate",
+    "no long-term contract",
+    "ability to switch to morning-only later"
+   ],
+   "pushbacks": [
+    "I only want mornings but your peak price covers all day",
+    "I can get a basic membership down the street for twenty-nine",
+    "Sixty-nine a month is more than my car payment"
+   ],
+   "wins_over": [
+    "transparent fee breakdown",
+    "no hidden costs",
+    "ability to pause membership without penalty"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 0,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "terrance_vance-1",
+   "name": "Terrance Vance",
+   "gender": "m",
+   "age": 35,
+   "scenario": "walk_in_tour",
+   "role": "membership consultant",
+   "personality": "knowledgeable cautious specific",
+   "background": "Terrance joined this gym after a shoulder injury and now works the front desk. He knows rehab routines and returns to lift but avoids aggravating moves.",
+   "cares_about": [
+    "value for money",
+    "clear contract terms",
+    "feeling respected"
+   ],
+   "pushbacks": [
+    "Sixty-nine a month is more than my car payment",
+    "I can get a basic membership down the street for twenty-nine",
+    "What if I get injured or move away, am I locked in?"
+   ],
+   "wins_over": [
+    "knowledge of rehab routines",
+    "willingness to test contract freeze policy",
+    "specific request for rack access"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#4f6f8f"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "laura_whitaker-2",
+   "name": "Laura Whitaker",
+   "gender": "f",
+   "age": 40,
+   "scenario": "trial_follow_up",
+   "role": "membership consultant",
+   "personality": "time pressed, practical, decisive",
+   "background": "Laura balances a demanding gym schedule with school pickup duties. She joined the club to set a clear routine for herself while her kids are at daycare.",
+   "cares_about": [
+    "time efficiency",
+    "clear pricing",
+    "no hidden fees"
+   ],
+   "pushbacks": [
+    "Sixty-nine a month feels higher than my car payment",
+    "I can sign up down the street for twenty-nine",
+    "What if I get injured or move away, am I locked in?"
+   ],
+   "wins_over": [
+    "transparent pricing",
+    "easy cancellation",
+    "child-friendly schedule"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "fair",
+    "hairStyle": "bob",
+    "hairColor": "blonde",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "ravi_khatri-3",
+   "name": "Ravi Khatri",
+   "gender": "m",
+   "age": 30,
+   "scenario": "trial_follow_up",
+   "role": "membership consultant",
+   "personality": "analytical, skeptical, prepared",
+   "background": "Ravi handles trial follow-ups with a spreadsheet of competitor pricing. He values transparency above all.",
+   "cares_about": [
+    "price transparency",
+    "cancellation flexibility",
+    "risk of injury or relocation"
+   ],
+   "pushbacks": [
+    "Sixty-nine a month is more than my car payment",
+    "I can get a basic membership down the street for twenty-nine",
+    "What if I get injured or move away, am I locked in?"
+   ],
+   "wins_over": [
+    "no hidden fees",
+    "clear cancellation policy",
+    "injury accommodation plan"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "black",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#7a3b2e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "gareth_whitaker-4",
+   "name": "Gareth Whitaker",
+   "gender": "m",
+   "age": 45,
+   "scenario": "trial_follow_up",
+   "role": "experienced member advocate",
+   "personality": "warm facilitator, values reciprocity",
+   "background": "Gareth has been a member for six years and often brings new people in after classes. He respects staff but expects fairness when asking for favors for friends.",
+   "cares_about": [
+    "maintaining trust with his social circle",
+    "future discounts for loyal members",
+    "ensuring his referrals feel valued"
+   ],
+   "pushbacks": [
+    "I get that there’s a rate cap but this friend deserves the member rate after six years of loyalty",
+    "I’ve referred three people already, why does your discount policy treat them differently?",
+    "If you won’t match the rate, I’ll take him to the other club that does"
+   ],
+   "wins_over": [
+    "demonstrating genuine appreciation after he mentions referrals",
+    "showing flexibility on processing fees instead of flat denial",
+    "letting him follow up directly with the manager about exceptions"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 11
+}

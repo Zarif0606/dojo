@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dojo</title>
+<meta name="description" content="Type your line of work and Dojo builds the whole training world: the situations, objections and people, then coaches you as you talk. Powered by NVIDIA Nemotron on Nebius.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23121212'/><circle cx='50' cy='50' r='16' fill='%23f3eee3'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/dojo.css">
+<link rel="stylesheet" href="/static/world.css">
+<link rel="stylesheet" href="/static/help.css">
+<link rel="stylesheet" href="/static/fit.css">
+<link rel="stylesheet" href="/static/fx.css">
+<link rel="stylesheet" href="/static/polish.css">
+<link rel="stylesheet" href="/static/home.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" data-go="start">Dojo</a>
+  <nav>
+    <button class="navlink" data-go="start">New world</button>
+    <button class="navlink" data-go="world" id="nav-world" hidden>This world</button>
+    <button class="navlink" data-go="progress">Progress</button>
+    <button class="navlink" data-go="help">Help</button>
+  </nav>
+  <button class="soundbtn" id="sound" aria-pressed="true" aria-label="Sound effects" title="Sound effects">
+    <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+    <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="m17 9 5 6M22 9l-5 6"/></svg>
+  </button>
+  <span class="provider" id="provider"></span>
+</header>
+
+<main>
+
+  <!-- START -->
+  <section id="view-start" class="view" hidden>
+    <div class="hero">
+      <div class="hero-copy">
+        <h1>Practise the call<br><em>before it counts.</em></h1>
+        <p class="lede">Describe any sales situation. Nemotron builds the scene, the objections and five real-sounding people. You talk out loud, they talk back, and a coach shows you what to say instead.</p>
+        <form class="builder" id="builder">
+          <label class="fld grow"><span>Describe the situation</span><span class="vwrap"><input id="line" maxlength="200" autocomplete="off" placeholder="e.g. a nervous first-time buyer comparing SUVs"><button class="linemic" id="line-mic" type="button" aria-pressed="false" aria-label="Describe the situation with your voice" title="Say it instead of typing"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button></span></label>
+          <button class="btn primary big" id="btn-build" type="submit">Build my world</button>
+          <label class="fld prod"><span>What do you sell? <em>Optional</em></span><input id="product" maxlength="120" autocomplete="off" placeholder="e.g. 2025 Honda CR-V Hybrid"></label>
+        </form>
+        <div class="examples" id="examples" aria-label="Examples"></div>
+        <p class="hint" id="build-hint"></p>
+        <p class="quick"><button class="btn quickgo" id="btn-quick" type="button">Skip the typing: start an insurance call now</button><span class="muted">No sign-up. Say hello and the customer answers.</span></p>
+      </div>
+      <div class="hero-cast" id="hero-cast" aria-hidden="true"></div>
+    </div>
+    <ol class="how" aria-label="How Dojo works">
+      <li><b>1</b><span><strong>Describe it</strong>Type or say any sales job or moment.</span></li>
+      <li><b>2</b><span><strong>Nemotron builds the world</strong>Situations, objections, a scoring rubric and five people.</span></li>
+      <li><b>3</b><span><strong>Talk it out loud</strong>They react live. Your coach scores the call and rewrites your weakest line.</span></li>
+    </ol>
+    <div class="sec-head"><h2 class="step">Sales professions, ready to enter</h2><p class="muted">You are the seller. The AI plays your prospects.</p></div>
+    <div class="worlds" id="worlds"></div>
+    <div id="custom-worlds-wrap" hidden>
+      <h2 class="step">Worlds you built</h2>
+      <div class="worlds" id="custom-worlds"></div>
+    </div>
+  </section>
+
+  <!-- HELP -->
+  <section id="view-help" class="view" hidden>
+    <div class="help-head">
+      <h1>How Dojo works</h1>
+      <p class="lede">A one-minute guided tour with a narrator and captions. Press play, or step through at your own pace.</p>
+    </div>
+    <div class="help-wrap">
+      <h2 id="help-title"></h2>
+      <div class="help-stage" id="help-stage" aria-live="off"></div>
+      <p class="help-cap" id="help-cap" aria-live="polite"></p>
+      <div class="help-ctl">
+        <button class="btn primary" id="hp-play">Play the guide</button>
+        <button class="btn" id="hp-back" aria-label="Previous step">Back</button>
+        <button class="btn" id="hp-next" aria-label="Next step">Next</button>
+        <div id="help-dots" role="group" aria-label="Steps"></div>
+        <span class="grow"></span>
+        <button class="btn" id="hp-cc" aria-pressed="true">Captions</button>
+        <button class="btn" id="hp-snd" aria-pressed="true">Narration</button>
+      </div>
+      <p class="hint">Keyboard: space plays or pauses, the arrow keys change step.</p>
+    </div>
+  </section>
+
+  <!-- WORLD -->
+  <section id="view-world" class="view" hidden>
+    <div class="world-head">
+      <div>
+        <p class="muted" id="w-line"></p>
+        <h1 id="w-title"></h1>
+        <p class="lede" id="w-tagline"></p>
+        <p class="muted" id="w-you"></p>
+      </div>
+      <div class="buildstate" id="buildstate" aria-live="polite"></div>
+    </div>
+
+    <h2 class="step">Situations</h2>
+    <div class="scenarios" id="scenarios"></div>
+    <p class="hint" id="skill-line"></p>
+
+    <h2 class="step">Your <span id="other-side">people</span> <span class="count" id="cast-count"></span></h2>
+    <div class="personas" id="personas"></div>
+
+    <div class="split">
+      <div class="panel"><h2>What you will hear</h2><div class="notes" id="w-objections"></div></div>
+      <div class="panel"><h2>How you are scored</h2><ul class="rubric" id="w-rubric"></ul><p class="hint">Skills marked live are scored by the director after every line you say.</p></div>
+    </div>
+
+    <h2 class="step">How tough <span id="diff-val">3</span></h2>
+    <input type="range" id="difficulty" min="1" max="5" value="3" aria-label="Difficulty">
+    <p class="hint" id="diff-desc"></p>
+
+    <div id="about-wrap" hidden>
+      <h2 class="step">About them <span class="count">optional</span></h2>
+      <input id="about" class="about" placeholder="A company or person to research first, e.g. Shopify" maxlength="200" aria-label="Who to research before the conversation">
+      <p class="hint">Searches the web (Tavily) so the character knows real facts about them.</p>
+    </div>
+
+    <div class="startbar">
+      <label class="prod"><span>What are you selling?</span><input id="w-product" maxlength="120" autocomplete="off" placeholder="Optional, e.g. 2025 Honda CR-V Hybrid"><small id="start-hint"></small></label>
+      <button class="btn primary big" id="btn-start" disabled>Start the conversation</button>
+    </div>
+  </section>
+
+  <!-- SESSION -->
+  <section id="view-session" class="view" hidden>
+    <div class="s-top">
+      <div class="s-who"><h1 id="s-name"></h1><p id="s-meta" class="muted"></p><div class="notes" id="s-note"></div></div>
+      <button class="btn danger" id="btn-end">End and get coaching</button>
+    </div>
+    <div class="arena">
+      <div class="scene-wrap" id="scene-wrap">
+        <div class="scene" id="scene" aria-hidden="true"></div>
+        <div class="face-stage" id="face" aria-hidden="true"></div>
+        <span class="scene-tag" id="scene-tag"></span>
+        <div class="react-chip" id="react-chip" aria-live="polite"></div>
+        <div class="cine" id="cine" aria-hidden="true">
+          <i class="bar top"></i><i class="bar bot"></i>
+          <div class="cine-card"><small id="cine-moment"></small><h2 id="cine-place"></h2><p id="cine-goal"></p><span class="cine-dots" id="cine-dots" hidden><i></i><i></i><i></i></span></div>
+          <span class="cine-skip" id="cine-skip" hidden>Click anywhere to start</span>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="director" aria-label="Live scores from the director model"><h2>Director <span class="count">live</span></h2><div id="director"></div></div>
+        <div class="transcript" id="transcript" aria-live="polite"></div>
+      </aside>
+    </div>
+    <div class="dock">
+      <button class="mic" id="mic" aria-label="Tap to talk" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.93V21h2v-2.07A7 7 0 0 0 19 12h-2Z"/></svg></button>
+      <div class="dock-mid"><p class="status" id="status" aria-live="polite">Tap the mic or press the space bar, then talk.</p><p class="interim" id="interim"></p><div class="meter" aria-hidden="true"><div id="meter-fill"></div></div></div>
+      <form class="typebox" id="typebox"><input id="typed" placeholder="Or type your line and press Enter" autocomplete="off"><button class="btn undo" id="btn-undo" type="button" disabled title="Take back your last line and their reply">Undo</button></form>
+      <div class="voicebar">
+        <label class="check"><input type="checkbox" id="handsfree"> Hands-free</label>
+        <label>Send after <select id="pause" aria-label="How long a pause before your line is sent"><option value="600">short</option><option value="900">normal</option><option value="1600">long</option></select></label>
+        <span class="lat" id="lat" aria-live="off"></span>
+        <details class="hood"><summary>Under the hood</summary><div class="hood-pop"><p class="hint">Five jobs, each on the right NVIDIA Nemotron model, served by Nebius Token Factory.</p><ul id="hood-list"><li>No calls yet.</li></ul></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORT -->
+  <section id="view-report" class="view" hidden>
+    <div class="report-head">
+      <div class="overall"><span id="r-overall">0</span><small>/10</small></div>
+      <div>
+        <h1 id="r-title"></h1>
+        <p id="r-meta" class="muted"></p>
+        <p id="r-outcome" class="outcome"></p>
+      </div>
+    </div>
+    <p id="r-summary" class="summary"></p>
+    <div class="report-grid">
+      <div class="panel"><h2>Scores</h2><div id="r-scores"></div></div>
+      <div class="panel"><h2>How they felt about your lines</h2><div id="r-director"></div></div>
+      <div class="panel"><h2>What worked</h2><ul id="r-strengths"></ul></div>
+      <div class="panel"><h2>Fix next time</h2><ol id="r-fixes"></ol></div>
+      <div class="panel wide"><h2>Lines to steal</h2><div id="r-lines"></div></div>
+      <div class="panel wide"><h2>Practice plan</h2><ul id="r-plan"></ul><p class="memory" id="r-memory"></p></div>
+    </div>
+    <details class="panel wide"><summary>Full transcript</summary><div id="r-transcript" class="transcript small"></div></details>
+    <div class="quick">
+      <button class="btn primary" id="btn-again">Run it back</button>
+      <button class="btn" data-go="start">New conversation</button>
+    </div>
+  </section>
+
+  <!-- PROGRESS -->
+  <section id="view-progress" class="view" hidden>
+    <h1>Progress</h1>
+    <div class="stats" id="stats"></div>
+    <div class="report-grid">
+      <div class="panel wide"><h2>Overall score per conversation</h2><div id="chart-overall" class="chart"></div></div>
+      <div class="panel wide"><h2>Last 10 conversations by skill</h2><div id="p-averages"></div></div>
+    </div>
+    <h2 class="step">History</h2>
+    <div id="history" class="history"></div>
+  </section>
+</main>
+
+<footer class="foot">Built for the Nebius x NVIDIA Global AI Hackathon. Open source under the MIT licence.</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="/static/faces.js"></script>
+<script src="/static/anime.js"></script>
+<script src="/static/scenes.js"></script>
+<script src="/static/help.js"></script>
+<script src="/static/sfx.js"></script>
+<script src="/static/fx.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

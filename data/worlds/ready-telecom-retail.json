@@ -1,0 +1,488 @@
+{
+ "title": "Telecom store rep",
+ "tagline": "Learn to match customers to the right phone and internet plans and close the sale on the floor.",
+ "you_are": "a wireless retail sales consultant",
+ "setting": "Conversations happen at a carrier store counter or demo table where walk-in shoppers browse devices and ask about plans.",
+ "other_side": "shoppers",
+ "scenarios": [
+  {
+   "id": "walk_in_upgrade",
+   "label": "Walk in phone upgrade",
+   "desc": "A shopper with an aging phone wants a new device and a plan that fits their budget.",
+   "setup": "The shopper taps a flagship phone on the demo table and says, Just looking for something faster than my three year old model.",
+   "skills": "Needs discovery and device matching",
+   "scene": "shop",
+   "objective": "Recommend a phone and plan combo and schedule the activation today.",
+   "place": "Metro Wireless flagship store",
+   "moment": "Saturday 11:15 am, bright morning light through the front glass",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e8eaf0",
+     "floor": "#d0d4dd",
+     "accent": "#0066cc",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "counter",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.2,
+      "color": "#2d2f36"
+     },
+     {
+      "type": "screen",
+      "x": -0.6,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#1a1c21"
+     },
+     {
+      "type": "car",
+      "x": 0.7,
+      "z": 0.3,
+      "scale": 0.9,
+      "color": "#0066cc"
+     },
+     {
+      "type": "table",
+      "x": -0.3,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#3a3d45"
+     },
+     {
+      "type": "plant",
+      "x": 0.9,
+      "z": 0.1,
+      "scale": 1.1,
+      "color": "#2e7d32"
+     },
+     {
+      "type": "banner",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.3,
+      "color": "#0066cc"
+     }
+    ]
+   }
+  },
+  {
+   "id": "family_plan_switch",
+   "label": "Family plan switch",
+   "desc": "A parent compares multi line deals and wants to move four numbers from a rival carrier.",
+   "setup": "The shopper spreads a competitor bill on the counter and says, I have four lines and they keep raising the price.",
+   "skills": "Competitive comparison and port in coordination",
+   "scene": "shop",
+   "objective": "Present a family plan offer, confirm port eligibility, and close the switch.",
+   "place": "Metro Wireless flagship store",
+   "moment": "Tuesday 6:50 pm, golden hour glow on the demo wall",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#f5ebe0",
+     "floor": "#dcc8b8",
+     "accent": "#cc5500",
+     "light": "#fff3e6"
+    },
+    "props": [
+     {
+      "type": "counter",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.2,
+      "color": "#3e3630"
+     },
+     {
+      "type": "screen",
+      "x": -0.6,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#1a1c21"
+     },
+     {
+      "type": "table",
+      "x": 0.4,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#4a4038"
+     },
+     {
+      "type": "chair",
+      "x": -0.8,
+      "z": 0.4,
+      "scale": 1.0,
+      "color": "#3e3630"
+     },
+     {
+      "type": "plant",
+      "x": 0.9,
+      "z": 0.1,
+      "scale": 1.1,
+      "color": "#2e7d32"
+     },
+     {
+      "type": "banner",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.3,
+      "color": "#cc5500"
+     }
+    ]
+   }
+  },
+  {
+   "id": "home_internet_bundle",
+   "label": "Home internet bundle",
+   "desc": "A remote worker needs reliable home broadband and wants it bundled with their phone line.",
+   "setup": "The shopper opens a laptop showing speed test results and says, My video calls keep freezing, I need better home internet.",
+   "skills": "Broadband qualification and bundle construction",
+   "scene": "shop",
+   "objective": "Qualify address for fiber or 5G home, build a phone plus internet bundle, and book the install.",
+   "place": "Metro Wireless flagship store",
+   "moment": "Thursday 3:20 pm, overcast sky pressing against the windows",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#dce0e8",
+     "floor": "#b8c0cc",
+     "accent": "#004499",
+     "light": "#e8edf2"
+    },
+    "props": [
+     {
+      "type": "counter",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.2,
+      "color": "#2a2f36"
+     },
+     {
+      "type": "screen",
+      "x": -0.6,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#1a1c21"
+     },
+     {
+      "type": "desk",
+      "x": 0.5,
+      "z": 0.4,
+      "scale": 1.0,
+      "color": "#3a3f47"
+     },
+     {
+      "type": "lamp",
+      "x": -0.4,
+      "z": 0.5,
+      "scale": 0.9,
+      "color": "#c8b890"
+     },
+     {
+      "type": "plant",
+      "x": 0.9,
+      "z": 0.1,
+      "scale": 1.1,
+      "color": "#2e7d32"
+     },
+     {
+      "type": "banner",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.3,
+      "color": "#004499"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "walk_in_upgrade",
+   "role": "first time smartphone buyer",
+   "personality": "nervous and detail oriented",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 28,
+   "angle": "Needs every fee explained before committing."
+  },
+  {
+   "scenario": "walk_in_upgrade",
+   "role": "tech savvy upgrader",
+   "personality": "confident and time pressed",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 35,
+   "angle": "Wants the best specs fast, dislikes upsell."
+  },
+  {
+   "scenario": "family_plan_switch",
+   "role": "budget conscious parent",
+   "personality": "calculating and skeptical",
+   "difficulty": 4,
+   "gender": "f",
+   "age": 42,
+   "angle": "Will walk away if the total monthly cost is not lower."
+  },
+  {
+   "scenario": "family_plan_switch",
+   "role": "small business owner",
+   "personality": "direct and decisive",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 48,
+   "angle": "Needs clear port timeline for three employee lines."
+  },
+  {
+   "scenario": "home_internet_bundle",
+   "role": "remote worker with deadlines",
+   "personality": "stressed and practical",
+   "difficulty": 5,
+   "gender": "f",
+   "age": 31,
+   "angle": "Cannot tolerate install delays, will escalate fast."
+  }
+ ],
+ "objections": [
+  "Your activation fee is higher than the store down the street",
+  "I don’t want insurance, why is it on the quote?",
+  "The competitor gives free phones for switching",
+  "My current contract ends in two months, I don’t want early termination fees",
+  "How do I know your 5G home internet actually reaches my apartment?",
+  "I’ve had billing mistakes before, how is this different?",
+  "Why does the unlimited plan throttle video at 480p?",
+  "If I bring my own phone, do I still pay the same monthly?"
+ ],
+ "rubric": [
+  {
+   "id": "needs_discovery",
+   "label": "Needs discovery",
+   "what": "Asks open questions about usage, budget, and pain points before recommending."
+  },
+  {
+   "id": "plan_matching",
+   "label": "Plan matching",
+   "what": "Connects the right plan tier and device to the shopper’s stated needs."
+  },
+  {
+   "id": "port_in_clarity",
+   "label": "Port in clarity",
+   "what": "Explains the number transfer steps, timeline, and any temporary service gaps."
+  },
+  {
+   "id": "fee_transparency",
+   "label": "Fee transparency",
+   "what": "Itemises every recurring and one time charge so the total monthly cost is clear."
+  },
+  {
+   "id": "compliance_disclosure",
+   "label": "Compliance disclosure",
+   "what": "States required regulatory disclosures, data caps, and arbitration clauses accurately."
+  },
+  {
+   "id": "close_and_next_steps",
+   "label": "Close and next steps",
+   "what": "Confirms the deal, sets the activation or install date, and summarises what the shopper leaves with."
+  }
+ ],
+ "live_meters": [
+  "needs_discovery",
+  "fee_transparency",
+  "close_and_next_steps"
+ ],
+ "pitfalls": [
+  "Quoting a promotional price without the qualifying auto pay or credit check conditions.",
+  "Activating a line before the port in completes, leaving the shopper without service.",
+  "Skipping the required arbitration clause and data management disclosures."
+ ],
+ "id": "ready-telecom-retail",
+ "line": "Selling phone and internet plans in a retail store",
+ "product": null,
+ "researched": false,
+ "personas": [
+  {
+   "id": "faye_karpov-0",
+   "name": "Faye Karpov",
+   "gender": "f",
+   "age": 28,
+   "scenario": "walk_in_upgrade",
+   "role": "wireless retail sales consultant",
+   "personality": "nervous and detail oriented",
+   "background": "Faye moved to the city a year ago to work in tech support before switching to retail sales. She double checks every line item on a bill before signing up for a new plan.",
+   "cares_about": [
+    "making sure she doesn’t overpay",
+    "understanding the contract fully",
+    "getting reliable service"
+   ],
+   "pushbacks": [
+    "The activation fee seems higher than the store down the street. Why is it priced like this?",
+    "Why is insurance automatically added to the quote? I don’t want it",
+    "Other carriers are offering free phones for switching, why should I stay with you?"
+   ],
+   "wins_over": [
+    "clear pricing with no hidden fees",
+    "demonstrating real coverage in her neighborhood",
+    "offering a flexible upgrade path without penalties"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 0,
+    "clothes": "#9a4d4d"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "brian_patel-1",
+   "name": "Brian Patel",
+   "gender": "m",
+   "age": 35,
+   "scenario": "walk_in_upgrade",
+   "role": "wireless retail sales consultant",
+   "personality": "wants specs fast, dislikes upsell",
+   "background": "Brian started as a technician at a hardware store before moving to retail tech sales. He knows the latest phones inside out and is focused on getting customers matched with what they need fast.",
+   "cares_about": [
+    "getting the best specs for his budget",
+    "completing the sale in record time",
+    "avoiding unnecessary add-ons"
+   ],
+   "pushbacks": [
+    "Actually, the $50 activation fee covers remote setup we don’t get charged at other stores",
+    "Insurance protects you if something happens to the device, it’s not a scam, it’s standard coverage",
+    "Free phones often require long contracts and don’t include the plan you want"
+   ],
+   "wins_over": [
+    "immediate clarity on pricing",
+    "honesty about fees",
+    "straightforward answers"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#2f5d62"
+   },
+   "accent": "en-CA"
+  },
+  {
+   "id": "sofia_ramirez-2",
+   "name": "Sofia Ramirez",
+   "gender": "f",
+   "age": 42,
+   "scenario": "family_plan_switch",
+   "role": "budget conscious parent",
+   "personality": "calculating and skeptical",
+   "background": "Sofia works full time as a retail telecom sales consultant. She raises two kids and carefully compares every monthly bill.",
+   "cares_about": [
+    "monthly bill total",
+    "hidden fees",
+    "kids’ data usage"
+   ],
+   "pushbacks": [
+    "Your activation fee is higher than the store down the street",
+    "I don’t want insurance, why is it on the quote?",
+    "The competitor gives free phones for switching"
+   ],
+   "wins_over": [
+    "lowering the total monthly cost",
+    "transparent fee breakdown",
+    "discount on bundled services"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 1,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "ronald_knox-3",
+   "name": "Ronald Knox",
+   "gender": "m",
+   "age": 48,
+   "scenario": "family_plan_switch",
+   "role": "small business owner",
+   "personality": "direct and decisive",
+   "background": "Runs a local courier service with three drivers. He budgets tightly and plans ahead for phone costs. He’s done with wasted time and vague answers.",
+   "cares_about": [
+    "device durability",
+    "billing transparency",
+    "network reliability"
+   ],
+   "pushbacks": [
+    "The activation fee is $50 here and $30 across the street, why charge more?",
+    "Why is insurance automatically on the quote? i don’t need it",
+    "Free phones from competitors? what’s the catch? i want the straight price"
+   ],
+   "wins_over": [
+    "i see you’ve already pulled up the port timeline for my team",
+    "you explained the 5g home setup matches my building’s signal",
+    "you didn’t push a plan i don’t need and listed all costs upfront"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3b4a5a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "violet_chen-4",
+   "name": "Violet Chen",
+   "gender": "f",
+   "age": 31,
+   "scenario": "home_internet_bundle",
+   "role": "remote worker with deadlines",
+   "personality": "stressed and practical",
+   "background": "Violet is a remote marketing manager juggling client meetings across time zones. She upgraded to wireless home internet to avoid unreliable service that stalled her work.",
+   "cares_about": [
+    "reliable connection for video calls",
+    "no hidden fees on her bill",
+    "quick setup before her lease ends"
+   ],
+   "pushbacks": [
+    "Activation fees are too high compared to the store down the street; I need justification",
+    "Why is insurance automatically added? I don’t want it",
+    "Free phones from competitors are compelling, what extra value do you offer?"
+   ],
+   "wins_over": [
+    "showing a flexible contract ending when her current lease does",
+    "demonstrating 5G coverage reaching her building address",
+    "offering a technician who will install within 24 hours"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3f4f3f"
+   },
+   "accent": "en-CA"
+  }
+ ],
+ "builtin": true,
+ "order": 9
+}

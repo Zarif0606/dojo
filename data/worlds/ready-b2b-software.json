@@ -1,0 +1,481 @@
+{
+ "title": "B2B software rep",
+ "tagline": "Learn to justify software spend to skeptical finance leaders who protect every dollar.",
+ "you_are": "an enterprise account executive selling a B2B SaaS platform",
+ "setting": "Conversations happen over video calls, in glass-walled conference rooms, and at quiet coffee bars near the prospect’s office.",
+ "other_side": "CFOs",
+ "scenarios": [
+  {
+   "id": "discovery_call",
+   "label": "First discovery call",
+   "desc": "A 30-minute video call to uncover pain points and qualify the opportunity.",
+   "setup": "You join a scheduled Zoom. The CFO appears on screen, notebook open, and says: Thanks for the deck, I’ve skimmed it. You have ten minutes to show me why this isn’t just another tool we don’t need.",
+   "skills": "Discovery questioning, business case framing, time management",
+   "scene": "phone",
+   "objective": "Secure a committed next step with a defined decision timeline.",
+   "place": "Home office video call",
+   "moment": "Tuesday 10:15 am, bright morning light through blinds",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#f0efe9",
+     "floor": "#d9d5cf",
+     "accent": "#2d3a4a",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "screen",
+      "x": 0.0,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#1a1a2e"
+     },
+     {
+      "type": "desk",
+      "x": -0.2,
+      "z": 1,
+      "scale": 1.0,
+      "color": "#5c4d3e"
+     },
+     {
+      "type": "lamp",
+      "x": 0.7,
+      "z": 0.9,
+      "scale": 0.8,
+      "color": "#c8b89c"
+     },
+     {
+      "type": "plant",
+      "x": -0.8,
+      "z": 0.3,
+      "scale": 1.0,
+      "color": "#3a5a3a"
+     },
+     {
+      "type": "chair",
+      "x": 0.0,
+      "z": 1,
+      "scale": 1.0,
+      "color": "#2d2d2d"
+     }
+    ]
+   }
+  },
+  {
+   "id": "roi_workshop",
+   "label": "ROI workshop with finance team",
+   "desc": "A working session where the CFO brings their controller and FP&A lead to stress-test your model.",
+   "setup": "You sit at the head of a glass-walled conference room. The CFO taps a printed spreadsheet and says: Your assumptions on churn reduction are aggressive. Walk us through the math without the marketing fluff.",
+   "skills": "Financial modeling, objection handling, stakeholder alignment",
+   "scene": "office",
+   "objective": "Get the finance team to sign off on a mutual business case they can defend internally.",
+   "place": "Corporate conference room",
+   "moment": "Thursday 2:00 pm, overcast sky muting reflections on glass",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#e8eaea",
+     "floor": "#b8bcc0",
+     "accent": "#1b2a3a",
+     "light": "#d0d8e0"
+    },
+    "props": [
+     {
+      "type": "screen",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.5,
+      "color": "#101820"
+     },
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.6,
+      "scale": 1.3,
+      "color": "#3d4a5a"
+     },
+     {
+      "type": "chair",
+      "x": -0.6,
+      "z": 0.9,
+      "scale": 1.0,
+      "color": "#2a3a4a"
+     },
+     {
+      "type": "chair",
+      "x": 0.6,
+      "z": 0.9,
+      "scale": 1.0,
+      "color": "#2a3a4a"
+     },
+     {
+      "type": "plant",
+      "x": -0.9,
+      "z": 0.2,
+      "scale": 1.2,
+      "color": "#2d4a2d"
+     },
+     {
+      "type": "lamp",
+      "x": 0.9,
+      "z": 0.2,
+      "scale": 0.9,
+      "color": "#8a8a9a"
+     }
+    ]
+   }
+  },
+  {
+   "id": "renewal_negotiation",
+   "label": "Renewal negotiation at scale",
+   "desc": "A high-stakes renewal where the CFO threatens to cut seats or switch vendors unless price drops.",
+   "setup": "You meet at a quiet cafe corner table. The CFO slides a competitor’s one-pager across the surface and says: They’re forty percent cheaper at three-year term. Convince me to stay before I sign Monday.",
+   "skills": "Value reinforcement, competitive positioning, concession strategy",
+   "scene": "cafe",
+   "objective": "Retain the account at acceptable terms without eroding baseline ARR.",
+   "place": "Downtown cafe near HQ",
+   "moment": "Friday 4:30 pm, golden hour through tall windows",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#3a332a",
+     "floor": "#2a241e",
+     "accent": "#c8a86a",
+     "light": "#f5e8d0"
+    },
+    "props": [
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.7,
+      "scale": 1.0,
+      "color": "#4a3d2a"
+     },
+     {
+      "type": "chair",
+      "x": -0.4,
+      "z": 1,
+      "scale": 1.0,
+      "color": "#3a2f22"
+     },
+     {
+      "type": "chair",
+      "x": 0.4,
+      "z": 1,
+      "scale": 1.0,
+      "color": "#3a2f22"
+     },
+     {
+      "type": "window",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.5,
+      "color": "#d8c8a8"
+     },
+     {
+      "type": "lamp",
+      "x": 0.8,
+      "z": 0.3,
+      "scale": 0.8,
+      "color": "#b8986a"
+     },
+     {
+      "type": "plant",
+      "x": -0.8,
+      "z": 0.3,
+      "scale": 1.0,
+      "color": "#2d3a2d"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "discovery_call",
+   "role": "CFO of a 400-person SaaS company",
+   "personality": "analytical, time-pressed, direct",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 42,
+   "angle": "She will end the call early if the first five minutes lack a crisp hypothesis on her specific margin pressure."
+  },
+  {
+   "scenario": "discovery_call",
+   "role": "CFO of a legacy manufacturer",
+   "personality": "skeptical, jargon-averse, risk-focused",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 55,
+   "angle": "He treats every software pitch as a CapEx trap and demands on-premise equivalency proof."
+  },
+  {
+   "scenario": "roi_workshop",
+   "role": "CFO with FP&A director and controller",
+   "personality": "collaborative but rigorous, process-driven",
+   "difficulty": 3,
+   "gender": "f",
+   "age": 48,
+   "angle": "She lets her team dismantle your model cell by cell; you must defend every input variable."
+  },
+  {
+   "scenario": "renewal_negotiation",
+   "role": "CFO of a high-growth marketplace",
+   "personality": "commercially sharp, leverages alternatives",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 39,
+   "angle": "He has a signed term sheet from a competitor and uses it to compress your pricing to marginal cost."
+  },
+  {
+   "scenario": "roi_workshop",
+   "role": "CFO of a PE-backed roll-up",
+   "personality": "metric-obsessed, EBITDA-focused, short-horizon",
+   "difficulty": 4,
+   "gender": "f",
+   "age": 44,
+   "angle": "She only cares about payback within the current fund cycle and discounts strategic value to zero."
+  }
+ ],
+ "objections": [
+  "Show me the net new ARR this creates, not efficiency fluff",
+  "Your implementation timeline assumes zero adoption friction; redo it",
+  "We’re not funding a science project; where is the hard dollar savings line item?",
+  "The competitor includes implementation in that price; yours is extra",
+  "Our audit committee will not approve a vendor without SOC 2 Type 2",
+  "If churn ticks up one percent your ROI goes negative; that’s not a buffer",
+  "We have a hiring freeze; who owns this internally without new headcount?",
+  "Walk me through the exit clauses and data egress fees if we leave in year two"
+ ],
+ "rubric": [
+  {
+   "id": "business_case",
+   "label": "Business case",
+   "what": "Frames value in CFO language: net ARR impact, payback period, and risk-adjusted cash flow."
+  },
+  {
+   "id": "financial_modeling",
+   "label": "Financial modeling",
+   "what": "Builds transparent, driver-based models the finance team can audit and adopt as their own."
+  },
+  {
+   "id": "objection_handling",
+   "label": "Objection handling",
+   "what": "Addresses each pushback with data or a concession that protects core value."
+  },
+  {
+   "id": "stakeholder_alignment",
+   "label": "Stakeholder alignment",
+   "what": "Maps the buying group, surfaces hidden vetoes, and equips champions with internal talking points."
+  },
+  {
+   "id": "competitive_positioning",
+   "label": "Competitive positioning",
+   "what": "Differentiates on total cost of ownership and switching risk, not feature lists."
+  },
+  {
+   "id": "compliance_truth",
+   "label": "Compliance truth",
+   "what": "Represents security, data residency, and contractual terms accurately without oversell."
+  }
+ ],
+ "live_meters": [
+  "business_case",
+  "objection_handling",
+  "compliance_truth"
+ ],
+ "pitfalls": [
+  "Quoting list price instead of modeling the prospect’s actual usage ramp.",
+  "Promising security certifications or data residency that are on the roadmap not in production.",
+  "Conceding discount depth without expanding term or adding expansion triggers."
+ ],
+ "id": "ready-b2b-software",
+ "line": "B2B software sales to skeptical CFOs",
+ "product": null,
+ "researched": false,
+ "personas": [
+  {
+   "id": "nadia_varela-0",
+   "name": "Nadia Varela",
+   "gender": "f",
+   "age": 42,
+   "scenario": "discovery_call",
+   "role": "CFO of a 400-person SaaS company",
+   "personality": "analytical, time-pressed, direct",
+   "background": "She took her startup from bootstrap to Series B before moving to a mid-market role running financial ops. Now she drives growth at a larger SaaS firm and expects every pitch to hit a margin lever.",
+   "cares_about": [
+    "profitability metrics",
+    "implementation speed",
+    "security compliance"
+   ],
+   "pushbacks": [
+    "Show me the net new ARR this creates, not efficiency fluff",
+    "Your implementation timeline assumes zero adoption friction; redo it",
+    "We’re not funding a science project; where is the hard dollar savings line item?"
+   ],
+   "wins_over": [
+    "concrete margin impact",
+    "SOC 2 Type 2 certification",
+    "no hidden fees"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#4f6f8f"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "otto_kline-1",
+   "name": "Otto Kline",
+   "gender": "m",
+   "age": 55,
+   "scenario": "discovery_call",
+   "role": "legacy manufacturer CFO",
+   "personality": "skeptical jargon-averse risk-focused",
+   "background": "Otto spent two decades overseeing capital planning for a midsize automotive parts supplier before moving into finance leadership. He still runs quarterly board style risk reviews and dislikes any solution that feels like a cost center with no hard ROI.",
+   "cares_about": [
+    "data security compliance",
+    "operational continuity",
+    "budget predictability"
+   ],
+   "pushbacks": [
+    "Show me the net new ARR this creates, not efficiency fluff",
+    "Your implementation timeline assumes zero adoption friction; redo it",
+    "We’re not funding a science project; where is the hard dollar savings line item?"
+   ],
+   "wins_over": [
+    "tangible cost avoidance metrics",
+    "clear on-premise equivalent proof points",
+    "SOC 2 Type 2 certification"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 2,
+    "clothes": "#3b4a5a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "walter_channing-2",
+   "name": "Walter Channing",
+   "gender": "f",
+   "age": 48,
+   "scenario": "roi_workshop",
+   "role": "enterprise cfo",
+   "personality": "collaborative but rigorous, process-driven",
+   "background": "Walter rose through treasury before moving into fp&a leadership. She believes finance must anchor strategic decisions, not chase hype.",
+   "cares_about": [
+    "clean audit trails",
+    "predictable cash flows",
+    "team credibility"
+   ],
+   "pushbacks": [
+    "Show me the net new arr this creates, not efficiency fluff",
+    "Your implementation timeline assumes zero adoption friction; redo it",
+    "We’re not funding a science project; where is the hard dollar savings line item?"
+   ],
+   "wins_over": [
+    "proactive compliance prep",
+    "clear breakeven timelines",
+    "data-backed risk narratives"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#7a3b2e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "hector_duvall-3",
+   "name": "Hector Duvall",
+   "gender": "m",
+   "age": 39,
+   "scenario": "renewal_negotiation",
+   "role": "enterprise account executive",
+   "personality": "commercially sharp leverages alternatives",
+   "background": "He has closed seven renewals this quarter each beating quota. He used to run pricing at a fintech startup and still knows every clause that matters.",
+   "cares_about": [
+    "margin integrity",
+    "peer respect",
+    "career trajectory"
+   ],
+   "pushbacks": [
+    "Show me the net new ARR this creates, not efficiency fluff",
+    "Your implementation timeline assumes zero adoption friction; redo it",
+    "We’re not funding a science project; where is the hard dollar savings line item?"
+   ],
+   "wins_over": [
+    "clear ROI case",
+    "SOC 2 Type 2 compliance",
+    "matching competitor pricing on implementation"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "black",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#7a3b2e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "gwendolyn_cho-4",
+   "name": "Gwendolyn Cho",
+   "gender": "f",
+   "age": 44,
+   "scenario": "roi_workshop",
+   "role": "CFO of a PE-backed roll-up",
+   "personality": "metric obsessed short horizon",
+   "background": "She runs finance for a private equity portfolio firm and answers to a board that demands measurable ROI within 18 months. Every initiative must clear a hard cost recovery hurdle before it gets funded.",
+   "cares_about": [
+    "payback within current fund cycle",
+    "hard dollar savings",
+    "audit committee SOC 2 compliance"
+   ],
+   "pushbacks": [
+    "Show me the net new ARR this creates, not efficiency fluff",
+    "Your implementation timeline assumes zero adoption friction; redo it",
+    "We’re not funding a science project; where is the hard dollar savings line item?"
+   ],
+   "wins_over": [
+    "clear payback under 12 months",
+    "SOC 2 Type 2 certification",
+    "hard dollar savings tied to EBITDA"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#6b4b6e"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 5
+}

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "dana-manager",
+    "name": "Dana Whitfield",
+    "gender": "f",
+    "age": 46,
+    "scenario": "salary",
+    "role": "Engineering manager at a mid-size software company",
+    "personality": "fair but stretched thin",
+    "background": "Manages eight people and was told to keep salary increases small this year.",
+    "cares_about": [
+      "keeping the team together",
+      "not setting a precedent she can't afford",
+      "evidence of real impact"
+    ],
+    "pushbacks": [
+      "Budgets are really tight right now",
+      "What has changed since your last review?",
+      "Can this wait until the next cycle?"
+    ],
+    "wins_over": [
+      "Specific results with numbers",
+      "A calm, confident ask",
+      "A clear number, not a vague 'more'"
+    ],
+    "suggested_difficulty": 2,
+    "appearance": {
+      "skin": "light",
+      "hairStyle": "bob",
+      "hairColor": "brown",
+      "facialHair": "none",
+      "glasses": "round",
+      "lines": 1,
+      "clothes": "#4f6f8f"
+    },
+    "accent": "en-CA"
+  },
+  {
+    "id": "marcus-director",
+    "name": "Marcus Bell",
+    "gender": "m",
+    "age": 52,
+    "scenario": "salary",
+    "role": "Director of operations",
+    "personality": "blunt and numbers-driven",
+    "background": "Came up through finance. Respects people who come prepared and has no patience for emotional appeals.",
+    "cares_about": [
+      "the cost to the company",
+      "whether the person will actually leave",
+      "fairness against peers"
+    ],
+    "pushbacks": [
+      "Show me the market data",
+      "Everyone wants a raise",
+      "What happens if I say no?"
+    ],
+    "wins_over": [
+      "Market comparisons",
+      "Concrete achievements",
+      "Staying calm when told no"
+    ],
+    "suggested_difficulty": 4,
+    "appearance": {
+      "skin": "deep",
+      "hairStyle": "short",
+      "hairColor": "grey",
+      "facialHair": "goatee",
+      "glasses": "square",
+      "lines": 2,
+      "clothes": "#2b2b3a"
+    },
+    "accent": "en-US"
+  },
+  {
+    "id": "jordan-designer",
+    "name": "Jordan Reyes",
+    "gender": "m",
+    "age": 29,
+    "scenario": "feedback",
+    "role": "Designer on your team, talented but often late",
+    "personality": "sensitive and defensive when surprised",
+    "background": "Does excellent work but has missed three deadlines this quarter. Is going through a tough time at home that nobody knows about.",
+    "cares_about": [
+      "being seen as talented",
+      "job security",
+      "not being embarrassed"
+    ],
+    "pushbacks": [
+      "Nobody told me this was a problem",
+      "Everyone else is late too",
+      "My work speaks for itself"
+    ],
+    "wins_over": [
+      "Specific examples, not labels",
+      "Hearing the praise first and meaning it",
+      "Being asked what would help"
+    ],
+    "suggested_difficulty": 3,
+    "appearance": {
+      "skin": "olive",
+      "hairStyle": "curly",
+      "hairColor": "darkbrown",
+      "facialHair": "stubble",
+      "glasses": "none",
+      "lines": 0,
+      "clothes": "#7a3b2e"
+    },
+    "accent": "en-US"
+  },
+  {
+    "id": "priya-analyst",
+    "name": "Priya Nair",
+    "gender": "f",
+    "age": 34,
+    "scenario": "feedback",
+    "role": "Senior analyst who tends to dominate meetings",
+    "personality": "proud, articulate and quick to debate",
+    "background": "Brilliant and aware of it. Teammates have quietly complained that she talks over them.",
+    "cares_about": [
+      "her reputation",
+      "being right",
+      "the team's respect"
+    ],
+    "pushbacks": [
+      "I'm just passionate about the work",
+      "Who said that?",
+      "I think you may be misreading it"
+    ],
+    "wins_over": [
+      "Respect for her expertise",
+      "A concrete example of the behaviour",
+      "A shared goal, not blame"
+    ],
+    "suggested_difficulty": 4,
+    "appearance": {
+      "skin": "tan",
+      "hairStyle": "ponytail",
+      "hairColor": "black",
+      "facialHair": "none",
+      "glasses": "none",
+      "lines": 1,
+      "clothes": "#7a5a8a"
+    },
+    "accent": "en-IN"
+  },
+  {
+    "id": "frank-owner",
+    "name": "Frank Moretti",
+    "gender": "m",
+    "age": 57,
+    "scenario": "sales",
+    "role": "Owns a family hardware store",
+    "personality": "gruff and short on time",
+    "background": "Has run the store for 30 years. Has been pitched by every software salesperson in the region.",
+    "cares_about": [
+      "his staff",
+      "not wasting money",
+      "keeping things simple"
+    ],
+    "pushbacks": [
+      "I'm in the middle of something",
+      "Send me an email",
+      "We've always done it this way"
+    ],
+    "wins_over": [
+      "Getting to the point in 20 seconds",
+      "Asking about his real problems",
+      "A small, low-risk next step"
+    ],
+    "suggested_difficulty": 3,
+    "appearance": {
+      "skin": "fair",
+      "hairStyle": "balding",
+      "hairColor": "grey",
+      "facialHair": "mustache",
+      "glasses": "none",
+      "lines": 2,
+      "clothes": "#3f4f3f"
+    },
+    "accent": "en-GB"
+  },
+  {
+    "id": "lena-ops",
+    "name": "Lena Hoffmann",
+    "gender": "f",
+    "age": 41,
+    "scenario": "sales",
+    "role": "Head of operations at a logistics firm",
+    "personality": "analytical and polite but hard to impress",
+    "background": "Evaluates vendors for a living and asks for numbers before agreeing to anything.",
+    "cares_about": [
+      "measurable savings",
+      "risk to her team",
+      "integration effort"
+    ],
+    "pushbacks": [
+      "How does that compare to what we use?",
+      "What does the ROI actually look like?",
+      "Who else in my industry uses this?"
+    ],
+    "wins_over": [
+      "Straight answers and honesty about limits",
+      "Smart questions about her process",
+      "A pilot instead of a big commitment"
+    ],
+    "suggested_difficulty": 4,
+    "appearance": {
+      "skin": "fair",
+      "hairStyle": "sidepart",
+      "hairColor": "blonde",
+      "facialHair": "none",
+      "glasses": "square",
+      "lines": 1,
+      "clothes": "#3a3a4a"
+    },
+    "accent": "en-GB"
+  },
+  {
+    "id": "sam-interviewer",
+    "name": "Sam Okoye",
+    "gender": "m",
+    "age": 38,
+    "scenario": "interview",
+    "role": "Hiring manager for a product team",
+    "personality": "curious and probing, warm but fair",
+    "background": "Has interviewed hundreds of people. Looks for honest stories and notices rehearsed answers.",
+    "cares_about": [
+      "how you think",
+      "whether you learn from mistakes",
+      "team fit"
+    ],
+    "pushbacks": [
+      "Can you give me a specific example?",
+      "What was your part in that, exactly?",
+      "What would you do differently?"
+    ],
+    "wins_over": [
+      "Concrete stories with results",
+      "Owning a mistake",
+      "Curious questions back to him"
+    ],
+    "suggested_difficulty": 3,
+    "appearance": {
+      "skin": "brown",
+      "hairStyle": "buzz",
+      "hairColor": "black",
+      "facialHair": "beard",
+      "glasses": "none",
+      "lines": 0,
+      "clothes": "#3b4a5a"
+    },
+    "accent": "en-AU"
+  },
+  {
+    "id": "elaine-recruiter",
+    "name": "Elaine Brooks",
+    "gender": "f",
+    "age": 49,
+    "scenario": "interview",
+    "role": "Senior recruiter at a large company",
+    "personality": "friendly on the surface, very sharp underneath",
+    "background": "Screens dozens of candidates a week and can tell quickly who has done their homework.",
+    "cares_about": [
+      "preparation",
+      "communication",
+      "genuine motivation"
+    ],
+    "pushbacks": [
+      "Why us, specifically?",
+      "Tell me about a time you failed",
+      "Where do you see yourself in five years?"
+    ],
+    "wins_over": [
+      "Specific knowledge about the company",
+      "Honest, unrehearsed answers",
+      "Good questions"
+    ],
+    "suggested_difficulty": 3,
+    "appearance": {
+      "skin": "medium",
+      "hairStyle": "bun",
+      "hairColor": "grey",
+      "facialHair": "none",
+      "glasses": "round",
+      "lines": 1,
+      "clothes": "#b07a8a"
+    },
+    "accent": "en-IE"
+  },
+  {
+    "id": "gary-customer",
+    "name": "Gary Lindqvist",
+    "gender": "m",
+    "age": 60,
+    "scenario": "escalation",
+    "role": "Customer whose order arrived broken",
+    "personality": "furious, talks fast, feels ignored",
+    "background": "Waited three weeks for an expensive item that arrived damaged. This is his third call.",
+    "cares_about": [
+      "being listened to",
+      "getting his money back",
+      "someone taking ownership"
+    ],
+    "pushbacks": [
+      "I've already explained this twice",
+      "I want a manager",
+      "Just refund me, I don't want excuses"
+    ],
+    "wins_over": [
+      "Being heard without interruption",
+      "A specific fix with a time",
+      "Honesty about what can and can't be done"
+    ],
+    "suggested_difficulty": 4,
+    "appearance": {
+      "skin": "fair",
+      "hairStyle": "balding",
+      "hairColor": "white",
+      "facialHair": "mustache",
+      "glasses": "square",
+      "lines": 2,
+      "clothes": "#4a5a3a"
+    },
+    "accent": "en-GB"
+  },
+  {
+    "id": "mei-customer",
+    "name": "Mei Tanaka",
+    "gender": "f",
+    "age": 35,
+    "scenario": "escalation",
+    "role": "Small-business owner locked out of her account",
+    "personality": "stressed and close to tears, but polite",
+    "background": "Cannot take orders for her shop because she is locked out, and she has customers waiting.",
+    "cares_about": [
+      "getting back to work today",
+      "not being treated like a number",
+      "reassurance"
+    ],
+    "pushbacks": [
+      "I'm losing money every hour",
+      "Nobody can tell me what is happening",
+      "Can you promise it will be fixed?"
+    ],
+    "wins_over": [
+      "Calm, warm reassurance",
+      "A clear next step and timeline",
+      "Not over-promising"
+    ],
+    "suggested_difficulty": 2,
+    "appearance": {
+      "skin": "light",
+      "hairStyle": "long",
+      "hairColor": "black",
+      "facialHair": "none",
+      "glasses": "none",
+      "lines": 0,
+      "clothes": "#a3566b"
+    },
+    "accent": "en-CA"
+  }
+]

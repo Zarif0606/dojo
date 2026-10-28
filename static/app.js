@@ -56,7 +56,7 @@ async function init() {
   $("#about-wrap").hidden = !state.config.research;
   setDifficulty(3); enter($("#view-start"));
   if (!SpeechRec) toast("Voice input needs Chrome or Edge. You can still type your lines.", 8000);
-  heroCast(); setupWebVoice();
+  heroCast();
   await loadWorlds();
   show("start");
 }
@@ -257,24 +257,8 @@ function pickVoice(p) {
 }
 function voiceInfo(p) {
   if (state.config?.voice === "kokoro" && !state.ttsDown) return { label: /^en-(GB|IE|AU|NZ|ZA|IN|scotland)/.test(p.accent) ? "British" : "American", exact: true, name: "Kokoro" };
-  if (webVoiceOn() && webTts.ready) return { label: /^en-(GB|IE|AU|NZ|ZA|IN|scotland)/.test(p.accent) ? "British" : "American", exact: true, name: "Kokoro (in your browser)" };
   const { voice, exact } = pickVoice(p), label = ACCENTS[p.accent] || "";
   return { label, exact, name: voice?.name || "default voice" };
-}
-// Natural voice that runs in the visitor’s browser (static/webtts.js): on by default where WebGPU exists, one checkbox to turn it off.
-const webVoiceOn = () => webTts.supported && pref("natVoice", true) && !webTts.failed;
-async function setupWebVoice() {
-  if (state.config?.voice === "kokoro" || !(await webTts.init())) return;
-  const box = $("#natvoice"); $("#natvoice-wrap").hidden = false; box.checked = pref("natVoice", true);
-  box.onchange = () => { setPref("natVoice", box.checked); if (box.checked) webTts.load(); else stopSpeaking(); };
-  let told = false;
-  webTts.onStatus = (s) => {
-    if (s.phase === "loading" && !told) { told = true; toast("Loading the natural voice (about 160 MB, only the first time). Basic voices are used until it’s ready.", 7000); }
-    if (s.phase === "loading") $("#lat").textContent = `Natural voice ${s.pct || 0}%`;
-    if (s.phase === "ready") { $("#lat").textContent = ""; toast("Natural voice ready.", 3000); }
-    if (s.phase === "failed") { $("#natvoice-wrap").hidden = true; toast("The natural voice couldn’t load here, so the browser voices are used.", 6000); }
-  };
-  if (box.checked) setTimeout(() => webTts.load(), 1500);
 }
 // The realistic neural voice (Kokoro, free, runs on this computer) when it is installed; otherwise the browser’s own voices.
 async function fetchTts(text, mood) {
@@ -299,7 +283,7 @@ const splitSentences = (t) => (t.match(/[^.!?…]+[.!?…]*["')\]]*\s*/g) || [t]
 // and speech can begin on the first sentence while the AI is still writing the rest.
 function makeSpeaker(p, getMood, onStart) {
   stopSpeaking();
-  const token = speakToken, items = [], useTts = state.config?.voice === "kokoro" && !state.ttsDown, useWeb = !useTts && webVoiceOn();
+  const token = speakToken, items = [], useTts = state.config?.voice === "kokoro" && !state.ttsDown;
   let closed = false, wake = null, started = false;
   const kick = () => { const w = wake; wake = null; w?.(); };
   activeKick = kick;
@@ -324,7 +308,7 @@ function makeSpeaker(p, getMood, onStart) {
   return {
     add(text, mood) {
       if (token !== speakToken) return; // interrupted: don’t fetch audio nobody will hear
-      const it = { text, audio: useTts ? fetchTts(text, mood).catch((e) => { ttsFailed(e); return null; }) : useWeb ? webTts.synth(text, p, mood) : null };
+      const it = { text, audio: useTts ? fetchTts(text, mood).catch((e) => { ttsFailed(e); return null; }) : null };
       items.push(it); kick();
     },
     finish() { closed = true; kick(); return done; },
@@ -557,7 +541,7 @@ async function startSession() {
   show("session");
   const vi = voiceInfo(p);
   if (state.config?.voice === "kokoro") fetch("/api/voice/warm", { method: "POST" }).catch(() => {}); // load the neural voice now, so the first line isn’t slow
-  if (state.config?.voice !== "kokoro" && !state.voiceHinted && !voices.some((v) => quality(v) >= 4) && !webVoiceOn()) {
+  if (state.config?.voice !== "kokoro" && !state.voiceHinted && !voices.some((v) => quality(v) >= 4)) {
     state.voiceHinted = true;
     toast("These are your computer’s basic voices. For nicer ones, install Premium voices in System Settings > Accessibility > Spoken Content.", 9000);
   }

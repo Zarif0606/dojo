@@ -795,16 +795,6 @@ state.ready = init();
   $("#builder").addEventListener("submit", () => { active = false; try { r?.stop(); } catch { /* already stopped */ } paint(); });
 })();
 
-// One click to a live call: a ready-made world, its first situation and first person, straight into the session.
-$("#btn-quick")?.addEventListener("click", async () => {
-  const b = $("#btn-quick"); if (b.disabled) return; b.disabled = true;
-  try {
-    setWorld(await api("/api/worlds/ready-insurance"), true);
-    const w = state.world; if (!w?.personas?.length) return;
-    const p = w.personas[0]; selectPersona(p.id, true); await startSession();
-  } catch (e) { toast(e.message || "That didn’t start. Try a profession below."); } finally { b.disabled = false; }
-});
-
 // "What would have happened": the customer answers the coach's better line, side by side with the real call.
 $("#r-lines").addEventListener("click", async (e) => {
   const b = e.target.closest(".replaybtn"); if (!b || b.disabled) return;

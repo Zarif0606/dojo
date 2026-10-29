@@ -21,8 +21,6 @@ main:has(#view-start:not([hidden])) { max-width: 1160px; }
 .hero .examples { max-width: none; gap: .4rem; margin: 0 0 .6rem; }
 .hero .examples button { font-size: .8rem; padding: .28rem .8rem; background: var(--surface); }
 .hero .hint:empty { display: none; }
-.hero .quick { margin: .5rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .9rem; font-size: .84rem; }
-.quickgo { padding: .5rem 1.1rem; }
 
 /* the cast: three live characters on a quiet stage */
 #view-start .hero-cast { height: 400px; border-radius: 28px; border: 1px solid var(--line); background: radial-gradient(70% 60% at 50% 38%, color-mix(in srgb, var(--accent-soft) 70%, var(--surface)), var(--surface)); overflow: hidden; }

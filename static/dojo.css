@@ -25,3 +25,10 @@ main { max-width: 960px; }
 .outcome.agreed { color: var(--good); } .outcome.walked_away { color: var(--bad); }
 
 @media (max-width: 760px) { .stage { grid-template-columns: 1fr; } }
+
+.models-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: .6rem; margin-top: .6rem; }
+.mcard { display: grid; gap: .15rem; padding: .7rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.mcard.big { border-color: var(--ink); }
+.mcard .mrole { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.mcard .mwhy { font-size: .85rem; }
+.mcard .mnum { font-size: .78rem; color: var(--muted); }

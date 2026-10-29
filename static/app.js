@@ -498,6 +498,12 @@ async function loadModelStats() {
     const s = await api("/api/model-stats"), names = { planner: "Planner", caster: "Caster", persona: "Persona", director: "Director", coach: "Coach" };
     const rows = Object.entries(s.roles).map(([role, r]) => `<li><b>${names[role]}</b> <code>${esc((r.model || "").split("/").pop())}</code>${r.first_token_s != null ? ` · ${r.first_token_s}s to first word` : ""}${r.tok_per_s ? ` · ${r.tok_per_s} tok/s` : ""} · ${r.calls} calls</li>`).join("");
     $("#hood-list").innerHTML = rows || "<li>No calls yet.</li>";
+    const why = { planner: "Designs the whole World", caster: "Writes the five people", persona: "Plays the person, in character", director: "Scores every line you say", coach: "Reads the whole call, then coaches" };
+    const k = (n) => n >= 1000 ? (n / 1000).toFixed(1) + "k" : String(n);
+    $("#r-models-grid").innerHTML = Object.entries(s.roles).filter(([, r]) => r.calls).map(([role, r]) => {
+      const m = (r.model || "").split("/").pop(), big = /ultra/i.test(m);
+      return `<div class="mcard${big ? " big" : ""}"><span class="mrole">${esc(names[role] || role)}</span><b>${big ? "Nemotron 3 Ultra" : "Nemotron 3 Nano"}</b><span class="mwhy">${esc(why[role] || "")}</span><span class="mnum">${r.calls} ${r.calls === 1 ? "call" : "calls"} · ${k(r.tokens_in + r.tokens_out)} tokens${r.first_token_s != null ? ` · ${r.first_token_s}s to first word` : ""}</span></div>`;
+    }).join("") || "<p class='hint'>No calls yet.</p>";
   } catch { /* the numbers are a nice extra; ignore failures */ }
 }
 // The scene around the face reacts too: it glows while the character talks and takes on a tint for their mood.

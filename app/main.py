@@ -19,7 +19,7 @@ from fastapi.responses import JSONResponse, Response, StreamingResponse  # noqa:
 from fastapi.staticfiles import StaticFiles  # noqa: E402
 from pydantic import BaseModel, Field  # noqa: E402
 
-from . import db, llm, research, tts_local, worlds  # noqa: E402
+from . import db, llm, research, tts_azure, tts_local, worlds  # noqa: E402
 from .typo import clean, clean_list, smart  # noqa: E402
 from .prompts import (LABELS, MOODS, coach_system, director_system, meters_of,  # noqa: E402
                       persona_system, transcript_text)
@@ -204,7 +204,8 @@ class ReactIn(BaseModel):
 
 @app.get("/api/config")
 def config():
-    return {"provider": llm.PROVIDER, "research": research.enabled(), "examples": worlds.EXAMPLES, "voice": "kokoro" if tts_local.ENABLED else "browser"}
+    return {"provider": llm.PROVIDER, "research": research.enabled(), "examples": worlds.EXAMPLES, "voice": "kokoro" if (tts_azure.ENABLED or tts_local.ENABLED) else "browser",
+            "voice_name": "Azure neural" if tts_azure.ENABLED else "Kokoro"}
 
 
 @app.get("/api/worlds")
@@ -237,7 +238,7 @@ class TtsIn(BaseModel):
 @app.post("/api/voice/warm")
 def voice_warm():
     """Start the local neural voice in the background when a conversation begins (it shuts itself down when idle)."""
-    if tts_local.ENABLED:
+    if tts_local.ENABLED and not tts_azure.ENABLED:
         threading.Thread(target=tts_local.warm_up, daemon=True).start()
     return {"ok": True}
 
@@ -251,15 +252,17 @@ def _speakable(text: str) -> str:
 @app.post("/api/sessions/{sid}/tts")
 def session_tts(sid: int, body: TtsIn):
     """Audio for one line of the character in this conversation, in their own voice. 404 means the browser voice is used instead."""
-    if not tts_local.ENABLED:
+    if not (tts_azure.ENABLED or tts_local.ENABLED):
         raise HTTPException(404, "No neural voice is installed")
     session = db.get(sid)
     if not session:
         raise HTTPException(404, "Session not found")
     mood = body.mood if body.mood in MOODS else "neutral"
     try:
+        if tts_azure.ENABLED:
+            return Response(tts_azure.speak(session["persona"], _speakable(body.text), mood), media_type="audio/mpeg", headers={"Cache-Control": "no-store"})
         audio = tts_local.speak(session["persona"], _speakable(body.text), mood)
-    except tts_local.LocalTTSError as e:
+    except (tts_local.LocalTTSError, tts_azure.AzureTTSError) as e:
         raise HTTPException(502, str(e))
     return Response(audio, media_type="audio/wav", headers={"Cache-Control": "no-store"})
 

@@ -256,7 +256,7 @@ function pickVoice(p) {
   return { voice: v, exact: !!v && accentOf(v) === want };
 }
 function voiceInfo(p) {
-  if (state.config?.voice === "kokoro" && !state.ttsDown) return { label: /^en-(GB|IE|AU|NZ|ZA|IN|scotland)/.test(p.accent) ? "British" : "American", exact: true, name: "Kokoro" };
+  if (state.config?.voice === "kokoro" && !state.ttsDown) return { label: state.config.voice_name === "Azure neural" ? ACCENTS[p.accent] || "American" : /^en-(GB|IE|AU|NZ|ZA|IN|scotland)/.test(p.accent) ? "British" : "American", exact: true, name: state.config.voice_name || "Kokoro" };
   const { voice, exact } = pickVoice(p), label = ACCENTS[p.accent] || "";
   return { label, exact, name: voice?.name || "default voice" };
 }
@@ -268,7 +268,7 @@ async function fetchTts(text, mood) {
 }
 function ttsFailed(e) {
   if (!state.ttsWarned) { state.ttsWarned = true; toast(`The realistic voice is unavailable (${e.message}). Using the browser voice.`, 9000); }
-  if (/installed|rejected|configured/i.test(e.message)) state.ttsDown = true;
+  if (/installed|rejected|configured|used up/i.test(e.message)) state.ttsDown = true;
 }
 // ---- speaking: one sentence at a time, in a voice that matches each character’s accent ----
 let curAudio = null, speakDone = null, speakToken = 0, activeKick = null;

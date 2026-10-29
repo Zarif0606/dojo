@@ -72,5 +72,33 @@ class Thinking(unittest.TestCase):
         self.assertEqual(llm.parse_json('<think>x</think>```json\n{"a": 1}\n```'), {"a": 1})
 
 
+class AzureVoice(unittest.TestCase):
+    P = {"id": "p1", "gender": "f", "age": 40, "accent": "en-GB", "personality": "kind"}
+
+    def test_voice_matches_accent_and_gender(self):
+        from app import tts_azure
+        self.assertTrue(tts_azure.voice_for(self.P).startswith("en-GB-"))
+        self.assertTrue(tts_azure.voice_for({**self.P, "accent": "en-scotland"}).startswith("en-GB-"))
+        self.assertTrue(tts_azure.voice_for({**self.P, "accent": "en-XX", "gender": "m"}).startswith("en-US-"))
+
+    def test_monthly_cap_and_ssml(self):
+        from unittest import mock
+        from app import tts_azure
+        tts_azure.REGION, tts_azure.KEY = "canadacentral", "k"
+        tts_azure._month, tts_azure.chars_used = "", 0
+        sent = {}
+
+        class R:
+            status_code, content = 200, b"mp3"
+        def fake(url, content, **kw):
+            sent["body"] = content.decode(); return R()
+        with mock.patch.object(tts_azure.httpx, "post", fake):
+            self.assertEqual(tts_azure.speak(self.P, "Fine & <ok>", "neutral"), b"mp3")
+            self.assertIn("Fine &amp; &lt;ok&gt;", sent["body"])
+            tts_azure.chars_used = tts_azure.MONTHLY_CAP
+            with self.assertRaises(tts_azure.AzureTTSError):
+                tts_azure.speak(self.P, "more")
+
+
 if __name__ == "__main__":
     unittest.main()

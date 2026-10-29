@@ -15,6 +15,14 @@ KEY = os.getenv("AZURE_SPEECH_KEY", "").strip()
 REGION = os.getenv("AZURE_SPEECH_REGION", "").strip()
 ENABLED = bool(KEY and REGION)
 MONTHLY_CAP = int(os.getenv("AZURE_MONTHLY_CHAR_CAP", "450000"))  # the free tier is 500K; leave a margin
+# HD voices sound the most human, but Azure bills them as a separate, higher tier that may not be covered by the free 500K.
+# So they have their own lower cap; past it, US characters use the regular Multilingual voices. AZURE_HD=off turns them off.
+HD = os.getenv("AZURE_HD", "on").lower() != "off"
+HD_CAP = int(os.getenv("AZURE_HD_CHAR_CAP", "120000"))
+HD_VOICES = {
+    ("us", "f"): ["en-US-Ava:DragonHDLatestNeural", "en-US-Emma:DragonHDLatestNeural"],
+    ("us", "m"): ["en-US-Andrew:DragonHDLatestNeural", "en-US-Steffan:DragonHDLatestNeural"],
+}
 
 # (accent, gender) -> voices; one is chosen per character by hashing their id. Older characters get the deeper/calmer ones first.
 VOICES = {
@@ -36,6 +44,7 @@ NEAREST = {"scotland": "gb", "nz": "au", "za": "gb"}  # accents Azure has no voi
 _lock = threading.Lock()
 _month = ""
 chars_used = 0
+hd_used = 0
 
 
 class AzureTTSError(RuntimeError):
@@ -49,10 +58,14 @@ def _h(s: str) -> int:
     return h
 
 
-def voice_for(p: dict) -> str:
+def _key(p: dict) -> tuple[str, str]:
     code = (p.get("accent") or "en-US").split("-", 1)[-1].lower()
-    code = NEAREST.get(code, code)
-    pool = VOICES.get((code, "f" if p.get("gender") == "f" else "m")) or VOICES[("us", "f" if p.get("gender") == "f" else "m")]
+    return NEAREST.get(code, code), "f" if p.get("gender") == "f" else "m"
+
+
+def voice_for(p: dict, hd: bool = False) -> str:
+    code, g = _key(p)
+    pool = (HD_VOICES.get((code, g)) if hd else None) or VOICES.get((code, g)) or VOICES[("us", g)]
     return pool[_h(p["id"]) % len(pool)]
 
 
@@ -64,24 +77,27 @@ def _rate(p: dict, mood: str) -> str:
     return f"{round((max(0.8, min(1.2, s)) - 1) * 100):+d}%"
 
 
-def _count(n: int) -> None:
-    """Add to this month's character count, or refuse when the monthly cap would be passed."""
-    global _month, chars_used
+def _count(n: int, hd_wanted: bool) -> bool:
+    """Add to this month's character counts, or refuse when the monthly cap would be passed. Returns whether HD can be used."""
+    global _month, chars_used, hd_used
     with _lock:
         m = date.today().strftime("%Y-%m")
         if m != _month:
-            _month, chars_used = m, 0
+            _month, chars_used, hd_used = m, 0, 0
         if chars_used + n > MONTHLY_CAP:
             raise AzureTTSError("The free voice allowance is used up for this month, so the browser voice is used.")
         chars_used += n
+        use_hd = hd_wanted and hd_used + n <= HD_CAP
+        if use_hd:
+            hd_used += n
+        return use_hd
 
 
 def speak(p: dict, text: str, mood: str = "neutral") -> bytes:
     text = re.sub(r"\s+", " ", text).strip()[:900]
     if not text:
         raise AzureTTSError("Nothing to say.")
-    _count(len(text))
-    voice = voice_for(p)
+    voice = voice_for(p, _count(len(text), HD and _key(p) in HD_VOICES))
     ssml = (f"<speak version='1.0' xml:lang='en-US'><voice name='{voice}'><prosody rate='{_rate(p, mood)}'>"
             f"{escape(text)}</prosody></voice></speak>")
     try:

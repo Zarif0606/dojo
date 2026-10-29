@@ -100,5 +100,27 @@ class AzureVoice(unittest.TestCase):
                 tts_azure.speak(self.P, "more")
 
 
+    def test_hd_for_us_then_falls_back_at_cap(self):
+        from unittest import mock
+        from app import tts_azure
+        tts_azure.REGION, tts_azure.KEY = "canadacentral", "k"
+        tts_azure._month, tts_azure.chars_used, tts_azure.hd_used = "", 0, 0
+        seen = []
+
+        class R:
+            status_code, content = 200, b"mp3"
+        def fake(url, content, **kw):
+            seen.append(content.decode()); return R()
+        us = {**self.P, "accent": "en-US"}
+        with mock.patch.object(tts_azure.httpx, "post", fake):
+            tts_azure.speak(us, "Hello there", "neutral")
+            tts_azure.hd_used = tts_azure.HD_CAP
+            tts_azure.speak(us, "Hello there", "neutral")
+            tts_azure.speak({**self.P, "accent": "en-GB"}, "Hello there", "neutral")
+        self.assertIn("DragonHD", seen[0])
+        self.assertIn("MultilingualNeural", seen[1])
+        self.assertIn("en-GB-", seen[2])
+
+
 if __name__ == "__main__":
     unittest.main()

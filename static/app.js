@@ -204,7 +204,7 @@ async function buildWorld(line, product = "") {
   if (finished) {
     Sfx.done();
     state.world = finished; renderSteps("", ["research", "plan", "cast"]); renderPeople(finished.personas); finishWorld(); loadWorlds();
-    $("#buildstate").insertAdjacentHTML("beforeend", `<div class="bstep ok"><i></i>Your world is ready</div>`);
+    $("#buildstate").insertAdjacentHTML("beforeend", `<div class="bstep ok"><i></i>Your World is ready</div>`);
   } else {
     $("#build-hint").textContent = failed ? failed.message : "That didn’t finish. Try again.";
     Sfx.error(); toast(failed ? failed.message : "That didn’t finish. Try again.", 8000); state.world = null; $("#nav-world").hidden = true; show("start");
@@ -738,7 +738,7 @@ state.ready = init();
   }
   function paint() { btn.setAttribute("aria-pressed", String(active)); btn.classList.toggle("on", active); }
   btn.onclick = () => {
-    if (active) { active = false; try { r?.stop(); } catch { /* already stopped */ } paint(); hint(input.value.trim().length >= 3 ? "Press Build my world when you’re happy with it." : ""); return; }
+    if (active) { active = false; try { r?.stop(); } catch { /* already stopped */ } paint(); hint(input.value.trim().length >= 3 ? "Press Build My World when you’re happy with it." : ""); return; }
     base = input.value.trim(); active = true; paint(); hint("Listening… describe the situation, then tap the mic again to stop.");
     try { begin(); } catch { active = false; paint(); }
   };

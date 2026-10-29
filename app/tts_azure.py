@@ -18,8 +18,8 @@ MONTHLY_CAP = int(os.getenv("AZURE_MONTHLY_CHAR_CAP", "450000"))  # the free tie
 
 # (accent, gender) -> voices; one is chosen per character by hashing their id. Older characters get the deeper/calmer ones first.
 VOICES = {
-    ("us", "f"): ["en-US-AvaNeural", "en-US-JennyNeural", "en-US-EmmaNeural", "en-US-AriaNeural", "en-US-NancyNeural", "en-US-SaraNeural"],
-    ("us", "m"): ["en-US-AndrewNeural", "en-US-BrianNeural", "en-US-GuyNeural", "en-US-DavisNeural", "en-US-TonyNeural", "en-US-JasonNeural"],
+    ("us", "f"): ["en-US-AvaMultilingualNeural", "en-US-EmmaMultilingualNeural"],  # the Multilingual voices sound the most natural
+    ("us", "m"): ["en-US-AndrewMultilingualNeural", "en-US-BrianMultilingualNeural"],
     ("gb", "f"): ["en-GB-SoniaNeural", "en-GB-LibbyNeural", "en-GB-MaisieNeural"],
     ("gb", "m"): ["en-GB-RyanNeural", "en-GB-ThomasNeural"],
     ("ca", "f"): ["en-CA-ClaraNeural"],

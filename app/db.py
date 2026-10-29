@@ -1,5 +1,6 @@
 """Tiny SQLite store: generated worlds, practice sessions and the coach's memory notes."""
 import json
+import contextvars
 import os
 import sqlite3
 import threading
@@ -17,6 +18,10 @@ def conn():
     return c
 
 
+# Who is making this request (a random id in a cookie, set by the middleware in main.py). None for internal / local use.
+CURRENT_VID: contextvars.ContextVar = contextvars.ContextVar("dojo_vid", default=None)
+
+
 def init():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     with conn() as c:
@@ -28,11 +33,14 @@ def init():
         CREATE TABLE IF NOT EXISTS memory (id INTEGER PRIMARY KEY AUTOINCREMENT, created_at TEXT, scenario TEXT, note TEXT);
         CREATE TABLE IF NOT EXISTS worlds (id TEXT PRIMARY KEY, created_at TEXT, line TEXT, title TEXT, data TEXT, builtin INTEGER DEFAULT 0, plays INTEGER DEFAULT 0);
         CREATE TABLE IF NOT EXISTS build_counter (day TEXT PRIMARY KEY, n INTEGER);
+        CREATE TABLE IF NOT EXISTS visitor_worlds (vid TEXT, world_id TEXT, PRIMARY KEY (vid, world_id));
         """)
         cols = {r["name"] for r in c.execute("PRAGMA table_info(sessions)")}
-        for col in ("world_id", "persona", "world"):  # added with the world generator
+        for col in ("world_id", "persona", "world", "vid"):  # world_id/persona/world came with the world generator, vid with per-visitor history
             if col not in cols:
                 c.execute(f"ALTER TABLE sessions ADD COLUMN {col} TEXT")
+        if "vid" not in {r["name"] for r in c.execute("PRAGMA table_info(memory)")}:
+            c.execute("ALTER TABLE memory ADD COLUMN vid TEXT")
 
 
 def _row(r):
@@ -62,9 +70,23 @@ def get_world(wid: str):
     return d
 
 
+def add_visitor_world(wid: str):
+    """Remember that this visitor built or played this world, so it shows in their own list."""
+    vid = CURRENT_VID.get()
+    if vid:
+        with conn() as c:
+            c.execute("INSERT OR IGNORE INTO visitor_worlds (vid, world_id) VALUES (?,?)", (vid, wid))
+
+
 def list_worlds(limit: int = 24):
+    """Ready-made worlds for everyone, plus only the worlds this visitor built or played."""
+    vid = CURRENT_VID.get()
     with conn() as c:
-        rows = c.execute("SELECT id, line, title, data, builtin, plays FROM worlds WHERE id != 'general' ORDER BY builtin DESC, created_at DESC").fetchall()
+        if vid:
+            rows = c.execute("SELECT id, line, title, data, builtin, plays FROM worlds WHERE id != 'general' AND (builtin=1 OR id IN (SELECT world_id FROM visitor_worlds WHERE vid=?)) "
+                             "ORDER BY builtin DESC, created_at DESC", (vid,)).fetchall()
+        else:
+            rows = c.execute("SELECT id, line, title, data, builtin, plays FROM worlds WHERE id != 'general' ORDER BY builtin DESC, created_at DESC").fetchall()
     out = []
     for r in sorted(rows, key=lambda r: (not r["builtin"], json.loads(r["data"]).get("order", 99) if r["builtin"] else 0, -r["plays"]))[:limit]:
         w = json.loads(r["data"])
@@ -97,15 +119,20 @@ def create(world: dict, scenario: str, persona: dict, difficulty: int, research=
     snap["product"] = product or world.get("product")
     snap["scenario"] = next((s for s in world["scenarios"] if s["id"] == scenario), world["scenarios"][0])
     with conn() as c:
-        cur = c.execute("INSERT INTO sessions (created_at, scenario, persona_id, persona_name, difficulty, research, world_id, persona, world) VALUES (?,?,?,?,?,?,?,?,?)",
+        cur = c.execute("INSERT INTO sessions (created_at, scenario, persona_id, persona_name, difficulty, research, world_id, persona, world, vid) VALUES (?,?,?,?,?,?,?,?,?,?)",
                         (datetime.now().isoformat(timespec="seconds"), scenario, persona["id"], persona["name"], difficulty, research, world["id"],
-                         json.dumps(persona), json.dumps(snap)))
+                         json.dumps(persona), json.dumps(snap), CURRENT_VID.get()))
         return cur.lastrowid
 
 
 def get(sid):
+    """A session, or None if it belongs to a different visitor."""
     with conn() as c:
-        return _row(c.execute("SELECT * FROM sessions WHERE id=?", (sid,)).fetchone())
+        row = _row(c.execute("SELECT * FROM sessions WHERE id=?", (sid,)).fetchone())
+    vid = CURRENT_VID.get()
+    if row and vid and row.get("vid") and row["vid"] != vid:
+        return None
+    return row
 
 
 def update(sid, **fields):
@@ -123,24 +150,30 @@ def delete(sid):
 
 
 def finished(world_id: str | None = None):
+    """Finished conversations, newest first: only this visitor's when a visitor is known."""
+    vid = CURRENT_VID.get()
+    sql, args = "SELECT * FROM sessions WHERE status='done'", []
+    if world_id:
+        sql += " AND world_id=?"; args.append(world_id)
+    if vid:
+        sql += " AND (vid=? OR vid IS NULL)"; args.append(vid)
     with conn() as c:
-        if world_id:
-            rows = c.execute("SELECT * FROM sessions WHERE status='done' AND world_id=? ORDER BY id DESC", (world_id,)).fetchall()
-        else:
-            rows = c.execute("SELECT * FROM sessions WHERE status='done' ORDER BY id DESC").fetchall()
+        rows = c.execute(sql + " ORDER BY id DESC", args).fetchall()
     return [_row(r) for r in rows]
 
 
 def add_memory(world_id, note):
     if note:
         with conn() as c:
-            c.execute("INSERT INTO memory (created_at, scenario, note) VALUES (?,?,?)",
-                      (datetime.now().isoformat(timespec="seconds"), world_id, note[:300]))
+            c.execute("INSERT INTO memory (created_at, scenario, note, vid) VALUES (?,?,?,?)",
+                      (datetime.now().isoformat(timespec="seconds"), world_id, note[:300], CURRENT_VID.get()))
 
 
 def latest_memory(world_id):
+    """The coach's note about this visitor's weakest habit in this world (never another visitor's)."""
+    vid = CURRENT_VID.get()
     with conn() as c:
-        r = c.execute("SELECT note FROM memory WHERE scenario=? ORDER BY id DESC LIMIT 1", (world_id,)).fetchone()
+        r = c.execute("SELECT note FROM memory WHERE scenario=? AND vid IS ? ORDER BY id DESC LIMIT 1", (world_id, vid)).fetchone()
     return r["note"] if r else None
 
 

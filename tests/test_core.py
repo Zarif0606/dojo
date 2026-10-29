@@ -124,3 +124,35 @@ class AzureVoice(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Visitors(unittest.TestCase):
+    """Two browsers (separate cookie jars) must not see each other's history, progress, worlds or coach memory."""
+    def test_visitors_are_isolated(self):
+        import tempfile, importlib, os as _os
+        _os.environ["DOJO_DB"] = tempfile.mkdtemp() + "/t.db"
+        from app import db as _db
+        importlib.reload(_db)
+        from app import main as _main
+        importlib.reload(_main)
+        from fastapi.testclient import TestClient
+        a, b = TestClient(_main.app), TestClient(_main.app)
+        worlds_a = a.get("/api/worlds").json(); b.get("/api/worlds")
+        w = worlds_a[0]; full = a.get(f"/api/worlds/{w['id']}").json()
+        sid = a.post("/api/sessions", json={"world_id": w["id"], "scenario": full["scenarios"][0]["id"], "persona_id": full["personas"][0]["id"], "difficulty": 3}).json()["id"]
+        self.assertEqual(a.get(f"/api/sessions/{sid}").status_code, 200)
+        self.assertEqual(b.get(f"/api/sessions/{sid}").status_code, 404)      # another visitor cannot open it
+        self.assertEqual(b.post(f"/api/sessions/{sid}/end").status_code, 404)
+        self.assertEqual(b.post(f"/api/sessions/{sid}/turn-stream", json={"text": "Hello there, thanks for your time today.", "seconds": 3}).status_code, 404)
+        a.post(f"/api/sessions/{sid}/turn-stream", json={"text": "Hello there, thanks for your time today.", "seconds": 3})
+        self.assertEqual(a.post(f"/api/sessions/{sid}/end").status_code, 200)
+        self.assertEqual(len(a.get("/api/sessions").json()), 1)
+        self.assertEqual(b.get("/api/sessions").json(), [])                    # history is per visitor
+        self.assertEqual(b.get("/api/stats").json().get("total", b.get("/api/stats").json().get("count", 0)), 0)
+        # worlds a visitor built are listed only for them; ready-made ones for everyone
+        _db.CURRENT_VID.set(None); _db.save_world("custom-x", "x line", {**full, "id": "custom-x", "title": "X"}, builtin=False)
+        ids = lambda c: {x["id"] for x in c.get("/api/worlds").json()}
+        self.assertNotIn("custom-x", ids(a)); self.assertNotIn("custom-x", ids(b))
+        t = _db.CURRENT_VID.set(a.cookies.get("dojo_vid")); _db.add_visitor_world("custom-x"); _db.CURRENT_VID.reset(t)
+        self.assertIn("custom-x", ids(a)); self.assertNotIn("custom-x", ids(b))
+        self.assertTrue(len(ids(b)) >= 10)                                      # the ready-made worlds are still there

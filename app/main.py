@@ -3,6 +3,7 @@ import json
 import re
 import threading
 import time
+import uuid
 from collections import defaultdict, deque
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -69,6 +70,20 @@ LIMITS = [  # (path test, env var, default per visitor per hour)
     (lambda p: p.endswith("/tts"), "TTS_RATE_PER_HOUR", 2500),
     (lambda p: p.endswith("/react"), "REACT_RATE_PER_HOUR", 900),
 ]
+
+
+@app.middleware("http")
+async def visitor(request: Request, call_next):
+    """Give every browser a random id in a cookie, so its worlds, history, progress and coach memory stay its own."""
+    vid = request.cookies.get("dojo_vid") or uuid.uuid4().hex
+    tok = db.CURRENT_VID.set(vid)
+    try:
+        resp = await call_next(request)
+    finally:
+        db.CURRENT_VID.reset(tok)
+    if "dojo_vid" not in request.cookies:
+        resp.set_cookie("dojo_vid", vid, max_age=31536000, httponly=True, samesite="lax", secure=request.headers.get("x-forwarded-proto") == "https")
+    return resp
 
 
 @app.middleware("http")
@@ -226,6 +241,8 @@ def build_world(body: BuildIn):
     """Streams the build as NDJSON: stage, world, persona (one at a time), done / error."""
     def gen():
         for ev in worlds.build_stream(body.line, body.product):
+            if ev.get("type") in ("world", "done") and ev.get("id"):
+                db.add_visitor_world(ev["id"])
             yield json.dumps(ev) + "\n"
     return StreamingResponse(gen(), media_type="application/x-ndjson", headers={"Cache-Control": "no-store", "X-Accel-Buffering": "no"})
 
@@ -286,6 +303,7 @@ def start(body: StartIn):
     brief = research.brief(body.about) if body.about else None
     sid = db.create(world, body.scenario, persona, body.difficulty, brief, clean(body.product, "phrase", 120) or None)
     db.bump_plays(world["id"])
+    db.add_visitor_world(world["id"])
     session = db.get(sid)
     system, msgs, p = _persona_prompt(session, [], None)
     raw = _llm(lambda: "".join(llm.chat_stream("persona", system, msgs)))

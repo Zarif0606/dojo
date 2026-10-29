@@ -1,191 +1,177 @@
 {
  "title": "B2B software rep",
- "tagline": "Learn to justify software spend to skeptical finance leaders who protect every dollar.",
- "you_are": "an enterprise account executive selling a B2B SaaS platform",
- "setting": "Conversations happen over video calls, in glass-walled conference rooms, and at quiet coffee bars near the prospect’s office.",
+ "tagline": "Learn to navigate budget gates, prove ROI, and displace incumbents with skeptical finance leaders.",
+ "you_are": "an enterprise account executive selling a finance-automation platform",
+ "setting": "Conversations happen over scheduled video calls and in C-suite offices after a champion has secured a first meeting.",
  "other_side": "CFOs",
  "scenarios": [
   {
    "id": "discovery_call",
    "label": "First discovery call",
-   "desc": "A 30-minute video call to uncover pain points and qualify the opportunity.",
-   "setup": "You join a scheduled Zoom. The CFO appears on screen, notebook open, and says: Thanks for the deck, I’ve skimmed it. You have ten minutes to show me why this isn’t just another tool we don’t need.",
-   "skills": "Discovery questioning, business case framing, time management",
+   "desc": "A 30-minute video call to uncover pain and quantify the cost of inaction.",
+   "setup": "You are on a scheduled Zoom with a CFO who agreed to 30 minutes after your champion pushed internally. They open with: ‘I gave you half an hour because my controller insisted. Make it count.’",
+   "skills": "Discovery questioning and value framing",
    "scene": "phone",
-   "objective": "Secure a committed next step with a defined decision timeline.",
-   "place": "Home office video call",
-   "moment": "Tuesday 10:15 am, bright morning light through blinds",
+   "objective": "Secure a follow-up working session with the controller and IT lead.",
+   "place": "Video call from your home office",
+   "moment": "Tuesday 10:00 am, clean background, notebook ready",
    "visual": {
     "sky": "day",
     "palette": {
-     "wall": "#f0efe9",
-     "floor": "#d9d5cf",
-     "accent": "#2d3a4a",
+     "wall": "#f0f4f8",
+     "floor": "#d9e6ed",
+     "accent": "#4a90e2",
      "light": "#ffffff"
     },
     "props": [
      {
-      "type": "screen",
-      "x": 0.0,
-      "z": 0.8,
-      "scale": 1.2,
-      "color": "#1a1a2e"
-     },
-     {
       "type": "desk",
-      "x": -0.2,
-      "z": 1,
+      "x": -0.5,
+      "z": 0.6,
       "scale": 1.0,
-      "color": "#5c4d3e"
+      "color": "#c8d6e2"
      },
      {
-      "type": "lamp",
-      "x": 0.7,
+      "type": "plant",
+      "x": -0.7,
       "z": 0.9,
       "scale": 0.8,
-      "color": "#c8b89c"
-     },
-     {
-      "type": "plant",
-      "x": -0.8,
-      "z": 0.3,
-      "scale": 1.0,
-      "color": "#3a5a3a"
-     },
-     {
-      "type": "chair",
-      "x": 0.0,
-      "z": 1,
-      "scale": 1.0,
-      "color": "#2d2d2d"
-     }
-    ]
-   }
-  },
-  {
-   "id": "roi_workshop",
-   "label": "ROI workshop with finance team",
-   "desc": "A working session where the CFO brings their controller and FP&A lead to stress-test your model.",
-   "setup": "You sit at the head of a glass-walled conference room. The CFO taps a printed spreadsheet and says: Your assumptions on churn reduction are aggressive. Walk us through the math without the marketing fluff.",
-   "skills": "Financial modeling, objection handling, stakeholder alignment",
-   "scene": "office",
-   "objective": "Get the finance team to sign off on a mutual business case they can defend internally.",
-   "place": "Corporate conference room",
-   "moment": "Thursday 2:00 pm, overcast sky muting reflections on glass",
-   "visual": {
-    "sky": "overcast",
-    "palette": {
-     "wall": "#e8eaea",
-     "floor": "#b8bcc0",
-     "accent": "#1b2a3a",
-     "light": "#d0d8e0"
-    },
-    "props": [
-     {
-      "type": "screen",
-      "x": 0.0,
-      "z": 0,
-      "scale": 1.5,
-      "color": "#101820"
-     },
-     {
-      "type": "table",
-      "x": 0.0,
-      "z": 0.6,
-      "scale": 1.3,
-      "color": "#3d4a5a"
-     },
-     {
-      "type": "chair",
-      "x": -0.6,
-      "z": 0.9,
-      "scale": 1.0,
-      "color": "#2a3a4a"
-     },
-     {
-      "type": "chair",
-      "x": 0.6,
-      "z": 0.9,
-      "scale": 1.0,
-      "color": "#2a3a4a"
-     },
-     {
-      "type": "plant",
-      "x": -0.9,
-      "z": 0.2,
-      "scale": 1.2,
-      "color": "#2d4a2d"
+      "color": "#a8d5a2"
      },
      {
       "type": "lamp",
-      "x": 0.9,
-      "z": 0.2,
+      "x": -0.9,
+      "z": 0.4,
+      "scale": 0.7,
+      "color": "#ffd180"
+     },
+     {
+      "type": "chair",
+      "x": -0.2,
+      "z": 0,
       "scale": 0.9,
-      "color": "#8a8a9a"
+      "color": "#333333"
      }
     ]
    }
   },
   {
-   "id": "renewal_negotiation",
-   "label": "Renewal negotiation at scale",
-   "desc": "A high-stakes renewal where the CFO threatens to cut seats or switch vendors unless price drops.",
-   "setup": "You meet at a quiet cafe corner table. The CFO slides a competitor’s one-pager across the surface and says: They’re forty percent cheaper at three-year term. Convince me to stay before I sign Monday.",
-   "skills": "Value reinforcement, competitive positioning, concession strategy",
-   "scene": "cafe",
-   "objective": "Retain the account at acceptable terms without eroding baseline ARR.",
-   "place": "Downtown cafe near HQ",
-   "moment": "Friday 4:30 pm, golden hour through tall windows",
+   "id": "roi_review",
+   "label": "ROI review meeting",
+   "desc": "A deep-dive session where the CFO stress-tests your business case against incumbent costs.",
+   "setup": "You sit across a conference table with the CFO and their controller. The CFO slides your model across the table and says: ‘Your NPV assumes 40 percent faster close. Show me the driver that isn’t hope.’",
+   "skills": "Financial modelling defence and competitive displacement",
+   "scene": "office",
+   "objective": "Get the CFO to sign off on a paid pilot scope and timeline.",
+   "place": "CFO corner office, downtown HQ",
+   "moment": "Thursday 3:15 pm, late winter light through blinds",
    "visual": {
-    "sky": "golden",
+    "sky": "day",
     "palette": {
-     "wall": "#3a332a",
-     "floor": "#2a241e",
-     "accent": "#c8a86a",
-     "light": "#f5e8d0"
+     "wall": "#e0e0e0",
+     "floor": "#c8c8c8",
+     "accent": "#b0c4de",
+     "light": "#f5f5f5"
     },
     "props": [
      {
-      "type": "table",
+      "type": "desk",
       "x": 0.0,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#4a3d2a"
+      "z": 0,
+      "scale": 1.2,
+      "color": "#8b8b8b"
      },
      {
       "type": "chair",
-      "x": -0.4,
-      "z": 1,
-      "scale": 1.0,
-      "color": "#3a2f22"
+      "x": -0.5,
+      "z": 0,
+      "scale": 0.9,
+      "color": "#3a3a3a"
      },
      {
       "type": "chair",
-      "x": 0.4,
-      "z": 1,
-      "scale": 1.0,
-      "color": "#3a2f22"
+      "x": 0.5,
+      "z": 0,
+      "scale": 0.9,
+      "color": "#3a3a3a"
+     },
+     {
+      "type": "lamp",
+      "x": -0.2,
+      "z": 0.2,
+      "scale": 0.8,
+      "color": "#f0e68c"
      },
      {
       "type": "window",
       "x": 0.0,
+      "z": 0.7,
+      "scale": 1.0,
+      "color": "#e6e6fa"
+     },
+     {
+      "type": "screen",
+      "x": 0.3,
+      "z": 0.1,
+      "scale": 0.9,
+      "color": "#1e90ff"
+     },
+     {
+      "type": "table",
+      "x": 0.0,
       "z": 0,
-      "scale": 1.5,
-      "color": "#d8c8a8"
+      "scale": 1.0,
+      "color": "#a9a9a9"
+     }
+    ]
+   }
+  },
+  {
+   "id": "contract_close",
+   "label": "Contract negotiation",
+   "desc": "Final round where the CFO presses on price, terms, and exit clauses before board sign-off.",
+   "setup": "You are back on video with the CFO alone. They lean in and say: ‘I like the pilot results. Now give me a three-year deal with a 90-day opt-out and 15 percent off list, or I walk to the board with the status quo.’",
+   "skills": "Commercial negotiation and risk reversal",
+   "scene": "phone",
+   "objective": "Close a multi-year agreement that protects margin and satisfies procurement.",
+   "place": "Video call from your home office",
+   "moment": "Monday 4:50 pm, end-of-quarter pressure palpable",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#2c1a3d",
+     "floor": "#1a0e2e",
+     "accent": "#c11ab4",
+     "light": "#f5a182"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.2,
+      "z": 0.3,
+      "scale": 1.1,
+      "color": "#3a3a5c"
      },
      {
       "type": "lamp",
-      "x": 0.8,
-      "z": 0.3,
-      "scale": 0.8,
-      "color": "#b8986a"
+      "x": -0.3,
+      "z": 0.4,
+      "scale": 0.9,
+      "color": "#ff9f5e"
      },
      {
-      "type": "plant",
-      "x": -0.8,
-      "z": 0.3,
-      "scale": 1.0,
-      "color": "#2d3a2d"
+      "type": "chair",
+      "x": 0.6,
+      "z": 0.2,
+      "scale": 0.8,
+      "color": "#5e5e70"
+     },
+     {
+      "type": "window",
+      "x": -0.4,
+      "z": 0.7,
+      "scale": 0.7,
+      "color": "#2b2b3b"
      }
     ]
    }
@@ -194,130 +180,183 @@
  "buyers": [
   {
    "scenario": "discovery_call",
-   "role": "CFO of a 400-person SaaS company",
-   "personality": "analytical, time-pressed, direct",
-   "difficulty": 2,
-   "gender": "f",
-   "age": 42,
-   "angle": "She will end the call early if the first five minutes lack a crisp hypothesis on her specific margin pressure."
+   "role": "first contact",
+   "personality": "skeptical pragmatic CFO",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 55,
+   "angle": "Focuses on ROI before any discussion."
   },
   {
    "scenario": "discovery_call",
-   "role": "CFO of a legacy manufacturer",
-   "personality": "skeptical, jargon-averse, risk-focused",
-   "difficulty": 4,
-   "gender": "m",
-   "age": 55,
-   "angle": "He treats every software pitch as a CapEx trap and demands on-premise equivalency proof."
-  },
-  {
-   "scenario": "roi_workshop",
-   "role": "CFO with FP&A director and controller",
-   "personality": "collaborative but rigorous, process-driven",
-   "difficulty": 3,
+   "role": "first contact",
+   "personality": "risk averse finance director",
+   "difficulty": 2,
    "gender": "f",
    "age": 48,
-   "angle": "She lets her team dismantle your model cell by cell; you must defend every input variable."
+   "angle": "Questions security and compliance upfront."
   },
   {
-   "scenario": "renewal_negotiation",
-   "role": "CFO of a high-growth marketplace",
-   "personality": "commercially sharp, leverages alternatives",
-   "difficulty": 5,
+   "scenario": "roi_review",
+   "role": "real conversation",
+   "personality": "budget cautious VP finance",
+   "difficulty": 3,
    "gender": "m",
-   "age": 39,
-   "angle": "He has a signed term sheet from a competitor and uses it to compress your pricing to marginal cost."
+   "age": 42,
+   "angle": "Wants to see concrete cost savings."
   },
   {
-   "scenario": "roi_workshop",
-   "role": "CFO of a PE-backed roll-up",
-   "personality": "metric-obsessed, EBITDA-focused, short-horizon",
+   "scenario": "roi_review",
+   "role": "real conversation",
+   "personality": "data driven controller",
    "difficulty": 4,
    "gender": "f",
-   "age": 44,
-   "angle": "She only cares about payback within the current fund cycle and discounts strategic value to zero."
+   "age": 39,
+   "angle": "Requires proof of efficiency gains."
+  },
+  {
+   "scenario": "contract_close",
+   "role": "hardest close",
+   "personality": "entrenched legacy user",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 61,
+   "angle": "Clings to existing system despite new options."
   }
  ],
  "objections": [
-  "Show me the net new ARR this creates, not efficiency fluff",
-  "Your implementation timeline assumes zero adoption friction; redo it",
-  "We’re not funding a science project; where is the hard dollar savings line item?",
-  "The competitor includes implementation in that price; yours is extra",
-  "Our audit committee will not approve a vendor without SOC 2 Type 2",
-  "If churn ticks up one percent your ROI goes negative; that’s not a buffer",
-  "We have a hiring freeze; who owns this internally without new headcount?",
-  "Walk me through the exit clauses and data egress fees if we leave in year two"
+  "Our current budget is frozen for new software purchases",
+  "I need to see measurable ROI within six months",
+  "We already have a financial analytics tool, why change now",
+  "Implementation costs are too high for our scale",
+  "Can you guarantee data security in our regulatory environment",
+  "We cannot risk downtime during fiscal quarter end",
+  "Show me exactly how this reduces our expenses",
+  "Our board will reject any expense without clear cost justification"
  ],
  "rubric": [
   {
-   "id": "business_case",
-   "label": "Business case",
-   "what": "Frames value in CFO language: net ARR impact, payback period, and risk-adjusted cash flow."
+   "id": "pain_quantification",
+   "label": "Pain quantification",
+   "what": "Translate vague finance frustrations into hard numbers the CFO owns."
   },
   {
-   "id": "financial_modeling",
-   "label": "Financial modeling",
-   "what": "Builds transparent, driver-based models the finance team can audit and adopt as their own."
+   "id": "roi_modelling",
+   "label": "ROI modelling",
+   "what": "Build and defend a business case that survives controller scrutiny."
   },
   {
-   "id": "objection_handling",
-   "label": "Objection handling",
-   "what": "Addresses each pushback with data or a concession that protects core value."
+   "id": "incumbent_displacement",
+   "label": "Incumbent displacement",
+   "what": "Articulate switching gains that outweigh migration cost and risk."
   },
   {
-   "id": "stakeholder_alignment",
-   "label": "Stakeholder alignment",
-   "what": "Maps the buying group, surfaces hidden vetoes, and equips champions with internal talking points."
+   "id": "stakeholder_mapping",
+   "label": "Stakeholder mapping",
+   "what": "Identify and mobilise the controller, IT, and procurement allies."
   },
   {
-   "id": "competitive_positioning",
-   "label": "Competitive positioning",
-   "what": "Differentiates on total cost of ownership and switching risk, not feature lists."
+   "id": "commercial_negotiation",
+   "label": "Commercial negotiation",
+   "what": "Trade concessions for commitment without eroding margin or compliance."
   },
   {
-   "id": "compliance_truth",
-   "label": "Compliance truth",
-   "what": "Represents security, data residency, and contractual terms accurately without oversell."
+   "id": "contract_compliance",
+   "label": "Contract compliance",
+   "what": "Structure terms that pass legal, security, and audit review on first pass."
   }
  ],
  "live_meters": [
-  "business_case",
-  "objection_handling",
-  "compliance_truth"
+  "pain_quantification",
+  "roi_modelling",
+  "commercial_negotiation"
  ],
  "pitfalls": [
-  "Quoting list price instead of modeling the prospect’s actual usage ramp.",
-  "Promising security certifications or data residency that are on the roadmap not in production.",
-  "Conceding discount depth without expanding term or adding expansion triggers."
+  "Promising implementation dates before technical validation.",
+  "Accepting opt-out clauses that void revenue recognition.",
+  "Sharing unredacted customer data in reference calls."
  ],
  "id": "ready-b2b-software",
  "line": "B2B software sales to skeptical CFOs",
  "product": null,
- "researched": false,
+ "researched": true,
+ "research": {
+  "text": "Common objections from skeptical CFOs in B2B software sales include concerns about cost and budget constraints. To address these, sellers suggest focusing on the outcomes that would make the investment worthwhile, helping buyers see the cost in the context of growth or efficiency. Skepticism about effectiveness can be countered by empathizing with the prospect's position, introducing the decision-maker to the product's benefits, and developing content that explores the solution's value. If a prospect already has a similar tool, emphasizing unique benefits, superior features, and potential cost savings or performance improvements can help. Additionally, generative AI tools like Microsoft's Copilot chatbot for finance workers are being introduced to address CFOs' concerns about implementation and maintenance.",
+  "sources": [
+   {
+    "title": "The Objection-Handling Playbook for B2B Sellers",
+    "url": "https://www.highspot.com/blog/objection-handling"
+   },
+   {
+    "title": "Common B2B sales objections and how to overcome them",
+    "url": "https://leadiq.com/blog/overcoming-common-b2b-sales-objections"
+   },
+   {
+    "title": "Mastering Objections: A seller’s workshop on turning no’s into yes’s | LeadIQ",
+    "url": "https://leadiq.com/webinars/mastering-objections"
+   }
+  ]
+ },
  "personas": [
   {
-   "id": "nadia_varela-0",
-   "name": "Nadia Varela",
-   "gender": "f",
-   "age": 42,
+   "id": "nathaniel_cole-0",
+   "name": "Nathaniel Cole",
+   "gender": "m",
+   "age": 55,
    "scenario": "discovery_call",
-   "role": "CFO of a 400-person SaaS company",
-   "personality": "analytical, time-pressed, direct",
-   "background": "She took her startup from bootstrap to Series B before moving to a mid-market role running financial ops. Now she drives growth at a larger SaaS firm and expects every pitch to hit a margin lever.",
+   "role": "enterprise account executive",
+   "personality": "skeptical pragmatic",
+   "background": "Nathaniel leads sales for a finance-automation platform. He knows CFOs guard every dollar and demand clear ROI. His years of experience make him speak directly to numbers and risk.",
    "cares_about": [
-    "profitability metrics",
-    "implementation speed",
-    "security compliance"
+    "cash flow visibility",
+    "profit margin impact",
+    "time-to-deploy efficiency"
    ],
    "pushbacks": [
-    "Show me the net new ARR this creates, not efficiency fluff",
-    "Your implementation timeline assumes zero adoption friction; redo it",
-    "We’re not funding a science project; where is the hard dollar savings line item?"
+    "Our current budget is frozen for new software purchases. We can’t afford another expense without proof of return",
+    "I need to see measurable ROI within six months or it won’t move the needle for the board",
+    "We already have a financial analytics tool. Why replace something that runs?"
    ],
    "wins_over": [
-    "concrete margin impact",
-    "SOC 2 Type 2 certification",
-    "no hidden fees"
+    "clear payback period under six months",
+    "tangible impact on net profit",
+    "minimal disruption to teams"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 2,
+    "clothes": "#7a3b2e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "olivia_hartwell-1",
+   "name": "Olivia Hartwell",
+   "gender": "f",
+   "age": 48,
+   "scenario": "discovery_call",
+   "role": "enterprise account executive",
+   "personality": "risk averse finance director",
+   "background": "Olivia has spent two decades climbing the finance ladder at mid-sized firms, eventually landing in enterprise finance where she now oversees multi-million dollar budgets. She is cautious by nature and only engages with vendors who can demonstrate rigorous compliance and measurable financial returns.",
+   "cares_about": [
+    "data integrity",
+    "audit readiness",
+    "budget predictability"
+   ],
+   "pushbacks": [
+    "Our current budget is frozen for new software purchases",
+    "I need to see measurable ROI within six months",
+    "Can you guarantee data security in our regulatory environment?"
+   ],
+   "wins_over": [
+    "clear ROI projections",
+    "regulatory compliance evidence",
+    "scalable implementation plans"
    ],
    "suggested_difficulty": 2,
    "appearance": {
@@ -325,157 +364,122 @@
     "hairStyle": "bob",
     "hairColor": "darkbrown",
     "facialHair": "none",
-    "glasses": "square",
+    "glasses": "round",
     "lines": 1,
-    "clothes": "#4f6f8f"
+    "clothes": "#2b2b3a"
    },
    "accent": "en-US"
   },
   {
-   "id": "otto_kline-1",
-   "name": "Otto Kline",
+   "id": "william_harrington-2",
+   "name": "William Harrington",
    "gender": "m",
-   "age": 55,
-   "scenario": "discovery_call",
-   "role": "legacy manufacturer CFO",
-   "personality": "skeptical jargon-averse risk-focused",
-   "background": "Otto spent two decades overseeing capital planning for a midsize automotive parts supplier before moving into finance leadership. He still runs quarterly board style risk reviews and dislikes any solution that feels like a cost center with no hard ROI.",
+   "age": 42,
+   "scenario": "roi_review",
+   "role": "enterprise account executive",
+   "personality": "budget cautious VP finance",
+   "background": "He has spent twelve years in corporate finance before moving to sales. He respects data and wants to see concrete cost savings.",
    "cares_about": [
-    "data security compliance",
-    "operational continuity",
-    "budget predictability"
+    "keeping cash flow stable",
+    "showing credible ROI",
+    "protecting his team from extra work"
    ],
    "pushbacks": [
-    "Show me the net new ARR this creates, not efficiency fluff",
-    "Your implementation timeline assumes zero adoption friction; redo it",
-    "We’re not funding a science project; where is the hard dollar savings line item?"
+    "Our current budget is frozen for new software purchases",
+    "We need measurable ROI within six months",
+    "We already have a financial analytics tool"
    ],
    "wins_over": [
-    "tangible cost avoidance metrics",
-    "clear on-premise equivalent proof points",
-    "SOC 2 Type 2 certification"
-   ],
-   "suggested_difficulty": 4,
-   "appearance": {
-    "skin": "medium",
-    "hairStyle": "short",
-    "hairColor": "darkbrown",
-    "facialHair": "stubble",
-    "glasses": "square",
-    "lines": 2,
-    "clothes": "#3b4a5a"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "walter_channing-2",
-   "name": "Walter Channing",
-   "gender": "f",
-   "age": 48,
-   "scenario": "roi_workshop",
-   "role": "enterprise cfo",
-   "personality": "collaborative but rigorous, process-driven",
-   "background": "Walter rose through treasury before moving into fp&a leadership. She believes finance must anchor strategic decisions, not chase hype.",
-   "cares_about": [
-    "clean audit trails",
-    "predictable cash flows",
-    "team credibility"
-   ],
-   "pushbacks": [
-    "Show me the net new arr this creates, not efficiency fluff",
-    "Your implementation timeline assumes zero adoption friction; redo it",
-    "We’re not funding a science project; where is the hard dollar savings line item?"
-   ],
-   "wins_over": [
-    "proactive compliance prep",
-    "clear breakeven timelines",
-    "data-backed risk narratives"
+    "realistic cost savings",
+    "clear ROI timeline",
+    "solid implementation plan"
    ],
    "suggested_difficulty": 3,
    "appearance": {
-    "skin": "medium",
-    "hairStyle": "bob",
-    "hairColor": "darkbrown",
-    "facialHair": "none",
-    "glasses": "square",
-    "lines": 1,
-    "clothes": "#7a3b2e"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "hector_duvall-3",
-   "name": "Hector Duvall",
-   "gender": "m",
-   "age": 39,
-   "scenario": "renewal_negotiation",
-   "role": "enterprise account executive",
-   "personality": "commercially sharp leverages alternatives",
-   "background": "He has closed seven renewals this quarter each beating quota. He used to run pricing at a fintech startup and still knows every clause that matters.",
-   "cares_about": [
-    "margin integrity",
-    "peer respect",
-    "career trajectory"
-   ],
-   "pushbacks": [
-    "Show me the net new ARR this creates, not efficiency fluff",
-    "Your implementation timeline assumes zero adoption friction; redo it",
-    "We’re not funding a science project; where is the hard dollar savings line item?"
-   ],
-   "wins_over": [
-    "clear ROI case",
-    "SOC 2 Type 2 compliance",
-    "matching competitor pricing on implementation"
-   ],
-   "suggested_difficulty": 5,
-   "appearance": {
-    "skin": "medium",
+    "skin": "light",
     "hairStyle": "short",
-    "hairColor": "black",
+    "hairColor": "brown",
     "facialHair": "stubble",
-    "glasses": "square",
+    "glasses": "none",
     "lines": 1,
-    "clothes": "#7a3b2e"
+    "clothes": "#8a5a3c"
    },
    "accent": "en-US"
   },
   {
-   "id": "gwendolyn_cho-4",
-   "name": "Gwendolyn Cho",
+   "id": "hannah_mendoza-3",
+   "name": "Hannah Mendoza",
    "gender": "f",
-   "age": 44,
-   "scenario": "roi_workshop",
-   "role": "CFO of a PE-backed roll-up",
-   "personality": "metric obsessed short horizon",
-   "background": "She runs finance for a private equity portfolio firm and answers to a board that demands measurable ROI within 18 months. Every initiative must clear a hard cost recovery hurdle before it gets funded.",
+   "age": 39,
+   "scenario": "roi_review",
+   "role": "enterprise account executive",
+   "personality": "data driven controller",
+   "background": "She spent ten years in corporate finance before moving to sales to help companies cut waste. She knows every metric her clients care about.",
    "cares_about": [
-    "payback within current fund cycle",
-    "hard dollar savings",
-    "audit committee SOC 2 compliance"
+    "margin expansion",
+    "team productivity",
+    "audit readiness"
    ],
    "pushbacks": [
-    "Show me the net new ARR this creates, not efficiency fluff",
-    "Your implementation timeline assumes zero adoption friction; redo it",
-    "We’re not funding a science project; where is the hard dollar savings line item?"
+    "Our budget is frozen for new software purchases",
+    "I need to see measurable ROI within six months",
+    "Implementation costs are too high for our scale"
    ],
    "wins_over": [
-    "clear payback under 12 months",
-    "SOC 2 Type 2 certification",
-    "hard dollar savings tied to EBITDA"
+    "clear savings numbers",
+    "quick pilot results",
+    "transparent rollout plan"
    ],
    "suggested_difficulty": 4,
    "appearance": {
-    "skin": "medium",
+    "skin": "light",
     "hairStyle": "bob",
-    "hairColor": "darkbrown",
+    "hairColor": "brown",
     "facialHair": "none",
     "glasses": "square",
     "lines": 1,
-    "clothes": "#6b4b6e"
+    "clothes": "#8a5a3c"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "garrett_miles-4",
+   "name": "Garrett Miles",
+   "gender": "m",
+   "age": 61,
+   "scenario": "contract_close",
+   "role": "enterprise account executive",
+   "personality": "skeptical yet open",
+   "background": "Spent decades building relationships in the finance world and now mentors junior reps. Values proven results over flashy pitches.",
+   "cares_about": [
+    "data accuracy",
+    "team stability",
+    "budget predictability"
+   ],
+   "pushbacks": [
+    "Budget is locked until next fiscal year",
+    "Our existing tool has served us fine for years",
+    "Implementation would disrupt quarter-end closing"
+   ],
+   "wins_over": [
+    "repeatable results",
+    "clear cost savings",
+    "minimal disruption"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "curly",
+    "hairColor": "grey",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 2,
+    "clothes": "#7a5a8a"
    },
    "accent": "en-US"
   }
  ],
  "builtin": true,
- "order": 5
+ "order": 5,
+ "group": "sales"
 }

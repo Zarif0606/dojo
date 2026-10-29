@@ -1,170 +1,170 @@
 {
  "title": "Insurance agent",
- "tagline": "Learn to guide families through protection planning with clarity and care.",
- "you_are": "a licensed insurance advisor",
- "setting": "Conversations happen in home offices, kitchen tables, and video calls where families make long-term financial decisions.",
+ "tagline": "Learn to protect families with the right coverage through trust and clear guidance.",
+ "you_are": "an independent life and home insurance agent",
+ "setting": "Conversations happen by phone, at kitchen tables, and in home offices, moving from first contact to policy delivery.",
  "other_side": "prospects",
  "scenarios": [
   {
-   "id": "first_meeting",
-   "label": "First kitchen table meeting",
-   "desc": "A young couple reviews their finances after buying a house and agrees to hear options.",
-   "setup": "You sit at their kitchen table with a laptop open. The husband says, ‘We just closed on the house, so money is tight, but we know we need something.’",
-   "skills": "Needs discovery and budget framing",
-   "scene": "home",
-   "objective": "Uncover their top three worries and agree on a follow-up with quotes.",
-   "place": "Suburban kitchen",
-   "moment": "Tuesday 7:15 pm, dishwasher humming",
-   "visual": {
-    "sky": "dusk",
-    "palette": {
-     "wall": "#F5F0E1",
-     "floor": "#C9B896",
-     "accent": "#2E5E4E",
-     "light": "#FFD9A0"
-    },
-    "props": [
-     {
-      "type": "table",
-      "x": 0.0,
-      "z": 0.6,
-      "scale": 1.2,
-      "color": "#8B6B4A"
-     },
-     {
-      "type": "plant",
-      "x": -0.8,
-      "z": 0.2,
-      "scale": 1.1,
-      "color": "#3A5A40"
-     },
-     {
-      "type": "window",
-      "x": 0.7,
-      "z": 0,
-      "scale": 1.3,
-      "color": "#4A4A5A"
-     },
-     {
-      "type": "chair",
-      "x": -0.4,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#6B5B4A"
-     }
-    ]
-   }
-  },
-  {
-   "id": "policy_comparison",
-   "label": "Term vs whole life comparison",
-   "desc": "A single parent weighs term affordability against whole life cash value for a child’s future.",
-   "setup": "You share a screen on a video call. The prospect leans forward and says, ‘Show me the numbers side by side so I can see what I’m actually paying for.’",
-   "skills": "Product explanation and value framing",
+   "id": "cold_call_intro",
+   "label": "Cold call introduction",
+   "desc": "Open a conversation with a stranger who did not expect your call.",
+   "setup": "You are calling a homeowner named Maya who answered on the second ring. She says: Hello, this is Maya.",
+   "skills": "Opening credibility and permission",
    "scene": "phone",
-   "objective": "Present a clear comparison and secure a preference for one structure.",
-   "place": "Home office video call",
-   "moment": "Thursday 8:00 pm, quiet house",
+   "objective": "Earn two minutes to explain how you help families like hers.",
+   "place": "Phone call from your home office",
+   "moment": "Tuesday 10:15 am, quiet background",
    "visual": {
-    "sky": "night",
+    "sky": "day",
     "palette": {
-     "wall": "#2D2D3A",
-     "floor": "#1E1E28",
-     "accent": "#B8860B",
-     "light": "#F0E6D2"
+     "wall": "#d4e6f1",
+     "floor": "#f5f7fa",
+     "accent": "#8ab4f8",
+     "light": "#f0f4ff"
     },
     "props": [
      {
       "type": "desk",
-      "x": 0.0,
-      "z": 0.5,
-      "scale": 1.3,
-      "color": "#3D3D4A"
-     },
-     {
-      "type": "screen",
-      "x": 0.1,
-      "z": 0.4,
+      "x": 0.3,
+      "z": 0.8,
       "scale": 1.0,
-      "color": "#1A1A2E"
+      "color": "#e8e8e8"
      },
      {
       "type": "lamp",
-      "x": -0.6,
-      "z": 0.3,
-      "scale": 0.9,
-      "color": "#C9B896"
+      "x": -0.2,
+      "z": 0.7,
+      "scale": 0.8,
+      "color": "#c9d6e3"
      },
      {
-      "type": "shelf",
-      "x": 0.7,
-      "z": 0.1,
-      "scale": 1.1,
-      "color": "#4A4A5A"
-     },
-     {
-      "type": "chair",
-      "x": -0.3,
-      "z": 0.8,
-      "scale": 1.0,
-      "color": "#3D3D4A"
+      "type": "plant",
+      "x": -0.4,
+      "z": 0.6,
+      "scale": 0.7,
+      "color": "#6b8e23"
      }
     ]
    }
   },
   {
-   "id": "bundle_close",
-   "label": "Bundling home and life at renewal",
-   "desc": "A longtime homeowner resists adding life coverage at renewal, citing cost and complexity.",
-   "setup": "You stand at their counter with the renewal packet. The homeowner taps the page and says, ‘My premium already jumped fifteen percent. Why would I add more now?’",
-   "skills": "Objection handling and cross-sell framing",
-   "scene": "door",
-   "objective": "Reframe the bundle as a discount and protection upgrade, then ask for the application.",
-   "place": "Farmhouse entryway",
-   "moment": "Saturday 10:30 am, dust motes in sunbeams",
+   "id": "kitchen_table_discov",
+   "label": "Kitchen table discovery",
+   "desc": "Uncover real gaps in a family’s protection while they sip coffee.",
+   "setup": "You are sitting across from David and Lisa at their kitchen table. David says: We already have term through work, so we are good.",
+   "skills": "Gap analysis and complement positioning",
+   "scene": "home",
+   "objective": "Show how a portable policy protects them if David leaves his job.",
+   "place": "Suburban kitchen with morning light",
+   "moment": "Saturday 9:30 am, coffee steaming",
    "visual": {
     "sky": "day",
     "palette": {
-     "wall": "#E8DCC8",
-     "floor": "#A68B6B",
-     "accent": "#1B4F3A",
-     "light": "#FFF3E0"
+     "wall": "#e8f4fc",
+     "floor": "#f5f0e6",
+     "accent": "#c9a88a",
+     "light": "#fff9e6"
     },
     "props": [
      {
-      "type": "door",
-      "x": 0.0,
-      "z": 0.2,
-      "scale": 1.4,
-      "color": "#6B5B4A"
+      "type": "window",
+      "x": 0.3,
+      "z": 0.9,
+      "scale": 1.2,
+      "color": "#cce7ff"
+     },
+     {
+      "type": "counter",
+      "x": -0.3,
+      "z": 0.1,
+      "scale": 0.8,
+      "color": "#d8c7b5"
+     },
+     {
+      "type": "lamp",
+      "x": -0.5,
+      "z": 0.8,
+      "scale": 0.9,
+      "color": "#a88e65"
      },
      {
       "type": "table",
-      "x": -0.3,
-      "z": 0.5,
+      "x": 0.0,
+      "z": 0,
       "scale": 1.0,
-      "color": "#8B6B4A"
+      "color": "#b0c4b1"
+     },
+     {
+      "type": "chair",
+      "x": 0.6,
+      "z": 0.8,
+      "scale": 1.0,
+      "color": "#7a6a53"
+     }
+    ]
+   }
+  },
+  {
+   "id": "video_proposal_close",
+   "label": "Video proposal close",
+   "desc": "Guide a hesitant couple through the application and next steps.",
+   "setup": "You are screen-sharing a recorded proposal with Elena and Marco. Elena says: It still feels like a lot of money for something we hope never happens.",
+   "skills": "Value framing and compliant close",
+   "scene": "phone",
+   "objective": "Secure the signed application and schedule the paramedical exam.",
+   "place": "Home office with dual monitors",
+   "moment": "Thursday 7:20 pm, soft lamp light",
+   "visual": {
+    "sky": "night",
+    "palette": {
+     "wall": "#1e1e1e",
+     "floor": "#1a1a1a",
+     "accent": "#c0c0c0",
+     "light": "#ff9e80"
+    },
+    "props": [
+     {
+      "type": "sofa",
+      "x": -0.3,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#8a8a8a"
+     },
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.95,
+      "scale": 1.0,
+      "color": "#333333"
+     },
+     {
+      "type": "lamp",
+      "x": 0.7,
+      "z": 0.7,
+      "scale": 0.9,
+      "color": "#ff9e80"
+     },
+     {
+      "type": "shelf",
+      "x": -0.8,
+      "z": 0.6,
+      "scale": 1.1,
+      "color": "#b0b0b0"
      },
      {
       "type": "plant",
-      "x": 0.6,
-      "z": 0.3,
-      "scale": 1.2,
-      "color": "#2E5E4E"
-     },
-     {
-      "type": "banner",
-      "x": 0.5,
-      "z": 0.1,
-      "scale": 0.9,
-      "color": "#B8860B"
-     },
-     {
-      "type": "rug",
-      "x": 0.0,
+      "x": 0.3,
       "z": 0.7,
-      "scale": 1.1,
-      "color": "#C9B896"
+      "scale": 0.8,
+      "color": "#6b8e23"
+     },
+     {
+      "type": "screen",
+      "x": 0.0,
+      "z": 0.9,
+      "scale": 1.3,
+      "color": "#00bfff"
      }
     ]
    }
@@ -172,203 +172,184 @@
  ],
  "buyers": [
   {
-   "scenario": "first_meeting",
-   "role": "First-time homebuyers, late 20s",
-   "personality": "cautious, budget-focused, collaborative",
-   "difficulty": 2,
+   "scenario": "cold_call_intro",
+   "role": "first contact",
+   "personality": "skeptical but curious",
+   "difficulty": 1,
    "gender": "m",
-   "age": 28,
-   "angle": "They track every dollar and need proof that coverage fits their tight cash flow."
+   "age": 35,
+   "angle": "Worries about cost but wants to protect family."
   },
   {
-   "scenario": "first_meeting",
-   "role": "First-time homebuyers, late 20s",
-   "personality": "optimistic, busy, defers to partner",
-   "difficulty": 2,
-   "gender": "f",
-   "age": 27,
-   "angle": "She wants the conversation efficient and hates jargon."
-  },
-  {
-   "scenario": "policy_comparison",
-   "role": "Single parent, teacher",
-   "personality": "analytical, protective, time-poor",
+   "scenario": "kitchen_table_discov",
+   "role": "real conversation",
+   "personality": "quiet, focused on family",
    "difficulty": 3,
    "gender": "f",
-   "age": 35,
-   "angle": "She will compare every decimal point and needs the child rider explained simply."
+   "age": 42,
+   "angle": "Cites existing coverage but fears gaps."
   },
   {
-   "scenario": "policy_comparison",
-   "role": "Tech worker, mid 30s",
-   "personality": "skeptical, DIY researcher, direct",
-   "difficulty": 4,
-   "gender": "m",
-   "age": 37,
-   "angle": "He has read Reddit threads and challenges every assumption with spreadsheets."
-  },
-  {
-   "scenario": "bundle_close",
-   "role": "Longtime homeowner, retired tradesman",
-   "personality": "loyal to current carrier, price-sensitive, blunt",
+   "scenario": "video_proposal_close",
+   "role": "hardest close",
+   "personality": "doubtful, values trust",
    "difficulty": 5,
    "gender": "m",
-   "age": 68,
-   "angle": "He sees the bundle as an upsell and trusts his agent of twenty years over new math."
+   "age": 60,
+   "angle": "Believes insurance companies deny claims."
+  },
+  {
+   "scenario": "kitchen_table_discov",
+   "role": "real conversation",
+   "personality": "busy, needs clarity",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 28,
+   "angle": "Wants simple explanation, no jargon."
+  },
+  {
+   "scenario": "cold_call_intro",
+   "role": "first contact",
+   "personality": "friendly, open-minded",
+   "difficulty": 1,
+   "gender": "f",
+   "age": 31,
+   "angle": "Asks how to start, seeks reassurance."
   }
  ],
  "objections": [
-  "Term is cheap enough, why pay triple for whole life?",
-  "I can invest the difference myself and do better",
-  "My employer gives me life insurance already",
-  "The house is insured, that’s the big asset",
-  "I’ll wait until the kids are older",
-  "Your competitor quoted twenty percent less",
-  "I don’t trust insurance companies to pay out",
-  "The medical exam is a hassle I don’t have time for"
+  "It’s too expensive for what I might never use",
+  "I don’t like talking about death or disasters",
+  "I already have life insurance through work",
+  "Insurance companies rarely pay out when you need them",
+  "I don’t understand all the policy details",
+  "I’m young and healthy, why do I need this now?",
+  "I’d rather save the money myself",
+  "I don’t trust agents who push too hard"
  ],
  "rubric": [
   {
+   "id": "credible_opening",
+   "label": "Credible opening",
+   "what": "State who you are, why you are calling, and ask permission within the first fifteen seconds."
+  },
+  {
    "id": "needs_discovery",
    "label": "Needs discovery",
-   "what": "Asks open questions that reveal family priorities, debts, and fears before quoting."
+   "what": "Ask open questions that reveal income dependency, debts, and family milestones before quoting products."
   },
   {
-   "id": "plain_explanation",
-   "label": "Plain explanation",
-   "what": "Translates riders, exclusions, and cash value into everyday language without jargon."
+   "id": "gap_analysis",
+   "label": "Gap analysis",
+   "what": "Compare existing coverage to actual obligations and show the specific shortfall in dollars and years."
   },
   {
-   "id": "budget_framing",
-   "label": "Budget framing",
-   "what": "Positions premiums as a percentage of income and shows trade-offs the prospect accepts."
+   "id": "value_framing",
+   "label": "Value framing",
+   "what": "Translate premium into daily cost and contrast it with the financial impact of an uncovered loss."
   },
   {
-   "id": "objection_handling",
-   "label": "Objection handling",
-   "what": "Acknowledges the concern, reframes with a concrete example, and checks for agreement."
+   "id": "compliant_close",
+   "label": "Compliant close",
+   "what": "Confirm suitability, disclose all material terms, and record consent before submitting the application."
   },
   {
-   "id": "compliance_honesty",
-   "label": "Compliance honesty",
-   "what": "Discloses limitations, waiting periods, and suitability rules even when it slows the sale."
-  },
-  {
-   "id": "close_clarity",
-   "label": "Close clarity",
-   "what": "Summarises the exact next step, documents required, and timeline in one sentence."
+   "id": "trust_building",
+   "label": "Trust building",
+   "what": "Acknowledge scepticism, share carrier ratings and claims-paid data, and never pressure or mislead."
   }
  ],
  "live_meters": [
+  "credible_opening",
   "needs_discovery",
-  "plain_explanation",
-  "objection_handling"
+  "trust_building"
  ],
  "pitfalls": [
-  "Illustrating non-guaranteed cash values as promises.",
-  "Skipping the suitability questionnaire to speed the application.",
-  "Bundling without showing the standalone home premium for comparison."
+  "Quoting premium before confirming health class and coverage amount.",
+  "Implying employer term is portable or permanent without checking the certificate.",
+  "Skipping the suitability questionnaire or recording consent."
  ],
  "id": "ready-insurance",
  "line": "Selling life and home insurance to individuals and families",
  "product": null,
- "researched": false,
+ "researched": true,
+ "research": {
+  "text": "Common objections to selling life and home insurance include concerns about cost, discomfort with discussing death, and distrust in insurance companies. Agents can address these by asking clients to consider the financial needs of their family in case of an unexpected event, emphasizing that life insurance is about protecting loved ones, and offering to send an application with a video proposal to ease the process. When clients claim they already have coverage, agents can leverage this to show how additional policies can complement existing ones, focusing on trust and clarity to guide the conversation.",
+  "sources": [
+   {
+    "title": "Handling Life Insurance Objections Ethically: Scripts That Build Trust",
+    "url": "https://www.adbanker.com/blog/handling-life-insurance-objections-ethically-scripts-strategy-and-skills-every-new-agent-needs"
+   },
+   {
+    "title": "How to Overcome the 5 Most Common Life Insurance Objections • Insurance Advisors Direct",
+    "url": "https://iadbrokerage.com/how-to-overcome-the-5-most-common-life-insurance-objections"
+   },
+   {
+    "title": "How To Overcome The Top 6 Insurance Sales Objections",
+    "url": "https://www.agencyperformancepartners.com/blog/how-to-overcome-the-top-6-insurance-sales-objections"
+   }
+  ]
+ },
  "personas": [
   {
-   "id": "nolan_bredesen-0",
-   "name": "Nolan Bredesen",
+   "id": "nathaniel_cho-0",
+   "name": "Nathaniel Cho",
    "gender": "m",
-   "age": 28,
-   "scenario": "first_meeting",
-   "role": "first-time homebuyer",
-   "personality": "cautious, budget-focused, collaborative",
-   "background": "They are buying their first house with a modest down payment and are watching every expense. Their savings are tied up in the purchase so they need insurance that won’t strain their cash flow.",
+   "age": 35,
+   "scenario": "cold_call_intro",
+   "role": "first contact",
+   "personality": "skeptical but curious",
+   "background": "Nathaniel sells life and home insurance on his own. He works from a home office and often meets clients in their kitchens or on the phone. He is balanced in his approach and tries to listen before explaining. His background in finance helps him assess risk without being pushy.",
    "cares_about": [
-    "protecting their new home",
-    "avoiding unexpected costs",
-    "keeping monthly bills predictable"
+    "long term financial security",
+    "providing for his family",
+    "maintaining trust with his clients"
    ],
    "pushbacks": [
-    "I can invest the difference myself and do better",
-    "My employer gives me life insurance already",
-    "I’ll wait until the kids are older"
+    "I’m not sure i can afford something i might never need",
+    "I don’t really want to think about worst case scenarios",
+    "I already have a group plan through my employer"
    ],
    "wins_over": [
-    "policy that fits their exact budget",
-    "clear proof of value over cost",
-    "no hidden fees or surprise charges"
+    "clear explanation of value",
+    "personalized examples that match my situation",
+    "no pressure and respect for my time"
    ],
-   "suggested_difficulty": 2,
+   "suggested_difficulty": 1,
    "appearance": {
     "skin": "light",
     "hairStyle": "short",
-    "hairColor": "brown",
+    "hairColor": "black",
     "facialHair": "none",
     "glasses": "none",
-    "lines": 0,
-    "clothes": "#7a5a8a"
+    "lines": 1,
+    "clothes": "#9a4d4d"
    },
    "accent": "en-US"
   },
   {
-   "id": "sarah_zheng-1",
-   "name": "Sarah Zheng",
+   "id": "sophia_morgan-1",
+   "name": "Sophia Morgan",
    "gender": "f",
-   "age": 27,
-   "scenario": "first_meeting",
-   "role": "first-time homebuyer",
-   "personality": "optimistic busy defers-to-partner",
-   "background": "They just signed a lease and are excited about their first home. She trusts her partner’s decisions but worries about hidden costs.",
+   "age": 42,
+   "scenario": "kitchen_table_discov",
+   "role": "independent life and home insurance agent",
+   "personality": "quiet, family-focused, cautious",
+   "background": "Sophia works from home and meets clients at kitchen tables to discuss their needs. She has two school-aged children and has seen how sudden costs can strain a family budget.",
    "cares_about": [
-    "making it fit their budget",
-    "protecting their new investment",
-    "avoiding regrets later"
+    "peace of mind",
+    "protecting her kids",
+    "being trusted"
    ],
    "pushbacks": [
-    "I know i need coverage but term is so cheap why pay triple",
-    "My rrsp has room i could grow the cash value better",
-    "My workplan covers me through group insurance"
+    "I know what my policy covers, but I still worry about the things it doesn’t",
+    "It’s hard to talk about losing someone, even if it means protecting my family financially",
+    "Sure, I have coverage at work, but it doesn’t pay for the house if something happens here"
    ],
    "wins_over": [
-    "they feel heard when they explain their month to month",
-    "simple clear answers beat vague promises",
-    "a personal touch makes them feel safe"
-   ],
-   "suggested_difficulty": 2,
-   "appearance": {
-    "skin": "light",
-    "hairStyle": "long",
-    "hairColor": "black",
-    "facialHair": "none",
-    "glasses": "square",
-    "lines": 0,
-    "clothes": "#2b2b3a"
-   },
-   "accent": "en-CA"
-  },
-  {
-   "id": "hannah_clark-2",
-   "name": "Hannah Clark",
-   "gender": "f",
-   "age": 35,
-   "scenario": "policy_comparison",
-   "role": "single parent teacher",
-   "personality": "analytical protective time-poor",
-   "background": "Hannah teaches middle school math while caring for her 8 year old son after school. Her small home office is where she reviews policies between classes and bedtime routines.",
-   "cares_about": [
-    "son’s future education",
-    "mortgage stability",
-    "accurate pricing details"
-   ],
-   "pushbacks": [
-    "I already pay for term coverage through my employer",
-    "I could invest that extra amount and get better returns",
-    "Whole life costs triple just for a child rider"
-   ],
-   "wins_over": [
-    "clear breakdown of child rider costs",
-    "simple term vs whole life math examples",
-    "guaranteed payout certainty for his future"
+    "clear explanations",
+    "real-life examples",
+    "people who listen without pressure"
    ],
    "suggested_difficulty": 3,
    "appearance": {
@@ -376,84 +357,122 @@
     "hairStyle": "bob",
     "hairColor": "brown",
     "facialHair": "none",
-    "glasses": "square",
+    "glasses": "round",
     "lines": 1,
-    "clothes": "#2f5d62"
+    "clothes": "#3f4f3f"
    },
    "accent": "en-US"
   },
   {
-   "id": "gideon_park-3",
-   "name": "Gideon Park",
+   "id": "horace_longley-2",
+   "name": "Horace Longley",
    "gender": "m",
-   "age": 37,
-   "scenario": "policy_comparison",
-   "role": "Tech worker",
-   "personality": "skeptical, DIY researcher, direct",
-   "background": "He works in software engineering and habitually quantifies financial decisions. He compares policy features with spreadsheets and trusts data over sales talk.",
+   "age": 60,
+   "scenario": "video_proposal_close",
+   "role": "hardest close",
+   "personality": "skeptical but trustworthy",
+   "background": "Spent 35 years selling life and home policies in suburban neighborhoods. He knows how premiums rise and claims get denied. He meets people at kitchen tables and in home offices while trying to close video proposals. He only trusts agents who prove they will fight for the client.",
    "cares_about": [
-    "clarity of policy language",
-    "potential return on premium paid",
-    "control over his financial assets"
+    "fair claim payouts",
+    "clear policy language",
+    "personal relationships"
    ],
    "pushbacks": [
-    "Term is cheap enough, why pay triple for whole life?",
-    "I can invest the difference myself and do better",
-    "My employer gives me life insurance already"
+    "I’ve seen them deny everything",
+    "You think this is different?",
+    "It’s still too pricey for nothing"
    ],
    "wins_over": [
-    "explains how premiums actually allocate",
-    "shows long-term growth projections",
-    "offers a calculator to run his own numbers"
-   ],
-   "suggested_difficulty": 4,
-   "appearance": {
-    "skin": "light",
-    "hairStyle": "short",
-    "hairColor": "black",
-    "facialHair": "stubble",
-    "glasses": "none",
-    "lines": 1,
-    "clothes": "#3b4a5a"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "marlon_hawkins-4",
-   "name": "Marlon Hawkins",
-   "gender": "m",
-   "age": 68,
-   "scenario": "bundle_close",
-   "role": "longtime homeowner",
-   "personality": "loyal to current carrier, price-sensitive, blunt",
-   "background": "Marlon spent forty years building houses with his own hands. He owns his home free and clear and has been with the same insurer forever. Retirement hasn’t softened his stance on costs.",
-   "cares_about": [
-    "saving every dollar he can",
-    "keeping his legacy intact",
-    "not being talked down to"
-   ],
-   "pushbacks": [
-    "I don’t need no upsell when I’m already covered enough",
-    "Triple the cost? That’s a rip‑off for the same payout"
-   ],
-   "wins_over": [
-    "when you speak straight and don’t hide fees",
-    "when you cite his own contractor quotes as proof",
-    "when you show the math saves his heirs money"
+    "they show real payout records",
+    "they explain limits plainly",
+    "they treat my home like theirs"
    ],
    "suggested_difficulty": 5,
    "appearance": {
-    "skin": "tan",
-    "hairStyle": "balding",
-    "hairColor": "grey",
-    "facialHair": "none",
-    "glasses": "square",
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "stubble",
+    "glasses": "none",
     "lines": 2,
-    "clothes": "#4f6f8f"
+    "clothes": "#6b4b6e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "gena_patel-3",
+   "name": "Gena Patel",
+   "gender": "f",
+   "age": 28,
+   "scenario": "kitchen_table_discov",
+   "role": "independent insurance agent",
+   "personality": "organized but time-pressed",
+   "background": "Gena started her own insurance consultancy after working for a major carrier. She meets clients in their homes to explain policies clearly and quickly fit sessions around her busy schedule. Her own family makes her sensitive to cost worries and jargon.",
+   "cares_about": [
+    "clear explanations",
+    "family protection",
+    "efficient communication"
+   ],
+   "pushbacks": [
+    "I know it costs more than I can afford",
+    "It feels weird to talk about dying or losing everything",
+    "These policies can be confusing; I need the basics"
+   ],
+   "wins_over": [
+    "simple breakdowns",
+    "real life examples",
+    "quick answers"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 0,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-AU"
+  },
+  {
+   "id": "mira_hollis-4",
+   "name": "Mira Hollis",
+   "gender": "f",
+   "age": 31,
+   "scenario": "cold_call_intro",
+   "role": "independent life and home insurance agent",
+   "personality": "friendly open-minded",
+   "background": "Mira grew up in a small town and studied business before moving to the city. She now runs her own independent insurance practice helping families protect what matters most.",
+   "cares_about": [
+    "her clients’ peace of mind",
+    "clear explanations she can trust",
+    "making complicated topics feel simple"
+   ],
+   "pushbacks": [
+    "I know it feels early but many people start with a quick chat just to see how it works",
+    "I get that talking about death isn’t easy but we can focus on protecting your family instead",
+    "It’s smart to check what you already have but most workplace plans don’t cover everything you need at home"
+   ],
+   "wins_over": [
+    "a clear next step",
+    "knowing she’ll never be pressured",
+    "hearing how simple the process really is"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#8a5a3c"
    },
    "accent": "en-US"
   }
  ],
  "builtin": true,
- "order": 1
+ "order": 1,
+ "group": "sales"
 }

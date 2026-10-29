@@ -107,3 +107,7 @@
 .builder .vwrap input#line { padding-right: 3.2rem; }
 .linemic.on { animation: micring 1.2s ease-out infinite; }
 @keyframes micring { from { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ink) 45%, transparent); } to { box-shadow: 0 0 0 10px transparent; } }
+
+.chip-note.src { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+#w-research { margin-top: 1rem; }
+#w-research .notes { display: flex; flex-wrap: wrap; gap: .5rem; }

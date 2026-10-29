@@ -134,7 +134,7 @@ def _llm(fn, *a, **kw):
 
 def _persona_prompt(session: dict, transcript: list[dict], stance: str | None):
     p, w = session["persona"], session["world"]
-    system = persona_system(p, w["scenario"], w, session["difficulty"], stance, db.latest_memory(w["id"]), session.get("research"))
+    system = persona_system(p, w["scenario"], w, session["difficulty"], stance, db.latest_memory(w["id"]), research.text_of(session.get("research")))
     msgs = [{"role": t["role"], "content": f"[mood:{t.get('mood', 'neutral')}] {t['content']}" if t["role"] == "assistant" else t["content"]}
             for t in transcript]
     return system, msgs or [{"role": "user", "content": "(The conversation begins. Say your opening line.)"}], p
@@ -301,7 +301,7 @@ def start(body: StartIn):
     if not persona:
         raise HTTPException(404, "Unknown person")
     brief = research.brief(body.about) if body.about else None
-    sid = db.create(world, body.scenario, persona, body.difficulty, brief, clean(body.product, "phrase", 120) or None)
+    sid = db.create(world, body.scenario, persona, body.difficulty, json.dumps(brief) if brief else None, clean(body.product, "phrase", 120) or None)
     db.bump_plays(world["id"])
     db.add_visitor_world(world["id"])
     session = db.get(sid)

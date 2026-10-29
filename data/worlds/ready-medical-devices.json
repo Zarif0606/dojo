@@ -1,191 +1,156 @@
 {
  "title": "Medical device rep",
- "tagline": "Learn to navigate clinical evidence, procurement committees, and long sales cycles to close hospital contracts.",
+ "tagline": "Learn to sell medical devices to clinics and hospitals through value-based evidence and committee consensus.",
  "you_are": "a medical device sales representative",
- "setting": "Conversations happen in hospital corridors, procurement offices, and operating room hallways where clinicians evaluate technology between cases.",
- "other_side": "clinicians and buyers",
+ "setting": "Conversations happen in clinic offices, hospital conference rooms, and virtual meetings where buying committees evaluate clinical and economic evidence.",
+ "other_side": "buying committees",
  "scenarios": [
   {
-   "id": "first_demo_request",
-   "label": "First demo request",
-   "desc": "A surgeon asks for a hands-on trial after seeing a conference abstract.",
-   "setup": "You are Dr. Aris Thorne, an orthopedic surgeon scrolling emails between cases. You look up and say: ‘Saw your poster at AAOS. The tibial guide looks promising. Can we get a rep tray for a wet lab next Tuesday?’",
-   "skills": "Clinical credibility and trial logistics",
-   "scene": "office",
-   "objective": "Schedule a hands-on evaluation with the surgical team.",
-   "place": "Orthopedic surgeon lounge",
-   "moment": "Wednesday 11:15 am, fluorescent hum overhead",
+   "id": "virtual_intro",
+   "label": "Virtual first meeting",
+   "desc": "A 30-minute video call with a clinical champion who screens vendors for the value analysis committee.",
+   "setup": "You are on a Teams call with Dr. Karen Liu, an orthopedic surgeon who controls the referral pathway. She opens with: We have seen three navigation pitches this quarter. Why should this one get committee time?",
+   "skills": "Value framing and clinical credibility",
+   "scene": "phone",
+   "objective": "Earn a slot on the value analysis committee agenda with a designated clinical sponsor.",
+   "place": "Virtual meeting room",
+   "moment": "Tuesday 10:15 am, screen share ready",
    "visual": {
     "sky": "day",
     "palette": {
-     "wall": "#E8ECEF",
-     "floor": "#B0BEC5",
-     "accent": "#006064",
-     "light": "#F1F8E9"
+     "wall": "#f2f5f9",
+     "floor": "#e0e5eb",
+     "accent": "#4a6fa5",
+     "light": "#ffffff"
     },
     "props": [
      {
-      "type": "desk",
-      "x": -0.2,
-      "z": 0.1,
-      "scale": 1.2,
-      "color": "#78909C"
-     },
-     {
       "type": "screen",
-      "x": 0.3,
-      "z": 0,
-      "scale": 1.0,
-      "color": "#263238"
-     },
-     {
-      "type": "chair",
-      "x": -0.6,
-      "z": 0.6,
-      "scale": 1.0,
-      "color": "#546E7A"
-     },
-     {
-      "type": "table",
       "x": 0.6,
-      "z": 0.7,
-      "scale": 0.9,
-      "color": "#CFD8DC"
-     },
-     {
-      "type": "plant",
-      "x": -0.9,
-      "z": 0,
-      "scale": 0.8,
-      "color": "#6B8E23"
-     }
-    ]
-   }
-  },
-  {
-   "id": "value_analysis_revie",
-   "label": "Value analysis review",
-   "desc": "A value analysis committee challenges the cost per case versus the current standard.",
-   "setup": "You are Maya Chen, director of value analysis, flipping through a spreadsheet. You set it down and say: ‘Your device adds $1,200 per case. The clinical data shows non-inferiority, not superiority. Why should we switch?’",
-   "skills": "Health economics and evidence framing",
-   "scene": "office",
-   "objective": "Secure a formal value analysis submission with supporting data.",
-   "place": "Value analysis conference room",
-   "moment": "Tuesday 2:00 pm, projector fan whirring",
-   "visual": {
-    "sky": "overcast",
-    "palette": {
-     "wall": "#DCE1E6",
-     "floor": "#9EAAB3",
-     "accent": "#455A64",
-     "light": "#E8EBF0"
-    },
-    "props": [
-     {
-      "type": "table",
-      "x": 0.0,
-      "z": 0.2,
-      "scale": 1.3,
-      "color": "#78909C"
-     },
-     {
-      "type": "screen",
-      "x": 0.0,
-      "z": 0,
-      "scale": 1.1,
-      "color": "#263238"
-     },
-     {
-      "type": "chair",
-      "x": -0.7,
-      "z": 0.8,
+      "z": 0.9,
       "scale": 1.0,
-      "color": "#546E7A"
+      "color": "#ffffff"
      },
      {
-      "type": "chair",
-      "x": 0.7,
-      "z": 0.8,
-      "scale": 1.0,
-      "color": "#546E7A"
+      "type": "window",
+      "x": -0.6,
+      "z": 0.9,
+      "scale": 1.2,
+      "color": "#cfe2f3"
      },
-     {
-      "type": "shelf",
-      "x": -0.9,
-      "z": 0,
-      "scale": 1.0,
-      "color": "#78909C"
-     },
-     {
-      "type": "plant",
-      "x": 0.9,
-      "z": 0,
-      "scale": 0.8,
-      "color": "#6B8E23"
-     }
-    ]
-   }
-  },
-  {
-   "id": "contract_negotiation",
-   "label": "Contract negotiation",
-   "desc": "A procurement lead pushes for volume tiers, consignment terms, and indemnity clauses.",
-   "setup": "You are Marcus Webb, senior procurement manager, tapping a contract redline. You slide it across and say: ‘We need 15% tiered discounts, 90-day consignment, and mutual indemnity. Sign here and we push to P&T next month.’",
-   "skills": "Contract terms and stakeholder alignment",
-   "scene": "office",
-   "objective": "Agree on redline terms that protect margin and satisfy compliance.",
-   "place": "Procurement office",
-   "moment": "Thursday 4:30 pm, late light through blinds",
-   "visual": {
-    "sky": "golden",
-    "palette": {
-     "wall": "#F5E6C8",
-     "floor": "#C9B996",
-     "accent": "#8B6914",
-     "light": "#FFF8E7"
-    },
-    "props": [
      {
       "type": "desk",
-      "x": -0.1,
-      "z": 0.1,
-      "scale": 1.2,
-      "color": "#8B7355"
-     },
-     {
-      "type": "chair",
-      "x": -0.6,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#6D5A3C"
-     },
-     {
-      "type": "screen",
-      "x": 0.4,
-      "z": 0,
-      "scale": 1.0,
-      "color": "#263238"
-     },
-     {
-      "type": "cabinet",
-      "x": -0.9,
-      "z": 0,
+      "x": -0.4,
+      "z": 0.6,
       "scale": 1.1,
-      "color": "#8B7355"
-     },
-     {
-      "type": "plant",
-      "x": 0.9,
-      "z": 0.1,
-      "scale": 0.9,
-      "color": "#6B8E23"
+      "color": "#d4d9e2"
      },
      {
       "type": "lamp",
-      "x": 0.7,
-      "z": 0.2,
+      "x": -0.2,
+      "z": 0.5,
       "scale": 0.8,
-      "color": "#C9B996"
+      "color": "#b0c4de"
+     },
+     {
+      "type": "plant",
+      "x": 0.3,
+      "z": 0.7,
+      "scale": 0.9,
+      "color": "#8fbc8f"
+     }
+    ]
+   }
+  },
+  {
+   "id": "committee_review",
+   "label": "Committee value review",
+   "desc": "A formal 45-minute committee session where clinicians, finance, IT, and supply chain interrogate ROI, cybersecurity, and workflow fit.",
+   "setup": "You are at the conference table with six stakeholders. The CFO opens with: Show us the cost-per-episode model with our actual payer mix, and the SOC-2 attestation.",
+   "skills": "Economic modeling and multi-stakeholder negotiation",
+   "scene": "office",
+   "objective": "Secure a conditional approval pending a 90-day pilot with predefined success metrics.",
+   "place": "Hospital boardroom",
+   "moment": "Thursday 2:00 pm, projector humming",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e8f4fc",
+     "floor": "#d9e6f2",
+     "accent": "#c93e4b",
+     "light": "#f0f3ff"
+    },
+    "props": [
+     {
+      "type": "screen",
+      "x": 0.4,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#000000"
+     },
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.5,
+      "scale": 1.3,
+      "color": "#3a3a3a"
+     },
+     {
+      "type": "chair",
+      "x": 0.8,
+      "z": 0.65,
+      "scale": 0.8,
+      "color": "#e0e0e0"
+     },
+     {
+      "type": "lamp",
+      "x": -0.7,
+      "z": 0.3,
+      "scale": 0.9,
+      "color": "#f0f0f0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pilot_negotiation",
+   "label": "Pilot terms negotiation",
+   "desc": "A follow-up negotiation with the OR director and materials manager to define pilot scope, data ownership, and conversion pricing.",
+   "setup": "You sit across from the OR director and materials manager. The director opens with: We will run the pilot, but our data stays here and the conversion price is capped at GPO minus 12 percent.",
+   "skills": "Contract structuring and risk sharing",
+   "scene": "office",
+   "objective": "Finalize a pilot agreement with clear go/no-go criteria and a priced conversion path.",
+   "place": "OR conference room",
+   "moment": "Monday 7:30 am, coffee on the table",
+   "visual": {
+    "sky": "dawn",
+    "palette": {
+     "wall": "#e0f2ff",
+     "floor": "#d4e6f5",
+     "accent": "#a8c4e6",
+     "light": "#f0f8ff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.2,
+      "color": "#a8c4e6"
+     },
+     {
+      "type": "lamp",
+      "x": -0.3,
+      "z": 0,
+      "scale": 0.8,
+      "color": "#f0f8ff"
+     },
+     {
+      "type": "chair",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#d4e6f5"
      }
     ]
    }
@@ -193,289 +158,307 @@
  ],
  "buyers": [
   {
-   "scenario": "first_demo_request",
-   "role": "Orthopedic surgeon",
-   "personality": "evidence-driven, time-pressed",
-   "difficulty": 2,
-   "gender": "m",
-   "age": 42,
-   "angle": "Wants peer-level data fast and will cancel if the rep tray arrives incomplete."
-  },
-  {
-   "scenario": "first_demo_request",
-   "role": "OR charge nurse",
-   "personality": "workflow-focused, skeptical",
-   "difficulty": 3,
-   "gender": "f",
-   "age": 38,
-   "angle": "Blocks products that add setup time or need special trays she doesn’t stock."
-  },
-  {
-   "scenario": "contract_negotiation",
-   "role": "Value analysis director",
-   "personality": "analytical, budget-accountable",
-   "difficulty": 4,
+   "scenario": "virtual_intro",
+   "role": "first contact",
+   "personality": "skeptical risk-averse committee",
+   "difficulty": 1,
    "gender": "f",
    "age": 45,
-   "angle": "Requires published outcomes and budget impact models; rejects marketing claims."
+   "angle": "Prefers proven solutions with long track records for safety and compliance."
   },
   {
-   "scenario": "first_demo_request",
-   "role": "CFO liaison",
-   "personality": "risk-averse, compliance-heavy",
+   "scenario": "committee_review",
+   "role": "real conversation",
+   "personality": "pragmatic budget analyst",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 38,
+   "angle": "Needs clear cost-per-case savings and flexible financing options to justify spend."
+  },
+  {
+   "scenario": "pilot_negotiation",
+   "role": "hardest close",
+   "personality": "data-driven procurement lead",
    "difficulty": 5,
-   "gender": "m",
+   "gender": "f",
    "age": 52,
-   "angle": "Flags any off-label language or missing FDA clearance letters instantly."
+   "angle": "Requires quantified ROI modeling and third-party validation before approval."
   },
   {
-   "scenario": "contract_negotiation",
-   "role": "Senior procurement manager",
-   "personality": "process-rigid, margin-focused",
-   "difficulty": 4,
+   "scenario": "committee_review",
+   "role": "real conversation",
+   "personality": "innovation-seeking clinician",
+   "difficulty": 2,
    "gender": "m",
-   "age": 48,
-   "angle": "Uses GPO benchmarks to squeeze price and demands consignment for all new SKUs."
+   "age": 41,
+   "angle": "Eager to test new tools if they promise measurable patient outcome improvement."
+  },
+  {
+   "scenario": "virtual_intro",
+   "role": "first contact",
+   "personality": "cautious procurement officer",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 55,
+   "angle": "Focuses on regulatory compliance and contract stability before exploring benefits."
   }
  ],
  "objections": [
-  "Your pivotal trial excluded obese patients and that’s half my panel",
-  "The 510(k) predicate device was recalled two years ago",
-  "We can’t stock another vendor-specific instrument tray",
-  "Your reps gave conflicting MRI compatibility answers last quarter",
-  "The GPO contract caps this category at 12% below your list price",
-  "Show me the real-world revision rate, not the registry subset you cherry-picked",
-  "If the rep isn’t in the OR for the first ten cases, we’re not switching",
-  "Your indemnity clause excludes reprocessing failures; that’s a deal-breaker"
+  "We need long-term evidence that this actually lowers infection rates",
+  "Our budget cycle doesn’t align with your proposal timeline",
+  "Why should we adopt this now when our current system works fine?",
+  "Can you show how this reduces cost per episode compared to our existing devices?",
+  "We require a formal cybersecurity audit report before any procurement committee will consider it",
+  "We need more concrete data on staff time savings before we can justify the investment",
+  "Our committee insists on seeing ROI projections tied to episode-based payment models",
+  "Flexible pricing sounds good, but we need proof it scales across multiple sites"
  ],
  "rubric": [
   {
-   "id": "clinical_fluency",
-   "label": "Clinical fluency",
-   "what": "Speaks the specialty’s language, cites relevant studies, and answers technique questions without deferring."
+   "id": "clinical_evidence",
+   "label": "Clinical evidence",
+   "what": "Cites peer-reviewed outcomes and real-world registry data that match the committee’s patient population."
   },
   {
-   "id": "evidence_mapping",
-   "label": "Evidence mapping",
-   "what": "Matches each claim to the exact study design, population, and endpoint the buyer cares about."
+   "id": "economic_modeling",
+   "label": "Economic modeling",
+   "what": "Presents a cost-per-episode analysis using the facility’s actual payer mix, DRG weights, and variable cost inputs."
   },
   {
-   "id": "value_modeling",
-   "label": "Value modeling",
-   "what": "Builds a cost-per-episode model with local inputs and defends assumptions against finance scrutiny."
+   "id": "stakeholder_alignment",
+   "label": "Stakeholder alignment",
+   "what": "Addresses each committee role’s distinct concerns, clinical, financial, IT, supply chain, in their own language."
   },
   {
-   "id": "regulatory_precision",
-   "label": "Regulatory precision",
-   "what": "States cleared indications, contraindications, and off-label boundaries accurately in every conversation."
+   "id": "compliance_integrity",
+   "label": "Compliance integrity",
+   "what": "Accurately represents FDA clearance status, on-label indications, and adverse event reporting obligations without puffery."
   },
   {
-   "id": "stakeholder_navigation",
-   "label": "Stakeholder navigation",
-   "what": "Identifies surgeons, administrators, and supply chain roles and advances each on their own terms."
+   "id": "cybersecurity_readiness",
+   "label": "Cybersecurity readiness",
+   "what": "Provides SOC-2 Type II summaries, SBOM documentation, and a clear patch-management SLA for connected devices."
   },
   {
-   "id": "contract_discipline",
-   "label": "Contract discipline",
-   "what": "Negotiates terms that protect margin, ensure supply continuity, and pass legal review without surprises."
+   "id": "pilot_structuring",
+   "label": "Pilot structuring",
+   "what": "Defines measurable success criteria, data ownership, timeline, and a pre-negotiated conversion price before the pilot starts."
   }
  ],
  "live_meters": [
-  "clinical_fluency",
-  "evidence_mapping",
-  "regulatory_precision"
+  "clinical_evidence",
+  "economic_modeling",
+  "stakeholder_alignment"
  ],
  "pitfalls": [
-  "Promising off-label outcomes or citing abstracts as peer-reviewed publications.",
-  "Skipping the biomed engineer or sterile processing lead in the evaluation loop.",
-  "Committing to consignment terms that violate inventory accounting policies."
+  "Promising off-label outcomes or implying superiority without head-to-head trial data.",
+  "Submitting a generic ROI calculator instead of a facility-specific cost-per-episode model.",
+  "Treating the clinical champion as the sole decision-maker and neglecting supply chain or IT requirements."
  ],
  "id": "ready-medical-devices",
  "line": "Selling medical devices to clinics and hospitals",
  "product": null,
- "researched": false,
+ "researched": true,
+ "research": {
+  "text": "Common objections from clinics and hospitals when selling medical devices include skepticism about effectiveness, timing issues, and lack of urgency. To address these, reps should offer flexible pricing plans, personalized demos, and ROI calculators. The shift to value-based care models has made clinical outcomes and cost-per-episode reductions crucial, and virtual selling is now essential. Committees demand quantified economic impact and cybersecurity attestations, and the buyer is often a committee rather than an individual.",
+  "sources": [
+   {
+    "title": "How to Sell Medical Devices to Hospitals in 2026",
+    "url": "https://www.getboomerang.ai/glossaries/how-to-sell-medical-devices-to-hospitals"
+   },
+   {
+    "title": "20 Examples of Common Sales Objections & Responses (2026)",
+    "url": "https://www.cognism.com/blog/sales-objections"
+   },
+   {
+    "title": "Medical Sales Challenges in 2026 | Lisa T. Miller",
+    "url": "https://www.lisatmiller.com/medical-sales-challenges-2026"
+   }
+  ]
+ },
  "personas": [
   {
-   "id": "harlan_booth-0",
-   "name": "Harlan Booth",
-   "gender": "m",
-   "age": 42,
-   "scenario": "first_demo_request",
-   "role": "Orthopedic surgeon",
-   "personality": "evidence-driven, time-pressed",
-   "background": "He has spent 12 years in operating rooms, first as a resident and now as a private practice surgeon. He runs a high-volume joint replacement service and measures every pitch against peer-reviewed outcomes.",
-   "cares_about": [
-    "peer-reviewed outcomes",
-    "instrument reliability",
-    "cost transparency"
-   ],
-   "pushbacks": [
-    "Your pivotal trial excluded obese patients and that’s half my panel",
-    "The 510(k) predicate device was recalled two years ago",
-    "We can’t stock another vendor-specific instrument tray"
-   ],
-   "wins_over": [
-    "peer-reviewed outcomes",
-    "instrument reliability",
-    "cost transparency"
-   ],
-   "suggested_difficulty": 2,
-   "appearance": {
-    "skin": "tan",
-    "hairStyle": "short",
-    "hairColor": "darkbrown",
-    "facialHair": "stubble",
-    "glasses": "none",
-    "lines": 1,
-    "clothes": "#8a5a3c"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "nora_hernandez-1",
-   "name": "Nora Hernandez",
-   "gender": "f",
-   "age": 38,
-   "scenario": "first_demo_request",
-   "role": "or charge nurse",
-   "personality": "workflow-focused, skeptical",
-   "background": "She runs triage for 18 surgeries a day and refuses anything that slows turnover. Colleagues say she knows every tray by feel.",
-   "cares_about": [
-    "patient safety",
-    "team efficiency",
-    "personal credibility"
-   ],
-   "pushbacks": [
-    "Your pivotal trial excluded obese patients and that’s half my panel",
-    "The 510(k) predicate device was recalled two years ago",
-    "We can’t stock another vendor-specific instrument tray"
-   ],
-   "wins_over": [
-    "demonstrates a tray that fits her existing workflow",
-    "shows data from a cohort that includes bariatric patients",
-    "offers a compatibility briefing that matches recent device updates"
-   ],
-   "suggested_difficulty": 3,
-   "appearance": {
-    "skin": "medium",
-    "hairStyle": "bob",
-    "hairColor": "darkbrown",
-    "facialHair": "none",
-    "glasses": "square",
-    "lines": 1,
-    "clothes": "#3f4f3f"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "patricia_o_donnell-2",
-   "name": "Patricia O’Donnell",
+   "id": "hannah_willis-0",
+   "name": "Hannah Willis",
    "gender": "f",
    "age": 45,
-   "scenario": "contract_negotiation",
-   "role": "value analysis director",
-   "personality": "analytical budget accountable",
-   "background": "She oversees multi-disciplinary committee decisions ensuring fiscal responsibility across clinical services. Trained as a clinical nurse specialist she now translates cost data into procurement policy.",
+   "scenario": "virtual_intro",
+   "role": "clinical adoption lead",
+   "personality": "cautious requires evidence",
+   "background": "She has spent ten years managing clinical rollouts within a large health network. Her current focus is assessing new technologies that meet strict infection control standards.",
    "cares_about": [
-    "evidence based decision making",
-    "sustainable equipment lifecycle",
-    "team reputation for rigor"
+    "infection reduction",
+    "budget predictability",
+    "compliance assurance"
    ],
    "pushbacks": [
-    "Our data shows outcomes vary with BMI our patient population mirrors real world practice",
-    "That recall never impacted our specific consumables or sterilization protocol",
-    "Our existing vendor provides comparable quality at a lower total cost of ownership"
+    "We need long-term evidence that this actually lowers infection rates",
+    "Our budget cycle doesn’t align with your proposal timeline",
+    "Why should we adopt this now when our current system works fine?"
    ],
    "wins_over": [
-    "peer reviewed meta analyses in stakeholder journals",
-    "transparent TCO modeling",
-    "demonstrated workflow compatibility"
+    "clinical validation",
+    "cost transparency",
+    "regulatory readiness"
    ],
-   "suggested_difficulty": 4,
+   "suggested_difficulty": 1,
    "appearance": {
     "skin": "medium",
     "hairStyle": "bob",
-    "hairColor": "darkbrown",
+    "hairColor": "brown",
     "facialHair": "none",
     "glasses": "square",
-    "lines": 1,
-    "clothes": "#8a5a3c"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "david_chen-3",
-   "name": "David Chen",
-   "gender": "m",
-   "age": 52,
-   "scenario": "first_demo_request",
-   "role": "cfo liaison",
-   "personality": "risk averse, compliance driven",
-   "background": "Formerly led procurement for a mid sized health system after twelve years in hospital finance. Now advises vendors on contract alignment and regulatory fit. Speaks with quiet precision and files every email for audit.",
-   "cares_about": [
-    "contractual indemnity",
-    "audit trail completeness",
-    "pre market clearance documentation"
-   ],
-   "pushbacks": [
-    "Your pivotal trial excluded obese patients and that’s half my panel",
-    "The 510(k) predicate device was recalled two years ago",
-    "We can’t stock another vendor specific instrument tray"
-   ],
-   "wins_over": [
-    "clearly labeled liability language",
-    "full pre market documentation on file",
-    "consistent answers from clinical affairs"
-   ],
-   "suggested_difficulty": 5,
-   "appearance": {
-    "skin": "light",
-    "hairStyle": "short",
-    "hairColor": "darkbrown",
-    "facialHair": "none",
-    "glasses": "none",
     "lines": 1,
     "clothes": "#3a3a4a"
    },
    "accent": "en-US"
   },
   {
-   "id": "brendan_o_connor-4",
-   "name": "Brendan O’Connor",
+   "id": "nigel_matheson-1",
+   "name": "Nigel Matheson",
    "gender": "m",
-   "age": 48,
-   "scenario": "contract_negotiation",
-   "role": "senior procurement",
-   "personality": "process-driven, margin-protective",
-   "background": "He has spent two decades negotiating hospital contracts and knows every clause by heart. Running a large procurement team feels like conducting an orchestra where timing is everything.",
+   "age": 38,
+   "scenario": "committee_review",
+   "role": "medical device sales rep",
+   "personality": "pragmatic budget analyst",
+   "background": "Nigel spent ten years as a hospital procurement analyst before moving into sales. He knows every cost centre and how committees think.",
    "cares_about": [
-    "gross margin",
-    "risk avoidance",
-    "team reputation"
+    "long term return on investment",
+    "avoiding unexpected maintenance fees",
+    "keeping relationships after a failed pitch"
    ],
    "pushbacks": [
-    "Your pivotal trial excluded obese patients and that’s half my panel",
-    "The 510(k) predicate device was recalled two years ago",
-    "We can’t stock another vendor-specific instrument tray"
+    "I need to see a break even on the purchase cost within eighteen months",
+    "If we extend the financing term will you take back some upfront margin",
+    "Are there any service guarantees if infection rates don’t improve"
    ],
    "wins_over": [
-    "consignment trails",
-    "real-world utilization data",
-    "tight integration with OR workflow"
+    "demonstrated savings after six months",
+    "flexible payment schedules",
+    "clear data on error reduction"
    ],
-   "suggested_difficulty": 4,
+   "suggested_difficulty": 3,
    "appearance": {
-    "skin": "medium",
+    "skin": "light",
     "hairStyle": "short",
     "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-GB"
+  },
+  {
+   "id": "priya_menon-2",
+   "name": "Priya Menon",
+   "gender": "f",
+   "age": 52,
+   "scenario": "pilot_negotiation",
+   "role": "procurement lead",
+   "personality": "fact-focused and cautious",
+   "background": "Spent two decades negotiating contracts in surgical settings. Leads a multidisciplinary committee that insists on hard data before any purchase.",
+   "cares_about": [
+    "reducing infection rates",
+    "cost per episode",
+    "audit compliance"
+   ],
+   "pushbacks": [
+    "Our budget cycle doesn’t align with your proposal timeline",
+    "Can you show how this reduces cost per episode compared to our existing devices?",
+    "Why should we adopt this now when our current system works fine?"
+   ],
+   "wins_over": [
+    "validated ROI models",
+    "third-party clinical outcomes",
+    "accurate cost-per-case analysis"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#6b4b6e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "derek_malone-3",
+   "name": "Derek Malone",
+   "gender": "m",
+   "age": 41,
+   "scenario": "committee_review",
+   "role": "medical device sales representative",
+   "personality": "innovation-seeking clinician",
+   "background": "Derek spent ten years as a clinical engineer before moving into sales. He knows how new technology can improve patient outcomes and he’s ready to prove it on the floor.",
+   "cares_about": [
+    "clinical effectiveness",
+    "cost efficiency",
+    "reputation in the market"
+   ],
+   "pushbacks": [
+    "We need longer studies showing infection rates actually drop",
+    "Our budgeting cycle runs on a different schedule than your pitch",
+    "Our current system works fine, so why change now?"
+   ],
+   "wins_over": [
+    "measurable patient outcome gains",
+    "clear cost per episode savings",
+    "solid cybersecurity audit"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "brown",
     "facialHair": "stubble",
     "glasses": "none",
     "lines": 1,
-    "clothes": "#7a5a8a"
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "brian_duvall-4",
+   "name": "Brian Duvall",
+   "gender": "m",
+   "age": 55,
+   "scenario": "virtual_intro",
+   "role": "procurement lead",
+   "personality": "cautious procurement officer",
+   "background": "Brian has spent two decades negotiating contracts for a regional hospital network. He oversees all major purchasing decisions and demands clear proof of compliance before considering new vendors.",
+   "cares_about": [
+    "regulatory compliance",
+    "contract stability",
+    "audit readiness"
+   ],
+   "pushbacks": [
+    "Can you show me the full regulatory compliance documentation?",
+    "Do you have an independent audit report for your device?",
+    "How stable are your pricing terms over the multi‑year contract?"
+   ],
+   "wins_over": [
+    "clear regulatory pathway",
+    "multi‑year price lock",
+    "audit‑ready evidence"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "balding",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 2,
+    "clothes": "#9a4d4d"
    },
    "accent": "en-US"
   }
  ],
  "builtin": true,
- "order": 10
+ "order": 10,
+ "group": "sales"
 }

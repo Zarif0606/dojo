@@ -122,9 +122,6 @@ class AzureVoice(unittest.TestCase):
         self.assertIn("en-GB-", seen[2])
 
 
-if __name__ == "__main__":
-    unittest.main()
-
 
 class Visitors(unittest.TestCase):
     """Two browsers (separate cookie jars) must not see each other's history, progress, worlds or coach memory."""
@@ -156,3 +153,22 @@ class Visitors(unittest.TestCase):
         t = _db.CURRENT_VID.set(a.cookies.get("dojo_vid")); _db.add_visitor_world("custom-x"); _db.CURRENT_VID.reset(t)
         self.assertIn("custom-x", ids(a)); self.assertNotIn("custom-x", ids(b))
         self.assertTrue(len(ids(b)) >= 10)                                      # the ready-made worlds are still there
+
+
+class ResearchPack(unittest.TestCase):
+    def test_pack_and_text_of(self):
+        from app import research
+        data = {"answer": "  Buyers worry about price.  ", "results": [{"title": "A", "url": "https://a.example/x", "content": "c"}, {"title": "B", "url": "javascript:alert(1)", "content": "c"}]}
+        p = research._pack(data, 600)
+        self.assertEqual(p["text"], "Buyers worry about price.")
+        self.assertEqual(p["sources"], [{"title": "A", "url": "https://a.example/x"}])   # only http(s) links are kept
+        self.assertIsNone(research._pack({}, 600)); self.assertIsNone(research._pack(None, 600))
+        import json
+        self.assertEqual(research.text_of(p), "Buyers worry about price.")
+        self.assertEqual(research.text_of(json.dumps(p)), "Buyers worry about price.")
+        self.assertEqual(research.text_of("older plain text"), "older plain text")
+        self.assertIsNone(research.text_of(None))
+
+
+if __name__ == "__main__":
+    unittest.main()

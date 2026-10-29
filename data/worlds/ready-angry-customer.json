@@ -1,0 +1,464 @@
+{
+ "title": "Angry customer",
+ "tagline": "Learn to de-escalate furious callers, resolve their issue and keep the call professional.",
+ "you_are": "a tier-one support agent handling inbound escalations",
+ "setting": "Calls arrive in a busy contact centre; you wear a headset, read the account on screen and talk only by voice.",
+ "other_side": "callers",
+ "scenarios": [
+  {
+   "id": "billing_shock",
+   "label": "Unexpected overage bill",
+   "desc": "A caller opens with rage over a surprise $300 charge they never authorised.",
+   "setup": "The caller is a freelance designer who just saw the charge on their banking app. They shout: You people stole three hundred dollars from me yesterday and I want it back right now.",
+   "skills": "Initial de-escalation and ownership",
+   "scene": "phone",
+   "objective": "Acknowledge the shock, verify the charge and secure agreement on the first corrective step.",
+   "place": "Contact centre floor, pod 12",
+   "moment": "Tuesday 10:15 am, background chatter low",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e0f7fa",
+     "floor": "#b2dfdb",
+     "accent": "#ff8a65",
+     "light": "#d3d3d3"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.7,
+      "scale": 1.2,
+      "color": "#9e9e9e"
+     },
+     {
+      "type": "lamp",
+      "x": -0.3,
+      "z": 0.7,
+      "scale": 0.8,
+      "color": "#ffcc80"
+     },
+     {
+      "type": "chair",
+      "x": 0.2,
+      "z": 0.65,
+      "scale": 0.9,
+      "color": "#616161"
+     }
+    ]
+   }
+  },
+  {
+   "id": "repeated_outage",
+   "label": "Third outage this month",
+   "desc": "A small-business owner faces the third internet outage in four weeks and threatens to cancel.",
+   "setup": "The caller runs a bakery with a broken POS system. They say: This is the third time in a month my card reader goes dark during rush hour. I am done. Cancel everything today.",
+   "skills": "Empathy under repeat-failure pressure and retention",
+   "scene": "phone",
+   "objective": "Validate the business impact, present a credible recovery plan and keep the account active.",
+   "place": "Contact centre floor, pod 12",
+   "moment": "Friday 11:02 am, queue alert flashing",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#f8f0e0",
+     "floor": "#d4c9b8",
+     "accent": "#c70000",
+     "light": "#ffcc00"
+    },
+    "props": [
+     {
+      "type": "counter",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.3,
+      "color": "#c0392b"
+     },
+     {
+      "type": "window",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#c70000"
+     },
+     {
+      "type": "shelf",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#c70000"
+     },
+     {
+      "type": "plant",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#c70000"
+     }
+    ]
+   }
+  },
+  {
+   "id": "abusive_escalation",
+   "label": "Abusive caller demanding supervisor",
+   "desc": "A caller crosses into personal insults and refuses any troubleshooting unless a manager answers immediately.",
+   "setup": "The caller has been on hold twice. They snap: You are useless. Put a real human on the line or I sue. I know your name and where you sit.",
+   "skills": "Boundary setting and safe escalation",
+   "scene": "phone",
+   "objective": "Set a respectful boundary, warn once, then transfer to the supervisor queue with a concise hand-off note.",
+   "place": "Contact centre floor, pod 12",
+   "moment": "Wednesday 3:47 pm, supervisor light blinking",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#2a5c8a",
+     "floor": "#d4e6f1",
+     "accent": "#e67e22",
+     "light": "#f39c12"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.2,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#c0392b"
+     },
+     {
+      "type": "lamp",
+      "x": -0.5,
+      "z": 0.9,
+      "scale": 0.8,
+      "color": "#f1c40f"
+     },
+     {
+      "type": "window",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#e67e22"
+     },
+     {
+      "type": "shelf",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#e67e22"
+     },
+     {
+      "type": "plant",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#e67e22"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "billing_shock",
+   "role": "first contact",
+   "personality": "frustrated pacing agitated",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 45,
+   "angle": "Quickly calms when heard."
+  },
+  {
+   "scenario": "repeated_outage",
+   "role": "real conversation",
+   "personality": "defensive denial resistant",
+   "difficulty": 3,
+   "gender": "f",
+   "age": 32,
+   "angle": "Cites policy as excuse."
+  },
+  {
+   "scenario": "abusive_escalation",
+   "role": "hardest close",
+   "personality": "abusive escalating threatening",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 55,
+   "angle": "Uses abusive language demanding supervisor."
+  },
+  {
+   "scenario": "billing_shock",
+   "role": "first contact",
+   "personality": "calm confused uncertain",
+   "difficulty": 1,
+   "gender": "f",
+   "age": 28,
+   "angle": "Needs reassurance promptly."
+  },
+  {
+   "scenario": "repeated_outage",
+   "role": "real conversation",
+   "personality": "polite skeptical doubtful",
+   "difficulty": 2,
+   "gender": "m",
+   "age": 40,
+   "angle": "Questions policy fairness quietly."
+  }
+ ],
+ "objections": [
+  "I just want someone to fix this now",
+  "I’ve been on hold for half an hour",
+  "Your policy doesn’t help my problem",
+  "I’ve called before and nothing changes",
+  "You can’t do anything but read scripts",
+  "I don’t trust another representative",
+  "Your product broke and you won’t admit it",
+  "I need compensation now not excuses"
+ ],
+ "rubric": [
+  {
+   "id": "active_listening",
+   "label": "Active listening",
+   "what": "Paraphrase the caller’s core problem and emotion before offering any fix."
+  },
+  {
+   "id": "empathetic_acknowledgeme",
+   "label": "Empathetic acknowledgement",
+   "what": "Use genuine phrases like I can hear how frustrating this is without adding but or policy language."
+  },
+  {
+   "id": "ownership_language",
+   "label": "Ownership language",
+   "what": "Say I am prioritising this right now or I will see this through instead of transferring blame."
+  },
+  {
+   "id": "compliant_apology",
+   "label": "Compliant apology",
+   "what": "Apologise for the experience, not the policy, and never follow sorry with a limitation."
+  },
+  {
+   "id": "boundary_setting",
+   "label": "Boundary setting",
+   "what": "Calmly state the behaviour you need to continue and the consequence if it persists."
+  },
+  {
+   "id": "resolution_clarity",
+   "label": "Resolution clarity",
+   "what": "Give one concrete next step, a time frame and a way to verify it happened."
+  }
+ ],
+ "live_meters": [
+  "ownership_language",
+  "boundary_setting",
+  "active_listening"
+ ],
+ "pitfalls": [
+  "Saying calm down or as per policy.",
+  "Apologising then adding but.",
+  "Threatening hang-up without a clear warning."
+ ],
+ "id": "ready-angry-customer",
+ "line": "Calming down an angry customer as a support agent",
+ "product": null,
+ "researched": true,
+ "research": {
+  "text": "To calm an angry customer, support agents should follow a clear de-escalation protocol: listen, acknowledge, apologize, confirm understanding, offer resolution, and follow through. Avoid phrases like “Calm down,” “As per our policy,” “There’s nothing I can do,” “That’s not our fault,” and any apology immediately followed by “but.” Instead, use phrases like “I’m prioritizing this right now” and “I can hear this has been a difficult experience.” If the customer’s behavior becomes abusive, agents should set firm but respectful boundaries and escalate to a supervisor. If harassment occurs, hanging up is appropriate. Use confident, empathetic tones and remain calm to de-escalate the situation.",
+  "sources": [
+   {
+    "title": "How to Deal with an Angry Customer: A Complete Guide [2026]",
+    "url": "https://kayako.com/blog/impatient-customers"
+   },
+   {
+    "title": "Customer De-Escalation: What to Say When a Customer Is Angry",
+    "url": "https://www.talaera.com/industry-specific-english/customer-de-escalation-phrases"
+   },
+   {
+    "title": "How to deal with angry customers: 17 tips and templates",
+    "url": "https://www.zendesk.com/blog/customer-experience/feedback/customer-feedback-hear-voice-customer/angry-customer-templates"
+   }
+  ]
+ },
+ "personas": [
+  {
+   "id": "craig_patel-0",
+   "name": "Craig Patel",
+   "gender": "m",
+   "age": 45,
+   "scenario": "billing_shock",
+   "role": "tier one support agent",
+   "personality": "frustrated pacing agitated",
+   "background": "Craig started in a call centre ten years ago. He works daily on billing shocks for new customers.",
+   "cares_about": [
+    "resolving issue fast",
+    "avoiding repeat calls",
+    "clear next steps"
+   ],
+   "pushbacks": [
+    "I just want someone to fix this now",
+    "I’ve been on hold for half an hour",
+    "Your policy doesn’t help my problem"
+   ],
+   "wins_over": [
+    "quick solution",
+    "clear next steps",
+    "no repeat calls"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3f4f3f"
+   },
+   "accent": "en-GB"
+  },
+  {
+   "id": "finn_fraser-1",
+   "name": "Finn Fraser",
+   "gender": "m",
+   "age": 32,
+   "scenario": "repeated_outage",
+   "role": "tier-one support caller",
+   "personality": "defensive denial resistant",
+   "background": "He handles recurring service outages and frequently invokes policy to delay resolution. He tends to repeat previous complaints, assuming previous answers will not change.",
+   "cares_about": [
+    "quick fix",
+    "being heard",
+    "end of outage"
+   ],
+   "pushbacks": [
+    "I’ve been on hold for half an hour and nothing’s changed",
+    "Your policy doesn’t help my problem",
+    "You can’t do anything but read scripts"
+   ],
+   "wins_over": [
+    "acknowledges his urgency",
+    "shows concrete steps",
+    "offers a real timeline"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "tommy_delaney-2",
+   "name": "Tommy Delaney",
+   "gender": "m",
+   "age": 55,
+   "scenario": "abusive_escalation",
+   "role": "hardest close",
+   "personality": "abusive escalating threatening",
+   "background": "He has worked ten years in the call centre handling billing issues. After his son died in an accident ten years ago he became short with customers. He sees the job as a way to earn a pension before retirement.",
+   "cares_about": [
+    "getting off shift on time",
+    "being listened to",
+    "feeling respected"
+   ],
+   "pushbacks": [
+    "I need to speak to a supervisor right now",
+    "This is unacceptable, do you understand?",
+    "If you don’t fix this I’m going to file a complaint"
+   ],
+   "wins_over": [
+    "acknowledge how maddening the delay feels",
+    "offer a clear next step",
+    "thank them for their patience"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "buzz",
+    "hairColor": "grey",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 2,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "vanessa_patel-3",
+   "name": "Vanessa Patel",
+   "gender": "f",
+   "age": 28,
+   "scenario": "billing_shock",
+   "role": "tier-one support agent",
+   "personality": "calm confused uncertain",
+   "background": "Vanessa joined the contact centre two years ago after moving to the city for a junior admin role. She handles billing complaints daily and tries to keep callers calm while learning the policies.",
+   "cares_about": [
+    "helping the caller feel heard",
+    "getting the right information without jargon",
+    "not letting the call end with unresolved anger"
+   ],
+   "pushbacks": [
+    "I understand you’re frustrated, but I can only do what the system allows",
+    "I’m not ignoring you, I’m looking for the fastest solution",
+    "I will pass this on to someone who can adjust the charge if needed"
+   ],
+   "wins_over": [
+    "a clear next step that involves a real person",
+    "when they see I’m trying to find a fix rather than reciting policy",
+    "a genuine apology that isn’t scripted"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "black",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 0,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-IN"
+  },
+  {
+   "id": "gilles_marquez-4",
+   "name": "Gilles Marquez",
+   "gender": "m",
+   "age": 40,
+   "scenario": "repeated_outage",
+   "role": "tier one support agent",
+   "personality": "polite skeptical doubtful",
+   "background": "Gilles has worked in tier one support for twelve years and knows the scripts by heart. He values clear answers and gets frustrated when policy feels disconnected from customer needs.",
+   "cares_about": [
+    "fair resolution",
+    "time efficiency",
+    "being heard"
+   ],
+   "pushbacks": [
+    "I just want someone to fix this now",
+    "I’ve been on hold for half an hour",
+    "Your policy doesn’t help my problem"
+   ],
+   "wins_over": [
+    "proactive updates",
+    "clear explanations",
+    "empathy with follow-through"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#2f5d62"
+   },
+   "accent": "en-CA"
+  }
+ ],
+ "builtin": true,
+ "order": 104,
+ "group": "life"
+}

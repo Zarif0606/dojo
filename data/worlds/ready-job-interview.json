@@ -1,0 +1,464 @@
+{
+ "title": "Job interview",
+ "tagline": "Learn to tell concise, high-signal stories that prove ownership, collaboration and technical judgment.",
+ "you_are": "a software engineer interviewing for a new role",
+ "setting": "Conversations happen in video calls, on-site meeting rooms and phone screens with hiring managers and senior engineers who probe your past work with behavioural questions.",
+ "other_side": "interviewers",
+ "scenarios": [
+  {
+   "id": "phone_screen",
+   "label": "Phone screen with recruiter",
+   "desc": "A 30-minute call where a recruiter checks basic fit and asks one behavioural question to gauge communication.",
+   "setup": "You are a recruiter who has my resume open. You open with: “Thanks for the time. Walk me through the project you’re proudest of and what your personal contribution was.”",
+   "skills": "concise storytelling and impact framing",
+   "scene": "phone",
+   "objective": "Deliver a two-minute STAR story that shows clear personal impact and matches the role level.",
+   "place": "Video call from home office",
+   "moment": "Tuesday 10:00 am, quiet background",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e0e0e0",
+     "floor": "#f5f5f5",
+     "accent": "#0066cc",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "sofa",
+      "x": -0.3,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#4a4a4a"
+     },
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.3,
+      "scale": 1.0,
+      "color": "#333333"
+     },
+     {
+      "type": "lamp",
+      "x": -0.4,
+      "z": 0.2,
+      "scale": 0.8,
+      "color": "#ffb84d"
+     },
+     {
+      "type": "plant",
+      "x": 0.3,
+      "z": 0.1,
+      "scale": 0.7,
+      "color": "#28a745"
+     },
+     {
+      "type": "screen",
+      "x": 0.0,
+      "z": 0,
+      "scale": 0.9,
+      "color": "#111111"
+     }
+    ]
+   }
+  },
+  {
+   "id": "hiring_manager",
+   "label": "Hiring manager deep dive",
+   "desc": "A 45-minute session where the hiring manager presses for judgment on ambiguity, conflict and failure.",
+   "setup": "You are the hiring manager. You open with: “Tell me about a time the requirements were vague and you had to decide what to build anyway.”",
+   "skills": "judgment under ambiguity and decision ownership",
+   "scene": "office",
+   "objective": "Explain the ambiguity, your framing process, the decision you drove and the measurable outcome.",
+   "place": "On-site conference room",
+   "moment": "Thursday 2:15 pm, whiteboard behind you",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e0e0e0",
+     "floor": "#c0c0c0",
+     "accent": "#ff5722",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.6,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#b0b0b0"
+     },
+     {
+      "type": "chair",
+      "x": -0.8,
+      "z": 0.5,
+      "scale": 0.8,
+      "color": "#607d8b"
+     },
+     {
+      "type": "lamp",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 0.7,
+      "color": "#ff9800"
+     }
+    ]
+   }
+  },
+  {
+   "id": "senior_engineer",
+   "label": "Senior engineer technical behavioural",
+   "desc": "A peer interview where a senior engineer tests collaboration, influence without authority and reliability improvements.",
+   "setup": "You are a senior engineer. You open with: “Describe a case where you improved system reliability and had to convince other teams to adopt your changes.”",
+   "skills": "cross-team influence and technical rigour",
+   "scene": "office",
+   "objective": "Show how you diagnosed the problem, built allies, shipped the fix and measured the reliability gain.",
+   "place": "Team area near the build monitors",
+   "moment": "Friday 11:30 am, faint CI chimes",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#2a2f36",
+     "floor": "#90a4ae",
+     "accent": "#7b9ebf",
+     "light": "#d9d9d9"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.2,
+      "z": 0.4,
+      "scale": 1.0,
+      "color": "#3e4a59"
+     },
+     {
+      "type": "shelf",
+      "x": 0.2,
+      "z": 0.6,
+      "scale": 0.8,
+      "color": "#2c3e50"
+     },
+     {
+      "type": "chair",
+      "x": -0.4,
+      "z": 0.3,
+      "scale": 0.9,
+      "color": "#555555"
+     },
+     {
+      "type": "poster",
+      "x": -0.3,
+      "z": 0.8,
+      "scale": 0.6,
+      "color": "#ffffff"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "phone_screen",
+   "role": "interviewer",
+   "personality": "friendly, curious",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 34,
+   "angle": "Tests basic STAR usage."
+  },
+  {
+   "scenario": "phone_screen",
+   "role": "tech lead",
+   "personality": "skeptical, direct",
+   "difficulty": 2,
+   "gender": "m",
+   "age": 41,
+   "angle": "Looks for concrete impact."
+  },
+  {
+   "scenario": "hiring_manager",
+   "role": "senior engineer",
+   "personality": "patient, probing",
+   "difficulty": 3,
+   "gender": "f",
+   "age": 45,
+   "angle": "Checks learning depth."
+  },
+  {
+   "scenario": "senior_engineer",
+   "role": "engineering manager",
+   "personality": "challenging, decisive",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 50,
+   "angle": "Presses on ownership trade‑offs."
+  },
+  {
+   "scenario": "senior_engineer",
+   "role": "CTO",
+   "personality": "visionary, impatient",
+   "difficulty": 5,
+   "gender": "f",
+   "age": 58,
+   "angle": "Asks about strategic influence."
+  }
+ ],
+ "objections": [
+  "I need to see how you handled ambiguity in a real project",
+  "Can you describe a conflict with a teammate and its outcome?",
+  "Tell me about a failure and what you changed",
+  "Give an example of improving performance or reliability",
+  "Describe a time you influenced a decision without authority",
+  "How did you take ownership of that work?",
+  "What was your specific impact on the metric?",
+  "Explain how you collaborated to resolve the issue"
+ ],
+ "rubric": [
+  {
+   "id": "star_structure",
+   "label": "STAR structure",
+   "what": "Each story has a clear Situation, Task, Action and Result with no rambling."
+  },
+  {
+   "id": "personal_impact",
+   "label": "Personal impact",
+   "what": "You centre your own decisions and code, not the team’s collective work."
+  },
+  {
+   "id": "technical_depth",
+   "label": "Technical depth",
+   "what": "You name concrete technologies, trade-offs and metrics rather than vague buzzwords."
+  },
+  {
+   "id": "judgment_signals",
+   "label": "Judgment signals",
+   "what": "You explain why you chose one path over alternatives and what you learned."
+  },
+  {
+   "id": "collaboration_honesty",
+   "label": "Collaboration honesty",
+   "what": "You admit friction, name the conversation that resolved it and avoid blaming others."
+  },
+  {
+   "id": "compliance_accuracy",
+   "label": "Compliance accuracy",
+   "what": "You never disclose proprietary algorithms, unreleased features or confidential incidents."
+  }
+ ],
+ "live_meters": [
+  "star_structure",
+  "personal_impact",
+  "technical_depth"
+ ],
+ "pitfalls": [
+  "Drifting into we-language and hiding your personal contribution.",
+  "Sharing confidential architecture or unreleased product details.",
+  "Giving a generic answer without a concrete metric or lesson learned."
+ ],
+ "id": "ready-job-interview",
+ "line": "Interviewing for a software engineer job",
+ "product": null,
+ "researched": true,
+ "research": {
+  "text": "Common behavioral interview questions for software engineers include: “Tell me about a time you handled ambiguity,” “Describe a conflict with a teammate,” “Tell me about a failure and what you changed,” “Give an example of improving performance/reliability,” and “Describe a time you influenced a decision without authority.” Interviewers aim to assess judgment, communication, and delivery in complex situations. To prepare, map stories to competencies like ownership, collaboration, learning speed, and impact using the STAR method. Be proud of your accomplishments and focus on your personal impact rather than team achievements. Practice your stories to ensure they are concise and compelling.",
+  "sources": [
+   {
+    "title": "Behavioral Interview Questions for Software Engineers | JobWizard Blog",
+    "url": "https://jobwizard.ai/blog/behavioral-interview-questions-software-engineer-practice-with-jobwizard"
+   },
+   {
+    "title": "How to Nail Big Tech Behavioral Interviews as a Senior Software Engineer",
+    "url": "https://www.youtube.com/watch?v=Nhw97fabuTM"
+   },
+   {
+    "title": "The 30 most common Software Engineer behavioral interview questions | Tech Interview Handb",
+    "url": "https://www.techinterviewhandbook.org/behavioral-interview-questions"
+   }
+  ]
+ },
+ "personas": [
+  {
+   "id": "harold_chen-0",
+   "name": "Harold Chen",
+   "gender": "m",
+   "age": 34,
+   "scenario": "phone_screen",
+   "role": "interviewer",
+   "personality": "friendly curious",
+   "background": "Harold works as a frontend engineer at a fintech startup where he leads small feature teams. He enjoys helping candidates show their process clearly.",
+   "cares_about": [
+    "clear storytelling",
+    "authentic examples",
+    "mutual respect"
+   ],
+   "pushbacks": [
+    "I’m not sure that’s the best way to show what I actually did",
+    "Could you clarify what you mean by “ambiguity”?",
+    "I’d rather talk about the outcome than the process"
+   ],
+   "wins_over": [
+    "humour",
+    "specific metrics",
+    "thoughtful follow‑up"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 1,
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "omar_delaney-1",
+   "name": "Omar Delaney",
+   "gender": "m",
+   "age": 41,
+   "scenario": "phone_screen",
+   "role": "tech lead",
+   "personality": "skeptical and direct",
+   "background": "Omar has spent the last decade building cloud infrastructure for startups. He mentors junior engineers and values clear metrics over buzzwords.",
+   "cares_about": [
+    "measurable performance gains",
+    "team cohesion",
+    "avoiding wasted cycles"
+   ],
+   "pushbacks": [
+    "I need to see how you handled ambiguity in a real project",
+    "Can you describe a conflict with a teammate and its outcome?",
+    "Tell me about a failure and what you changed"
+   ],
+   "wins_over": [
+    "a clear before‑after metric",
+    "a concise post‑mortem story",
+    "a concrete improvement to reliability"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "bethany_voss-2",
+   "name": "Bethany Voss",
+   "gender": "f",
+   "age": 38,
+   "scenario": "hiring_manager",
+   "role": "software engineer",
+   "personality": "curious and precise",
+   "background": "Spent ten years in fintech and two in open source tools. Leads a small team at a mid‑size startup.",
+   "cares_about": [
+    "clear communication",
+    "thoughtful feedback",
+    "growth through mentorship"
+   ],
+   "pushbacks": [
+    "I understand the curve, but I need more context before I can commit",
+    "Ambiguity is fine, but I prefer to see concrete criteria first",
+    "A conflict can be resolved, but I want to know the trade‑offs we accepted"
+   ],
+   "wins_over": [
+    "a clear learning path",
+    "respectful questioning",
+    "evidence of impact"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "alvaro_de_leon-3",
+   "name": "Alvaro de Leon",
+   "gender": "m",
+   "age": 50,
+   "scenario": "senior_engineer",
+   "role": "engineering manager",
+   "personality": "challenging, decisive",
+   "background": "After twenty years at a major tech company, he moved to a mid-sized startup to lead the core platform team. He values clear ownership and rarely tolerates vague answers.",
+   "cares_about": [
+    "impact",
+    "clarity",
+    "consistency"
+   ],
+   "pushbacks": [
+    "I need to see how you handled ambiguity in a real project",
+    "Can you describe a conflict with a teammate and its outcome?",
+    "Tell me about a failure and what you changed"
+   ],
+   "wins_over": [
+    "direct",
+    "outcome-focused",
+    "ownership-driven"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "balding",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "round",
+    "lines": 1,
+    "clothes": "#7a3b2e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "jocelyn_won-4",
+   "name": "Jocelyn Won",
+   "gender": "f",
+   "age": 58,
+   "scenario": "senior_engineer",
+   "role": "senior_engineer",
+   "personality": "visionary impulsive",
+   "background": "Jocelyn spent two decades building scalable infrastructure at a major tech firm before moving to a startup as chief architect. She now leads engineering strategy and pushes teams toward bold technical visions.",
+   "cares_about": [
+    "technical excellence",
+    "team clarity",
+    "scalable impact"
+   ],
+   "pushbacks": [
+    "I’ve seen that pattern before and we should avoid it",
+    "Your idea is tempting but impractical without a strong prototype",
+    "You’re skipping the real risk we face today"
+   ],
+   "wins_over": [
+    "clear articulation of tradeoffs",
+    "ownership of messy outcomes",
+    "evidence of strategic patience"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 2,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 101,
+ "group": "life"
+}

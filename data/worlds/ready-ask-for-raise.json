@@ -1,0 +1,464 @@
+{
+ "title": "Asking for a raise",
+ "tagline": "Learn to ask for a raise confidently, handle budget objections, and negotiate your total compensation package.",
+ "you_are": "an employee who has had a strong year and wants a salary increase",
+ "setting": "Private one-on-one meetings with your direct manager in an office or on a video call to discuss performance and compensation.",
+ "other_side": "managers",
+ "scenarios": [
+  {
+   "id": "request_meeting",
+   "label": "Request the meeting",
+   "desc": "Ask your manager for a dedicated time to discuss your role and compensation.",
+   "setup": "You catch your manager at their desk or send a calendar invite. They glance up and say, “Sure, what’s this about?”",
+   "skills": "Professional framing and meeting setting",
+   "scene": "office",
+   "objective": "Secure a private, formal meeting to discuss your compensation within the next week.",
+   "place": "Open-plan office near manager’s desk",
+   "moment": "Tuesday 10:15 am, quiet morning before meetings start",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#c2e0fe",
+     "floor": "#e8e8e8",
+     "accent": "#ff9f43",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.2,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#3a3a3a"
+     },
+     {
+      "type": "chair",
+      "x": -0.3,
+      "z": 0.7,
+      "scale": 0.8,
+      "color": "#555555"
+     },
+     {
+      "type": "lamp",
+      "x": -0.4,
+      "z": 0.65,
+      "scale": 0.9,
+      "color": "#f0a500"
+     }
+    ]
+   }
+  },
+  {
+   "id": "present_case",
+   "label": "Present your case",
+   "desc": "Walk through your achievements and ask for a specific increase.",
+   "setup": "You sit down in the booked room. Your manager opens with, “Thanks for pulling the numbers together. Walk me through what you’ve got.”",
+   "skills": "Evidence-based negotiation and specific ask",
+   "scene": "office",
+   "objective": "Present quantified achievements and request a concrete salary figure or percentage increase.",
+   "place": "Small conference room with whiteboard",
+   "moment": "Thursday 2:00 pm, afternoon light through blinds",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#f2f2f2",
+     "floor": "#d4d4d4",
+     "accent": "#4a90e2",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.3,
+      "z": 0.9,
+      "scale": 1.2,
+      "color": "#e0e0e0"
+     },
+     {
+      "type": "lamp",
+      "x": -0.6,
+      "z": 0.85,
+      "scale": 0.9,
+      "color": "#ffd700"
+     },
+     {
+      "type": "chair",
+      "x": -0.5,
+      "z": 0.4,
+      "scale": 0.9,
+      "color": "#c0c0c0"
+     },
+     {
+      "type": "sofa",
+      "x": 0.6,
+      "z": 0.3,
+      "scale": 1.1,
+      "color": "#a8d5e2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "handle_objections",
+   "label": "Handle objections",
+   "desc": "Respond to budget limits, timing issues, or a partial offer and negotiate the full package.",
+   "setup": "After your ask, your manager leans back and says, “I’d love to do that number, but the budget cycle is locked until Q3. What else could work?”",
+   "skills": "Package negotiation and next-step planning",
+   "scene": "office",
+   "objective": "Negotiate alternative compensation elements and agree on a clear timeline or criteria for the raise.",
+   "place": "Same conference room",
+   "moment": "Thursday 2:20 pm, tension easing into problem-solving",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#6a5acd",
+     "floor": "#8b7355",
+     "accent": "#ff6f61",
+     "light": "#f0f8ff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.2,
+      "z": 0.4,
+      "scale": 1.2,
+      "color": "#c0c0c0"
+     },
+     {
+      "type": "chair",
+      "x": -0.4,
+      "z": 0.3,
+      "scale": 0.9,
+      "color": "#778899"
+     },
+     {
+      "type": "lamp",
+      "x": 0.1,
+      "z": 0.6,
+      "scale": 0.8,
+      "color": "#ffd700"
+     },
+     {
+      "type": "window",
+      "x": 0.05,
+      "z": 0.9,
+      "scale": 1.0,
+      "color": "#e0e0e0"
+     },
+     {
+      "type": "poster",
+      "x": 0.3,
+      "z": 0.5,
+      "scale": 0.7,
+      "color": "#87ceeb"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "request_meeting",
+   "role": "first meeting with manager",
+   "personality": "calm confident analytical",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 38,
+   "angle": "Easy, likes data."
+  },
+  {
+   "scenario": "present_case",
+   "role": "mid‑year performance review",
+   "personality": "supportive detail‑oriented",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 45,
+   "angle": "Wants proof of impact."
+  },
+  {
+   "scenario": "handle_objections",
+   "role": "budget approval meeting",
+   "personality": "cautious budget‑focused",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 52,
+   "angle": "Worried about costs."
+  },
+  {
+   "scenario": "request_meeting",
+   "role": "first meeting with senior exec",
+   "personality": "direct results‑driven",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 60,
+   "angle": "Asks for numbers up front."
+  },
+  {
+   "scenario": "handle_objections",
+   "role": "final negotiation session",
+   "personality": "pragmatic flexible",
+   "difficulty": 5,
+   "gender": "f",
+   "age": 48,
+   "angle": "Balances morale and budget."
+  }
+ ],
+ "objections": [
+  "We don’t have any budget left this year",
+  "The timing isn’t right with the fiscal quarter ending",
+  "Your performance metrics aren’t quite at the target level",
+  "We need to see more long‑term results before adjusting pay",
+  "A raise would set a precedent for others in the team",
+  "We prefer to keep compensation discussions separate from performance reviews",
+  "Our compensation committee meets only quarterly",
+  "We can only consider non‑salary benefits as alternatives"
+ ],
+ "rubric": [
+  {
+   "id": "professional_framing",
+   "label": "Professional framing",
+   "what": "Opens the conversation respectfully, sets a collaborative tone, and avoids ultimatums or emotional language."
+  },
+  {
+   "id": "evidence_based_case",
+   "label": "Evidence-based case",
+   "what": "Cites specific achievements, metrics, and market data to justify the request without exaggeration."
+  },
+  {
+   "id": "specific_ask",
+   "label": "Specific ask",
+   "what": "States a clear dollar amount or percentage increase rather than a vague desire for more money."
+  },
+  {
+   "id": "package_negotiation",
+   "label": "Package negotiation",
+   "what": "Explores bonus, equity, benefits, flexibility, or development budget when base salary cannot move."
+  },
+  {
+   "id": "objection_handling",
+   "label": "Objection handling",
+   "what": "Acknowledges budget or timing constraints calmly and pivots to actionable alternatives or future milestones."
+  },
+  {
+   "id": "compliance_integrity",
+   "label": "Compliance integrity",
+   "what": "Keeps discussion within company policy, avoids sharing protected salary data, and documents agreements accurately."
+  }
+ ],
+ "live_meters": [
+  "professional_framing",
+  "evidence_based_case",
+  "objection_handling"
+ ],
+ "pitfalls": [
+  "Threatening to quit or mentioning other offers as leverage before exploring internal options.",
+  "Asking for a range instead of a specific figure, which weakens anchoring.",
+  "Accepting a verbal promise without a follow-up email confirming the agreed timeline or criteria."
+ ],
+ "id": "ready-ask-for-raise",
+ "line": "Asking my manager for a raise after a strong year",
+ "product": null,
+ "researched": true,
+ "research": {
+  "text": "When asking your manager for a raise, anticipate objections such as budget constraints or timing concerns, and prepare responses that acknowledge these while keeping the conversation moving. Be ready to negotiate the entire compensation package, not just the base salary, and use specific dollar figures rather than vague requests. Request a private, formal meeting to discuss your role and compensation, and take notes during the conversation to follow up with an email summarizing the discussion. If your request is denied, ask for specific feedback on what would need to change for a future discussion. Sources emphasize the importance of professionalism and respect throughout the process, regardless of the outcome.",
+  "sources": [
+   {
+    "title": "How To Ask for a Raise (A Guide With Script Examples) | Indeed.com",
+    "url": "https://www.indeed.com/career-advice/pay-salary/guide-how-to-ask-for-a-raise"
+   },
+   {
+    "title": "When to Ask for a Raise: Timing and Salary Negotiation Tips",
+    "url": "https://www.frontlinesourcegroup.com/blog-when-to-ask-for-a-raise-timing-and-tips.html"
+   },
+   {
+    "title": "How To Ask Your Boss For a Raise",
+    "url": "https://skillpath.com/blog/asking-your-boss-for-a-raise"
+   }
+  ]
+ },
+ "personas": [
+  {
+   "id": "darian_cho-0",
+   "name": "Darian Cho",
+   "gender": "m",
+   "age": 38,
+   "scenario": "request_meeting",
+   "role": "strategic analyst",
+   "personality": "calm confident analytical",
+   "background": "Darian has spent five years in the analytics team and recently completed a high‑impact project ahead of schedule. He values clear metrics and presents his case with solid data.",
+   "cares_about": [
+    "recognition of expertise",
+    "fair compensation",
+    "growth opportunities"
+   ],
+   "pushbacks": [
+    "I understand budget constraints, but my recent deliverables exceeded expectations by 15%",
+    "Can we revisit the fiscal timing and explore a partial adjustment now?",
+    "My performance metrics are above target and I’ve documented the results"
+   ],
+   "wins_over": [
+    "clear data presentation",
+    "mutual respect",
+    "flexible solutions"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "iris_patel-1",
+   "name": "Iris Patel",
+   "gender": "f",
+   "age": 45,
+   "scenario": "present_case",
+   "role": "marketing analyst",
+   "personality": "detail oriented supportive",
+   "background": "Iris has worked in the analytics team for eight years and leads the quarterly reporting projects. She meticulously tracks results and seeks evidence of measurable impact before pushing for change.",
+   "cares_about": [
+    "accurate compensation history",
+    "clear performance metrics",
+    "respectful communication"
+   ],
+   "pushbacks": [
+    "We don’t have any budget left this year",
+    "The timing isn’t right with the fiscal quarter ending",
+    "Your performance metrics aren’t quite at the target level"
+   ],
+   "wins_over": [
+    "well‑structured data insights",
+    "recognition of team effort",
+    "forward‑looking strategy"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#4f6f8f"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "fernando_alvarez-2",
+   "name": "Fernando Alvarez",
+   "gender": "m",
+   "age": 52,
+   "scenario": "handle_objections",
+   "role": "budget approval meeting",
+   "personality": "cautious and budget-focused",
+   "background": "Fernando has spent twenty years at a mid‑size tech firm managing operational expenses. He joined the company straight after college and now mentors junior managers.",
+   "cares_about": [
+    "steady cash flow",
+    "team stability",
+    "career longevity"
+   ],
+   "pushbacks": [
+    "Our department is already operating at the limit of what we can handle without cutting into next year’s projects",
+    "I’ve seen many teams that promised big gains but ended up draining resources without delivering",
+    "A raise now would force us to re‑allocate funds that are needed for critical system upgrades"
+   ],
+   "wins_over": [
+    "a clear cost‑saving proposal",
+    "evidence of long‑term revenue impact",
+    "a step‑by‑step rollout plan"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "round",
+    "lines": 1,
+    "clothes": "#2b2b3a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "ethan_caldwell-3",
+   "name": "Ethan Caldwell",
+   "gender": "m",
+   "age": 34,
+   "scenario": "request_meeting",
+   "role": "employee salary increase discussion",
+   "personality": "direct results-driven",
+   "background": "Ethan leads the analytics team and just closed a project that saved the company $2M. He has been with the firm for six years and is known for measurable outcomes.",
+   "cares_about": [
+    "earning what I deserve",
+    "being recognized for results",
+    "future career growth"
+   ],
+   "pushbacks": [
+    "We need a raise now",
+    "How do my numbers compare?",
+    "What budget do we have?"
+   ],
+   "wins_over": [
+    "specific result numbers",
+    "clear precedent talk avoided",
+    "budget options offered"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "wendy_natelson-4",
+   "name": "Wendy Natelson",
+   "gender": "f",
+   "age": 48,
+   "scenario": "handle_objections",
+   "role": "final negotiation session",
+   "personality": "pragmatic flexible",
+   "background": "Wendy manages the customer success team and recently led a major client win. She balances team morale with company budget limits.",
+   "cares_about": [
+    "team morale",
+    "her annual bonus",
+    "clear career path"
+   ],
+   "pushbacks": [
+    "We’ve already stretched the budget to meet our goals this year",
+    "The fiscal quarter ends next week, and any changes could delay our reporting",
+    "Your metrics are solid, but we need to see longer‑term results before adjusting pay"
+   ],
+   "wins_over": [
+    "a compelling business case showing the raise’s impact",
+    "recognition of the team’s recent success",
+    "clear discussion of growth opportunities"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3f4f3f"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 100,
+ "group": "life"
+}

@@ -90,7 +90,7 @@ def list_worlds(limit: int = 24):
     out = []
     for r in sorted(rows, key=lambda r: (not r["builtin"], json.loads(r["data"]).get("order", 99) if r["builtin"] else 0, -r["plays"]))[:limit]:
         w = json.loads(r["data"])
-        out.append({"id": r["id"], "line": r["line"], "title": r["title"], "tagline": w.get("tagline", ""), "builtin": bool(r["builtin"]),
+        out.append({"id": r["id"], "line": r["line"], "title": r["title"], "tagline": w.get("tagline", ""), "builtin": bool(r["builtin"]), "group": w.get("group", "sales"),
                     "plays": r["plays"], "people": len(w.get("personas", [])), "other_side": w.get("other_side", "people"), "scenarios": len(w.get("scenarios", [])),
                     "faces": [p["appearance"] for p in w.get("personas", [])[:4]]})
     return out

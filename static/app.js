@@ -50,6 +50,7 @@ async function init() {
   $("#examples").onclick = (e) => { const b = e.target.closest("button"); if (b) { $("#line").value = b.textContent; $("#line").focus(); } };
   $("#builder").onsubmit = (e) => { e.preventDefault(); buildWorld($("#line").value.trim(), $("#product").value.trim()); };
   $("#worlds").onclick = (e) => { const b = e.target.closest(".wcard"); if (b) openWorld(b.dataset.id); };
+  $("#life-worlds").onclick = $("#worlds").onclick;
   $("#scenarios").onclick = (e) => { const b = e.target.closest(".scenario"); if (b && b.dataset.s) selectScenario(b.dataset.s); };
   $("#personas").onclick = (e) => { const b = e.target.closest(".persona"); if (b && b.dataset.id) selectPersona(b.dataset.id, true); };
   $("#difficulty").oninput = (e) => setDifficulty(+e.target.value);
@@ -92,7 +93,9 @@ async function loadWorlds() {
       <strong>${esc(w.title)}</strong><span>${esc(w.tagline)}</span>
       <span class="wmeta">${w.scenarios} situations · ${w.people} ${esc(w.other_side || "people")}${w.plays ? ` · ${w.plays} played` : ""}</span>
     </button>`;
-  $("#worlds").innerHTML = state.worlds.filter((w) => w.builtin).map(card).join("");
+  const ready = state.worlds.filter((w) => w.builtin), life = ready.filter((w) => w.group === "life");
+  $("#worlds").innerHTML = ready.filter((w) => w.group !== "life").map(card).join("");
+  $("#life-wrap").hidden = !life.length; $("#life-worlds").innerHTML = life.map(card).join("");
   const mine = state.worlds.filter((w) => !w.builtin);
   $("#custom-worlds-wrap").hidden = !mine.length; $("#custom-worlds").innerHTML = mine.map(card).join("");
 }
@@ -118,6 +121,7 @@ function skeletons(w) {
   $("#w-objections").innerHTML = ""; $("#w-rubric").innerHTML = ""; $("#cast-count").textContent = "";
 }
 // A finished world, or the plan part of one that is still being cast.
+const srcLinks = (list) => (list || []).filter((s) => /^https?:\/\//.test(s.url)).map((s) => `<a class="chip-note src" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="Source found by Tavily search">${esc(s.title)}</a>`).join("");
 function setWorld(w, complete) {
   state.world = w; state.scenarioId = null; state.personaId = null;
   $("#nav-world").hidden = false; $("#other-side").textContent = w.other_side || "people"; if (complete) $("#w-product").value = w.product || "";
@@ -129,6 +133,7 @@ function setWorld(w, complete) {
   const live = new Set(w.live_meters || []);
   $("#w-rubric").innerHTML = (w.rubric || []).map((r) => `<li><b>${esc(r.label)}${live.has(r.id) ? `<span class="live">live</span>` : ""}</b>${r.what ? `<span>${esc(r.what)}</span>` : ""}</li>`).join("")
     + ((w.pitfalls || []).length ? `<ul class="pitfalls">${w.pitfalls.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "");
+  const rs = w.research; $("#w-research").hidden = !(rs && rs.text); if (rs && rs.text) { $("#w-research-text").textContent = rs.text; $("#w-research-src").innerHTML = srcLinks(rs.sources); }
   if (complete) { renderPeople(w.personas); finishWorld(); }
   else { $("#personas").innerHTML = (w.buyers || Array.from({ length: 5 })).map((_, i) => `<div class="persona skel" data-slot="${i}"></div>`).join(""); $("#cast-count").textContent = ""; }
   $("#btn-start").disabled = !complete;
@@ -562,7 +567,7 @@ async function startSession() {
     const about = $("#about").value.trim();
     const r = await api("/api/sessions", { method: "POST", body: { world_id: w.id, scenario: sc.id, persona_id: p.id, difficulty: state.difficulty, about: about || null, product: $("#w-product").value.trim() || null } });
     wait.remove(); state.session = { id: r.id, persona: p, scenario: sc.id, scenarioScene: sc.scene, difficulty: state.difficulty };
-    const chips = [r.memory ? `<span class="chip-note" title="The coach saved this after your last conversation">Remembers: ${esc(r.memory)}</span>` : "", r.research ? `<span class="chip-note" title="Found with Tavily search">Researched: ${esc(r.research.slice(0, 120))}…</span>` : ""];
+    const chips = [r.memory ? `<span class="chip-note" title="The coach saved this after your last conversation">Remembers: ${esc(r.memory)}</span>` : "", r.research && r.research.text ? `<span class="chip-note" title="Found with Tavily search">Researched: ${esc(r.research.text.slice(0, 120))}…</span>${srcLinks(r.research.sources)}` : ""];
     $("#s-note").innerHTML = chips.join("");
     await arriving; // the prospect finishes arriving before they speak
     await ownerSays(r.reply, r.outcome, r.mood);
@@ -662,6 +667,23 @@ $("#btn-end").onclick = async () => {
 function bars(scores, labels) {
   return Object.entries(scores).map(([k, v], i) => `<div class="bar" style="--i:${i}"><span>${esc(labels[k] || k)}</span><div class="track"><div class="fill ${v <= 4 ? "low" : v >= 8 ? "high" : ""}" style="width:${v * 10}%"></div></div><b>${v}</b></div>`).join("");
 }
+// The director's read of every line you said, drawn as a line: where the character warmed up, and where you lost them.
+function renderTimeline(s) {
+  const box = $("#r-timeline"), users = (s.transcript || []).filter((t) => t.role === "user"), turns = s.director || [];
+  const pts = users.map((u, i) => { const d = turns[i]; const v = d && d.meters ? Object.values(d.meters).filter((n) => typeof n === "number") : []; return v.length ? { n: i + 1, line: u.content, score: v.reduce((a, b) => a + b, 0) / v.length, stance: d.stance, note: d.note } : null; }).filter(Boolean);
+  if (pts.length < 2) { box.hidden = true; return; }
+  box.hidden = false;
+  const W = 680, H = 230, L = 40, R = 20, T = 22, B = 40, x = (k) => L + (k * (W - L - R)) / (pts.length - 1), y = (v) => T + ((5 - v) * (H - T - B)) / 5;
+  const col = { soften: "var(--good)", harden: "var(--bad)", hold: "var(--muted)" };
+  const low = pts.reduce((m, p) => (p.score < m.score ? p : m), pts[0]), lowK = pts.indexOf(low);
+  const grid = [1, 2, 3, 4, 5].map((v) => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${v}</text>`).join("");
+  const path = pts.map((p, k) => `${k ? "L" : "M"}${x(k).toFixed(1)} ${y(p.score).toFixed(1)}`).join(" ");
+  const dots = pts.map((p, k) => `<circle cx="${x(k).toFixed(1)}" cy="${y(p.score).toFixed(1)}" r="${p === low ? 9 : 7}" fill="${col[p.stance] || col.hold}" ${p === low ? 'stroke="var(--ink)" stroke-width="2.5"' : ""}><title>Line ${p.n}: ${esc(p.line.slice(0, 120))}</title></circle><text x="${x(k).toFixed(1)}" y="${H - 14}" text-anchor="middle" font-size="12" fill="var(--muted)">${p.n}</text>`).join("");
+  $("#r-timeline-chart").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="How the character felt about each of your lines" style="width:100%;height:auto;display:block">${grid}<path d="${path}" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>${dots}<text x="${W / 2}" y="${H}" text-anchor="middle" font-size="12" fill="var(--muted)">Your lines, in order</text></svg>
+    <p class="hint"><span style="color:var(--good)">●</span> they warmed up &nbsp; <span style="color:var(--muted)">●</span> held firm &nbsp; <span style="color:var(--bad)">●</span> hardened &nbsp; · height = the director’s average score for that line (out of 5)</p>`;
+  const hard = pts.filter((p) => p.stance === "harden").map((p) => p.n);
+  $("#r-timeline-note").textContent = `Lowest point: line ${low.n}. You said “${low.line.length > 150 ? low.line.slice(0, 150) + "…" : low.line}”${low.note ? ` The director noted: ${low.note}.` : ""}${hard.length ? ` They hardened after ${hard.length === 1 ? "line" : "lines"} ${hard.join(", ")}.` : ""}`;
+}
 function renderReport(s) {
   state.lastReport = s;
   const fb = s.feedback || {}, labels = s.labels || {};
@@ -675,6 +697,7 @@ function renderReport(s) {
   $("#r-scores").innerHTML = bars(seen, labels) + ((fb.not_shown || []).length ? `<p class="muted">Not shown this time: ${(fb.not_shown).map((k) => esc(labels[k] || k)).join(", ")}. Not counted in your score.</p>` : "");
   const da = fb.director_averages || {}, ml = s.meter_labels || {};
   $("#r-director").innerHTML = Object.keys(da).length ? Object.entries(da).map(([k, v]) => `<div class="bar"><span>${esc(ml[k] || labels[k] || k)}</span><div class="track"><div class="fill ${v <= 2 ? "low" : v >= 4 ? "high" : ""}" style="width:${v * 20}%"></div></div><b>${v}</b></div>`).join("") + `<p class="hint">How the character’s director scored your lines as you talked (out of 5).</p>` : `<p class="empty">No live scores for this session.</p>`;
+  renderTimeline(s);
   $("#r-strengths").innerHTML = (fb.strengths || []).map((x) => `<li>${esc(x)}</li>`).join("");
   $("#r-fixes").innerHTML = (fb.fixes || []).map((x) => `<li>${esc(x)}</li>`).join("");
   $("#r-lines").innerHTML = (fb.better_lines || []).map((l, i) => `<div class="lineswap"><p>${esc(l.moment)}</p><q>${esc(l.instead)}</q><button class="btn replaybtn" type="button" data-i="${i}">See how they’d respond</button><div class="replay" hidden></div></div>`).join("") || `<p class="empty">No suggestions this time.</p>`;
@@ -682,6 +705,27 @@ function renderReport(s) {
   $("#r-memory").textContent = fb.memory_note ? `Next time, they’ll remember: ${fb.memory_note}` : "";
   $("#r-transcript").innerHTML = (s.transcript || []).map((t) => `<div class="line ${t.role === "user" ? "agent" : "owner"}">${esc(t.content)}</div>`).join("");
 }
+// A shareable image of this result, drawn on a canvas and downloaded. Nothing leaves your browser.
+function saveCard() {
+  const s = state.lastReport; if (!s) return;
+  const fb = s.feedback || {}, W = 1200, H = 630, c = document.createElement("canvas"); c.width = W; c.height = H; const x = c.getContext("2d");
+  const g = x.createRadialGradient(W * 0.85, 0, 50, W * 0.85, 0, 900); g.addColorStop(0, "#4a0910"); g.addColorStop(1, "#0e0e0d"); x.fillStyle = g; x.fillRect(0, 0, W, H);
+  const wrap = (t, mx, size, lh, maxLines, px, py, color) => { x.font = `${size}px "Instrument Serif", Georgia, serif`; x.fillStyle = color; const words = t.split(/\s+/); let line = "", n = 0;
+    for (const w of words) { const test = line ? line + " " + w : w; if (x.measureText(test).width > mx && line) { if (++n >= maxLines) { line += "…"; break; } x.fillText(line, px, py); py += lh; line = w; } else line = test; } x.fillText(line, px, py); return py; };
+  x.fillStyle = "#f1ecdf"; x.font = '44px "Instrument Serif", Georgia, serif'; x.fillText("Dojo", 60, 80);
+  x.font = '600 22px "Instrument Sans", sans-serif'; x.fillStyle = "#ff8a92"; x.fillText("MY PRACTICE RESULT", 60, 150);
+  x.fillStyle = "#f1ecdf"; x.font = '200px "Instrument Serif", Georgia, serif'; x.fillText(Number(s.overall || 0).toFixed(1), 56, 340); const w1 = x.measureText(Number(s.overall || 0).toFixed(1)).width;
+  x.font = '60px "Instrument Serif", Georgia, serif'; x.fillStyle = "#9a9585"; x.fillText("/10", 56 + w1 + 10, 340);
+  wrap(`${s.scenario_label || s.scenario} with ${s.persona_name}`, 480, 38, 46, 3, 60, 410, "#f1ecdf");
+  const lines = fb.better_lines || [], q = lines[0] && lines[0].instead;
+  x.fillStyle = "rgba(255,255,255,.06)"; x.beginPath(); x.roundRect(600, 130, 540, 370, 20); x.fill(); x.strokeStyle = "#ff2a36"; x.lineWidth = 3; x.stroke();
+  x.font = '600 20px "Instrument Sans", sans-serif'; x.fillStyle = "#7ee787"; x.fillText("MY COACH SAID TO SAY", 636, 180);
+  wrap(q ? `“${q}”` : (fb.summary || ""), 470, 36, 46, 6, 636, 240, "#f1ecdf");
+  x.font = '600 22px "Instrument Sans", sans-serif'; x.fillStyle = "#f1ecdf"; x.fillText("Practise any hard conversation, out loud.", 60, 560);
+  x.fillStyle = "#9a9585"; x.font = '500 20px "Instrument Sans", sans-serif'; x.fillText(`${location.host} · NVIDIA Nemotron on Nebius`, 60, 592);
+  c.toBlob((b) => { const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "dojo-score-card.png"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); });
+}
+$("#btn-card").onclick = saveCard;
 $("#btn-again").onclick = async () => {
   const s = state.lastReport;
   try { const w = await api(`/api/worlds/${encodeURIComponent(s.world_id || "general")}`); setWorld(w, true); selectPersona(s.persona_id, false); selectScenario(s.scenario); setDifficulty(s.difficulty); startSession(); }

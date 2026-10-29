@@ -65,7 +65,11 @@ Details that make it hold together:
   Your typed text is treated as data inside the planner prompt, not as instructions.
 - **Cost protection for a public demo:** a per-visitor hourly limit, a daily cap on new worlds, a daily cap on model calls, and ready-made
   worlds that work even when the caps are reached.
-- Optional **Tavily** web research makes the objections and situations reflect how the field really works right now.
+- **Live web research with Tavily (optional, needs a key).** Every new world is grounded in a Tavily search, and the sources are shown on the world page, so the objections and situations reflect how the field really works right now. You can also **practise on a real prospect**: type a company or person and the character knows real facts about them, with links.
+- **Where you lost them.** The coach report draws the director's read of each of your lines as a timeline, marks the lowest point and shows what you said there.
+- **A score card you can save.** One click draws a shareable image of your result in your browser; nothing is uploaded.
+- **Private by default.** Each browser has its own history, progress, worlds and coach memory (a random id in a cookie, no accounts); other people's conversations are not readable.
+- **Twenty ready-made worlds**, twelve sales jobs and eight hard conversations (asking for a raise, a job interview, a landlord, an angry customer and more), so the demo works even when the daily caps are reached.
 
 ## Run it
 

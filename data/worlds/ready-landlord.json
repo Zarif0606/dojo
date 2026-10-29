@@ -1,0 +1,513 @@
+{
+ "title": "Landlord repairs",
+ "tagline": "Learn to get repairs done and keep rent stable without damaging the landlord relationship.",
+ "you_are": "a tenant with a maintenance issue and a rent-stability goal",
+ "setting": "Conversations happen in the rental unit, the building hallway, or by phone and email follow-up, often with the landlord or their property manager.",
+ "other_side": "landlords",
+ "scenarios": [
+  {
+   "id": "first_request",
+   "label": "First repair request",
+   "desc": "You walk the landlord through the issue for the first time and ask for a fix.",
+   "setup": "The landlord is standing in your doorway after you texted them about a leaking bathroom pipe. They look at the stain on the ceiling and say, ‘Okay, what exactly am I looking at here?’",
+   "skills": "Clear problem description and collaborative tone",
+   "scene": "home",
+   "objective": "Get a concrete repair commitment with a timeline.",
+   "place": "Your apartment hallway",
+   "moment": "Tuesday 6:15 pm, hallway light flickering",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#3e2723",
+     "floor": "#5d4037",
+     "accent": "#ffb74d",
+     "light": "#fdd835"
+    },
+    "props": [
+     {
+      "type": "lamp",
+      "x": -0.2,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#9e9e9e"
+     },
+     {
+      "type": "door",
+      "x": 0.6,
+      "z": 1,
+      "scale": 0.9,
+      "color": "#b0bec5"
+     },
+     {
+      "type": "sofa",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#ffb74d"
+     },
+     {
+      "type": "lamp",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#ffb74d"
+     },
+     {
+      "type": "plant",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#ffb74d"
+     },
+     {
+      "type": "rug",
+      "x": 0.5,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#ffb74d"
+     },
+     {
+      "type": "poster",
+      "x": 0.0,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#ffb74d"
+     }
+    ]
+   }
+  },
+  {
+   "id": "delayed_response",
+   "label": "Chasing a stalled repair",
+   "desc": "The landlord acknowledged the issue but nothing has happened for two weeks.",
+   "setup": "You catch the property manager in the laundry room. They check their phone and say, ‘Yeah, I emailed the owner about the plumber. Haven’t heard back yet.’",
+   "skills": "Persistent follow-up and written record-keeping",
+   "scene": "home",
+   "objective": "Secure a specific date for the repair visit.",
+   "place": "Building laundry room",
+   "moment": "Saturday 10:00 am, washer spin cycle humming",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e0e0e0",
+     "floor": "#c0c0c0",
+     "accent": "#8a8a8a",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "cabinet",
+      "x": -0.5,
+      "z": 0.8,
+      "scale": 1.1,
+      "color": "#9e9e9e"
+     },
+     {
+      "type": "sofa",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#8a8a8a"
+     },
+     {
+      "type": "lamp",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#8a8a8a"
+     },
+     {
+      "type": "plant",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#8a8a8a"
+     },
+     {
+      "type": "rug",
+      "x": 0.5,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#8a8a8a"
+     },
+     {
+      "type": "poster",
+      "x": 0.0,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#8a8a8a"
+     }
+    ]
+   }
+  },
+  {
+   "id": "rent_hold_negotiatio",
+   "label": "Negotiating rent stability",
+   "desc": "The landlord hints at a rent increase at renewal while the repair is still open.",
+   "setup": "You sit across from the landlord at a cafe near the building. They slide a renewal letter toward you and say, ‘Market rents have gone up quite a bit. This number reflects that.’",
+   "skills": "Leveraging repair history and lease terms for rent stability",
+   "scene": "cafe",
+   "objective": "Agree on a renewal rate at or near current rent with the repair completed.",
+   "place": "Corner cafe near your building",
+   "moment": "Thursday 7:00 pm, coffee cups steaming",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#F5E8C7",
+     "floor": "#D4A57F",
+     "accent": "#8B5E3C",
+     "light": "#FFF5E1"
+    },
+    "props": [
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.8,
+      "scale": 1.0,
+      "color": "#C0A880"
+     },
+     {
+      "type": "chair",
+      "x": -0.3,
+      "z": 0.7,
+      "scale": 0.9,
+      "color": "#5A4A3F"
+     },
+     {
+      "type": "window",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#8B5E3C"
+     },
+     {
+      "type": "table",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#8B5E3C"
+     },
+     {
+      "type": "chair",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#8B5E3C"
+     },
+     {
+      "type": "lamp",
+      "x": 0.5,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#8B5E3C"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "first_request",
+   "role": "specific job or situation",
+   "personality": "quiet helpful middle-aged",
+   "difficulty": 1,
+   "gender": "f",
+   "age": 55,
+   "angle": "Easy because she values clear written proof."
+  },
+  {
+   "scenario": "delayed_response",
+   "role": "specific job or situation",
+   "personality": "firm busy businessman",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 40,
+   "angle": "Hard because he wants quick cash flow."
+  },
+  {
+   "scenario": "rent_hold_negotiatio",
+   "role": "specific job or situation",
+   "personality": "skeptical elderly woman",
+   "difficulty": 5,
+   "gender": "f",
+   "age": 70,
+   "angle": "Hard because she distrusts rent promises."
+  },
+  {
+   "scenario": "delayed_response",
+   "role": "specific job or situation",
+   "personality": "pragmatic property manager",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 35,
+   "angle": "Hard because he enforces strict lease terms."
+  },
+  {
+   "scenario": "first_request",
+   "role": "specific job or situation",
+   "personality": "neighborly friendly retiree",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 68,
+   "angle": "Easy because she enjoys helping tenants."
+  }
+ ],
+ "objections": [
+  "I can’t stall repairs for another month",
+  "Your lease allows rent increases with thirty days notice",
+  "I need proof the leak was caused by your negligence",
+  "The building’s roof is new and under warranty",
+  "You haven’t paid rent on time in the past",
+  "I’ve already spoken with the housing authority",
+  "The cost of repairs exceeds my yearly budget",
+  "I’m not obligated to waive any fees"
+ ],
+ "rubric": [
+  {
+   "id": "issue_clarity",
+   "label": "Issue clarity",
+   "what": "You describe the problem, its impact, and the exact fix needed in specific, factual language."
+  },
+  {
+   "id": "written_follow_up",
+   "label": "Written follow-up",
+   "what": "You confirm every verbal agreement with a dated email or message that summarises the commitment."
+  },
+  {
+   "id": "lease_knowledge",
+   "label": "Lease knowledge",
+   "what": "You reference the correct lease clauses, habitability standards, and notice periods without guessing."
+  },
+  {
+   "id": "timeline_accountability",
+   "label": "Timeline accountability",
+   "what": "You pin the landlord to a concrete date or milestone and confirm what happens if it slips."
+  },
+  {
+   "id": "compliance_honesty",
+   "label": "Compliance honesty",
+   "what": "You never withhold rent illegally, misrepresent the unit condition, or skip required notice steps."
+  },
+  {
+   "id": "opening",
+   "label": "Opening",
+   "what": ""
+  }
+ ],
+ "live_meters": [
+  "issue_clarity",
+  "timeline_accountability",
+  "written_follow_up"
+ ],
+ "pitfalls": [
+  "Withholding rent without following the legal repair-and-deduct or escrow process for your jurisdiction.",
+  "Accepting a verbal promise without a written confirmation that includes a date.",
+  "Agreeing to a rent increase before the outstanding repair is verified complete."
+ ],
+ "id": "ready-landlord",
+ "line": "Asking my landlord to fix a problem and hold the rent steady",
+ "product": null,
+ "researched": true,
+ "research": {
+  "text": "To ask your landlord to fix a problem and hold the rent steady, follow up any phone conversation with a written statement—an email is sufficient. Explain yourself clearly and if you'll be late on rent, explain why. Make a list of the issues you’d like addressed to focus your conversation and resolve the situation. If the problem is severe and affects your health and safety, contact relief agencies, churches, family, friends, and neighbors for assistance in vacating. Keep a copy of your written lease and record any changes or addendums to the agreement. Keep financial records and receipts for your payments. A witness to these conversations can be helpful.",
+  "sources": [
+   {
+    "title": "How to Resolve a Landlord Dispute: Rights, Steps, Options",
+    "url": "https://www.legalshield.com/blog/how-do-i-resolve-dispute-my-landlord"
+   },
+   {
+    "title": "How To Request Your Landlord To Make Repairs Under ...",
+    "url": "https://www.mdeq.ms.gov/wp-content/uploads/2017/05/264381How-To-Request-Your-Landlord-To-Make-Repairs-Under-the-Mississippi-Residential-Landlord.pdf"
+   },
+   {
+    "title": "Repairs Needed — Free Advice Articles — California Tenant Law",
+    "url": "https://caltenantlaw.com/free-advice-articles/repairs-needed"
+   }
+  ]
+ },
+ "personas": [
+  {
+   "id": "alice_ng-0",
+   "name": "Alice Ng",
+   "gender": "f",
+   "age": 55,
+   "scenario": "first_request",
+   "role": "tenant negotiating repairs",
+   "personality": "quiet helpful middle-aged",
+   "background": "Alice lives in a rented two-bedroom apartment in a mid-sized building. She works part-time as a librarian and values clear written proof for all tenant issues.",
+   "cares_about": [
+    "long-term housing stability",
+    "fair treatment from management",
+    "keeping the apartment safe for her grandchildren"
+   ],
+   "pushbacks": [
+    "I can’t stall repairs for another month",
+    "Your lease allows rent increases with thirty days notice",
+    "I need proof the leak was caused by your negligence"
+   ],
+   "wins_over": [
+    "receiving a written repair plan",
+    "adhering to legal notice periods",
+    "prompt acknowledgment of maintenance requests"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 2,
+    "clothes": "#8a5a3c"
+   },
+   "accent": "en-CA"
+  },
+  {
+   "id": "nigel_mercer-1",
+   "name": "Nigel Mercer",
+   "gender": "m",
+   "age": 40,
+   "scenario": "delayed_response",
+   "role": "specific job or situation",
+   "personality": "firm busy businessman",
+   "background": "He manages commercial properties for an investment firm. Every month he must show positive cash flow to his investors.",
+   "cares_about": [
+    "steady rent collection",
+    "low vacancy rates",
+    "maintaining asset value"
+   ],
+   "pushbacks": [
+    "I can’t stall repairs for another month",
+    "Your lease allows rent increases with thirty days notice",
+    "I need proof the leak was caused by your negligence"
+   ],
+   "wins_over": [
+    "a clear maintenance schedule",
+    "a written payment plan",
+    "proof the problem is not his fault"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#2b2b3a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "beatrice_whitaker-2",
+   "name": "Beatrice Whitaker",
+   "gender": "f",
+   "age": 70,
+   "scenario": "rent_hold_negotiatio",
+   "role": "tenant",
+   "personality": "skeptical elderly woman",
+   "background": "Beatrice has lived in her rent-controlled studio for forty years after retiring from teaching. She values stability above all and believes promises must be kept in writing.",
+   "cares_about": [
+    "security for aging",
+    "honoring commitments",
+    "neighborhood reputation"
+   ],
+   "pushbacks": [
+    "I can’t stall repairs for another month",
+    "Your lease allows rent increases with thirty days notice",
+    "I need proof the leak was caused by your negligence"
+   ],
+   "wins_over": [
+    "decades of tenancy",
+    "documented correspondence",
+    "peer sympathy"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "white",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 2,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "thomas_whitaker-3",
+   "name": "Thomas Whitaker",
+   "gender": "m",
+   "age": 35,
+   "scenario": "delayed_response",
+   "role": "property manager",
+   "personality": "pragmatic, disciplined about lease terms",
+   "background": "Thomas runs the building’s maintenance office. He handles lease enforcement and ensures timely repair responses.",
+   "cares_about": [
+    "building reputation",
+    "budget predictability",
+    "community stability"
+   ],
+   "pushbacks": [
+    "I can’t stall repairs for another month",
+    "Your lease allows rent increases with thirty days notice",
+    "You haven’t paid rent on time in the past"
+   ],
+   "wins_over": [
+    "he respects written documentation",
+    "he values consistent communication",
+    "he appreciates policy adherence"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#8a5a3c"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "verna_calder-4",
+   "name": "Verna Calder",
+   "gender": "f",
+   "age": 68,
+   "scenario": "first_request",
+   "role": "retired school librarian",
+   "personality": "neighborly friendly retiree",
+   "background": "Verna has lived in the building for twelve years and volunteers to mediate tenant concerns. She values community and keeps the building’s notice board updated with repair schedules.",
+   "cares_about": [
+    "fair treatment for all residents",
+    "preserving the building’s original details",
+    "a calm atmosphere in the hallways"
+   ],
+   "pushbacks": [
+    "I can’t stall repairs for another month",
+    "Your lease allows rent increases with thirty days notice",
+    "I need proof the leak was caused by your negligence"
+   ],
+   "wins_over": [
+    "a willingness to listen to residents",
+    "a genuine effort to fix problems",
+    "respect for the building’s history"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "ponytail",
+    "hairColor": "grey",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 2,
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 102,
+ "group": "life"
+}

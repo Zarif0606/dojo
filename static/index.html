@@ -60,6 +60,10 @@
     </ol>
     <div class="sec-head"><h2 class="step">Sales professions, ready to enter</h2><p class="muted">You are the seller. The AI plays your prospects.</p></div>
     <div class="worlds" id="worlds"></div>
+    <div id="life-wrap" hidden>
+      <div class="sec-head"><h2 class="step">Hard conversations, ready to enter</h2><p class="muted">You are the one asking, explaining or delivering the news. Same live director, same coach.</p></div>
+      <div class="worlds" id="life-worlds"></div>
+    </div>
     <div id="custom-worlds-wrap" hidden>
       <h2 class="step">Worlds you built</h2>
       <div class="worlds" id="custom-worlds"></div>
@@ -112,15 +116,16 @@
       <div class="panel"><h2>What you will hear</h2><div class="notes" id="w-objections"></div></div>
       <div class="panel"><h2>How you are scored</h2><ul class="rubric" id="w-rubric"></ul><p class="hint">Skills marked live are scored by the director after every line you say.</p></div>
     </div>
+    <div class="panel" id="w-research" hidden><h2>Grounded in live web research</h2><p class="muted" id="w-research-text"></p><div class="notes" id="w-research-src"></div><p class="hint">Found with Tavily search when this world was planned, so the objections and situations match how the field works right now.</p></div>
 
     <h2 class="step">How tough <span id="diff-val">3</span></h2>
     <input type="range" id="difficulty" min="1" max="5" value="3" aria-label="Difficulty">
     <p class="hint" id="diff-desc"></p>
 
     <div id="about-wrap" hidden>
-      <h2 class="step">About them <span class="count">optional</span></h2>
-      <input id="about" class="about" placeholder="A company or person to research first, e.g. Shopify" maxlength="200" aria-label="Who to research before the conversation">
-      <p class="hint">Searches the web (Tavily) so the character knows real facts about them.</p>
+      <h2 class="step">Practise on a real prospect <span class="count">optional</span></h2>
+      <input id="about" class="about" placeholder="A real company or person you are about to meet, e.g. Shopify" maxlength="200" aria-label="A real company or person to research before the conversation">
+      <p class="hint">Tavily searches the web and the character will know real facts about them, with the sources shown. Use public information only, never private client details.</p>
     </div>
 
     <div class="startbar">
@@ -177,6 +182,7 @@
     </div>
     <p id="r-summary" class="summary"></p>
     <div class="report-grid">
+      <div class="panel wide" id="r-timeline" hidden><h2>Where you lost them</h2><div id="r-timeline-chart"></div><p class="memory" id="r-timeline-note"></p></div>
       <div class="panel"><h2>Scores</h2><div id="r-scores"></div></div>
       <div class="panel"><h2>How they felt about your lines</h2><div id="r-director"></div></div>
       <div class="panel"><h2>What worked</h2><ul id="r-strengths"></ul></div>
@@ -187,6 +193,7 @@
     <details class="panel wide"><summary>Full transcript</summary><div id="r-transcript" class="transcript small"></div></details>
     <div class="quick">
       <button class="btn primary" id="btn-again">Run it back</button>
+      <button class="btn" id="btn-card" type="button">Save score card</button>
       <button class="btn" data-go="start">New conversation</button>
     </div>
   </section>

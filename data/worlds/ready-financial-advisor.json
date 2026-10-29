@@ -1,70 +1,63 @@
 {
  "title": "Financial advisor",
- "tagline": "Learn to guide clients from first meeting to a signed financial plan with clarity and trust.",
- "you_are": "a certified financial advisor",
- "setting": "Conversations happen in a private office, on video calls, and at kitchen tables where clients keep their statements.",
- "other_side": "clients",
+ "tagline": "Learn to guide clients from first meeting to a signed financial plan with compliance and trust.",
+ "you_are": "a certified financial planner at an independent advisory firm",
+ "setting": "Conversations happen in a private office or on a video call after a referral or seminar lead.",
+ "other_side": "prospects",
  "scenarios": [
   {
    "id": "discovery_meeting",
    "label": "First discovery meeting",
-   "desc": "A new client sits down with statements spread out, unsure what a planner actually does.",
-   "setup": "You are a certified financial advisor. The client opens with: I have accounts everywhere and no idea if any of it fits together.",
-   "skills": "Listening, fact finding, agenda setting",
+   "desc": "Qualify a referred prospect and agree the planning scope.",
+   "setup": "You sit across from a prospect who was referred by an existing client. They open with: I’m not sure I need a full plan yet, I just wanted to hear what you do.",
+   "skills": "rapport, needs discovery, compliance framing",
    "scene": "office",
-   "objective": "Agree on a planning scope and book the data gathering session.",
+   "objective": "Agree a clear engagement letter and fact-find date before they leave.",
    "place": "Harbor Wealth conference room",
-   "moment": "Tuesday 10:15 am, late morning light through vertical blinds",
+   "moment": "Tuesday 10:15 am, morning light through vertical blinds",
    "visual": {
     "sky": "day",
     "palette": {
-     "wall": "#E8ECEF",
-     "floor": "#2D3A4A",
-     "accent": "#006D77",
-     "light": "#F5F0E1"
+     "wall": "#D4E6F1",
+     "floor": "#F5F5F5",
+     "accent": "#4A6FA5",
+     "light": "#FFFFFF"
     },
     "props": [
+     {
+      "type": "sofa",
+      "x": -0.3,
+      "z": 0.8,
+      "scale": 1.0,
+      "color": "#5D8AA8"
+     },
+     {
+      "type": "lamp",
+      "x": 0.0,
+      "z": 0.4,
+      "scale": 0.9,
+      "color": "#B0C4DE"
+     },
      {
       "type": "table",
       "x": 0.0,
       "z": 0.5,
       "scale": 1.2,
-      "color": "#2D3A4A"
+      "color": "#C0C0C0"
      },
      {
-      "type": "chair",
-      "x": -0.6,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#1A252F"
-     },
-     {
-      "type": "chair",
-      "x": 0.6,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#1A252F"
-     },
-     {
-      "type": "screen",
+      "type": "desk",
       "x": 0.0,
-      "z": 0.1,
+      "z": 0.2,
       "scale": 1.1,
-      "color": "#101820"
+      "color": "#E0E0E0"
      },
      {
-      "type": "plant",
-      "x": 0.9,
-      "z": 0.2,
-      "scale": 1.0,
-      "color": "#2E5D4E"
-     },
-     {
-      "type": "lamp",
-      "x": -0.8,
-      "z": 0.2,
+      "type": "window",
+      "x": 0.0,
+      "z": 1,
       "scale": 0.8,
-      "color": "#C9A84C"
+      "color": "#FFFFFF"
      }
     ]
    }
@@ -72,127 +65,99 @@
   {
    "id": "plan_presentation",
    "label": "Plan presentation",
-   "desc": "You walk the client through a draft plan that shows a shortfall they did not expect.",
-   "setup": "You are a certified financial advisor. The client opens with: I thought I was on track, why does this say I fall short at eighty?",
-   "skills": "Framing trade offs, visual storytelling, calm reassurance",
+   "desc": "Present the written financial plan and handle fee objections.",
+   "setup": "The prospect has seen the draft plan. They open with: The fee schedule looks steep compared with my robo-advisor. Why should I pay this much?",
+   "skills": "value articulation, fee transparency, behavioural coaching",
    "scene": "office",
-   "objective": "Get client approval on the core assumptions and move to implementation steps.",
+   "objective": "Secure signature on the implementation agreement and transfer paperwork.",
    "place": "Harbor Wealth conference room",
-   "moment": "Thursday 3:40 pm, golden hour light warming the table",
+   "moment": "Thursday 3:00 pm, rain tapping the window",
    "visual": {
-    "sky": "golden",
+    "sky": "overcast",
     "palette": {
-     "wall": "#F2E8D5",
-     "floor": "#2D3A4A",
-     "accent": "#B8860B",
-     "light": "#FFF8E7"
+     "wall": "#d9e2ec",
+     "floor": "#f5f7fa",
+     "accent": "#4a6b8a",
+     "light": "#aab7c4"
     },
     "props": [
      {
-      "type": "table",
-      "x": 0.0,
-      "z": 0.5,
-      "scale": 1.2,
-      "color": "#2D3A4A"
-     },
-     {
-      "type": "screen",
-      "x": 0.0,
-      "z": 0.1,
-      "scale": 1.1,
-      "color": "#101820"
-     },
-     {
-      "type": "chair",
+      "type": "window",
       "x": -0.6,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#1A252F"
+      "z": 0.85,
+      "scale": 1.2,
+      "color": "#ffffff"
      },
      {
-      "type": "chair",
-      "x": 0.6,
-      "z": 0.7,
+      "type": "sofa",
+      "x": -0.3,
+      "z": 0.45,
       "scale": 1.0,
-      "color": "#1A252F"
+      "color": "#5a7d9a"
      },
      {
-      "type": "plant",
-      "x": 0.9,
+      "type": "desk",
+      "x": 0.0,
       "z": 0.2,
-      "scale": 1.0,
-      "color": "#2E5D4E"
+      "scale": 1.5,
+      "color": "#7c91a6"
      },
      {
       "type": "lamp",
-      "x": -0.8,
-      "z": 0.2,
+      "x": 0.8,
+      "z": 0.3,
       "scale": 0.8,
-      "color": "#C9A84C"
+      "color": "#d4b99e"
+     },
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.4,
+      "scale": 1.1,
+      "color": "#b0c4d9"
      }
     ]
    }
   },
   {
-   "id": "implementation_revie",
-   "label": "Annual implementation review",
-   "desc": "A year later the client questions fees and wants to shift strategy after a market dip.",
-   "setup": "You are a certified financial advisor. The client opens with: My statement shows high fees and the portfolio dropped, so why stay the course?",
-   "skills": "Fee transparency, rebalancing discipline, regulatory compliance",
-   "scene": "office",
-   "objective": "Confirm the fee structure, explain the rebalance, and re-sign the ongoing service agreement.",
-   "place": "Harbor Wealth conference room",
-   "moment": "Monday 9:00 am, overcast sky with cool fluorescent glow",
+   "id": "market_volatility_re",
+   "label": "Volatility review call",
+   "desc": "Calm a nervous client during a market drop and prevent panic selling.",
+   "setup": "A video call with an existing client whose portfolio is down twelve percent. They open with: I can’t watch this anymore. Let’s move everything to cash until it settles.",
+   "skills": "emotional discipline, fiduciary duty, rebalancing rationale",
+   "scene": "phone",
+   "objective": "Keep the client invested per the agreed policy and book the next quarterly review.",
+   "place": "Home office video call",
+   "moment": "Monday 7:30 pm, dim desk lamp, market alerts flashing",
    "visual": {
-    "sky": "overcast",
+    "sky": "night",
     "palette": {
-     "wall": "#DCE0E6",
-     "floor": "#2D3A4A",
-     "accent": "#5A7A8A",
-     "light": "#E8EEF2"
+     "wall": "#2a2a35",
+     "floor": "#1e1e1e",
+     "accent": "#8a8a8a",
+     "light": "#ff5500"
     },
     "props": [
      {
-      "type": "table",
-      "x": 0.0,
-      "z": 0.5,
-      "scale": 1.2,
-      "color": "#2D3A4A"
-     },
-     {
-      "type": "screen",
-      "x": 0.0,
-      "z": 0.1,
-      "scale": 1.1,
-      "color": "#101820"
-     },
-     {
-      "type": "chair",
-      "x": -0.6,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#1A252F"
-     },
-     {
-      "type": "chair",
-      "x": 0.6,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#1A252F"
-     },
-     {
-      "type": "plant",
-      "x": 0.9,
+      "type": "desk",
+      "x": -0.3,
       "z": 0.2,
-      "scale": 1.0,
-      "color": "#2E5D4E"
+      "scale": 1.2,
+      "color": "#333333"
      },
      {
-      "type": "cabinet",
-      "x": -0.9,
-      "z": 0.1,
+      "type": "lamp",
+      "x": -0.4,
+      "z": 0.3,
+      "scale": 0.9,
+      "color": "#ff5500"
+     },
+     {
+      "type": "chair",
+      "x": 0.0,
+      "z": 0.3,
       "scale": 1.0,
-      "color": "#1A252F"
+      "color": "#444444"
      }
     ]
    }
@@ -201,288 +166,306 @@
  "buyers": [
   {
    "scenario": "discovery_meeting",
-   "role": "busy executive with stock options",
-   "personality": "direct, time pressed, skeptical",
-   "difficulty": 3,
+   "role": "retirement planning",
+   "personality": "skeptical future retiree",
+   "difficulty": 2,
+   "gender": "m",
+   "age": 58,
+   "angle": "Worries about outliving savings and feels too old to start."
+  },
+  {
+   "scenario": "plan_presentation",
+   "role": "tax strategy",
+   "personality": "proactive entrepreneur",
+   "difficulty": 4,
    "gender": "m",
    "age": 42,
-   "angle": "Wants the bottom line in five minutes and doubts a planner adds value."
+   "angle": "Looks for immediate ROI on every dollar spent."
+  },
+  {
+   "scenario": "market_volatility_re",
+   "role": "estate planning",
+   "personality": "concerned parent",
+   "difficulty": 5,
+   "gender": "f",
+   "age": 65,
+   "angle": "Fear of burdening children with financial mess."
   },
   {
    "scenario": "discovery_meeting",
-   "role": "recent widow organizing affairs",
-   "personality": "cautious, detail oriented, emotional",
-   "difficulty": 2,
-   "gender": "f",
-   "age": 58,
-   "angle": "Afraid of mistakes, needs every term explained in plain language."
-  },
-  {
-   "scenario": "plan_presentation",
-   "role": "dual income couple nearing retirement",
-   "personality": "analytical, aligned, cost sensitive",
-   "difficulty": 4,
+   "role": "emergency fund",
+   "personality": "budget-conscious college grad",
+   "difficulty": 1,
    "gender": "m",
-   "age": 60,
-   "angle": "Scrutinizes every assumption and pushes back on projected returns."
+   "age": 24,
+   "angle": "Has no disposable income and sees saving as impossible."
   },
   {
    "scenario": "plan_presentation",
-   "role": "tech founder with concentrated equity",
-   "personality": "confident, risk tolerant, impatient",
-   "difficulty": 5,
-   "gender": "f",
-   "age": 37,
-   "angle": "Resists diversification and questions why fees apply to held shares."
-  },
-  {
-   "scenario": "plan_presentation",
-   "role": "long term client facing market drop",
-   "personality": "loyal but anxious, fee focused",
+   "role": "risk tolerance",
+   "personality": "cautious investor",
    "difficulty": 3,
-   "gender": "m",
-   "age": 65,
-   "angle": "Sees a paper loss and ties it to advisory cost, ready to leave."
+   "gender": "f",
+   "age": 38,
+   "angle": "Avoids anything that sounds speculative or volatile."
   }
  ],
  "objections": [
-  "Why should I pay you when a robo advisor charges a fraction?",
-  "I don’t want to lock money away I might need next year",
-  "Your projected returns look optimistic compared to the last decade",
-  "The fee schedule is confusing, what am I actually paying for?",
-  "My CPA already handles my taxes, why add another layer?",
-  "I prefer to pick my own funds, I have beaten the market before",
-  "What happens if you leave the firm or we stop working together?",
-  "Can you guarantee I will not run out of money in retirement?"
+  "It’s too expensive",
+  "I don’t have the money right now",
+  "I think I’m too young to plan",
+  "I’ll do it later when I make more",
+  "I don’t trust financial advisors",
+  "It sounds too complicated",
+  "I already have a 401k",
+  "What if the market crashes right after I invest?"
  ],
  "rubric": [
   {
-   "id": "discovery_depth",
-   "label": "Discovery depth",
-   "what": "Uncovers goals, fears, and all assets before recommending anything."
+   "id": "rapport_trust",
+   "label": "Rapport & trust",
+   "what": "Builds genuine connection and shows the client’s interests come first."
   },
   {
-   "id": "risk_alignment",
-   "label": "Risk alignment",
-   "what": "Matches portfolio risk to the client’s true capacity for loss."
+   "id": "needs_discovery",
+   "label": "Needs discovery",
+   "what": "Uncovers goals, risk capacity and constraints before any recommendation."
   },
   {
-   "id": "fee_transparency",
-   "label": "Fee transparency",
-   "what": "Explains every cost in dollars and basis points with no jargon."
+   "id": "compliance_clarity",
+   "label": "Compliance clarity",
+   "what": "Explains fees, conflicts and regulatory duties in plain language every time."
   },
   {
-   "id": "fiduciary_clarity",
-   "label": "Fiduciary clarity",
-   "what": "States the advisor’s legal duty and any conflicts in plain language."
+   "id": "value_articulation",
+   "label": "Value articulation",
+   "what": "Links the plan’s cost to concrete outcomes the client cares about."
   },
   {
-   "id": "scenario_modeling",
-   "label": "Scenario modeling",
-   "what": "Shows best, base, and stress cases with live numbers the client can test."
+   "id": "behavioural_coaching",
+   "label": "Behavioural coaching",
+   "what": "Guides the client past fear or greed without pressure or prediction."
   },
   {
-   "id": "implementation_disciplin",
-   "label": "Implementation discipline",
-   "what": "Keeps the client on the agreed rebalance schedule through market noise."
+   "id": "fiduciary_duty",
+   "label": "Fiduciary duty",
+   "what": "Every recommendation is documented as suitable and in the client’s best interest."
   }
  ],
  "live_meters": [
-  "discovery_depth",
-  "fee_transparency",
-  "fiduciary_clarity"
+  "rapport_trust",
+  "compliance_clarity",
+  "behavioural_coaching"
  ],
  "pitfalls": [
-  "Recommending products before the fact find is complete.",
-  "Blurring advisory fees with product commissions in the client’s mind.",
-  "Implying guaranteed returns or downside protection that does not exist."
+  "Promising specific returns or implying past performance guarantees future results.",
+  "Skipping the risk-profiling questionnaire before showing product slides.",
+  "Failing to disclose trailing commissions or platform fees in the total cost figure."
  ],
  "id": "ready-financial-advisor",
  "line": "Selling financial plans as a financial advisor",
  "product": null,
- "researched": false,
+ "researched": true,
+ "research": {
+  "text": "Common objections financial advisors face include cost concerns, timing issues, and perceived lack of interest. To address cost concerns, advisors should focus on the value provided and how proactive planning mitigates risks. Timing objections often stem from fear of risk or uncertainty, which can be alleviated by demonstrating the benefits of starting early. When clients express disinterest, advisors should engage by asking questions that prompt clients to discuss their goals and struggles, showing genuine interest in their lives. The sources do not provide a definitive answer to how conversations typically go beyond these guidelines.",
+  "sources": [
+   {
+    "title": "Overcoming 4 Common Objections to Close Financial Planning Clients",
+    "url": "https://partners.planswell.com/blog/overcoming-4-common-objections-to-close-financial-planning-clients"
+   },
+   {
+    "title": "Overcoming Objections: A Guide for Financial Advisors | LeadingResponse",
+    "url": "https://leadingresponse.com/blog/an-advisors-guide-to-objection-handling"
+   },
+   {
+    "title": "How to Handle Financial Advisor Fee Objections With Confidence",
+    "url": "https://www.xyplanningnetwork.com/advisor-blog/how-to-handle-financial-advisor-fee-objections-with-confidence"
+   }
+  ]
+ },
  "personas": [
   {
-   "id": "jordan_mendoza-0",
-   "name": "Jordan Mendoza",
+   "id": "johnathan_cheng-0",
+   "name": "Johnathan Cheng",
    "gender": "m",
-   "age": 42,
+   "age": 58,
    "scenario": "discovery_meeting",
-   "role": "executive client with stock options",
-   "personality": "direct time pressed skeptical",
-   "background": "Jordan runs a high growth startup and holds multiple stock grants. He meets advisors between board meetings and family dinners.",
+   "role": "retirement planning",
+   "personality": "skeptical future retiree",
+   "background": "He spent thirty years managing warehouse logistics for a regional retailer and now worries his savings will not last through his seventies and eighties. He respects data but distrusts anyone selling certainty in uncertain times.",
    "cares_about": [
-    "tax efficient growth",
-    "retirement runway",
-    "family legacy"
+    "health costs",
+    "legacy for adult children",
+    "maintaining independence"
    ],
    "pushbacks": [
-    "I already have a robo platform why pay more",
-    "I can’t lock money i might need for a down payment",
-    "Your return assumptions feel like fiction"
+    "I’ve put all this off long enough",
+    "I don’t trust vague retirement promises",
+    "My super balance barely covers five years"
    ],
    "wins_over": [
-    "clear fee breakdown",
-    "straight talk about risk",
-    "real world scenario modeling"
+    "clear break-even numbers",
+    "specific withdrawal examples",
+    "mentions of estate paperwork"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 2,
+    "clothes": "#3f4f3f"
+   },
+   "accent": "en-NZ"
+  },
+  {
+   "id": "terry_mcallister-1",
+   "name": "Terry McAllister",
+   "gender": "m",
+   "age": 42,
+   "scenario": "plan_presentation",
+   "role": "certified financial planner",
+   "personality": "proactive entrepreneur",
+   "background": "Terry runs his own advisory firm and has spent years helping entrepreneurs minimize tax liabilities. He believes that smart planning is only valuable when it shows clear, immediate returns.",
+   "cares_about": [
+    "keeping clients profitable",
+    "using technology to streamline planning",
+    "maintaining a flexible schedule"
+   ],
+   "pushbacks": [
+    "It’s too pricey for a service that just tells me how to pay less tax?",
+    "I can’t justify spending now when I already have cash flow pressure",
+    "Honestly, I’m not sure the ROI will beat what I’m doing myself"
+   ],
+   "wins_over": [
+    "clear, measurable ROI within six months",
+    "a simple dashboard that shows savings month over month",
+    "a partnership approach that feels personal, not corporate"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "sidepart",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#9a4d4d"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "sylvia_wexler-2",
+   "name": "Sylvia Wexler",
+   "gender": "f",
+   "age": 65,
+   "scenario": "market_volatility_re",
+   "role": "concerned parent",
+   "personality": "quietly protective, firm on legacy",
+   "background": "Retired schoolteacher turned early‑career investor. She built her wealth from modest means and worries about leaving debts or unclear assets for her kids.",
+   "cares_about": [
+    "leaving a clean balance sheet",
+    "avoiding family conflict over assets",
+    "ensuring her kids can manage what she leaves"
+   ],
+   "pushbacks": [
+    "I’m not paying for someone to tell me how to spend my money after I’ve already saved for retirement",
+    "If I had more time, I’d sort it myself, I don’t need a fancy planner",
+    "I’m not ready to hand over control of my finances to anyone else yet"
+   ],
+   "wins_over": [
+    "clear, honest cost breakdown",
+    "stories of other parents who avoided burdening children",
+    "simple, visual plans that show exactly where everything goes"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "white",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 2,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "peter_ng-3",
+   "name": "Peter Ng",
+   "gender": "m",
+   "age": 24,
+   "scenario": "discovery_meeting",
+   "role": "emergency fund",
+   "personality": "budget-conscious college grad",
+   "background": "Recent graduate in economics studies. Works part-time at a library while applying for full-time jobs. Lives with roommates in a small city apartment.",
+   "cares_about": [
+    "future stability",
+    "avoiding debt",
+    "making small progress"
+   ],
+   "pushbacks": [
+    "It’s too expensive",
+    "I don’t have the money right now",
+    "I think i’m too young to plan"
+   ],
+   "wins_over": [
+    "any win",
+    "someone who listens",
+    "a realistic plan"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 0,
+    "clothes": "#2b2b3a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "evelyn_mcgregor-4",
+   "name": "Evelyn McGregor",
+   "gender": "f",
+   "age": 38,
+   "scenario": "plan_presentation",
+   "role": "risk tolerance",
+   "personality": "cautious investor",
+   "background": "Evelyn McGregor has spent ten years building trust with mid‑career professionals who worry about volatility. She prefers methods that protect capital over chasing high returns.",
+   "cares_about": [
+    "preserving client savings",
+    "transparent fee structures",
+    "long‑term security"
+   ],
+   "pushbacks": [
+    "I’m not interested in anything that sounds speculative or volatile",
+    "My clients expect certainty, not gamble‑type projections",
+    "If it feels like a gamble, we’ll walk away"
+   ],
+   "wins_over": [
+    "clear risk metrics",
+    "historical performance data",
+    "client‑centric case studies"
    ],
    "suggested_difficulty": 3,
    "appearance": {
     "skin": "light",
-    "hairStyle": "buzz",
+    "hairStyle": "bob",
     "hairColor": "darkbrown",
     "facialHair": "none",
     "glasses": "square",
     "lines": 1,
-    "clothes": "#2f5d62"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "theresa_mullins-1",
-   "name": "Theresa Mullins",
-   "gender": "f",
-   "age": 58,
-   "scenario": "discovery_meeting",
-   "role": "recent widow organizing affairs",
-   "personality": "cautious detail oriented emotional",
-   "background": "Theresa became a widow two months ago and now manages joint finances for the first time. She is meticulous about paperwork and wants clarity on every financial term.",
-   "cares_about": [
-    "preserving her late husband’s legacy",
-    "ensuring her children’s inheritance is protected",
-    "avoiding costly mistakes with her limited savings"
-   ],
-   "pushbacks": [
-    "Why should I pay you when a robo advisor charges a fraction?",
-    "I don’t want to lock money away I might need next year",
-    "Your projected returns look optimistic compared to the last decade"
-   ],
-   "wins_over": [
-    "clarity and plain language explanations",
-    "personalized service that respects her husband’s wishes",
-    "transparent fee breakdown that matches her budget"
-   ],
-   "suggested_difficulty": 2,
-   "appearance": {
-    "skin": "light",
-    "hairStyle": "bob",
-    "hairColor": "brown",
-    "facialHair": "none",
-    "glasses": "square",
-    "lines": 2,
-    "clothes": "#3f4f3f"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "samuel_cho-2",
-   "name": "Samuel Cho",
-   "gender": "m",
-   "age": 60,
-   "scenario": "plan_presentation",
-   "role": "financial advisor",
-   "personality": "analytical and skeptical",
-   "background": "He spent two decades managing retirement portfolios for high‑net‑worth families. Now he leads a boutique advisory that emphasizes transparency and long‑term security.",
-   "cares_about": [
-    "preserving capital",
-    "avoiding hidden fees",
-    "clear communication"
-   ],
-   "pushbacks": [
-    "The projected returns look optimistic compared to the last decade",
-    "I don’t want to lock money away i might need next year",
-    "Why should i pay you when a robo advisor charges a fraction?"
-   ],
-   "wins_over": [
-    "clear breakdown of all fees",
-    "conservative return assumptions",
-    "personalized tax‑efficient strategies"
-   ],
-   "suggested_difficulty": 4,
-   "appearance": {
-    "skin": "light",
-    "hairStyle": "balding",
-    "hairColor": "grey",
-    "facialHair": "none",
-    "glasses": "none",
-    "lines": 2,
-    "clothes": "#3a3a4a"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "priya_mehta-3",
-   "name": "Priya Mehta",
-   "gender": "f",
-   "age": 37,
-   "scenario": "plan_presentation",
-   "role": "financial advisor",
-   "personality": "direct confident impatient",
-   "background": "She works remotely in lakefront condo. She built a fintech startup in Chicago and now manages her concentrated stock portfolio.",
-   "cares_about": [
-    "portfolio growth",
-    "risk control",
-    "client trust"
-   ],
-   "pushbacks": [
-    "Diversification slows my growth",
-    "My shares are already highly liquid, why lock them?",
-    "Fees on unrealized gains feel punitive"
-   ],
-   "wins_over": [
-    "alignment on capital gains",
-    "long term vision",
-    "clarity on fee structure"
-   ],
-   "suggested_difficulty": 5,
-   "appearance": {
-    "skin": "medium",
-    "hairStyle": "bob",
-    "hairColor": "brown",
-    "facialHair": "none",
-    "glasses": "none",
-    "lines": 1,
-    "clothes": "#3a3a4a"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "earl_monroe-4",
-   "name": "Earl Monroe",
-   "gender": "m",
-   "age": 65,
-   "scenario": "plan_presentation",
-   "role": "retired business owner",
-   "personality": "loyal but anxious fee focused",
-   "background": "Spent his career building a manufacturing firm. He trusts professionals but watches every dollar he spends.",
-   "cares_about": [
-    "preserving capital for health expenses",
-    "maintaining steady income without losses",
-    "seeing transparent fee breakdowns"
-   ],
-   "pushbacks": [
-    "I’ve already paid enough in fees this year",
-    "Why should I keep you when markets are going down?",
-    "Can you show me exactly what I’m paying for each quarter?"
-   ],
-   "wins_over": [
-    "a clear, simple fee structure",
-    "real world examples of similar downturns",
-    "a short term plan that protects cash flow"
-   ],
-   "suggested_difficulty": 3,
-   "appearance": {
-    "skin": "medium",
-    "hairStyle": "short",
-    "hairColor": "grey",
-    "facialHair": "none",
-    "glasses": "none",
-    "lines": 2,
-    "clothes": "#2f5d62"
+    "clothes": "#6b4b6e"
    },
    "accent": "en-US"
   }
  ],
  "builtin": true,
- "order": 7
+ "order": 7,
+ "group": "sales"
 }

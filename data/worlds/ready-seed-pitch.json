@@ -1,0 +1,452 @@
+{
+ "title": "Seed round pitch",
+ "tagline": "Learn to answer skeptical investor questions and close a seed commitment.",
+ "you_are": "a founder raising a seed round",
+ "setting": "Conversations happen in partner offices, video calls, and coffee shops after intros or demo days, with 20-40 minutes to prove the fundable core.",
+ "other_side": "investors",
+ "scenarios": [
+  {
+   "id": "intro_meeting",
+   "label": "First partner meeting",
+   "desc": "A warm intro gets you 30 minutes with a partner who has seen your deck but not met you.",
+   "setup": "You are a partner at a seed fund. You liked the deck enough to take the meeting but you have three other pitches today. You open with: ‘Thanks for coming in. Walk me through why this team, why this problem, and why now in ninety seconds.’",
+   "skills": "Narrative compression and unfair advantage",
+   "scene": "office",
+   "objective": "Earn a second meeting with the full partnership or a technical deep-dive.",
+   "place": "Sequoia Capital conference room",
+   "moment": "Tuesday 10:00 am, quiet hum of the hallway",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e0e0e0",
+     "floor": "#d4d4d4",
+     "accent": "#2c3e50",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "sofa",
+      "x": -0.5,
+      "z": 0.8,
+      "scale": 1.0,
+      "color": "#34495e"
+     },
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.2,
+      "scale": 1.2,
+      "color": "#34495e"
+     },
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0,
+      "scale": 0.9,
+      "color": "#bdc3c7"
+     },
+     {
+      "type": "lamp",
+      "x": -0.3,
+      "z": 0.7,
+      "scale": 0.8,
+      "color": "#ecf0f1"
+     }
+    ]
+   }
+  },
+  {
+   "id": "traction_probe",
+   "label": "Traction deep-dive",
+   "desc": "A follow-up call where the investor presses on early revenue, retention, and sales repeatability.",
+   "setup": "You are the same partner on a Zoom call. You have the dashboard shared on screen. You open with: ‘I see three pilots and one annual contract. Show me the repeatable motion that turns pilots into a pipeline.’",
+   "skills": "Evidence-based traction and sales motion",
+   "scene": "phone",
+   "objective": "Get the partner to champion the deal at Monday partner meeting.",
+   "place": "Zoom call",
+   "moment": "Thursday 3:15 pm, late afternoon light on both sides",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#2E292F",
+     "floor": "#3A3633",
+     "accent": "#4A6FA5",
+     "light": "#6B8E9F"
+    },
+    "props": [
+     {
+      "type": "car",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.5,
+      "color": "#4A6FA5"
+     },
+     {
+      "type": "screen",
+      "x": 0.0,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#FFFFFF"
+     },
+     {
+      "type": "lamp",
+      "x": 0.6,
+      "z": 0.5,
+      "scale": 0.9,
+      "color": "#3A3633"
+     },
+     {
+      "type": "plant",
+      "x": -0.5,
+      "z": 0.7,
+      "scale": 0.8,
+      "color": "#2E292F"
+     }
+    ]
+   }
+  },
+  {
+   "id": "terms_close",
+   "label": "Terms negotiation",
+   "desc": "The partner wants in but pushes on valuation cap, pro-rata, and board observer rights.",
+   "setup": "You are the partner at a quiet cafe. Term sheet is on the table. You open with: ‘We want to write $1.5M on a $12M post. That means a board observer seat and full pro-rata. Talk me through the cap logic.’",
+   "skills": "Cap table discipline and partnership alignment",
+   "scene": "cafe",
+   "objective": "Agree a term sheet you can sign this week without sinking the next round.",
+   "place": "Blue bottle coffee",
+   "moment": "Friday 4:30 pm, espresso machine hiss",
+   "visual": {
+    "sky": "golden",
+    "palette": {
+     "wall": "#A29BFE",
+     "floor": "#FFE8D6",
+     "accent": "#7B6158",
+     "light": "#FFFFFF"
+    },
+    "props": [
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.3,
+      "scale": 1.2,
+      "color": "#FFFFFF"
+     },
+     {
+      "type": "chair",
+      "x": -0.3,
+      "z": 0.3,
+      "scale": 0.9,
+      "color": "#7B6158"
+     },
+     {
+      "type": "counter",
+      "x": 0.5,
+      "z": 0.8,
+      "scale": 1.0,
+      "color": "#A29BFE"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "intro_meeting",
+   "role": "seed round pitch",
+   "personality": "eager analytical skeptic",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 38,
+   "angle": "Focuses on problem size and market fit."
+  },
+  {
+   "scenario": "traction_probe",
+   "role": "seed round pitch",
+   "personality": "data driven neutral",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 45,
+   "angle": "Asks for concrete usage metrics and growth rates."
+  },
+  {
+   "scenario": "terms_close",
+   "role": "seed round pitch",
+   "personality": "strategic visionary",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 52,
+   "angle": "Pushes on timing relevance and long term vision."
+  },
+  {
+   "scenario": "traction_probe",
+   "role": "seed round pitch",
+   "personality": "quantitative cautious",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 34,
+   "angle": "Wants detailed CAC and LTV calculations."
+  },
+  {
+   "scenario": "terms_close",
+   "role": "seed round pitch",
+   "personality": "pattern seeking exit",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 60,
+   "angle": "Presses on exit potential and acquisition signals."
+  }
+ ],
+ "objections": [
+  "Your team lacks deep industry experience",
+  "The problem isn’t big enough to justify venture scale",
+  "It’s too early to prove product market fit",
+  "There’s no clear path to revenue yet",
+  "I need to see more traction before writing a check",
+  "Your technology seems unproven at scale",
+  "I’m not convinced customers are actively seeking this solution",
+  "The market timing feels off given current economic conditions"
+ ],
+ "rubric": [
+  {
+   "id": "unfair_advantage",
+   "label": "Unfair advantage",
+   "what": "Articulates a concrete, defensible edge the team owns that others cannot easily copy."
+  },
+  {
+   "id": "problem_evidence",
+   "label": "Problem evidence",
+   "what": "Cites specific customer pain, frequency, and spend data instead of market size abstractions."
+  },
+  {
+   "id": "timing_clarity",
+   "label": "Timing clarity",
+   "what": "Explains why the solution is only now possible or urgent with tech, regulation, or behavior shifts."
+  },
+  {
+   "id": "traction_rigor",
+   "label": "Traction rigor",
+   "what": "Distinguishes signal from noise: paid pilots, cohort retention, sales cycle length, and CAC proof points."
+  },
+  {
+   "id": "cap_discipline",
+   "label": "Cap discipline",
+   "what": "Models dilution, option pool, and follow-on reserves so the seed terms protect the Series A."
+  },
+  {
+   "id": "compliance_honesty",
+   "label": "Compliance honesty",
+   "what": "States material risks, cap table facts, and use-of-funds truthfully without exaggeration or omission."
+  }
+ ],
+ "live_meters": [
+  "unfair_advantage",
+  "traction_rigor",
+  "compliance_honesty"
+ ],
+ "pitfalls": [
+  "Inflating pilot revenue as ARR before contracts are signed.",
+  "Promising board seats or voting rights that conflict with Delaware law or Series A expectations.",
+  "Hiding founder vesting gaps or IP ownership issues until legal diligence."
+ ],
+ "id": "ready-seed-pitch",
+ "line": "Pitching a seed round to a skeptical investor",
+ "product": null,
+ "researched": true,
+ "research": {
+  "text": "When pitching a seed round to a skeptical investor, common objections often revolve around the team's expertise, the problem's significance, the timing of the solution, and traction signals. Investors typically focus on whether the founders have an unfair advantage, if the problem is real and large enough, if now is the right moment, and if there is any traction signal like a paying customer. To address these, it's important to clearly state the funding request and planned use of funds, highlight additional support sought, and refine the pitch based on investor questions and feedback. Follow-up materials can provide more context and data to address skepticism.",
+  "sources": [
+   {
+    "title": "Here’s What You Can Really Expect When Pitching Your Seed-Stage Startup at a VC Partner Me",
+    "url": "https://review.firstround.com/heres-what-you-can-really-expect-when-pitching-your-seed-stage-startup-at-a-vc-partner-meeting"
+   },
+   {
+    "title": "Seed Round Pitch Deck: 10-Step Guide, Free Template & Examples (2026) - Visible.vc",
+    "url": "https://visible.vc/blog/seed-round-pitch-deck"
+   },
+   {
+    "title": "Blog Seedblink | How to build a convincing pitch for pre-seed funding",
+    "url": "https://seedblink.com/blog/how-to-build-a-convincing-pitch-for-pre-seed-funding"
+   }
+  ]
+ },
+ "personas": [
+  {
+   "id": "calum_iain_mcleod-0",
+   "name": "Calum Iain McLeod",
+   "gender": "m",
+   "age": 38,
+   "scenario": "intro_meeting",
+   "role": "seed round pitch",
+   "personality": "eager analytical skeptic",
+   "background": "He built a data platform for renewable firms while working late nights in his parents’ garage. Now he leads a seed-stage climate tech startup after leaving his previous engineering role. He values clarity over optimism.",
+   "cares_about": [
+    "validating assumptions with real data",
+    "keeping the team lean and focused",
+    "earning trust before scaling"
+   ],
+   "pushbacks": [
+    "The problem isn’t big enough to justify venture scale",
+    "I need to see more traction before writing a check",
+    "Your team lacks deep industry experience"
+   ],
+   "wins_over": [
+    "a demo that shows clear traction",
+    "when I can see real market pull",
+    "when the team nails the numbers"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#2b2b3a"
+   },
+   "accent": "en-GB"
+  },
+  {
+   "id": "gwen_patel-1",
+   "name": "Gwen Patel",
+   "gender": "f",
+   "age": 45,
+   "scenario": "traction_probe",
+   "role": "seed round pitch",
+   "personality": "data driven neutral",
+   "background": "Gwen spent a decade as a product lead at a large SaaS firm before moving to a venture studio where she advises early startups. She values clear metrics and believes conviction should be backed by data.",
+   "cares_about": [
+    "scalable growth",
+    "clear unit economics",
+    "team cohesion"
+   ],
+   "pushbacks": [
+    "What specific usage metrics prove consistent growth?",
+    "Can you show month over month retention numbers?",
+    "Where is your burn rate headed over the next six months?"
+   ],
+   "wins_over": [
+    "clean data presentation",
+    "clarity on churn trends",
+    "honest traction discussion"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#2b2b3a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "soren_albright-2",
+   "name": "Soren Albright",
+   "gender": "m",
+   "age": 52,
+   "scenario": "terms_close",
+   "role": "seed round pitch",
+   "personality": "strategic visionary",
+   "background": "Soren spent two decades building early stage tech companies before turning to angel advising for emerging founders. He now seeks out teams that can redefine market expectations long before they achieve scale.",
+   "cares_about": [
+    "passion for long term vision",
+    "clarity of market transformation",
+    "founder’s commitment to scale"
+   ],
+   "pushbacks": [
+    "It feels premature to talk about transformation when traction is still thin",
+    "I need tangible metrics before I can justify a bold vision",
+    "Your model relies on scaling faster than current numbers suggest is realistic"
+   ],
+   "wins_over": [
+    "compelling vision",
+    "evidence of strategic depth",
+    "clear long term growth path"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#7a3b2e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "kara_stone-3",
+   "name": "Kara Stone",
+   "gender": "f",
+   "age": 34,
+   "scenario": "traction_probe",
+   "role": "seed round pitch",
+   "personality": "quietly analytical",
+   "background": "She built a heatmap tool for solar farms after five years in data engineering. She reads every cohort chart twice before speaking.",
+   "cares_about": [
+    "clean metrics",
+    "tangible cost savings",
+    "team cohesion"
+   ],
+   "pushbacks": [
+    "Can we run that scenario again with the churn baseline?",
+    "The sample size is too small to trust that trend",
+    "Have you stress-tested retention under a 10% price bump?"
+   ],
+   "wins_over": [
+    "variant-driven growth",
+    "pythonic efficiency",
+    "quiet confidence"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#6b4b6e"
+   },
+   "accent": "en-CA"
+  },
+  {
+   "id": "person_5-4",
+   "name": "Person 5",
+   "gender": "m",
+   "age": 60,
+   "scenario": "terms_close",
+   "role": "seed round pitch",
+   "personality": "pattern seeking exit",
+   "background": "Presses on exit potential and acquisition signals.",
+   "cares_about": [
+    "their time",
+    "not being tricked"
+   ],
+   "pushbacks": [
+    "I’m not sure about this"
+   ],
+   "wins_over": [
+    "a straight answer"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "long",
+    "hairColor": "white",
+    "facialHair": "mustache",
+    "glasses": "square",
+    "lines": 2,
+    "clothes": "#2f5d62"
+   },
+   "accent": "en-CA"
+  }
+ ],
+ "builtin": true,
+ "order": 103,
+ "group": "life"
+}

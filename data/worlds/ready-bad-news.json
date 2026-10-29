@@ -1,0 +1,478 @@
+{
+ "title": "Delivering bad news",
+ "tagline": "Learn to tell a client their project will be late while preserving trust and agreeing a new path forward.",
+ "you_are": "a project manager or account lead breaking the news to a client",
+ "setting": "Private one-to-one conversations, usually by video call or in a meeting room, where you explain the delay, the causes and the recovery options.",
+ "other_side": "clients",
+ "scenarios": [
+  {
+   "id": "first_notice",
+   "label": "First delay conversation",
+   "desc": "You tell the client the original date is at risk and lay out three recovery options.",
+   "setup": "The client joins the call expecting a routine status update. You open with: “Thanks for making time, I need to let you know the launch date is slipping.”",
+   "skills": "Framing bad news with evidence and options",
+   "scene": "office",
+   "objective": "Agree a revised plan, de-scoped delivery, added budget or new date, before the call ends.",
+   "place": "Video call from your home office",
+   "moment": "Tuesday 10:15 am, quiet background",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#3A3F44",
+     "floor": "#D1D9DC",
+     "accent": "#7A7F85",
+     "light": "#F2F2F2"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.4,
+      "z": 0.2,
+      "scale": 0.9,
+      "color": "#2D3436"
+     },
+     {
+      "type": "sofa",
+      "x": -0.6,
+      "z": 0.7,
+      "scale": 1.2,
+      "color": "#636E72"
+     },
+     {
+      "type": "lamp",
+      "x": -0.2,
+      "z": 0.3,
+      "scale": 0.8,
+      "color": "#A3B18A"
+     },
+     {
+      "type": "plant",
+      "x": 0.7,
+      "z": 0.5,
+      "scale": 0.7,
+      "color": "#889966"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pushback_on_options",
+   "label": "Client rejects all options",
+   "desc": "The client refuses de-scoping, extra cost and a later date, demanding the original promise.",
+   "setup": "The client leans forward, voice tight. They open with: “We signed a contract for 30 June. I am not paying more and I am not cutting features.”",
+   "skills": "Holding firm on constraints while keeping the relationship",
+   "scene": "office",
+   "objective": "Reach a compromise the client can sign off today without conceding the impossible.",
+   "place": "Client boardroom",
+   "moment": "Thursday 3:00 pm, rain on the glass",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#3a3a3a",
+     "floor": "#1e1e1e",
+     "accent": "#a87c6d",
+     "light": "#c0c0c0"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.4,
+      "z": 0.2,
+      "scale": 0.9,
+      "color": "#5a5a5a"
+     },
+     {
+      "type": "chair",
+      "x": -0.3,
+      "z": 0,
+      "scale": 1.0,
+      "color": "#333333"
+     },
+     {
+      "type": "lamp",
+      "x": 0.2,
+      "z": 0.45,
+      "scale": 0.8,
+      "color": "#e0e0e0"
+     },
+     {
+      "type": "window",
+      "x": 0.45,
+      "z": 0.85,
+      "scale": 1.1,
+      "color": "#000000"
+     }
+    ]
+   }
+  },
+  {
+   "id": "executive_escalation",
+   "label": "Executive sponsor demands answers",
+   "desc": "A senior sponsor who was not in earlier calls joins and wants a root-cause account and a guarantee.",
+   "setup": "The sponsor appears on screen mid-call. They open with: “I heard this second-hand. Walk me through exactly why and how you guarantee the next date.”",
+   "skills": "Explaining technical causes to non-technical power brokers",
+   "scene": "office",
+   "objective": "Secure the sponsor’s sign-off on the revised plan and a follow-up cadence they trust.",
+   "place": "Video call with three stakeholders",
+   "moment": "Monday 9:30 am, coffee in hand",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#f5f5f5",
+     "floor": "#e0e0e0",
+     "accent": "#e67e22",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0.8,
+      "scale": 1.0,
+      "color": "#c0392b"
+     },
+     {
+      "type": "chair",
+      "x": -0.4,
+      "z": 0.5,
+      "scale": 0.9,
+      "color": "#7f8c8d"
+     },
+     {
+      "type": "window",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#e67e22"
+     },
+     {
+      "type": "desk",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#e67e22"
+     },
+     {
+      "type": "plant",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#e67e22"
+     },
+     {
+      "type": "shelf",
+      "x": 0.5,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#e67e22"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "first_notice",
+   "role": "Marketing manager",
+   "personality": "friendly but decisive",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 35,
+   "angle": "Easy to talk to, wants quick answers."
+  },
+  {
+   "scenario": "pushback_on_options",
+   "role": "Finance director",
+   "personality": "skeptical and detail oriented",
+   "difficulty": 2,
+   "gender": "m",
+   "age": 48,
+   "angle": "Checks every line of the timeline."
+  },
+  {
+   "scenario": "executive_escalation",
+   "role": "Operations VP",
+   "personality": "angry and urgent",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 52,
+   "angle": "Needs immediate impact on team schedule."
+  },
+  {
+   "scenario": "pushback_on_options",
+   "role": "Customer Success Lead",
+   "personality": "calm but firm",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 31,
+   "angle": "Wants to protect client relationship."
+  },
+  {
+   "scenario": "executive_escalation",
+   "role": "External Stakeholder",
+   "personality": "assertive and demanding",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 44,
+   "angle": "Has contractual penalties for delays."
+  }
+ ],
+ "objections": [
+  "What evidence do you have that the delay is real?",
+  "Can we revisit the original estimate?",
+  "Would you be willing to pay more for faster delivery?",
+  "Is de-scoping an option for us?",
+  "Can we adjust the project timeline?",
+  "I need more time to discuss this with my team",
+  "What concrete steps will you take to mitigate the delay?",
+  "Are there any risks to the overall schedule?"
+ ],
+ "rubric": [
+  {
+   "id": "evidence_based_explanati",
+   "label": "Evidence-based explanation",
+   "what": "You cite concrete data, velocity, scope changes, dependency logs, not vague excuses."
+  },
+  {
+   "id": "option_clarity",
+   "label": "Option clarity",
+   "what": "You lay out de-scoping, added cost and new date as three distinct, quantified paths with trade-offs."
+  },
+  {
+   "id": "honesty_compliance",
+   "label": "Honesty and compliance",
+   "what": "You admit what you know, avoid over-promising, and flag any contractual or regulatory limits."
+  },
+  {
+   "id": "client_agency",
+   "label": "Client agency",
+   "what": "You let the client choose or blend options rather than dictating the outcome."
+  },
+  {
+   "id": "emotional_steadiness",
+   "label": "Emotional steadiness",
+   "what": "You stay calm, acknowledge frustration without mirroring it, and keep the tone collaborative."
+  },
+  {
+   "id": "next_steps_concreteness",
+   "label": "Concrete next steps",
+   "what": "You close with a written summary, owner, deadline and the next check-in date."
+  }
+ ],
+ "live_meters": [
+  "option_clarity",
+  "emotional_steadiness",
+  "evidence_based_explanati"
+ ],
+ "pitfalls": [
+  "Emailing the delay instead of speaking privately.",
+  "Blaming a vendor or team member by name.",
+  "Promising a new date without buffer or written change request."
+ ],
+ "id": "ready-bad-news",
+ "line": "Telling a client their project will be late",
+ "product": null,
+ "researched": true,
+ "research": {
+  "text": "When telling a client their project will be late, the sources suggest providing them with options such as de-scoping functionality, paying more, or changing the date. It's important to be evidence-based, revisit original estimates, and explain the reasons for the delay honestly but confidently. The conversation should be held privately, preferably face-to-face, rather than in a public setting. Common objections include needing more information or time to make a decision, which can be addressed by offering to provide more details or scheduling a follow-up. The sources also emphasize the importance of being a genuine problem-solver and maintaining a high level of service.",
+  "sources": [
+   {
+    "title": "How to tell a client you’re behind on the project | Tempo",
+    "url": "https://www.tempo.io/blog/how-to-tell-a-client-youre-behind-on-the-project-you-just-took-over"
+   },
+   {
+    "title": "21 Common Sales Objections and How to Handle Them Like a Pro",
+    "url": "https://www.atlassian.com/blog/loom/sales-objections"
+   },
+   {
+    "title": "8 Common Sales Objections (And How to Respond)",
+    "url": "https://www.allego.com/blog/handling-sales-objections"
+   }
+  ]
+ },
+ "personas": [
+  {
+   "id": "galen_hunt-0",
+   "name": "Galen Hunt",
+   "gender": "m",
+   "age": 35,
+   "scenario": "first_notice",
+   "role": "marketing manager",
+   "personality": "friendly but decisive",
+   "background": "Galen has run regional campaigns for a tech agency for ten years. He knows how to keep clients calm when timelines shift.",
+   "cares_about": [
+    "clear results",
+    "client trust",
+    "team stability"
+   ],
+   "pushbacks": [
+    "I want to see the full schedule before I let anything slip",
+    "Can we revisit the original estimate?",
+    "Would you be willing to pay more for faster delivery?"
+   ],
+   "wins_over": [
+    "data-backed timelines",
+    "honest about impact",
+    "quick decisions that help"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "theo_whitaker-1",
+   "name": "Theo Whitaker",
+   "gender": "m",
+   "age": 48,
+   "scenario": "pushback_on_options",
+   "role": "finance director",
+   "personality": "skeptical detail oriented",
+   "background": "Theo runs the financial oversight for major tech rollouts. He previously worked in risk analysis and now watches every budget line closely.",
+   "cares_about": [
+    "budget integrity",
+    "accurate reporting",
+    "avoiding unexpected costs"
+   ],
+   "pushbacks": [
+    "Show me the specific tasks that slipped",
+    "What proof do we have that the delay isn’t just scope creep?",
+    "Before we discuss extra spend, let’s confirm the baseline estimate"
+   ],
+   "wins_over": [
+    "clear variance analysis",
+    "data‑driven recovery plans",
+    "transparent cost impact"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "sidepart",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#3f4f3f"
+   },
+   "accent": "en-GB"
+  },
+  {
+   "id": "warren_peck-2",
+   "name": "Warren Peck",
+   "gender": "m",
+   "age": 52,
+   "scenario": "executive_escalation",
+   "role": "Operations VP",
+   "personality": "angry and urgent",
+   "background": "Warren leads operations for a mid-size tech firm. He has spent twenty years polishing processes and expects every timeline to be locked in before any work starts.",
+   "cares_about": [
+    "team schedule",
+    "budget stewardship",
+    "client trust"
+   ],
+   "pushbacks": [
+    "What evidence do you have that the delay is real?",
+    "Can we revisit the original estimate?",
+    "Would you be willing to pay more for faster delivery?"
+   ],
+   "wins_over": [
+    "clear recovery plans",
+    "binding commitments",
+    "measurable progress updates"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#2b2b3a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "bree_delaney-3",
+   "name": "Bree Delaney",
+   "gender": "f",
+   "age": 31,
+   "scenario": "pushback_on_options",
+   "role": "Customer Success Lead",
+   "personality": "calm but firm",
+   "background": "Bree works at a mid-size tech consultancy where she oversees client outcomes. She has spent five years building trust with enterprise buyers and rarely raises her voice.",
+   "cares_about": [
+    "client satisfaction",
+    "team morale",
+    "her professional reputation"
+   ],
+   "pushbacks": [
+    "Can you share the data that shows the delay is real?",
+    "May we review the original estimate again?",
+    "Would you consider adding funds for an accelerated schedule?"
+   ],
+   "wins_over": [
+    "clear and honest updates",
+    "collaborative problem solving",
+    "recognition of her stewardship"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 1,
+    "clothes": "#9a4d4d"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "jasper_whitlock-4",
+   "name": "Jasper Whitlock",
+   "gender": "m",
+   "age": 44,
+   "scenario": "executive_escalation",
+   "role": "External Stakeholder",
+   "personality": "assertive and demanding",
+   "background": "Jasper runs a mid-size agency and has signed a fixed-price contract with the client. He must report delays to his board within 24 hours and faces penalties that could affect his next funding round. He expects precise data and clear mitigation steps to protect his reputation and financial exposure.",
+   "cares_about": [
+    "protecting profit margins",
+    "upholding contractual obligations",
+    "preserving his professional credibility"
+   ],
+   "pushbacks": [
+    "What evidence do you have that the delay is real?",
+    "Can we revisit the original estimate?",
+    "Would you be willing to pay more for faster delivery?"
+   ],
+   "wins_over": [
+    "receiving detailed impact analysis",
+    "clear recovery milestones",
+    "offering to amend the scope without extra cost"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 105,
+ "group": "life"
+}

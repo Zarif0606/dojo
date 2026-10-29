@@ -1,184 +1,149 @@
 {
  "title": "Real estate agent",
- "tagline": "Learn to guide buyers from first showing to signed contract with confidence and compliance.",
- "you_are": "a licensed residential real estate agent",
- "setting": "Conversations happen at open houses, private showings, coffee shops, and kitchen tables across the metro area.",
- "other_side": "buyers",
+ "tagline": "Learn to win listings and guide buyers to confident offers.",
+ "you_are": "a residential real estate agent",
+ "setting": "Conversations happen at kitchen tables, on living-room sofas, and over the phone with homeowners deciding whether to list and buyers deciding whether to write an offer.",
+ "other_side": "homeowners and buyers",
  "scenarios": [
   {
-   "id": "open_house_first_con",
-   "label": "Open house first contact",
-   "desc": "Greet a walk-in visitor at a Saturday open house and uncover their real timeline.",
-   "setup": "You are hosting an open house for a three-bedroom colonial. A visitor pauses at the front door, glances at the spec sheet, and says: Thanks, I’ll just look around.",
-   "skills": "Rapid rapport and needs discovery",
-   "scene": "shop",
-   "objective": "Schedule a private showing or buyer consultation within the next week.",
-   "place": "Maple Street colonial open house",
-   "moment": "Saturday 11:15 am, bright spring light through front windows",
+   "id": "listing_presentation",
+   "label": "Listing presentation",
+   "desc": "First sit-down with a homeowner who is interviewing three agents and wants the highest price for the lowest fee.",
+   "setup": "The homeowner sits across the kitchen table with a printed CMA from a competitor. They lean back and say I like your marketing but the other agent will list for four percent and says we can get three twenty.",
+   "skills": "Pricing credibility and commission defence",
+   "scene": "home",
+   "objective": "Secure a signed listing agreement at your full commission.",
+   "place": "Maple Street kitchen",
+   "moment": "Tuesday 7 pm, dishwasher humming",
    "visual": {
-    "sky": "day",
+    "sky": "night",
     "palette": {
-     "wall": "#f5f0e8",
-     "floor": "#d4c4b0",
-     "accent": "#2d5a3d",
-     "light": "#fff8e7"
+     "wall": "#D4AF37",
+     "floor": "#8B4513",
+     "accent": "#2E8B57",
+     "light": "#FFFFFF"
     },
     "props": [
      {
-      "type": "door",
-      "x": -0.8,
-      "z": 0,
+      "type": "counter",
+      "x": -0.3,
+      "z": 0.4,
       "scale": 1.2,
-      "color": "#8b6b4a"
+      "color": "#FFD700"
+     },
+     {
+      "type": "chair",
+      "x": -0.6,
+      "z": 0.5,
+      "scale": 0.8,
+      "color": "#8B4513"
      },
      {
       "type": "table",
       "x": 0.0,
-      "z": 0.3,
+      "z": 0.6,
       "scale": 1.0,
-      "color": "#c9b896"
+      "color": "#FFFFFF"
+     },
+     {
+      "type": "lamp",
+      "x": 0.0,
+      "z": 0.8,
+      "scale": 0.7,
+      "color": "#FFA500"
+     }
+    ]
+   }
+  },
+  {
+   "id": "fsbo_conversion",
+   "label": "FSBO conversion",
+   "desc": "Door-knock on a for-sale-by-owner who plans to save the commission and has already turned away two agents this week.",
+   "setup": "The owner opens the front door holding a flyer stack, squints at your badge and says We are not paying a commission, we have it covered.",
+   "skills": "Value demonstration and objection handling",
+   "scene": "door",
+   "objective": "Book a no-obligation pricing consultation inside the home.",
+   "place": "Oak Ridge driveway",
+   "moment": "Saturday 10 am, leaves blowing across the lawn",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#f5e6d3",
+     "floor": "#c9b3a1",
+     "accent": "#3a6b3a",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "door",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.2,
+      "color": "#d4a373"
      },
      {
       "type": "plant",
-      "x": 0.7,
-      "z": 0.1,
+      "x": 0.4,
+      "z": 0.2,
       "scale": 1.1,
-      "color": "#3a5a3f"
+      "color": "#5a7c46"
      },
      {
-      "type": "banner",
-      "x": -0.5,
-      "z": 0,
+      "type": "car",
+      "x": -0.2,
+      "z": 0.4,
+      "scale": 0.7,
+      "color": "#8c9bb3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "buyer_hesitation",
+   "label": "Buyer hesitation",
+   "desc": "Phone follow-up with a pre-approved buyer who loved the showing but fears overpaying in a multiple-offer market.",
+   "setup": "The buyer answers on the second ring, voice tight, and says I just keep thinking what if something goes wrong or we pay ten grand more than we should.",
+   "skills": "Risk reframing and decision guidance",
+   "scene": "phone",
+   "objective": "Schedule a second viewing and get a verbal commitment to write an offer.",
+   "place": "Mobile call screen",
+   "moment": "Thursday 8:15 pm, quiet on their end",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#2a1b1d",
+     "floor": "#3a4a5a",
+     "accent": "#ff9e58",
+     "light": "#e0e0e0"
+    },
+    "props": [
+     {
+      "type": "screen",
+      "x": 0.3,
+      "z": 0.9,
+      "scale": 1.2,
+      "color": "#ffffff"
+     },
+     {
+      "type": "window",
+      "x": -0.8,
+      "z": 0.2,
       "scale": 1.0,
-      "color": "#2d5a3d"
+      "color": "#ff9e58"
      },
      {
       "type": "shelf",
-      "x": 0.6,
-      "z": 0,
-      "scale": 0.9,
-      "color": "#b8a082"
-     }
-    ]
-   }
-  },
-  {
-   "id": "private_showing_obje",
-   "label": "Private showing objection handling",
-   "desc": "Walk a qualified buyer through a home they like but hesitate on price and condition.",
-   "setup": "You are mid-tour in a renovated craftsman with a pre-approved couple. The wife stops at the primary bath, taps the tile, and says: We love the layout but the roof is original and the price feels high for that risk.",
-   "skills": "Value justification and inspection framing",
-   "scene": "home",
-   "objective": "Keep them engaged and move toward a written offer with clear contingencies.",
-   "place": "Elm Avenue craftsman private showing",
-   "moment": "Tuesday 4:30 pm, golden hour through west-facing windows",
-   "visual": {
-    "sky": "golden",
-    "palette": {
-     "wall": "#efe8dd",
-     "floor": "#a8947a",
-     "accent": "#8b4513",
-     "light": "#fdf6eb"
-    },
-    "props": [
-     {
-      "type": "window",
-      "x": -0.7,
-      "z": 0,
-      "scale": 1.3,
-      "color": "#d8d0c0"
-     },
-     {
-      "type": "sofa",
-      "x": 0.3,
-      "z": 0.4,
-      "scale": 1.2,
-      "color": "#6b5b4a"
-     },
-     {
-      "type": "lamp",
-      "x": 0.6,
-      "z": 0.2,
-      "scale": 0.9,
-      "color": "#c9a84c"
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#ff9e58"
      },
      {
       "type": "plant",
-      "x": -0.4,
+      "x": -0.3,
       "z": 0.5,
       "scale": 1.0,
-      "color": "#4a6b3a"
-     },
-     {
-      "type": "rug",
-      "x": 0.0,
-      "z": 0.3,
-      "scale": 1.1,
-      "color": "#8b7355"
-     }
-    ]
-   }
-  },
-  {
-   "id": "kitchen_table_negoti",
-   "label": "Kitchen table negotiation close",
-   "desc": "Navigate a multiple-offer counteroffer at the seller’s kitchen table with your buyer.",
-   "setup": "You sit at the seller’s kitchen island with your buyer clients. Their agent just emailed a highest-and-best deadline. Your buyer exhales and says: We can stretch five thousand more but we need the appraisal gap covered and the closing cost credit.",
-   "skills": "Contract strategy and emotional steadiness",
-   "scene": "home",
-   "objective": "Structure a winning counteroffer that protects the buyer’s cash and inspection rights.",
-   "place": "Seller’s kitchen island negotiation",
-   "moment": "Wednesday 8:10 pm, warm under-cabinet lighting, rain on the window",
-   "visual": {
-    "sky": "night",
-    "palette": {
-     "wall": "#f0ebe0",
-     "floor": "#7a6b5a",
-     "accent": "#1a3a4a",
-     "light": "#fef9f0"
-    },
-    "props": [
-     {
-      "type": "window",
-      "x": -0.6,
-      "z": 0,
-      "scale": 1.2,
-      "color": "#2a3a4a"
-     },
-     {
-      "type": "counter",
-      "x": 0.0,
-      "z": 0.2,
-      "scale": 1.3,
-      "color": "#3a2f28"
-     },
-     {
-      "type": "chair",
-      "x": -0.4,
-      "z": 0.5,
-      "scale": 1.0,
-      "color": "#5a4a3a"
-     },
-     {
-      "type": "chair",
-      "x": 0.4,
-      "z": 0.5,
-      "scale": 1.0,
-      "color": "#5a4a3a"
-     },
-     {
-      "type": "lamp",
-      "x": 0.7,
-      "z": 0.1,
-      "scale": 0.8,
-      "color": "#c9a84c"
-     },
-     {
-      "type": "screen",
-      "x": 0.2,
-      "z": 0.1,
-      "scale": 0.9,
-      "color": "#1a1a2a"
+      "color": "#ff9e58"
      }
     ]
    }
@@ -186,241 +151,185 @@
  ],
  "buyers": [
   {
-   "scenario": "open_house_first_con",
-   "role": "first-time buyer browsing alone",
-   "personality": "polite but guarded researcher",
+   "scenario": "listing_presentation",
+   "role": "first contact with a seller",
+   "personality": "curious but cautious",
+   "difficulty": 1,
+   "gender": "f",
+   "age": 45,
+   "angle": "She’s just exploring options, not ready to commit."
+  },
+  {
+   "scenario": "fsbo_conversion",
+   "role": "a home tour",
+   "personality": "interested but hesitant",
    "difficulty": 2,
-   "gender": "f",
-   "age": 28,
-   "angle": "She has a spreadsheet of comparables and will not share her budget until trust is earned."
-  },
-  {
-   "scenario": "private_showing_obje",
-   "role": "relocating executive on a tight timeline",
-   "personality": "decisive but skeptical of process",
-   "difficulty": 3,
    "gender": "m",
-   "age": 42,
-   "angle": "He needs to close in forty-five days and will test whether you can actually deliver speed."
+   "age": 38,
+   "angle": "Loves the house but worries about future repairs."
   },
   {
-   "scenario": "kitchen_table_negoti",
-   "role": "detail-oriented engineer couple",
-   "personality": "analytical and risk-averse",
-   "difficulty": 4,
-   "gender": "f",
-   "age": 35,
-   "angle": "They will model every repair cost and walk if the inspection contingency feels weak."
-  },
-  {
-   "scenario": "open_house_first_con",
-   "role": "move-up buyer with a contingent sale",
-   "personality": "optimistic but financially stretched",
+   "scenario": "buyer_hesitation",
+   "role": "price negotiation",
+   "personality": "aggressive bargain‑seeker",
    "difficulty": 3,
-   "gender": "m",
-   "age": 39,
-   "angle": "Their equity is locked until their current home closes, so they need creative structuring."
-  },
-  {
-   "scenario": "private_showing_obje",
-   "role": "investor buyer with cash and multiple irons in fire",
-   "personality": "calm, ruthless on terms",
-   "difficulty": 5,
    "gender": "m",
    "age": 52,
-   "angle": "He will use the appraisal gap as leverage and expects you to cave on closing costs."
+   "angle": "Wants a steep discount and threatens to walk away."
+  },
+  {
+   "scenario": "listing_presentation",
+   "role": "first contact with a seller",
+   "personality": "busy professional",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 31,
+   "angle": "Has little time to talk, wants quick answers."
+  },
+  {
+   "scenario": "fsbo_conversion",
+   "role": "a home tour",
+   "personality": "emotional buyer",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 29,
+   "angle": "Falls in love with every detail, overthinks."
   }
  ],
  "objections": [
-  "The roof is original and the price feels high for that risk",
-  "We can stretch five thousand more but we need the appraisal gap covered and the closing cost credit",
-  "I’m not signing a buyer agency agreement until I see how you work",
-  "Our lender says the HOA reserves are underfunded so we need a price reduction",
-  "The inspection turned up knob-and-tube wiring and we want a full rewire credit",
-  "We love the house but the school district boundary changed last month",
-  "Our current home has not had an offer yet so we cannot go non-contingent",
-  "The seller’s disclosure mentions water in the crawl space and we want a warranty"
+  "Your commission seems too high",
+  "I want to interview another agent before deciding",
+  "I think I can sell it myself for more",
+  "A friend of mine is a realtor, I’ll go with them",
+  "I’m pricing too high and plan to reduce later",
+  "Buyers are hesitant about price and timing",
+  "I’m worried about paying more than the market value",
+  "I’m unsure about the negotiation process and fees"
  ],
  "rubric": [
   {
-   "id": "rapport_discovery",
-   "label": "Rapport & discovery",
-   "what": "Opens with genuine curiosity, uncovers timeline, motivation, and financial picture without interrogation."
+   "id": "pricing_credibility",
+   "label": "Pricing credibility",
+   "what": "Present data-driven price ranges and explain the cost of overpricing without inflating value."
   },
   {
-   "id": "value_justification",
-   "label": "Value justification",
-   "what": "Frames price against comparable sales, condition, and market data instead of defending the number."
+   "id": "commission_defence",
+   "label": "Commission defence",
+   "what": "Articulate the net-to-seller advantage of full-service marketing versus discount or flat-fee models."
   },
   {
-   "id": "inspection_framing",
-   "label": "Inspection framing",
-   "what": "Positions the inspection as a planning tool, not a renegotiation trigger, and sets clear contingency scope."
+   "id": "objection_handling",
+   "label": "Objection handling",
+   "what": "Acknowledge concerns, ask clarifying questions, and guide the conversation to a logical next step."
   },
   {
-   "id": "contract_strategy",
-   "label": "Contract strategy",
-   "what": "Structures offers and counteroffers with precise contingencies, timelines, and risk allocation for the buyer."
+   "id": "risk_reframing",
+   "label": "Risk reframing",
+   "what": "Translate buyer fears into measurable market context and show the cost of waiting."
+  },
+  {
+   "id": "decision_guidance",
+   "label": "Decision guidance",
+   "what": "Lead prospects to a concrete action such as a signed agreement, a scheduled showing, or a written offer."
   },
   {
    "id": "compliance_honesty",
-   "label": "Compliance & honesty",
-   "what": "Discloses material facts, avoids steering language, and documents every concession per license law."
-  },
-  {
-   "id": "emotional_steadiness",
-   "label": "Emotional steadiness",
-   "what": "Stays calm under deadline pressure, absorbs buyer anxiety, and keeps the conversation solution-focused."
+   "label": "Compliance honesty",
+   "what": "Disclose agency relationships, material facts, and fair-housing obligations in every conversation."
   }
  ],
  "live_meters": [
-  "rapport_discovery",
-  "value_justification",
+  "objection_handling",
+  "decision_guidance",
   "compliance_honesty"
  ],
  "pitfalls": [
-  "Steering buyers toward or away from neighborhoods based on protected classes.",
-  "Promising repairs or credits the seller has not authorized in writing.",
-  "Letting a buyer waive inspection without a signed advisory notice."
+  "Promising a sale price above the CMA range to win the listing.",
+  "Failing to disclose dual-agency or designated-agency status before confidential details are shared.",
+  "Pressuring a buyer to waive inspections or appraisal contingencies without written counsel."
  ],
  "id": "ready-real-estate",
  "line": "Selling homes as a real estate agent",
  "product": null,
- "researched": false,
+ "researched": true,
+ "research": {
+  "text": "The most common real estate objections include commission pushback, wanting to interview another agent, deciding to try selling it themselves, leaning on a friend in the business, pricing too high with a plan to reduce later, and hesitation from buyers who are unsure about price, timing, or competition. To handle objections, agents should acknowledge the concern, ask a clarifying question, and guide the prospect to a logical next step. For example, when a seller claims they already have an agent, the agent can ask if the current agent is actively marketing the home or just listed it on MLS, which often leads to engagement. For buyers, common objections include fear of overpaying or making a mistake, and agents should reframe concerns, offer perspective, and guide buyers toward confident, informed choices.",
+  "sources": [
+   {
+    "title": "Real Estate Objection Handling Scripts: 5 Common Objections",
+    "url": "https://www.tomferry.com/blog/5-scripts-to-overcome-objections"
+   },
+   {
+    "title": "How to Handle The 4 MOST Common Real Estate Seller Objections",
+    "url": "https://www.youtube.com/watch?v=6whI0v5Y96o"
+   },
+   {
+    "title": "12 Objection Responses for Real Estate Cold Calls",
+    "url": "https://skipcall.io/en/blog/real-estate-cold-call-objections"
+   }
+  ]
+ },
  "personas": [
   {
-   "id": "iris_collins-0",
-   "name": "Iris Collins",
+   "id": "iris_harper-0",
+   "name": "Iris Harper",
    "gender": "f",
-   "age": 28,
-   "scenario": "open_house_first_con",
-   "role": "residential real estate agent",
-   "personality": "polite but guarded researcher",
-   "background": "She works nights at a boutique marketing firm and studies market analytics after hours. She prefers data over sales talk and keeps a notebook of every listing she visits.",
+   "age": 45,
+   "scenario": "listing_presentation",
+   "role": "listing agent",
+   "personality": "curious but cautious",
+   "background": "She has been a residential real estate agent for ten years. Her days are spent at kitchen tables and over the phone, guiding homeowners through the listing decision.",
    "cares_about": [
-    "risk assessment",
-    "market value",
-    "long term value"
+    "accurate pricing",
+    "seller confidence",
+    "personal rapport"
    ],
    "pushbacks": [
-    "The roof is original and the price feels high for that risk",
-    "We can stretch five thousand more but we need the appraisal gap covered and the closing cost credit",
-    "I’m not signing a buyer agency agreement until I see how you work"
+    "Your numbers seem optimistic",
+    "I’m not ready to sign anything yet"
    ],
    "wins_over": [
-    "detailed data sheets",
-    "transparent process",
-    "clear comparables"
+    "clear communication",
+    "local market insight",
+    "genuine empathy"
    ],
-   "suggested_difficulty": 2,
+   "suggested_difficulty": 1,
    "appearance": {
     "skin": "light",
     "hairStyle": "bob",
     "hairColor": "darkbrown",
     "facialHair": "none",
-    "glasses": "none",
-    "lines": 0,
-    "clothes": "#8a5a3c"
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#9a4d4d"
    },
    "accent": "en-US"
   },
   {
-   "id": "leonard_hale-1",
-   "name": "Leonard Hale",
+   "id": "liam_whitaker-1",
+   "name": "Liam Whitaker",
    "gender": "m",
-   "age": 42,
-   "scenario": "private_showing_obje",
-   "role": "relocating executive",
-   "personality": "decisive but skeptical of process",
-   "background": "Leonard leads a rapidly growing tech division and is used to fast decisions.",
+   "age": 38,
+   "scenario": "fsbo_conversion",
+   "role": "home tour",
+   "personality": "interested but hesitant",
+   "background": "Liam works as a homebuilder and renovated his own first house before turning to real estate. He now meets clients to show properties and answer their repair concerns.",
    "cares_about": [
-    "timeline",
-    "risk",
-    "value"
+    "long‑term maintenance costs",
+    "transparent pricing",
+    "client trust"
    ],
    "pushbacks": [
-    "The original roof is a red flag; we need a price cut",
-    "We can stretch five thousand more, but the appraisal gap must be covered and the closing‑cost credit has to be guaranteed",
-    "I’m not signing a buyer agency agreement until I see how you work; show me your speed plan"
+    "My commission seems too high, but I guarantee a faster sale",
+    "I want to interview another agent before deciding, but I need to see clear data",
+    "I think I can sell it myself for more, yet I need a proper marketing plan"
    ],
    "wins_over": [
-    "quick closing schedule",
-    "clear contingency plan",
-    "transparent pricing"
+    "clear repair timeline",
+    "realistic pricing suggestions",
+    "personalized marketing strategy"
    ],
-   "suggested_difficulty": 3,
-   "appearance": {
-    "skin": "medium",
-    "hairStyle": "short",
-    "hairColor": "darkbrown",
-    "facialHair": "stubble",
-    "glasses": "none",
-    "lines": 1,
-    "clothes": "#3f4f3f"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "daria_dewar-2",
-   "name": "Daria Dewar",
-   "gender": "f",
-   "age": 35,
-   "scenario": "kitchen_table_negoti",
-   "role": "detail-oriented engineer couple",
-   "personality": "analytical risk-averse",
-   "background": "Daria and her partner are engineers who move often for jobs. They settle in suburbs that need minimal renovation and avoid bidding wars.",
-   "cares_about": [
-    "inspection contingency strength",
-    "repair contingency for major defects",
-    "HOA financial health"
-   ],
-   "pushbacks": [
-    "We can negotiate but we need the appraisal gap covered and the closing cost credit",
-    "We will model every repair cost and walk if the inspection contingency feels weak",
-    "Our lender says the HOA reserves are underfunded so we need a price reduction"
-   ],
-   "wins_over": [
-    "the roof is original and the price feels high for that risk",
-    "inspection turned up knob-and-tube wiring and we want a full rewire credit",
-    "our lender says the HOA reserves are underfunded so we need a price reduction"
-   ],
-   "suggested_difficulty": 4,
-   "appearance": {
-    "skin": "medium",
-    "hairStyle": "bob",
-    "hairColor": "darkbrown",
-    "facialHair": "none",
-    "glasses": "round",
-    "lines": 1,
-    "clothes": "#7a5a8a"
-   },
-   "accent": "en-CA"
-  },
-  {
-   "id": "freddy_chen-3",
-   "name": "Freddy Chen",
-   "gender": "m",
-   "age": 39,
-   "scenario": "open_house_first_con",
-   "role": "move-up buyer with a contingent sale",
-   "personality": "optimistic but financially stretched",
-   "background": "Freddy just sold his townhouse but settlement won’t happen until late summer. He’s looking for a larger home for his growing family but needs the sale proceeds to close. He’s polite and hopeful but visibly anxious about timing.",
-   "cares_about": [
-    "getting the right neighborhood",
-    "low maintenance yard",
-    "future resale value"
-   ],
-   "pushbacks": [
-    "The roof looks original and I can’t risk a surprise repair right after closing",
-    "Five thousand more might stretch me too thin. Can we adjust the gap coverage?",
-    "I need the appraisal gap covered before I sign any buyer agreement"
-   ],
-   "wins_over": [
-    "creative financing options",
-    "clear pricing breakdown",
-    "proof of fund flexibility"
-   ],
-   "suggested_difficulty": 3,
+   "suggested_difficulty": 2,
    "appearance": {
     "skin": "light",
     "hairStyle": "short",
@@ -428,47 +337,120 @@
     "facialHair": "none",
     "glasses": "none",
     "lines": 1,
-    "clothes": "#2f5d62"
+    "clothes": "#7a5a8a"
    },
    "accent": "en-US"
   },
   {
-   "id": "vicente_rojas-4",
-   "name": "Vicente Rojas",
+   "id": "duane_whitaker-2",
+   "name": "Duane Whitaker",
    "gender": "m",
    "age": 52,
-   "scenario": "private_showing_obje",
-   "role": "investor buyer",
-   "personality": "calm ruthless on terms",
-   "background": "Vicente owns several rental properties across the metro area and is closing a big portfolio deal. He speaks fast when numbers matter and trusts only data.",
+   "scenario": "buyer_hesitation",
+   "role": "price negotiation",
+   "personality": "sharp negotiator who checks every number",
+   "background": "Duane has worked in midwestern suburbs for twenty years. He prides himself on closing deals by outsmarting inflated offers.",
    "cares_about": [
-    "tightening profit margins",
-    "securing below‑market valuations",
-    "minimizing future maintenance surprises"
+    "lowering client fees",
+    "proving his skill",
+    "maintaining his reputation"
    ],
    "pushbacks": [
-    "‘The roof’s original and the price feels high for that risk.’",
-    "‘We can stretch five thousand more but we need the appraisal gap covered and the closing‑cost credit.’",
-    "‘I’m not signing a buyer‑agency agreement until I see how you work.’"
+    "I need a 2 percent cut or I walk out",
+    "Your list price is a fantasy, I can sell for half",
+    "If you can’t meet my terms I’ll list with my cousin"
    ],
    "wins_over": [
-    "clear breakdown of repair costs",
-    "swift, written concessions on appraisal gap",
-    "transparent closing‑cost credits"
+    "clear market data",
+    "realistic comps",
+    "smooth paperwork"
    ],
-   "suggested_difficulty": 5,
+   "suggested_difficulty": 3,
    "appearance": {
-    "skin": "medium",
+    "skin": "light",
     "hairStyle": "short",
     "hairColor": "darkbrown",
     "facialHair": "stubble",
     "glasses": "none",
     "lines": 1,
-    "clothes": "#4f6f8f"
+    "clothes": "#6b4b6e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "frederick_hale-3",
+   "name": "Frederick Hale",
+   "gender": "m",
+   "age": 31,
+   "scenario": "listing_presentation",
+   "role": "listing agent",
+   "personality": "efficient and focused",
+   "background": "Frederick works full‑time as a residential real estate agent in a fast‑growing market, handling three to four listing presentations each day. He values clear, concise communication and prefers to move quickly through objections to close the next appointment.",
+   "cares_about": [
+    "maintaining a predictable schedule of appointments",
+    "protecting his commission rates without negotiation",
+    "building a reputation for closing deals efficiently"
+   ],
+   "pushbacks": [
+    "My commission reflects the current market standards; we can discuss the timeline, but the rate stays the same",
+    "I’m sorry, I don’t have time for a lengthy interview, just share your goals and I’ll show how I’ll achieve them",
+    "If you decide to sell on your own, you’ll still need professional marketing and buyer outreach that most owners can’t organize alone"
+   ],
+   "wins_over": [
+    "a clear, data‑backed pricing strategy",
+    "a brief overview of recent comparable sales in the neighborhood",
+    "a concise timeline that shows how quickly I can move from listing to closing"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "vanessa_patel-4",
+   "name": "Vanessa Patel",
+   "gender": "f",
+   "age": 29,
+   "scenario": "fsbo_conversion",
+   "role": "homeowner",
+   "personality": "emotional buyer, overthinks",
+   "background": "Vanessa recently inherited her grandmother’s house and feels overwhelmed. She loves each room but worries about pricing it right.",
+   "cares_about": [
+    "family memories",
+    "a fair price",
+    "not rushing decisions"
+   ],
+   "pushbacks": [
+    "I really love the sunroom, but I need to figure out my next move",
+    "I’m not sure if my timing is right yet",
+    "I keep second‑guessing if the market will hold"
+   ],
+   "wins_over": [
+    "honest pricing",
+    "personal stories",
+    "patience"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "long",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 0,
+    "clothes": "#2b2b3a"
    },
    "accent": "en-US"
   }
  ],
  "builtin": true,
- "order": 3
+ "order": 3,
+ "group": "sales"
 }

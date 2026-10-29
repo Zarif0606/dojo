@@ -1,0 +1,499 @@
+{
+ "title": "Tough feedback",
+ "tagline": "Learn to address repeated missed deadlines with clear evidence, diagnose the root cause, and agree on a concrete recovery plan.",
+ "you_are": "a team lead or manager",
+ "setting": "Conversations happen in a private meeting room or video call, scheduled or ad-hoc, after a deadline has been missed or is at risk.",
+ "other_side": "team members",
+ "scenarios": [
+  {
+   "id": "first_missed_deadlin",
+   "label": "First missed deadline",
+   "desc": "Address a single missed milestone with a usually reliable contributor.",
+   "setup": "The team member sits down looking tense. They open with: “I know the prototype didn’t ship Friday. I’ve got the logs if you want them.”",
+   "skills": "Evidence-based opening, psychological safety",
+   "scene": "office",
+   "objective": "Agree on what specifically was missed and capture their perspective on why.",
+   "place": "Huddle room 3B",
+   "moment": "Monday 9:15 am, coffee cooling on the table",
+   "visual": {
+    "sky": "dawn",
+    "palette": {
+     "wall": "#c2b8b0",
+     "floor": "#e0e0e0",
+     "accent": "#8a9b91",
+     "light": "#f5f5f5"
+    },
+    "props": [
+     {
+      "type": "table",
+      "x": -0.21,
+      "z": 0.3,
+      "scale": 1.2,
+      "color": "#7a6e63"
+     },
+     {
+      "type": "desk",
+      "x": -0.35,
+      "z": 0.3,
+      "scale": 0.9,
+      "color": "#4b5a52"
+     },
+     {
+      "type": "chair",
+      "x": -0.22,
+      "z": 0.3,
+      "scale": 0.9,
+      "color": "#3e4e44"
+     },
+     {
+      "type": "lamp",
+      "x": -0.26,
+      "z": 0.3,
+      "scale": 0.8,
+      "color": "#f2c87c"
+     },
+     {
+      "type": "screen",
+      "x": 0.11,
+      "z": 0.3,
+      "scale": 1.1,
+      "color": "#2c3e50"
+     }
+    ]
+   }
+  },
+  {
+   "id": "pattern_conversation",
+   "label": "Pattern of missed deadlines",
+   "desc": "Confront a recurring pattern across three sprints with a senior engineer.",
+   "setup": "The engineer leans back, arms folded. They open with: “Which one this time? The API freeze, the docs, or the demo?”",
+   "skills": "Pattern diagnosis, non-judgmental questioning",
+   "scene": "office",
+   "objective": "Identify the systemic root cause, planning, scope, dependencies, or capacity, and commit to one process change.",
+   "place": "Conference room A",
+   "moment": "Thursday 4:00 pm, low afternoon light",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#a8b6c9",
+     "floor": "#f0f0f0",
+     "accent": "#d1b2a3",
+     "light": "#c0bcd9"
+    },
+    "props": [
+     {
+      "type": "table",
+      "x": 0.0,
+      "z": 0.3,
+      "scale": 1.0,
+      "color": "#e0e0e0"
+     },
+     {
+      "type": "chair",
+      "x": -0.7,
+      "z": 0.2,
+      "scale": 0.8,
+      "color": "#b3cddb"
+     },
+     {
+      "type": "window",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#d1b2a3"
+     },
+     {
+      "type": "desk",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#d1b2a3"
+     },
+     {
+      "type": "plant",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#d1b2a3"
+     },
+     {
+      "type": "shelf",
+      "x": 0.5,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#d1b2a3"
+     }
+    ]
+   }
+  },
+  {
+   "id": "recovery_plan_commit",
+   "label": "Recovery plan commitment",
+   "desc": "Lock in a concrete, measurable recovery plan with a member who agrees there’s a problem but resists oversight.",
+   "setup": "The team member nods slowly. They open with: “Okay, I hear you. I’ll just work weekends and catch up, no need for extra process.”",
+   "skills": "Accountability design, realistic deadline setting",
+   "scene": "office",
+   "objective": "Replace vague promises with a written plan: scoped work, intermediate checkpoints, and a shared tracking method.",
+   "place": "Manager’s office",
+   "moment": "Friday 10:30 am, notification sounds muted",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#A87C7C",
+     "floor": "#D8C5A5",
+     "accent": "#5A6D7C",
+     "light": "#34495E"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.2,
+      "z": 0.9,
+      "scale": 1.2,
+      "color": "#8B7355"
+     },
+     {
+      "type": "chair",
+      "x": 0.0,
+      "z": 0.5,
+      "scale": 0.8,
+      "color": "#B89C7D"
+     },
+     {
+      "type": "window",
+      "x": -0.5,
+      "z": 0.8,
+      "scale": 0.9,
+      "color": "#3A3A3A"
+     },
+     {
+      "type": "lamp",
+      "x": -0.3,
+      "z": 0.2,
+      "scale": 0.7,
+      "color": "#F5D6A0"
+     },
+     {
+      "type": "plant",
+      "x": 0.6,
+      "z": 0.4,
+      "scale": 0.8,
+      "color": "#6B8E23"
+     },
+     {
+      "type": "screen",
+      "x": 0.3,
+      "z": 0.6,
+      "scale": 1.1,
+      "color": "#FFFFFF"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "first_missed_deadlin",
+   "role": "first contact",
+   "personality": "detail oriented low tolerance",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 34,
+   "angle": "Believes deadlines are flexible if work is thorough."
+  },
+  {
+   "scenario": "pattern_conversation",
+   "role": "the real conversation",
+   "personality": "defensive avoids eye contact",
+   "difficulty": 3,
+   "gender": "f",
+   "age": 29,
+   "angle": "Calls missed deadline a miscommunication not negligence."
+  },
+  {
+   "scenario": "recovery_plan_commit",
+   "role": "hardest close",
+   "personality": "resistant flat tone",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 42,
+   "angle": "Threatens to quit if feedback changes."
+  },
+  {
+   "scenario": "first_missed_deadlin",
+   "role": "first contact",
+   "personality": "skeptical analytical",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 37,
+   "angle": "Wants data proof before adjusting schedule."
+  },
+  {
+   "scenario": "pattern_conversation",
+   "role": "the real conversation",
+   "personality": "overwhelmed quiet",
+   "difficulty": 4,
+   "gender": "f",
+   "age": 31,
+   "angle": "Claims workload spikes sabotage planning."
+  }
+ ],
+ "objections": [
+  "I was waiting on resources that arrived late",
+  "The scope changed mid‑sprint and I had to adjust",
+  "I thought the deadline was flexible given the quality",
+  "I got pulled into an emergency that took priority",
+  "I didn’t understand the deadline was firm",
+  "My previous projects always had buffer time",
+  "I was testing a new approach that required extra time",
+  "No one told me the deadline was critical"
+ ],
+ "rubric": [
+  {
+   "id": "specific_evidence",
+   "label": "Specific evidence",
+   "what": "Opens with the exact missed commitment, date, and impact, no vague language or hearsay."
+  },
+  {
+   "id": "curious_diagnosis",
+   "label": "Curious diagnosis",
+   "what": "Asks open ‘what’ questions to uncover planning gaps, unclear scope, or dependency blockers before offering solutions."
+  },
+  {
+   "id": "impact_clarity",
+   "label": "Impact clarity",
+   "what": "Explains how the miss affected the project, stakeholders, or teammates without blame or exaggeration."
+  },
+  {
+   "id": "realistic_recommitment",
+   "label": "Realistic recommitment",
+   "what": "Co-creates a recovery plan with scoped work, buffer, and intermediate checkpoints grounded in past velocity."
+  },
+  {
+   "id": "feedback_loop_design",
+   "label": "Feedback loop design",
+   "what": "Proposes a shorter, structured cadence, stand-ups, demo checkpoints, or async updates, to catch drift early."
+  },
+  {
+   "id": "fairness_consistency",
+   "label": "Fairness consistency",
+   "what": "Applies the same standard and process used with other team members; documents the conversation per policy."
+  }
+ ],
+ "live_meters": [
+  "specific_evidence",
+  "curious_diagnosis",
+  "realistic_recommitment"
+ ],
+ "pitfalls": [
+  "Softening the message with sandwich feedback and losing the concrete ask.",
+  "Accepting ‘I’ll work harder’ without a written plan and checkpoints.",
+  "Skipping documentation required by HR or performance policy."
+ ],
+ "id": "ready-tough-feedback",
+ "line": "Giving tough feedback to a team member who keeps missing deadlines",
+ "product": null,
+ "researched": true,
+ "research": {
+  "text": "When giving tough feedback to a team member who keeps missing deadlines, it's important to start by precisely stating the missed deadline and asking what happened, avoiding generalizations. Sources suggest exploring potential reasons such as poor planning skills or unclear expectations. It's advised to have an uncomfortable conversation, framing feedback constructively, and emphasizing the importance of meeting deadlines for the overall project success. If it's a pattern, diagnose the root cause by asking \"what\" questions instead of judgmental ones. Sources also recommend making deadlines realistic, using evidence from similar work, and creating shorter feedback loops to correct problems before deadlines are missed.",
+  "sources": [
+   {
+    "title": "How to deal with team members who miss deadlines",
+    "url": "https://medium.com/@candela.iglesias/how-to-deal-with-team-members-who-miss-deadlines-a79e890393d0"
+   },
+   {
+    "title": "Feedback and missed deadlines | Manager Tools",
+    "url": "https://www.manager-tools.com/forums/feedback-and-missed-deadlines"
+   },
+   {
+    "title": "Employees Missing Deadlines | Mondays with Mike",
+    "url": "https://mikestaver.com/employees-missing-deadlines"
+   }
+  ]
+ },
+ "personas": [
+  {
+   "id": "ian_patel-0",
+   "name": "Ian Patel",
+   "gender": "m",
+   "age": 34,
+   "scenario": "first_missed_deadlin",
+   "role": "team lead",
+   "personality": "meticulous, impatient about delays",
+   "background": "Ian leads a dev squad that builds financial tools. He was burned by a launch that missed regulators, so he now demands perfect timing and no excuses that hide risk. He keeps a spreadsheet of every milestone and flags any lag the moment it appears.",
+   "cares_about": [
+    "his team’s reputation",
+    "avoiding chain reactions in production",
+    "finishing work that actually works"
+   ],
+   "pushbacks": [
+    "I was waiting on resources that arrived late",
+    "The scope changed mid‑sprint and I had to adjust",
+    "I thought the deadline was flexible given the quality"
+   ],
+   "wins_over": [
+    "clear, early communication",
+    "data showing impact was avoided",
+    "suggestions for future risk mitigation"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "tan",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "evelyn_mercer-1",
+   "name": "Evelyn Mercer",
+   "gender": "f",
+   "age": 29,
+   "scenario": "pattern_conversation",
+   "role": "project lead",
+   "personality": "defensive avoids eye contact",
+   "background": "Evelyn manages a cross‑functional product team in a fast‑growing startup. She has delivered successful launches but often feels resources are beyond her control.",
+   "cares_about": [
+    "keeping the team motivated",
+    "delivering quality work",
+    "her professional reputation"
+   ],
+   "pushbacks": [
+    "I was waiting on resources that arrived late",
+    "The scope changed mid‑sprint and I had to adjust",
+    "I thought the deadline was flexible given the quality"
+   ],
+   "wins_over": [
+    "demonstrating a clear impact on revenue",
+    "showing genuine empathy for the team",
+    "providing concise data‑driven updates"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 0,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-CA"
+  },
+  {
+   "id": "derek_linton-2",
+   "name": "Derek Linton",
+   "gender": "m",
+   "age": 42,
+   "scenario": "recovery_plan_commit",
+   "role": "hardest close",
+   "personality": "resistant flat tone",
+   "background": "Derek manages a small dev team and has a reputation for pushing back when timelines shift. He values technical work over office politics.",
+   "cares_about": [
+    "maintaining team autonomy",
+    "project quality",
+    "career stability"
+   ],
+   "pushbacks": [
+    "I was waiting on resources that arrived late",
+    "The scope changed mid‑sprint and I had to adjust",
+    "I thought the deadline was flexible given the quality"
+   ],
+   "wins_over": [
+    "showing concrete evidence of progress",
+    "respecting technical expertise",
+    "acknowledging systemic constraints"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#2f5d62"
+   },
+   "accent": "en-GB"
+  },
+  {
+   "id": "adele_moreau-3",
+   "name": "Adele Moreau",
+   "gender": "f",
+   "age": 37,
+   "scenario": "first_missed_deadlin",
+   "role": "team lead",
+   "personality": "skeptical analytical",
+   "background": "Adele manages a software team that delivers quarterly releases. She trusts numbers over conversation and keeps detailed logs.",
+   "cares_about": [
+    "data consistency",
+    "team workload balance",
+    "personal credibility"
+   ],
+   "pushbacks": [
+    "Our velocity dropped because of the extra QA cycles",
+    "I need the actual completion metrics before shifting dates",
+    "Show me the revised burn‑down chart"
+   ],
+   "wins_over": [
+    "clear visualizations of timeline impact",
+    "concise data snapshots",
+    "respect for logical arguments"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#9a4d4d"
+   },
+   "accent": "en-CA"
+  },
+  {
+   "id": "faye_patel-4",
+   "name": "Faye Patel",
+   "gender": "f",
+   "age": 31,
+   "scenario": "pattern_conversation",
+   "role": "engineering lead",
+   "personality": "overwhelmed quiet",
+   "background": "Faye is an engineering lead who has been juggling emerging talent while battling shifting timelines. She reports to product, begs support, and is now on her final warning.",
+   "cares_about": [
+    "her mentoring reputation",
+    "seeing her team grow",
+    "giving each member a fair shot"
+   ],
+   "pushbacks": [
+    "I was waiting on resources that arrived late",
+    "The scope changed mid-sprint and I had to adjust",
+    "I thought the deadline was flexible given the quality"
+   ],
+   "wins_over": [
+    "when she sees her team thrive",
+    "when leadership offers real help",
+    "when a mistake is resolved quickly"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 1,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-CA"
+  }
+ ],
+ "builtin": true,
+ "order": 106,
+ "group": "life"
+}

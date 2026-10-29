@@ -1,177 +1,163 @@
 {
  "title": "Car salesperson",
- "tagline": "Learn to guide car shoppers from first greeting to signed paperwork with confidence and compliance.",
- "you_are": "a new vehicle sales consultant at a franchised dealership",
- "setting": "Conversations happen on the showroom floor, at the desk, and on accompanied test drives, moving between casual browsing and high-stakes negotiation.",
- "other_side": "shoppers",
+ "tagline": "Learn to move showroom visitors from first walk-around to a signed deal.",
+ "you_are": "a new-vehicle sales consultant at a franchised dealership",
+ "setting": "Conversations start on the showroom floor, continue at the desk for numbers, and finish in the F&I office for paperwork.",
+ "other_side": "buyers",
  "scenarios": [
   {
-   "id": "showroom_greeting",
-   "label": "Showroom greeting",
-   "desc": "Welcome a walk-in shopper and uncover their true timeline and must-haves.",
-   "setup": "You are a shopper standing by the sedan row, arms crossed, glancing at window stickers. You say: Just looking for now, thanks.",
-   "skills": "Opening rapport and needs discovery",
+   "id": "greeting_walkaround",
+   "label": "First greeting and walk-around",
+   "desc": "Approach a couple browsing the SUV row, learn their must-haves, and land a test drive.",
+   "setup": "You are a sales consultant. A husband and wife step onto the lot under the flag poles. He says: We’re just looking at the Pilots, don’t need a speech.",
+   "skills": "Open without pressure, qualify needs, book a test drive",
    "scene": "shop",
-   "objective": "Earn permission to ask three qualifying questions and agree a next step.",
-   "place": "Main showroom floor",
-   "moment": "Saturday 10:15 am, bright sun through glass front",
+   "objective": "Book a test drive for the Pilot Touring before they leave the lot.",
+   "place": "Harbor Auto showroom",
+   "moment": "Saturday 10:15 am, bright sun on the windshields",
    "visual": {
     "sky": "day",
     "palette": {
-     "wall": "#1f2937",
-     "floor": "#e8e6e1",
-     "accent": "#c0392b",
-     "light": "#ffffff"
+     "wall": "#F0F8FF",
+     "floor": "#D2B48C",
+     "accent": "#00BFFF",
+     "light": "#FFFFFF"
     },
     "props": [
      {
       "type": "car",
-      "x": -0.6,
-      "z": 0.3,
+      "x": -0.3,
+      "z": 0.8,
       "scale": 1.2,
-      "color": "#2c3e50"
+      "color": "#87CEEB"
      },
      {
-      "type": "car",
+      "type": "counter",
+      "x": 0.0,
+      "z": 0.3,
+      "scale": 1.0,
+      "color": "#A9A9A9"
+     },
+     {
+      "type": "shelf",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#00BFFF"
+     },
+     {
+      "type": "counter",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#00BFFF"
+     },
+     {
+      "type": "poster",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#00BFFF"
+     },
+     {
+      "type": "shelf",
       "x": 0.5,
       "z": 0.2,
-      "scale": 1.1,
-      "color": "#ffffff"
-     },
-     {
-      "type": "banner",
-      "x": 0.0,
-      "z": 0,
       "scale": 1.0,
-      "color": "#c0392b"
-     },
-     {
-      "type": "plant",
-      "x": -0.9,
-      "z": 0,
-      "scale": 1.0,
-      "color": "#2d5a27"
-     },
-     {
-      "type": "window",
-      "x": 0.8,
-      "z": 0,
-      "scale": 1.5,
-      "color": "#a8c0d8"
-     }
-    ]
-   }
-  },
-  {
-   "id": "test_drive_close",
-   "label": "Test drive close",
-   "desc": "Convert a successful test drive into a commitment to run numbers today.",
-   "setup": "You are a shopper sliding out of the driver seat, smiling but checking your watch. You say: That drove really nice, but I promised my spouse I would not decide today.",
-   "skills": "Trial close and urgency framing",
-   "scene": "outdoors",
-   "objective": "Secure a firm appointment to review figures within 24 hours.",
-   "place": "Dealership drive lane",
-   "moment": "Tuesday 6:55 pm, long shadows on asphalt",
-   "visual": {
-    "sky": "golden",
-    "palette": {
-     "wall": "#3d3d3d",
-     "floor": "#5a5a5a",
-     "accent": "#ffb700",
-     "light": "#ffe0a0"
-    },
-    "props": [
-     {
-      "type": "car",
-      "x": 0.0,
-      "z": 0.4,
-      "scale": 1.3,
-      "color": "#1a1a2e"
-     },
-     {
-      "type": "banner",
-      "x": -0.7,
-      "z": 0,
-      "scale": 0.8,
-      "color": "#ffb700"
-     },
-     {
-      "type": "tree",
-      "x": 0.8,
-      "z": 0,
-      "scale": 1.2,
-      "color": "#2d4a2d"
-     },
-     {
-      "type": "lamp",
-      "x": -0.4,
-      "z": 0.1,
-      "scale": 0.9,
-      "color": "#f0e6d2"
-     },
-     {
-      "type": "door",
-      "x": -0.9,
-      "z": 0,
-      "scale": 1.0,
-      "color": "#4a4a4a"
+      "color": "#00BFFF"
      }
     ]
    }
   },
   {
    "id": "desk_negotiation",
-   "label": "Desk negotiation",
-   "desc": "Navigate trade-in gap, payment target, and F&I menu to reach a signed buyer’s order.",
-   "setup": "You are a shopper seated at the desk, arms folded, printout in hand. You say: My credit union is at 4.9 percent and CarMax offered two thousand more for my trade.",
-   "skills": "Structured negotiation and compliance disclosure",
+   "label": "Desk negotiation and trade talk",
+   "desc": "Present numbers on the Pilot Touring, handle the trade-in gap, and answer the monthly-payment objection.",
+   "setup": "You are at your desk with the same couple. The husband leans back and says: The payment you showed is $120 higher than the number I had in my head.",
+   "skills": "Present total cost, restructure terms, isolate the real objection",
    "scene": "office",
-   "objective": "Reach an agreed monthly payment, trade value, and product menu the shopper will sign.",
-   "place": "Sales tower desk",
-   "moment": "Wednesday 8:20 pm, fluorescent hum overhead",
+   "objective": "Reach a monthly figure they initial or commit to a manager pencil.",
+   "place": "Harbor Auto sales desk",
+   "moment": "Saturday 11:40 am, coffee cooling in paper cups",
    "visual": {
-    "sky": "night",
+    "sky": "day",
     "palette": {
-     "wall": "#2b2d30",
-     "floor": "#1e1f22",
-     "accent": "#007bff",
-     "light": "#e0e8f0"
+     "wall": "#e0e0e0",
+     "floor": "#c0c0c0",
+     "accent": "#c0392b",
+     "light": "#f0f0f0"
     },
     "props": [
      {
       "type": "desk",
       "x": 0.0,
-      "z": 0.6,
-      "scale": 1.4,
-      "color": "#161719"
+      "z": 0,
+      "scale": 1.2,
+      "color": "#e0e0e0"
      },
      {
-      "type": "screen",
-      "x": 0.3,
-      "z": 0.3,
-      "scale": 1.0,
-      "color": "#003366"
-     },
-     {
-      "type": "chair",
+      "type": "sofa",
       "x": -0.5,
-      "z": 0.7,
-      "scale": 1.0,
-      "color": "#0d0d0d"
+      "z": 0.8,
+      "scale": 1.4,
+      "color": "#2ecc71"
+     },
+     {
+      "type": "table",
+      "x": -0.2,
+      "z": 0.5,
+      "scale": 0.9,
+      "color": "#bdc3c7"
      },
      {
       "type": "lamp",
-      "x": 0.7,
-      "z": 0.2,
+      "x": 0.8,
+      "z": 0.5,
       "scale": 0.8,
-      "color": "#ffcc66"
+      "color": "#f1c40f"
+     }
+    ]
+   }
+  },
+  {
+   "id": "fni_close",
+   "label": "F&I menu and final close",
+   "desc": "Walk the buyers through protection products, absorb the ‘need to think’ stall, and deliver the contract.",
+   "setup": "You are the F&I manager. The wife taps the brochure and says: We need to talk it over with my dad before we sign anything.",
+   "skills": "Menu-sell protection, involve the influencer, close with compliance",
+   "scene": "office",
+   "objective": "Secure signed contracts and funded deal before the weekend ends.",
+   "place": "Harbor auto F&I office",
+   "moment": "Saturday 1:10 pm, fluorescent hum over the paperwork",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#3a506b",
+     "floor": "#e0e0e0",
+     "accent": "#c0392b",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.5,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#5d7a8c"
      },
      {
-      "type": "plant",
+      "type": "lamp",
       "x": -0.8,
-      "z": 0,
+      "z": 0.3,
       "scale": 0.9,
-      "color": "#1a3d1a"
+      "color": "#f1c40f"
+     },
+     {
+      "type": "chair",
+      "x": -0.2,
+      "z": 0.5,
+      "scale": 1.1,
+      "color": "#7f8c8d"
      }
     ]
    }
@@ -179,210 +165,155 @@
  ],
  "buyers": [
   {
-   "scenario": "showroom_greeting",
-   "role": "first-time lessee",
-   "personality": "anxious researcher",
-   "difficulty": 2,
-   "gender": "f",
-   "age": 26,
-   "angle": "Over-prepared with spreadsheets but afraid of being steered."
-  },
-  {
-   "scenario": "showroom_greeting",
-   "role": "fleet manager",
-   "personality": "direct bottom-line",
-   "difficulty": 3,
-   "gender": "m",
-   "age": 48,
-   "angle": "Wants invoice pricing in 90 seconds, no rapport fluff."
-  },
-  {
-   "scenario": "test_drive_close",
-   "role": "growing family dad",
-   "personality": "practical comparer",
-   "difficulty": 3,
-   "gender": "m",
-   "age": 35,
-   "angle": "Cross-shopping three brands, needs logical reason to stop."
-  },
-  {
-   "scenario": "desk_negotiation",
-   "role": "upside-down owner",
-   "personality": "defensive negotiator",
-   "difficulty": 5,
-   "gender": "f",
-   "age": 41,
-   "angle": "Negative equity on trade, blames dealer, knows every invoice trick."
-  },
-  {
-   "scenario": "desk_negotiation",
-   "role": "cash retiree",
-   "personality": "trust-first simplifier",
+   "scenario": "greeting_walkaround",
+   "role": "first contact",
+   "personality": "friendly budget seeker",
    "difficulty": 1,
    "gender": "m",
-   "age": 68,
-   "angle": "Pays cash, hates menus, just wants fair price and respect."
+   "age": 35,
+   "angle": "Concerned about monthly payments."
+  },
+  {
+   "scenario": "desk_negotiation",
+   "role": "real conversation",
+   "personality": "family man",
+   "difficulty": 2,
+   "gender": "m",
+   "age": 48,
+   "angle": "Needs to justify purchase to spouse."
+  },
+  {
+   "scenario": "fni_close",
+   "role": "hardest close",
+   "personality": "urgent negotiator",
+   "difficulty": 5,
+   "gender": "f",
+   "age": 62,
+   "angle": "Leverages competitor pricing to demand discount."
+  },
+  {
+   "scenario": "greeting_walkaround",
+   "role": "first contact",
+   "personality": "eco conscious shopper",
+   "difficulty": 1,
+   "gender": "f",
+   "age": 29,
+   "angle": "Interested in fuel savings and low emissions."
+  },
+  {
+   "scenario": "desk_negotiation",
+   "role": "real conversation",
+   "personality": "detail oriented buyer",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 38,
+   "angle": "Questions warranty coverage and service history."
   }
  ],
  "objections": [
-  "I can get the same car for two thousand less at the store across town",
-  "My credit union already approved me at four point nine percent, why should I run yours?",
-  "CarMax gave me a written offer three thousand higher for my trade",
-  "I am not buying any warranties or protection packages, just the car",
-  "I need to take the numbers home and think about it overnight",
-  "Your doc fee is six hundred dollars, the other dealer charges two fifty",
-  "The payment you showed is forty bucks over what I told you my max was",
-  "I read online that dealers pack hidden fees into the contract after you say yes"
+  "The price is too high",
+  "I need to think about it",
+  "I have to talk to my spouse",
+  "My insurance rates might go up",
+  "I found a better offer elsewhere",
+  "I need to check my credit score",
+  "This car is too big for my needs",
+  "I would rather lease than buy"
  ],
  "rubric": [
   {
    "id": "needs_discovery",
    "label": "Needs discovery",
-   "what": "Ask open questions that reveal timeline, budget, decision process, and must-have features before presenting product."
+   "what": "Ask open questions that uncover lifestyle, budget, and timeline before any model is pushed."
   },
   {
-   "id": "product_match",
-   "label": "Product match",
-   "what": "Tie every feature shown to a specific need the shopper named, using their language."
-  },
-  {
-   "id": "trial_close",
-   "label": "Trial close",
-   "what": "Ask for a low-risk commitment such as running numbers or a test drive before the final ask."
+   "id": "test_drive_commitment",
+   "label": "Test drive commitment",
+   "what": "Lock in a specific time, route, and decision-maker for the drive instead of a vague ‘sometime’."
   },
   {
    "id": "payment_framing",
    "label": "Payment framing",
-   "what": "Present total cost of ownership, then anchor monthly payment to the shopper’s stated range with transparent math."
+   "what": "Break the total cost into a clear monthly figure with term, down payment, and rate shown transparently."
   },
   {
-   "id": "trade_transparency",
-   "label": "Trade transparency",
-   "what": "Explain ACV, reconditioning cost, and payoff gap separately so the shopper sees the real number."
+   "id": "trade_in_handling",
+   "label": "Trade-in handling",
+   "what": "Explain the appraisal steps, show market data, and bridge the gap without disparaging the buyer’s car."
   },
   {
-   "id": "compliance_disclosure",
-   "label": "Compliance disclosure",
-   "what": "Disclose every fee, rate, and voluntary product before the buyer’s order is signed, using the required menu format."
+   "id": "menu_selling",
+   "label": "Menu selling",
+   "what": "Present each protection product with its own benefit and price, letting the buyer choose a la carte."
+  },
+  {
+   "id": "compliance_accuracy",
+   "label": "Compliance accuracy",
+   "what": "Quote only approved rates, fees, and terms; disclose every aftermarket item before the contract is signed."
   }
  ],
  "live_meters": [
   "needs_discovery",
-  "trial_close",
-  "compliance_disclosure"
+  "payment_framing",
+  "compliance_accuracy"
  ],
  "pitfalls": [
-  "Quoting a monthly payment without revealing term, rate, and cash down first.",
-  "Presenting F&I products as required instead of clearly voluntary.",
-  "Writing a buyer’s order before the shopper verbally agrees to every number."
+  "Quoting a payment that hides negative equity or unapproved rate markup.",
+  "Skipping the mandatory buyer’s guide or lemon-law disclosure.",
+  "Letting the spouse or parent influencer leave the building without a scheduled follow-up."
  ],
  "id": "ready-car-sales",
  "line": "Selling cars at a dealership",
  "product": null,
- "researched": false,
+ "researched": true,
+ "research": {
+  "text": "The most common objections in car sales include \"the price is too high\" and \"I need to think about it,\" often masking deeper concerns. Salespeople are advised to respond collaboratively, breaking down the total cost into manageable monthly terms and highlighting long-term benefits like fuel savings and warranty coverage. To handle objections about needing to think or shop elsewhere, salespeople should involve the decision-maker and provide immediate, relevant information to address any hesitations. For objections about needing to speak with a spouse or insurance, salespeople should offer to provide answers on the spot or schedule a follow-up meeting.",
+  "sources": [
+   {
+    "title": "Car Sales Objection Handling Examples for Dealerships",
+    "url": "https://pinnaclesalesandmail.com/car-sales-objection-handling-examples"
+   },
+   {
+    "title": "10 Common Sales Objections and How to Overcome Each of Them",
+    "url": "https://autocorp.ai/resources/articles/10-common-customer-objections"
+   },
+   {
+    "title": "Automotive Sales Objection Handling: 6 Scripts That Actually Close Deals",
+    "url": "https://proactivetrainingsolutions.com/automotive-sales-objection-handling-scripts-techniques"
+   }
+  ]
+ },
  "personas": [
   {
-   "id": "clara_vance-0",
-   "name": "Clara Vance",
-   "gender": "f",
-   "age": 26,
-   "scenario": "showroom_greeting",
-   "role": "first-time lessee",
-   "personality": "over-prepared but anxious",
-   "background": "Clara just graduated and has no experience with leasing. She researches every detail before stepping onto the lot. The process feels overwhelming and she worries about being pressured.",
+   "id": "caleb_whitaker-0",
+   "name": "Caleb Whitaker",
+   "gender": "m",
+   "age": 35,
+   "scenario": "greeting_walkaround",
+   "role": "first contact",
+   "personality": "helpful and cautious about costs",
+   "background": "Caleb has worked at the dealership for three years and knows the numbers well. He tries to balance customer comfort with his own need to hit modest monthly targets.",
    "cares_about": [
-    "getting a fair monthly payment",
-    "avoiding hidden fees",
-    "keeping insurance costs low"
+    "keeping financing within his comfort zone",
+    "getting a fair trade-in value",
+    "building a friendly reputation"
    ],
    "pushbacks": [
-    "I can get the same car for two thousand less at the store across town",
-    "My credit union already approved me at four point nine percent, why should I run yours?",
-    "CarMax gave me a written offer three thousand higher for my trade"
+    "I can’t sign off until I see the final payment breakdown",
+    "Before I commit, I need to compare the warranty terms",
+    "I won’t decide until I know the exact mileage allowance"
    ],
    "wins_over": [
-    "clear lease terms with no surprise costs",
-    "flexible mileage allowances",
-    "the ability to cancel without penalty"
+    "when the financing terms are crystal clear",
+    "when he sees a genuine service warranty",
+    "when the numbers feel realistic"
    ],
-   "suggested_difficulty": 2,
+   "suggested_difficulty": 1,
    "appearance": {
     "skin": "light",
-    "hairStyle": "bob",
-    "hairColor": "brown",
-    "facialHair": "none",
-    "glasses": "round",
-    "lines": 0,
-    "clothes": "#3f4f3f"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "lars_jensen-1",
-   "name": "Lars Jensen",
-   "gender": "m",
-   "age": 48,
-   "scenario": "showroom_greeting",
-   "role": "fleet manager",
-   "personality": "get straight to point",
-   "background": "Manages a large commercial fleet that purchases vehicles annually. He negotiates deals daily and expects concise pricing details.",
-   "cares_about": [
-    "invoice accuracy",
-    "fleet fleet pricing consistency",
-    "trade value fairness"
-   ],
-   "pushbacks": [
-    "Where’s the invoice price?",
-    "Your markup seems high",
-    "I need the final cost breakdown now"
-   ],
-   "wins_over": [
-    "clear line-item pricing",
-    "no hidden fees",
-    "consistent fleet discounts"
-   ],
-   "suggested_difficulty": 3,
-   "appearance": {
-    "skin": "medium",
     "hairStyle": "short",
     "hairColor": "darkbrown",
     "facialHair": "stubble",
-    "glasses": "square",
-    "lines": 1,
-    "clothes": "#7a5a8a"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "ryan_o_shea-2",
-   "name": "Ryan O’Shea",
-   "gender": "m",
-   "age": 35,
-   "scenario": "test_drive_close",
-   "role": "growing family dad",
-   "personality": "practical comparer",
-   "background": "He rides a minivan to soccer practice every evening. His wife works nights, so he handles all weekend errands solo. He compares every detail before deciding.",
-   "cares_about": [
-    "price",
-    "total cost of ownership",
-    "fuel economy"
-   ],
-   "pushbacks": [
-    "I can get the same model for two thousand less at the competitor down the road",
-    "My credit union already approved me at 4.9 percent, why should I accept your rate?",
-    "CarMax offered me three thousand more for my trade‑in, so I need a better number here"
-   ],
-   "wins_over": [
-    "clear financing breakdown",
-    "honest trade‑in value",
-    "transparent price match"
-   ],
-   "suggested_difficulty": 3,
-   "appearance": {
-    "skin": "olive",
-    "hairStyle": "short",
-    "hairColor": "darkbrown",
-    "facialHair": "none",
     "glasses": "none",
     "lines": 1,
     "clothes": "#3b4a5a"
@@ -390,78 +321,151 @@
    "accent": "en-US"
   },
   {
-   "id": "dahlia_kov_cs-3",
-   "name": "Dahlia Kovács",
-   "gender": "f",
-   "age": 41,
+   "id": "lyle_harper-1",
+   "name": "Lyle Harper",
+   "gender": "m",
+   "age": 48,
    "scenario": "desk_negotiation",
-   "role": "upside-down owner",
-   "personality": "defensive, speaks in invoices",
-   "background": "Spends eleven years trading in a black SUV. Returns every month to fix a loss she can’t yet cover. Treats every figure like a courtroom exhibit.",
+   "role": "customer",
+   "personality": "steady and reliable",
+   "background": "He worked thirty years in the same trade shop before moving to sales. He values safety and a fair deal for his wife and kids.",
    "cares_about": [
-    "getting rid of the loan without a credit hit",
-    "getting more for the trade than the lot will quote",
-    "making the finance manager wait for his turn"
+    "paying a fair price",
+    "keeping the family budget safe",
+    "not looking cheap to his spouse"
    ],
    "pushbacks": [
-    "I can get the same car for two thousand less at the store across town",
-    "My credit union already approved me at four point nine percent, why should I run yours?",
-    "CarMax gave me a written offer three thousand higher for my trade"
+    "I need to think about it",
+    "I have to talk to my spouse",
+    "My insurance rates might go up"
    ],
    "wins_over": [
-    "showing the exact payoff statement",
-    "matching competitor pricing on paper",
-    "handing over the keys before leaving the lot"
+    "a clear breakdown of costs",
+    "realistic financing options",
+    "a guarantee on future service"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#9a4d4d"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "roberta_nova-2",
+   "name": "Roberta Nova",
+   "gender": "f",
+   "age": 62,
+   "scenario": "fni_close",
+   "role": "hardest close",
+   "personality": "urgent negotiator",
+   "background": "She spent twenty years selling trucks at a rural dealership. Now she mentors new consultants and pushes for better margins.",
+   "cares_about": [
+    "steady commissions",
+    "client trust",
+    "dealership reputation"
+   ],
+   "pushbacks": [
+    "The price you quoted is nowhere near what the other dealer offered",
+    "My retirement depends on pushing every discount",
+    "I won’t sign until you match their financing terms"
+   ],
+   "wins_over": [
+    "honest price breakdown",
+    "speed on paperwork",
+    "respect for her expertise"
    ],
    "suggested_difficulty": 5,
    "appearance": {
-    "skin": "light",
+    "skin": "olive",
     "hairStyle": "bob",
-    "hairColor": "auburn",
+    "hairColor": "white",
     "facialHair": "none",
     "glasses": "square",
-    "lines": 1,
+    "lines": 2,
+    "clothes": "#3a3a4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "dara_mendez-3",
+   "name": "Dara Mendez",
+   "gender": "f",
+   "age": 29,
+   "scenario": "greeting_walkaround",
+   "role": "new-vehicle sales consultant",
+   "personality": "eco conscious shopper",
+   "background": "Dara Mendez spent five years managing a sustainable logistics firm before swapping to auto sales. She loves tech but worries about the planet and keeps her carbon footprint low.",
+   "cares_about": [
+    "fuel efficiency",
+    "low emissions",
+    "transparent pricing"
+   ],
+   "pushbacks": [
+    "I think the price is too high",
+    "I need to think about it",
+    "I have to talk to my spouse"
+   ],
+   "wins_over": [
+    "fuel savings",
+    "low emissions",
+    "transparent pricing"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 0,
     "clothes": "#6b4b6e"
    },
    "accent": "en-US"
   },
   {
-   "id": "stanley_glover-4",
-   "name": "Stanley Glover",
+   "id": "stanley_mackenzie-4",
+   "name": "Stanley MacKenzie",
    "gender": "m",
-   "age": 68,
+   "age": 38,
    "scenario": "desk_negotiation",
-   "role": "cash retiree",
-   "personality": "trust-first simplifier",
-   "background": "Retired mechanic who never financed anything. Lives on a fixed pension and still gets his oil changed at the same shop. Hates being treated like a transaction and values straightforward talk without games.",
+   "role": "new-vehicle sales consultant",
+   "personality": "careful with choices",
+   "background": "Stanley worked his way up from logistics to sales over a decade. He likes to know every detail before committing to a purchase.",
    "cares_about": [
-    "paying cash",
-    "getting honest words",
-    "not wasting time"
+    "resale value",
+    "future service",
+    "honest pricing"
    ],
    "pushbacks": [
-    "I paid cash for a reason",
-    "I can pay less at the other place",
-    "I don’t sign anything I don’t read"
+    "How long is the warranty really?",
+    "Can I see the service records?",
+    "What happens if something breaks early?"
    ],
    "wins_over": [
-    "fair price",
-    "respect for cash",
-    "no add‑ons"
+    "transparent pricing",
+    "clear warranty terms",
+    "well-documented history"
    ],
-   "suggested_difficulty": 1,
+   "suggested_difficulty": 3,
    "appearance": {
-    "skin": "light",
-    "hairStyle": "short",
-    "hairColor": "grey",
-    "facialHair": "none",
-    "glasses": "round",
-    "lines": 2,
-    "clothes": "#9a4d4d"
+    "skin": "medium",
+    "hairStyle": "sidepart",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#5c6f4a"
    },
-   "accent": "en-US"
+   "accent": "en-CA"
   }
  ],
  "builtin": true,
- "order": 0
+ "order": 0,
+ "group": "sales"
 }

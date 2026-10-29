@@ -342,8 +342,8 @@ def build_stream(line: str, product: str | None = None):
             yield {"type": "stage", "stage": "research", "label": "Researching your field on the web"}
             brief = research.field_brief(line)
         yield {"type": "stage", "stage": "plan", "label": "Designing situations, objections and a scoring rubric"}
-        w = plan(line, brief, product)
-        w.update(id=wid, line=line, product=product, researched=bool(brief))
+        w = plan(line, brief["text"] if brief else None, product)
+        w.update(id=wid, line=line, product=product, researched=bool(brief), research=brief)
         yield {"type": "world", "world": w, "id": wid, "cached": False}
         yield {"type": "stage", "stage": "cast", "label": "Casting the people you'll meet"}
         people: list[dict | None] = [None] * len(w["buyers"])

@@ -1,177 +1,163 @@
 {
  "title": "Home renovation sales",
- "tagline": "Learn to sell roofing and home renovation projects to homeowners with confidence and compliance.",
- "you_are": "a residential roofing and renovation sales consultant",
- "setting": "Conversations happen at kitchen tables, in driveways, and on follow-up calls after storms or seasonal inspections.",
+ "tagline": "Learn to guide homeowners from storm damage or aging roofs through a trusted renovation plan.",
+ "you_are": "a residential roofing and renovation consultant",
+ "setting": "Conversations happen at the homeowner’s kitchen table after an exterior inspection, or by phone when the homeowner requests a callback.",
  "other_side": "homeowners",
  "scenarios": [
   {
-   "id": "storm_door_knock",
-   "label": "Post-storm door knock",
-   "desc": "First contact with a homeowner after a hail event, offering a free inspection.",
-   "setup": "You are a roofing consultant standing on a wet porch. The homeowner opens the front door, arms crossed, and says: ‘We just had three guys yesterday. What makes you different?’",
-   "skills": "Cold approach, credibility, inspection close",
-   "scene": "door",
-   "objective": "Book a no-obligation roof inspection for the next 48 hours.",
-   "place": "Maple Street subdivision",
-   "moment": "Saturday 10:15 am, overcast sky, puddles in the yard",
+   "id": "storm_damage_lead",
+   "label": "Storm damage inspection follow-up",
+   "desc": "Follow up on a free inspection after a hail event to show findings and explain insurance coordination.",
+   "setup": "The homeowner watched you climb the ladder. They are at the kitchen table with coffee. They say: I saw you taking pictures up there, what did you find?",
+   "skills": "Inspection storytelling and insurance process clarity",
+   "scene": "home",
+   "objective": "Walk the homeowner through the damage report and secure a signed contingency agreement for the insurance claim.",
+   "place": "Kitchen table with inspection photos",
+   "moment": "Tuesday 10:15 am, late spring light through the window",
    "visual": {
-    "sky": "overcast",
+    "sky": "day",
     "palette": {
-     "wall": "#7b8a9a",
-     "floor": "#4a4a4a",
-     "accent": "#c9a84c",
-     "light": "#e8e8e8"
+     "wall": "#D4E6F1",
+     "floor": "#E8F5E9",
+     "accent": "#81C784",
+     "light": "#FFF9C4"
     },
     "props": [
      {
-      "type": "door",
+      "type": "table",
       "x": 0.0,
-      "z": 0,
-      "scale": 1.2,
-      "color": "#3d2b1f"
-     },
-     {
-      "type": "house",
-      "x": -0.8,
-      "z": 0.2,
-      "scale": 1.3,
-      "color": "#6b5b4f"
-     },
-     {
-      "type": "banner",
-      "x": 0.6,
-      "z": 0.1,
+      "z": 0.3,
       "scale": 0.9,
-      "color": "#0066cc"
+      "color": "#795548"
+     },
+     {
+      "type": "chair",
+      "x": 1,
+      "z": 0.05,
+      "scale": 1.0,
+      "color": "#5D4037"
+     },
+     {
+      "type": "lamp",
+      "x": 0.2,
+      "z": 0.7,
+      "scale": 0.8,
+      "color": "#FFB300"
      },
      {
       "type": "plant",
-      "x": -0.4,
-      "z": 0.9,
-      "scale": 1.0,
-      "color": "#2d5a27"
+      "x": 1,
+      "z": 0.6,
+      "scale": 0.8,
+      "color": "#388E3C"
+     }
+    ]
+   }
+  },
+  {
+   "id": "aging_roof_consultat",
+   "label": "Aging roof full replacement consult",
+   "desc": "Guide a homeowner whose 20-year roof is curling and leaking toward a full system replacement.",
+   "setup": "The homeowner invited you in after a phone screening. They sit with a notepad. They say: Three other guys gave me prices, why are you higher?",
+   "skills": "Value differentiation and system selling",
+   "scene": "home",
+   "objective": "Present the full roof system upgrade and earn a commitment to schedule the install.",
+   "place": "Living room with sample shingles and deck",
+   "moment": "Saturday 9:30 am, dust motes in the air",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e0d8c9",
+     "floor": "#a89a8d",
+     "accent": "#c2b8a9",
+     "light": "#f0e6d2"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.2,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#5d5d5d"
+     },
+     {
+      "type": "sofa",
+      "x": 0.1,
+      "z": 0.6,
+      "scale": 0.9,
+      "color": "#7a6e66"
+     },
+     {
+      "type": "counter",
+      "x": -0.5,
+      "z": 0.2,
+      "scale": 0.8,
+      "color": "#8b7d6b"
      },
      {
       "type": "table",
       "x": 0.3,
-      "z": 0.7,
-      "scale": 0.8,
-      "color": "#555555"
-     }
-    ]
-   }
-  },
-  {
-   "id": "kitchen_table_scope",
-   "label": "Kitchen table scope review",
-   "desc": "Second meeting to present the inspection report, scope options, and financing.",
-   "setup": "You are seated at the kitchen island with a tablet open to the report. The homeowner leans forward, coffee in hand, and says: ‘Walk me through the good-better-best options but keep it simple.’",
-   "skills": "Scope presentation, financing talk, objection handling",
-   "scene": "home",
-   "objective": "Secure a signed letter of intent and deposit for the chosen package.",
-   "place": "Homeowner kitchen",
-   "moment": "Tuesday 7:00 pm, golden light through west windows",
-   "visual": {
-    "sky": "golden",
-    "palette": {
-     "wall": "#f5e6cc",
-     "floor": "#8b7355",
-     "accent": "#0066cc",
-     "light": "#fff8e7"
-    },
-    "props": [
-     {
-      "type": "table",
-      "x": 0.0,
-      "z": 0.6,
-      "scale": 1.2,
-      "color": "#6b4f3d"
-     },
-     {
-      "type": "chair",
-      "x": -0.5,
-      "z": 0.8,
-      "scale": 1.0,
-      "color": "#4a3b2f"
-     },
-     {
-      "type": "lamp",
-      "x": 0.7,
-      "z": 0.2,
-      "scale": 0.8,
-      "color": "#c9a84c"
-     },
-     {
-      "type": "screen",
-      "x": 0.2,
-      "z": 0.3,
-      "scale": 1.0,
-      "color": "#1a1a2e"
-     },
-     {
-      "type": "window",
-      "x": -0.8,
-      "z": 0,
-      "scale": 1.5,
-      "color": "#88ccee"
-     }
-    ]
-   }
-  },
-  {
-   "id": "final_contract_close",
-   "label": "Final contract close",
-   "desc": "Last conversation to review the contract, lien waiver, and schedule the crew.",
-   "setup": "You are on a speakerphone call with both decision-makers. The husband says: ‘The price jumped $1,200 from the letter of intent. Explain that before I sign.’",
-   "skills": "Contract transparency, compliance disclosure, scheduling commitment",
-   "scene": "phone",
-   "objective": "Get the electronic contract signed and the first material delivery dated.",
-   "place": "Homeowner living room (call)",
-   "moment": "Thursday 8:30 pm, night, quiet neighborhood",
-   "visual": {
-    "sky": "night",
-    "palette": {
-     "wall": "#2d2d3a",
-     "floor": "#1e1e26",
-     "accent": "#c9a84c",
-     "light": "#f0e8d8"
-    },
-    "props": [
-     {
-      "type": "sofa",
-      "x": 0.0,
-      "z": 0.7,
-      "scale": 1.3,
-      "color": "#3a3a4a"
-     },
-     {
-      "type": "lamp",
-      "x": 0.8,
-      "z": 0.1,
-      "scale": 0.9,
-      "color": "#c9a84c"
-     },
-     {
-      "type": "screen",
-      "x": -0.6,
-      "z": 0.2,
-      "scale": 1.0,
-      "color": "#0d0d1a"
+      "z": 0.4,
+      "scale": 0.7,
+      "color": "#d4c8b5"
      },
      {
       "type": "plant",
-      "x": -0.9,
-      "z": 0.5,
-      "scale": 1.0,
-      "color": "#1a3d1a"
+      "x": 0.6,
+      "z": 0.9,
+      "scale": 0.7,
+      "color": "#6b8e23"
+     }
+    ]
+   }
+  },
+  {
+   "id": "multi_trade_renovati",
+   "label": "Multi-trade renovation scope creep",
+   "desc": "Manage a whole-home exterior project where the homeowner keeps adding siding, gutters and windows.",
+   "setup": "The homeowner texts you mid-project, then meets at the site. They say: While the crew is here, can we just redo the deck and add a skylight?",
+   "skills": "Change order control and budget protection",
+   "scene": "outdoors",
+   "objective": "Finalize a signed change order with clear pricing and timeline impact before any new work starts.",
+   "place": "Job site with scaffolding and tarps",
+   "moment": "Thursday 2:00 pm, compressor whine in background",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#6A6A6A",
+     "floor": "#8B7355",
+     "accent": "#D4A017",
+     "light": "#FFF8DC"
+    },
+    "props": [
+     {
+      "type": "car",
+      "x": -0.3,
+      "z": 0.2,
+      "scale": 1.1,
+      "color": "#A52A2A"
      },
      {
-      "type": "table",
-      "x": 0.5,
-      "z": 0.6,
-      "scale": 0.9,
-      "color": "#2a2a3a"
+      "type": "tree",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#D4A017"
+     },
+     {
+      "type": "house",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#D4A017"
+     },
+     {
+      "type": "tree",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#D4A017"
      }
     ]
    }
@@ -179,207 +165,224 @@
  ],
  "buyers": [
   {
-   "scenario": "storm_door_knock",
-   "role": "Recent transplant from a rental",
-   "personality": "polite but guarded, first-time owner",
-   "difficulty": 2,
+   "scenario": "storm_damage_lead",
+   "role": "first contact",
+   "personality": "curious homeowner",
+   "difficulty": 1,
    "gender": "f",
-   "age": 32,
-   "angle": "Has no frame of reference for roof work and fears being upsold."
+   "age": 45,
+   "angle": "Wants to understand benefits without feeling pressured."
   },
   {
-   "scenario": "storm_door_knock",
-   "role": "Retired contractor",
-   "personality": "knows the trades, tests your specs",
-   "difficulty": 4,
-   "gender": "m",
-   "age": 68,
-   "angle": "Will spot vague language and demand manufacturer spec sheets on the spot."
-  },
-  {
-   "scenario": "kitchen_table_scope",
-   "role": "Dual-income couple, one skeptical",
-   "personality": "analytical, spreadsheet-driven",
+   "scenario": "aging_roof_consultat",
+   "role": "real conversation",
+   "personality": "skeptical homeowner",
    "difficulty": 3,
-   "gender": "f",
-   "age": 41,
-   "angle": "Compares your line items to three competitor PDFs open on a second monitor."
+   "gender": "m",
+   "age": 58,
+   "angle": "Prioritizes visible spending and ROI concerns."
   },
   {
-   "scenario": "kitchen_table_scope",
-   "role": "Insurance claim veteran",
-   "personality": "jaded, expects supplements",
+   "scenario": "multi_trade_renovati",
+   "role": "hardest close",
+   "personality": "decision-avoidant homeowner",
+   "difficulty": 5,
+   "gender": "f",
+   "age": 39,
+   "angle": "Needs proof before committing despite interest."
+  },
+  {
+   "scenario": "aging_roof_consultat",
+   "role": "real conversation",
+   "personality": "budget-conscious homeowner",
    "difficulty": 4,
    "gender": "m",
-   "age": 55,
-   "angle": "Assumes the first scope is low-balled and pushes for full code-upgrade coverage."
+   "age": 34,
+   "angle": "Challenges price by comparing DIY costs."
   },
   {
-   "scenario": "final_contract_close",
-   "role": "Attorney homeowner",
-   "personality": "reads every clause, cites statute",
+   "scenario": "multi_trade_renovati",
+   "role": "hardest close",
+   "personality": "urgency-sensitive homeowner",
    "difficulty": 5,
    "gender": "m",
-   "age": 49,
-   "angle": "Will not sign until lien waiver language matches state statute verbatim."
+   "age": 62,
+   "angle": "Presses timeline but fears hidden costs."
   }
  ],
  "objections": [
-  "Your price is three thousand higher than the guy who left a magnet on my fridge",
-  "I need to talk to my brother-in-law who does siding before I commit",
-  "The insurance adjuster said I only need a repair, not a full replacement",
-  "Why does the contract say ‘materials escalation’ when lumber prices dropped last month?",
-  "I’m not signing anything without a start date written in pen on the agreement",
-  "The last crew left nails in my driveway for weeks. How do you guarantee cleanup?",
-  "My deductible is five grand. If the supplement doesn’t cover it, I’m not doing it",
-  "Show me the manufacturer’s wind warranty in writing, not just your brochure"
+  "I’m not sure if a new roof will increase my home’s value enough to justify the cost",
+  "Roofing seems like a big expense when I have other home projects pending",
+  "I’ve heard roofing contractors sometimes overestimate the needed repairs",
+  "I’m not convinced the energy savings will offset the installation price",
+  "My insurance might cover part of the cost, but I’m not sure how that works",
+  "I want to compare multiple bids before deciding on any contractor",
+  "I’m concerned about the disruption to my daily routine during the project",
+  "I need to check if the materials used are compatible with my existing home style"
  ],
  "rubric": [
   {
-   "id": "credibility_framing",
-   "label": "Credibility framing",
-   "what": "Opens with a verifiable local reference, license number, and a specific inspection process before asking for time."
-  },
-  {
-   "id": "scope_clarity",
-   "label": "Scope clarity",
-   "what": "Presents good-better-best packages with line-item differences, not vague upgrades, and ties each to the homeowner’s stated priorities."
-  },
-  {
-   "id": "financing_transparency",
-   "label": "Financing transparency",
-   "what": "States the exact monthly payment, total of payments, lender name, and any dealer fee before the homeowner asks."
+   "id": "inspection_storytelling",
+   "label": "Inspection storytelling",
+   "what": "Translate photos and measurements into a clear narrative the homeowner can repeat to a spouse or adjuster."
   },
   {
    "id": "insurance_fluency",
    "label": "Insurance fluency",
-   "what": "Explains RCV vs ACV, supplement process, and the homeowner’s deductible responsibility without promising coverage the carrier decides."
+   "what": "Explain RCV versus ACV, supplement process, and contingency language without promising coverage."
   },
   {
-   "id": "compliance_disclosure",
-   "label": "Compliance disclosure",
-   "what": "Discloses right-to-cancel period, lien waiver requirements, and any material-escalation clause in plain language before signature."
+   "id": "system_value_pitch",
+   "label": "System value pitch",
+   "what": "Contrast a full roof system with a shingle-only quote using ventilation, warranty and labor facts."
   },
   {
-   "id": "cleanup_commitment",
-   "label": "Cleanup commitment",
-   "what": "Specifies magnetic sweep, daily debris removal, and a written post-job walkthrough sign-off as standard, not optional."
+   "id": "change_order_discipline",
+   "label": "Change order discipline",
+   "what": "Capture every scope addition in a written change order with price, schedule impact and homeowner signature."
+  },
+  {
+   "id": "lien_waiver_compliance",
+   "label": "Lien waiver compliance",
+   "what": "Provide conditional and final lien waivers at each draw and never ask for payment before the waiver is ready."
+  },
+  {
+   "id": "honest_roi_framing",
+   "label": "Honest ROI framing",
+   "what": "Cite realtor data on resale value without guaranteeing dollar-for-dollar return or tax benefits."
   }
  ],
  "live_meters": [
-  "credibility_framing",
-  "scope_clarity",
-  "compliance_disclosure"
+  "inspection_storytelling",
+  "insurance_fluency",
+  "honest_roi_framing"
  ],
  "pitfalls": [
-  "Promising the insurance company will approve a supplement before the adjuster re-inspects.",
-  "Quoting a monthly payment that excludes the dealer fee or assumes a credit tier the homeowner may not qualify for.",
-  "Leaving the material-escalation clause unexplained or hidden in paragraph 12 of the contract."
+  "Promising the insurance company will approve the full supplement before the adjuster reinspects.",
+  "Collecting a progress payment without delivering a signed conditional lien waiver.",
+  "Guaranteeing a specific percentage return on investment at resale."
  ],
  "id": "ready-home-services",
  "line": "Selling roofing and home renovations to homeowners",
  "product": null,
- "researched": false,
+ "researched": true,
+ "research": {
+  "text": "The sources indicate that roofing and home renovations are common upgrades, with roofing being the most common exterior renovation in the first quarter of 2024, accounting for 22% of renovations at an average cost of $12,000. Homeowners spent $463 billion on home renovations in the first quarter of 2024, with roofing recommended by 33% of Realtors as a beneficial upgrade before selling a home. However, while a new roof improves comfort and can be financially beneficial, it does not guarantee a full return on investment when selling a home. The sources do not provide a definitive answer on customer objections or specific conversation details regarding selling roofing and home renovations to homeowners.",
+  "sources": [
+   {
+    "title": "Vertex Roofing & Home Renovations",
+    "url": "https://www.mapquest.com/us/georgia/vertex-roofing-home-renovations-646170141"
+   },
+   {
+    "title": "Faz Roofing & Renovations",
+    "url": "https://www.mapquest.com/us/georgia/faz-roofing-renovations-387655927"
+   },
+   {
+    "title": "Roofing and Renovations Concierge",
+    "url": "https://www.mapquest.com/us/colorado/roofing-renovations-concierge-inc-716314312"
+   }
+  ]
+ },
  "personas": [
   {
-   "id": "jillian_mcauliffe-0",
-   "name": "Jillian McAuliffe",
+   "id": "jane_porter-0",
+   "name": "Jane Porter",
    "gender": "f",
-   "age": 32,
-   "scenario": "storm_door_knock",
-   "role": "storm_door_knock",
-   "personality": "polite but guarded, first-time owner",
-   "background": "Jillian moved to this neighborhood from a long-term rental after her landlord sold the building. She’s learning how to maintain a home on her own and is watching every dollar. She values honesty above speed, but distrusts anyone who seems to be pushing a sale before she understands what’s at stake. She is especially ne.",
+   "age": 45,
+   "scenario": "storm_damage_lead",
+   "role": "residential roofing and renovation consultant",
+   "personality": "curious homeowner",
+   "background": "Jane lives in a suburban neighborhood with her partner and two kids. She recently had storm damage to her roof and is exploring repair options while balancing other home projects and overall budget concerns.",
    "cares_about": [
-    "avoiding scams",
-    "seeing proof of durability",
-    "understanding insurance paperwork"
+    "family safety",
+    "keeping home value stable",
+    "energy efficiency in the house"
    ],
    "pushbacks": [
-    "I’ve never seen a roof need a full replacement after one storm, can you explain why mine does?",
-    "I’m not signing anything until I get the contract in my lawyer’s hands, so I need all the fees listed upfront",
-    "Three thousand more than the last quote feels like a lot, can you show me where that extra cost is going?"
+    "I’m not sure a new roof will boost my home’s value enough to justify the cost",
+    "Roofing seems like a big expense when i have other home projects pending",
+    "I’ve heard contractors sometimes overestimate what needs fixing"
    ],
    "wins_over": [
-    "contracts with clear timelines and itemized costs",
-    "evidence from independent inspections",
-    "stories of other new homeowners who avoided costly repairs"
+    "clear explanation of how a new roof protects her family",
+    "detailed estimate showing long-term energy savings",
+    "transparent breakdown of insurance claim process"
    ],
-   "suggested_difficulty": 2,
+   "suggested_difficulty": 1,
    "appearance": {
     "skin": "light",
     "hairStyle": "bob",
     "hairColor": "brown",
     "facialHair": "none",
-    "glasses": "round",
+    "glasses": "none",
     "lines": 1,
-    "clothes": "#7a3b2e"
+    "clothes": "#2f5d62"
    },
    "accent": "en-US"
   },
   {
-   "id": "ezekiel_hartwell-1",
-   "name": "Ezekiel Hartwell",
+   "id": "ethan_patel-1",
+   "name": "Ethan Patel",
    "gender": "m",
-   "age": 68,
-   "scenario": "storm_door_knock",
-   "role": "Retired contractor",
-   "personality": "precisionist and retired foreman",
-   "background": "Spent forty years managing residential crews before retiring to his workshop. He now inspects every proposal like a project site, refusing anything that lacks manufacturer specs.",
+   "age": 58,
+   "scenario": "aging_roof_consultat",
+   "role": "skeptical homeowner",
+   "personality": "skeptical and detail-oriented",
+   "background": "Ethan is a 58-year-old homeowner who has lived in his suburban house for 35 years. He is retired from a manufacturing job and manages his property carefully but is cautious about new expenses.",
    "cares_about": [
-    "material integrity",
-    "warranty durability",
-    "crew reliability"
+    "home resale value",
+    "long-term savings",
+    "financial predictability"
    ],
    "pushbacks": [
-    "‘Three thousand higher than the magnet guy’? That’s a bait-and-switch when I’ve built roofs that last forty winters",
-    "‘No start date in pen’? I need a calendar, not a handshake",
-    "‘Just a repair’? I’ve seen adjuster shortcuts ruin whole roofs"
+    "I just want to know if the numbers actually make sense for my situation",
+    "I’ve been quoted by others who pushed upgrades I didn’t need",
+    "I need proof that energy savings will cover the investment over time"
    ],
    "wins_over": [
-    "exact manufacturer specs",
-    "a signed calendar date",
-    "a warranty that covers labor"
-   ],
-   "suggested_difficulty": 4,
-   "appearance": {
-    "skin": "medium",
-    "hairStyle": "short",
-    "hairColor": "grey",
-    "facialHair": "stubble",
-    "glasses": "square",
-    "lines": 2,
-    "clothes": "#4f6f8f"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "natalie_mercer-2",
-   "name": "Natalie Mercer",
-   "gender": "f",
-   "age": 41,
-   "scenario": "kitchen_table_scope",
-   "role": "kitchen_table_scope",
-   "personality": "analytical spreadsheet driven",
-   "background": "Natalie works in property damage claims for a large insurer and spends weekends renovating the family home. She evaluates contractors with the same rigor she applies to policy reviews.",
-   "cares_about": [
-    "exact material specs",
-    "long term resale value",
-    "audit trail documentation"
-   ],
-   "pushbacks": [
-    "Your price is three thousand higher than the guy who left a magnet on my fridge",
-    "I need to talk to my brother-in-law who does siding before I commit",
-    "The insurance adjuster said I only need a repair, not a full replacement"
-   ],
-   "wins_over": [
-    "a clear breakdown of markup percentages",
-    "comparative line item screenshots",
-    "proof of warranty on hidden components"
+    "clear ROI calculations",
+    "transparent pricing",
+    "references from similar homes"
    ],
    "suggested_difficulty": 3,
    "appearance": {
     "skin": "medium",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 2,
+    "clothes": "#8a5a3c"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "nora_miller-2",
+   "name": "Nora Miller",
+   "gender": "f",
+   "age": 39,
+   "scenario": "multi_trade_renovati",
+   "role": "homeowner",
+   "personality": "quietly decisive",
+   "background": "Nora lives in a 1995 colonial with two kids and a dog. She runs a small home bakery and handles all household finances.",
+   "cares_about": [
+    "resale value",
+    "budget peace of mind",
+    "long-term comfort"
+   ],
+   "pushbacks": [
+    "I’m not sure a new roof will really raise my home’s value enough to make sense",
+    "I’ve got other repairs on the list and i need to see proof it’s worth the spend",
+    "I’m skeptical about how much energy savings will actually show up on my bill"
+   ],
+   "wins_over": [
+    "clear proof that the roof will protect the house for years",
+    "a detailed breakdown that shows exactly what i’ll save month to month",
+    "when the estimate includes how insurance can lower the final cost"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
     "hairStyle": "bob",
     "hairColor": "brown",
     "facialHair": "none",
@@ -387,41 +390,41 @@
     "lines": 1,
     "clothes": "#3f4f3f"
    },
-   "accent": "en-US"
+   "accent": "en-CA"
   },
   {
-   "id": "daniel_merewitz-3",
-   "name": "Daniel Merewitz",
+   "id": "dave_hensley-3",
+   "name": "Dave Hensley",
    "gender": "m",
-   "age": 55,
-   "scenario": "kitchen_table_scope",
-   "role": "insurance claim veteran",
-   "personality": "cynical but customer-focused",
-   "background": "He has spent 25 years interpreting storm claims for homeowners. He knows how to spot gaps in surveyors’ reports and when to demand re‑evaluation.",
+   "age": 34,
+   "scenario": "aging_roof_consultat",
+   "role": "respective homeowner",
+   "personality": "budget-conscious homeowner who values DIY costs",
+   "background": "Dave is a DIY enthusiast who tackled his last roof repair two years ago. He recently priced out replacing materials himself and thinks he can handle cheaper labor.",
    "cares_about": [
-    "getting the full replacement approved",
-    "protecting homeowner from undervalued offers",
-    "maintaining his reputation as a trusted advocate"
+    "keeping renovation costs predictable",
+    "maximizing resale value without overspending",
+    "avoiding unexpected roof leaks after work"
    ],
    "pushbacks": [
-    "The adjuster’s repair allowance doesn’t cover hidden structural damage",
-    "My scope of work already assumes code upgrades; any lower estimate is insufficient",
-    "My experience shows these storms always require a full tear‑off, not a patch"
+    "I priced out the shingles and labour myself and it’s under half your estimate",
+    "Before you quote, tell me exactly which sections need replacement, not just ‘the whole roof’",
+    "If your warranty covers storm damage, I want to know how to prove I didn’t cause it"
    ],
    "wins_over": [
-    "he sees a clear, written estimate that respects the homeowner’s budget",
-    "he recognizes a genuine partnership when the contractor offers a realistic timeline",
-    "he appreciates when the contractor offers to handle paperwork and follow‑up with the insurer"
+    "demonstrating how new roofing boosts appraisal value",
+    "showing a detailed cost breakdown that includes disposal",
+    "offering a trial fix I can inspect before full payment"
    ],
    "suggested_difficulty": 4,
    "appearance": {
-    "skin": "medium",
+    "skin": "light",
     "hairStyle": "short",
-    "hairColor": "grey",
+    "hairColor": "brown",
     "facialHair": "stubble",
     "glasses": "none",
-    "lines": 2,
-    "clothes": "#3a3a4a"
+    "lines": 1,
+    "clothes": "#2f5d62"
    },
    "accent": "en-US"
   },
@@ -429,39 +432,40 @@
    "id": "frank_delaney-4",
    "name": "Frank Delaney",
    "gender": "m",
-   "age": 49,
-   "scenario": "final_contract_close",
-   "role": "Attorney homeowner",
-   "personality": "meticulous contractual reader",
-   "background": "Frank is a real estate attorney who reviews every line of a contract before signing. He keeps annotated copies of state construction statutes in a binder on his desk.",
+   "age": 62,
+   "scenario": "multi_trade_renovati",
+   "role": "consultant",
+   "personality": "urgent yet frugal",
+   "background": "Frank has spent thirty years managing small contractors and handling home repairs himself. He values clear numbers and warns that hidden costs can ruin a budget.",
    "cares_about": [
-    "statutory compliance on lien waivers",
-    "clear scope of work definitions",
-    "avoiding hidden fee escalation clauses"
+    "project timeline",
+    "transparent pricing",
+    "energy efficiency"
    ],
    "pushbacks": [
-    "The lien waiver language does not align with the specific language required by § 47-1502 of the Idaho Code",
-    "Your materials escalation clause references ‘current market rates’ which contradicts the adjuster’s assessment that lumber prices fell 7% last month",
-    "I cannot sign without a clearly written start date in ink on the agreement, per Idaho Consumer Protection Act § 48-603"
+    "I’m not sure if a new roof will boost resale value enough to cover the price",
+    "Roofing feels like a huge expense while I still have a kitchen remodel pending",
+    "I’m skeptical that energy savings will ever offset the upfront cost"
    ],
    "wins_over": [
-    "when I see the contractor’s portfolio includes state-licensed roofing specialists with OSHA compliance certificates",
-    "when the contract includes a clause that references the exact statutory citation I provided for lien waivers",
-    "when the contractor provides a copy of the insurance adjuster’s written scope confirming full replacement is necessary"
+    "a detailed cost breakdown",
+    "proof of future maintenance savings",
+    "clear warranty terms"
    ],
    "suggested_difficulty": 5,
    "appearance": {
     "skin": "light",
     "hairStyle": "short",
-    "hairColor": "darkbrown",
-    "facialHair": "stubble",
+    "hairColor": "grey",
+    "facialHair": "none",
     "glasses": "none",
-    "lines": 1,
-    "clothes": "#6b4b6e"
+    "lines": 2,
+    "clothes": "#3b4a5a"
    },
    "accent": "en-US"
   }
  ],
  "builtin": true,
- "order": 8
+ "order": 8,
+ "group": "sales"
 }

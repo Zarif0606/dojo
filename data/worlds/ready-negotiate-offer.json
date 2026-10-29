@@ -1,0 +1,457 @@
+{
+ "title": "Negotiating a job offer",
+ "tagline": "Learn to negotiate a job offer’s total value without burning the relationship.",
+ "you_are": "a candidate who has received a formal offer and wants to improve the package",
+ "setting": "Conversations happen by phone or video call with the hiring manager or HR partner after the offer letter lands.",
+ "other_side": "hiring managers",
+ "scenarios": [
+  {
+   "id": "first_call",
+   "label": "First counter offer call",
+   "desc": "Open the negotiation after receiving the written offer.",
+   "setup": "You are the hiring manager who just sent the offer. You open by asking if the candidate has had a chance to review the package and whether they have any initial questions.",
+   "skills": "Anchoring value and setting a collaborative tone",
+   "scene": "phone",
+   "objective": "Express enthusiasm for the role and put a specific counter number on the table with a brief rationale.",
+   "place": "Hiring manager’s office",
+   "moment": "Tuesday 10:15 am, quiet morning between meetings",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#c9e6cb",
+     "floor": "#f0f0f0",
+     "accent": "#d4a373",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.0,
+      "z": 0,
+      "scale": 1.2,
+      "color": "#8b7355"
+     },
+     {
+      "type": "lamp",
+      "x": -0.3,
+      "z": 0,
+      "scale": 0.8,
+      "color": "#a67c52"
+     },
+     {
+      "type": "chair",
+      "x": -0.4,
+      "z": 0,
+      "scale": 0.9,
+      "color": "#5d4037"
+     },
+     {
+      "type": "window",
+      "x": 0.6,
+      "z": 0.8,
+      "scale": 0.7,
+      "color": "#e0e0e0"
+     }
+    ]
+   }
+  },
+  {
+   "id": "equity_signing_push",
+   "label": "Equity and signing bonus push",
+   "desc": "Trade base salary headroom for equity, bonus, or accelerated review.",
+   "setup": "You are the hiring manager who likes the candidate but has a tight band for base pay. You open by saying the base is capped by policy but asking what else would make the offer a clear yes.",
+   "skills": "Creative packaging and knowing non-cash levers",
+   "scene": "phone",
+   "objective": "Secure a higher signing bonus, extra equity, or a six-month salary review clause.",
+   "place": "Hiring manager’s office",
+   "moment": "Thursday 3:40 pm, late afternoon light through blinds",
+   "visual": {
+    "sky": "dusk",
+    "palette": {
+     "wall": "#4A4A4A",
+     "floor": "#6A6A6A",
+     "accent": "#A67C52",
+     "light": "#D9C9B6"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": 0.5,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#5D5D5D"
+     },
+     {
+      "type": "sofa",
+      "x": -0.3,
+      "z": 0.7,
+      "scale": 1.1,
+      "color": "#B8861B"
+     },
+     {
+      "type": "lamp",
+      "x": -0.2,
+      "z": 0.5,
+      "scale": 0.9,
+      "color": "#F5DEB3"
+     },
+     {
+      "type": "cabinet",
+      "x": 0.2,
+      "z": 0.3,
+      "scale": 1.0,
+      "color": "#8B4513"
+     }
+    ]
+   }
+  },
+  {
+   "id": "competing_offer_leve",
+   "label": "Competing offer leverage",
+   "desc": "Use a genuine competing offer to move the needle without sounding like a threat.",
+   "setup": "You are the hiring manager who knows the candidate is a top pick. You open by saying you want to close this week and asking if anything stands in the way.",
+   "skills": "Leverage framing and relationship preservation",
+   "scene": "phone",
+   "objective": "Match or beat the competing total compensation while keeping the hiring manager as an advocate.",
+   "place": "Hiring manager’s office",
+   "moment": "Friday 11:00 am, end-of-week urgency in the air",
+   "visual": {
+    "sky": "overcast",
+    "palette": {
+     "wall": "#3a3a3a",
+     "floor": "#8c8c8c",
+     "accent": "#c0c0c0",
+     "light": "#f5f5f5"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.5,
+      "z": 0.8,
+      "scale": 1.2,
+      "color": "#2e2e2e"
+     },
+     {
+      "type": "sofa",
+      "x": -0.8,
+      "z": 0.6,
+      "scale": 1.0,
+      "color": "#5a4d42"
+     },
+     {
+      "type": "lamp",
+      "x": 0.0,
+      "z": 0.9,
+      "scale": 0.8,
+      "color": "#b8860b"
+     }
+    ]
+   }
+  }
+ ],
+ "buyers": [
+  {
+   "scenario": "first_call",
+   "role": "first contact via phone",
+   "personality": "enthusiastic hiring manager",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 45,
+   "angle": "Values culture fit and is eager to fill the role quickly."
+  },
+  {
+   "scenario": "equity_signing_push",
+   "role": "virtual interview",
+   "personality": "detail-oriented recruiter",
+   "difficulty": 3,
+   "gender": "f",
+   "age": 32,
+   "angle": "Asks many logistical questions and tests flexibility."
+  },
+  {
+   "scenario": "competing_offer_leve",
+   "role": "final offer meeting",
+   "personality": "senior executive",
+   "difficulty": 5,
+   "gender": "m",
+   "age": 58,
+   "angle": "Has budget limits and wants to close without extra cost."
+  },
+  {
+   "scenario": "equity_signing_push",
+   "role": "second interview with team lead",
+   "personality": "collaborative peer",
+   "difficulty": 2,
+   "gender": "f",
+   "age": 29,
+   "angle": "Focuses on growth opportunities and team dynamics."
+  },
+  {
+   "scenario": "competing_offer_leve",
+   "role": "negotiation call",
+   "personality": "cautious finance director",
+   "difficulty": 4,
+   "gender": "m",
+   "age": 47,
+   "angle": "Prioritizes cost control and long‑term ROI."
+  }
+ ],
+ "objections": [
+  "I love the team but our budget is fixed",
+  "Our culture emphasizes work‑life balance over extra pay",
+  "We can’t change the start date without causing disruption",
+  "We don’t typically offer signing bonuses for this level",
+  "Our vacation policy is standard across the company",
+  "We prefer to keep compensation structure simple",
+  "Our market data suggests this salary is already competitive",
+  "We need to stay within the band for internal equity"
+ ],
+ "rubric": [
+  {
+   "id": "value_anchoring",
+   "label": "Value anchoring",
+   "what": "The candidate ties every ask to concrete impact they will deliver, not to personal need."
+  },
+  {
+   "id": "package_thinking",
+   "label": "Package thinking",
+   "what": "The candidate negotiates the whole deal, base, bonus, equity, review cadence, flexibility, growth, not just the salary line."
+  },
+  {
+   "id": "constraint_respect",
+   "label": "Constraint respect",
+   "what": "The candidate probes the employer’s real limits (band, equity pool, policy) and designs asks that fit inside them."
+  },
+  {
+   "id": "leverage_framing",
+   "label": "Leverage framing",
+   "what": "The candidate mentions competing offers or market data as factual context, never as an ultimatum."
+  },
+  {
+   "id": "patience_tempo",
+   "label": "Patience tempo",
+   "what": "The candidate slows the pace, asks for thinking time, and avoids pressure closes that damage trust."
+  },
+  {
+   "id": "compliance_honesty",
+   "label": "Compliance honesty",
+   "what": "The candidate represents competing offers, current pay, and qualifications truthfully and respects confidentiality obligations."
+  }
+ ],
+ "live_meters": [
+  "value_anchoring",
+  "package_thinking",
+  "constraint_respect"
+ ],
+ "pitfalls": [
+  "Stating a competing offer that does not exist or inflating its numbers.",
+  "Issuing a take-it-or-leave-it deadline that forces the hiring manager to withdraw.",
+  "Negotiating only base salary and leaving equity, bonus, or review terms on the table."
+ ],
+ "id": "ready-negotiate-offer",
+ "line": "Negotiating the salary on a job offer",
+ "product": null,
+ "researched": true,
+ "research": {
+  "text": "Common objections in salary negotiation include concerns about the company's culture and flexibility on start dates, vacation time, and signing bonuses. It's important to understand the company's constraints to propose options that solve both sides' problems. While salary is a key factor, focus on the value of the entire deal, including responsibilities, location, travel, flexibility in work hours, opportunities for growth, perks, and support for continued education. If the offer isn't competitive, remind the employer of your value based on industry tenure, experience, or unique skills. Be patient and avoid ultimatums, taking time to consider the offer and asking for a reasonable response period. If another offer is better, consider using it as leverage to negotiate.",
+  "sources": [
+   {
+    "title": "How To Negotiate Salary After a Job Offer (With 13 Tips) | Indeed.com",
+    "url": "https://www.indeed.com/career-advice/pay-salary/how-to-negotiate-salary"
+   },
+   {
+    "title": "15 Rules for Negotiating a Job Offer | Department of",
+    "url": "https://economics.virginia.edu/15-rules-negotiating-job-offer"
+   },
+   {
+    "title": "How to negotiate salary after a job offer | Fidelity",
+    "url": "https://www.fidelity.com/learning-center/smart-money/how-to-negotiate-salary"
+   }
+  ]
+ },
+ "personas": [
+  {
+   "id": "patricia_liu-0",
+   "name": "Patricia Liu",
+   "gender": "f",
+   "age": 28,
+   "scenario": "first_call",
+   "role": "entry-level analyst",
+   "personality": "bright eager to learn",
+   "background": "Patricia graduated top of her class and landed her first job at a fast-growing startup. She enjoys solving data puzzles and building her network.",
+   "cares_about": [
+    "career growth",
+    "fair pay",
+    "learning opportunities"
+   ],
+   "pushbacks": [
+    "I appreciate the offer but I was hoping for a higher base",
+    "My research shows similar roles command a bit more, can we discuss?",
+    "I’m excited about the team but I’d love a quicker start to dive in"
+   ],
+   "wins_over": [
+    "genuine enthusiasm",
+    "clear research",
+    "collaborative spirit"
+   ],
+   "suggested_difficulty": 1,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "round",
+    "lines": 0,
+    "clothes": "#4f6f8f"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "kelly_nakamura-1",
+   "name": "Kelly Nakamura",
+   "gender": "f",
+   "age": 32,
+   "scenario": "equity_signing_push",
+   "role": "equity signing recruiter",
+   "personality": "meticulous and cautious",
+   "background": "Kelly works in talent acquisition at a fast growing tech firm. She handles negotiations with a focus on policy limits and internal fairness.",
+   "cares_about": [
+    "equity timing",
+    "budget boundaries",
+    "process transparency"
+   ],
+   "pushbacks": [
+    "Our equity grants follow a fixed schedule",
+    "Changing the start date would affect the whole team",
+    "Signing bonuses are reserved for senior leadership"
+   ],
+   "wins_over": [
+    "data‑backed equity requests",
+    "specific milestone dates",
+    "cultural fit evidence"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#3b4a5a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "wesley_mcallister-2",
+   "name": "Wesley McAllister",
+   "gender": "m",
+   "age": 58,
+   "scenario": "competing_offer_leve",
+   "role": "senior executive",
+   "personality": "skeptical and precise",
+   "background": "After three decades in corporate finance he moved into a consulting advisory role where he mentors younger managers. He prides himself on disciplined negotiations and protecting the bottom line.",
+   "cares_about": [
+    "preserving cash for the business",
+    "maintaining employee morale through fairness",
+    "showcasing strategic vision"
+   ],
+   "pushbacks": [
+    "Our budget is locked for the fiscal year",
+    "We can’t shift the start date without ripple effects",
+    "Signing bonuses aren’t part of our standard package at this level"
+   ],
+   "wins_over": [
+    "data‑driven decisions",
+    "a clear win‑win outcome",
+    "professional persistence"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "stubble",
+    "glasses": "none",
+    "lines": 2,
+    "clothes": "#2f5d62"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "jenna_patel-3",
+   "name": "Jenna Patel",
+   "gender": "f",
+   "age": 29,
+   "scenario": "equity_signing_push",
+   "role": "Equity listener",
+   "personality": "collaborative and strategic",
+   "background": "Jenna works as a senior analyst at a fintech start‑up. She values transparency and growth within her team.",
+   "cares_about": [
+    "equity vesting speed",
+    "team culture",
+    "career trajectory"
+   ],
+   "pushbacks": [
+    "I appreciate the offer but the equity schedule feels early for me",
+    "Our budget is fixed, so any increase would affect other priorities",
+    "A signing bonus would set a precedent we might not be able to repeat"
+   ],
+   "wins_over": [
+    "growth path",
+    "team cohesion",
+    "mentorship opportunities"
+   ],
+   "suggested_difficulty": 2,
+   "appearance": {
+    "skin": "medium",
+    "hairStyle": "bob",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 0,
+    "clothes": "#7a5a8a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "hank_mitchell-4",
+   "name": "Hank Mitchell",
+   "gender": "m",
+   "age": 47,
+   "scenario": "competing_offer_leve",
+   "role": "senior finance manager",
+   "personality": "cautious, analytical, cost-conscious",
+   "background": "Hank has spent two decades advancing through corporate finance roles, earning an MBA and a reputation for meticulous budgeting. His career focus leads him to evaluate every offer through a lens of long-term value and risk mitigation.",
+   "cares_about": [
+    "maximizing total compensation",
+    "preserving negotiation leverage",
+    "maintaining market alignment"
+   ],
+   "pushbacks": [
+    "I appreciate the offer, but our budget constraints really limit what we can adjust",
+    "Our compensation framework is rigid at this level, so additional equity isn’t feasible",
+    "I’d prefer to keep the start date as originally set to avoid disrupting the team"
+   ],
+   "wins_over": [
+    "a detailed ROI analysis supporting higher pay",
+    "an equity grant that aligns with company performance metrics",
+    "flexible remote‑work options that preserve work‑life balance"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "stubble",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#2f5d62"
+   },
+   "accent": "en-US"
+  }
+ ],
+ "builtin": true,
+ "order": 107,
+ "group": "life"
+}

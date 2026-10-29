@@ -35,10 +35,29 @@ DEFAULT = [  # (id, profession shown on the card, line sent to the planner)
     ("gym", "Gym membership advisor", "Selling gym memberships"),
 ]
 
+# Hard conversations outside sales: you are the one asking, explaining or delivering the news.
+EXTRA = [
+    ("ask-for-raise", "Asking for a raise", "Asking my manager for a raise after a strong year"),
+    ("job-interview", "Job interview", "Interviewing for a software engineer job"),
+    ("landlord", "Landlord repairs", "Asking my landlord to fix a problem and hold the rent steady"),
+    ("seed-pitch", "Seed round pitch", "Pitching a seed round to a skeptical investor"),
+    ("angry-customer", "Angry customer", "Calming down an angry customer as a support agent"),
+    ("bad-news", "Delivering bad news", "Telling a client their project will be late"),
+    ("tough-feedback", "Tough feedback", "Giving tough feedback to a team member who keeps missing deadlines"),
+    ("negotiate-offer", "Negotiating a job offer", "Negotiating the salary on a job offer"),
+]
+
 db.init()
 out = ROOT / "data" / "worlds"
 out.mkdir(parents=True, exist_ok=True)
-jobs = [(f"custom-{i}", None, l) for i, l in enumerate(sys.argv[1:])] if sys.argv[1:] else DEFAULT
+args = [a for a in sys.argv[1:] if not a.startswith("--")]
+GROUP = {}
+if "--extra" in sys.argv:
+    jobs = EXTRA; GROUP = {j[0]: "life" for j in EXTRA}
+elif args:
+    jobs = [(f"custom-{i}", None, l) for i, l in enumerate(args)]
+else:
+    jobs = DEFAULT; GROUP = {j[0]: "sales" for j in DEFAULT}
 for order, (slug_, profession, line) in enumerate(jobs):
     print(f"Building: {line}")
     final = None
@@ -55,6 +74,8 @@ for order, (slug_, profession, line) in enumerate(jobs):
     if profession:
         final["title"] = profession
     final["builtin"] = True
-    final["order"] = order
+    final["order"] = order + (100 if GROUP.get(slug_) == "life" else 0)
+    if slug_ in GROUP:
+        final["group"] = GROUP[slug_]
     (out / f"{final['id']}.json").write_text(json.dumps(final, indent=1, ensure_ascii=False))
     print(f"  saved data/worlds/{final['id']}.json")

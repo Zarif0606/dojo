@@ -1,170 +1,184 @@
 {
  "title": "Cold caller (SDR)",
- "tagline": "Learn to open cold calls with small business owners and book qualified demos.",
- "you_are": "an outbound sales development representative for a B2B software company",
- "setting": "Calls are made from a quiet home office or sales floor using a dialer and CRM, targeting owners who have never heard of the product.",
- "other_side": "owners",
+ "tagline": "Learn to open cold calls, handle the top objections and book qualified demos with small business owners.",
+ "you_are": "an outbound sales development rep for a B2B software company",
+ "setting": "You dial from a quiet desk or home office, using a dialler and CRM, aiming to reach decision-makers at small businesses during their workday.",
+ "other_side": "owners and managers",
  "scenarios": [
   {
-   "id": "gatekeeper_screen",
-   "label": "Gatekeeper screen",
-   "desc": "Reach the decision maker past an assistant or voicemail.",
-   "setup": "You dial a local bakery chain. The owner’s assistant answers, polite but busy, and asks who is calling and what it is regarding.",
-   "skills": "Gatekeeper navigation, concise value statement",
+   "id": "first_dial",
+   "label": "First cold call",
+   "desc": "Reach an owner who answers their own phone and asks why you are calling.",
+   "setup": "You are a small business owner who picked up on the second ring. You sound busy but polite. You say: Who is this and what is this about?",
+   "skills": "Opening credibility and permission",
    "scene": "phone",
-   "objective": "Get transferred to the owner or secure a specific callback time.",
-   "place": "Home office desk",
-   "moment": "Tuesday 10:15 am, soft morning light",
+   "objective": "Earn thirty seconds to explain the reason for the call and schedule a discovery chat.",
+   "place": "Owner’s mobile phone",
+   "moment": "Tuesday 10:15 am, light office background noise",
    "visual": {
     "sky": "day",
     "palette": {
-     "wall": "#e8e6e3",
-     "floor": "#d4d0cc",
-     "accent": "#2a6f97",
-     "light": "#f5f0eb"
+     "wall": "#d9e2ec",
+     "floor": "#f5f7fa",
+     "accent": "#4a90e2",
+     "light": "#ffffff"
     },
     "props": [
      {
       "type": "desk",
-      "x": 0.0,
-      "z": 0.2,
-      "scale": 1.2,
-      "color": "#3d3530"
-     },
-     {
-      "type": "screen",
-      "x": -0.3,
-      "z": 0.1,
-      "scale": 1.0,
-      "color": "#1a1a2e"
+      "x": -0.4,
+      "z": 0,
+      "scale": 0.8,
+      "color": "#c0c0c0"
      },
      {
       "type": "lamp",
-      "x": 0.6,
+      "x": 0.3,
       "z": 0,
       "scale": 0.9,
-      "color": "#c9b896"
+      "color": "#e0e0e0"
      },
      {
-      "type": "plant",
-      "x": -0.7,
-      "z": 0.8,
-      "scale": 0.8,
-      "color": "#4a6b4a"
-     }
-    ]
-   }
-  },
-  {
-   "id": "first_pitch",
-   "label": "First pitch",
-   "desc": "Deliver the opening value proposition to a skeptical owner.",
-   "setup": "The owner of a 12-person marketing agency picks up. They sound rushed and say they are happy with their current tools.",
-   "skills": "Pattern interrupt, pain discovery, demo framing",
-   "scene": "phone",
-   "objective": "Book a 20-minute discovery call for later this week.",
-   "place": "Home office desk",
-   "moment": "Wednesday 2:40 pm, afternoon glare on the monitor",
-   "visual": {
-    "sky": "golden",
-    "palette": {
-     "wall": "#f0e9dd",
-     "floor": "#dccbb8",
-     "accent": "#c4762e",
-     "light": "#faf5e8"
-    },
-    "props": [
-     {
-      "type": "desk",
-      "x": 0.0,
+      "type": "window",
+      "x": -0.8,
       "z": 0.2,
-      "scale": 1.2,
-      "color": "#3d3530"
-     },
-     {
-      "type": "screen",
-      "x": -0.3,
-      "z": 0.1,
       "scale": 1.0,
-      "color": "#1a1a2e"
-     },
-     {
-      "type": "lamp",
-      "x": 0.6,
-      "z": 0,
-      "scale": 0.9,
-      "color": "#c9b896"
-     },
-     {
-      "type": "plant",
-      "x": -0.7,
-      "z": 0.8,
-      "scale": 0.8,
-      "color": "#4a6b4a"
-     },
-     {
-      "type": "chair",
-      "x": 0.2,
-      "z": 0.5,
-      "scale": 1.0,
-      "color": "#2f2f2f"
-     }
-    ]
-   }
-  },
-  {
-   "id": "price_pushback",
-   "label": "Price pushback",
-   "desc": "Handle budget objections after a demo when the owner loves the product but balks at cost.",
-   "setup": "You follow up with a plumbing supply owner who attended a demo last week. They say the ROI makes sense but the monthly fee is double their software budget.",
-   "skills": "Value anchoring, creative financing, next-step commitment",
-   "scene": "phone",
-   "objective": "Secure a signed agreement or a paid pilot start date.",
-   "place": "Home office desk",
-   "moment": "Friday 4:55 pm, long shadows across the keyboard",
-   "visual": {
-    "sky": "dusk",
-    "palette": {
-     "wall": "#3a3a4a",
-     "floor": "#282834",
-     "accent": "#e8a838",
-     "light": "#4a4a5a"
-    },
-    "props": [
-     {
-      "type": "desk",
-      "x": 0.0,
-      "z": 0.2,
-      "scale": 1.2,
-      "color": "#1f1f24"
-     },
-     {
-      "type": "screen",
-      "x": -0.3,
-      "z": 0.1,
-      "scale": 1.0,
-      "color": "#0d0d14"
-     },
-     {
-      "type": "lamp",
-      "x": 0.6,
-      "z": 0,
-      "scale": 0.9,
-      "color": "#b8860b"
-     },
-     {
-      "type": "plant",
-      "x": -0.7,
-      "z": 0.8,
-      "scale": 0.8,
-      "color": "#2d4a2d"
+      "color": "#4a90e2"
      },
      {
       "type": "shelf",
-      "x": 0.7,
-      "z": 0,
-      "scale": 1.1,
-      "color": "#2a2a36"
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#4a90e2"
+     },
+     {
+      "type": "plant",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#4a90e2"
+     }
+    ]
+   }
+  },
+  {
+   "id": "gatekeeper_screen",
+   "label": "Gatekeeper screen",
+   "desc": "Navigate an assistant or spouse who protects the owner’s calendar.",
+   "setup": "You are an executive assistant who answers the main line. You are polite but firm. You say: Can I take a message or would you like to send an email?",
+   "skills": "Gatekeeper navigation and value statement",
+   "scene": "phone",
+   "objective": "Get transferred to the owner or secure a specific callback window with the owner’s name.",
+   "place": "Front desk line",
+   "moment": "Wednesday 9:40 am, faint keyboard clatter",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#e0f7fa",
+     "floor": "#b2ebf2",
+     "accent": "#ff7043",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.2,
+      "z": 0.15,
+      "scale": 1.2,
+      "color": "#ffffff"
+     },
+     {
+      "type": "poster",
+      "x": 0.0,
+      "z": 1,
+      "scale": 0.6,
+      "color": "#90caf9"
+     },
+     {
+      "type": "window",
+      "x": -0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#ff7043"
+     },
+     {
+      "type": "shelf",
+      "x": 0.8,
+      "z": 0.35,
+      "scale": 1.0,
+      "color": "#ff7043"
+     },
+     {
+      "type": "plant",
+      "x": -0.3,
+      "z": 0.5,
+      "scale": 1.0,
+      "color": "#ff7043"
+     }
+    ]
+   }
+  },
+  {
+   "id": "objection_cluster",
+   "label": "Objection cluster",
+   "desc": "Handle the three most common brush-offs in one call without sounding scripted.",
+   "setup": "You are a busy operations manager who has heard five pitches this week. You say: We are not looking right now, we already have a tool, and I do not have budget.",
+   "skills": "Objection handling and curiosity questions",
+   "scene": "phone",
+   "objective": "Acknowledge each objection, ask one diagnostic question and book a ten-minute discovery call for next week.",
+   "place": "Manager’s direct line",
+   "moment": "Thursday 2:05 pm, warehouse hum in background",
+   "visual": {
+    "sky": "day",
+    "palette": {
+     "wall": "#c0e0ff",
+     "floor": "#f5f5f5",
+     "accent": "#4a90e2",
+     "light": "#ffffff"
+    },
+    "props": [
+     {
+      "type": "desk",
+      "x": -0.6,
+      "z": 0.3,
+      "scale": 1.2,
+      "color": "#333333"
+     },
+     {
+      "type": "lamp",
+      "x": -0.2,
+      "z": 0.5,
+      "scale": 0.8,
+      "color": "#e6e6e6"
+     },
+     {
+      "type": "shelf",
+      "x": 0.5,
+      "z": 0.4,
+      "scale": 1.0,
+      "color": "#555555"
+     },
+     {
+      "type": "window",
+      "x": 0.8,
+      "z": 0.2,
+      "scale": 1.0,
+      "color": "#000000"
+     },
+     {
+      "type": "car",
+      "x": -0.8,
+      "z": 0.9,
+      "scale": 0.8,
+      "color": "#777777"
+     },
+     {
+      "type": "poster",
+      "x": 0.2,
+      "z": 0.8,
+      "scale": 1.3,
+      "color": "#ffcc00"
      }
     ]
    }
@@ -172,241 +186,150 @@
  ],
  "buyers": [
   {
-   "scenario": "gatekeeper_screen",
-   "role": "Executive assistant to a retail chain owner",
-   "personality": "protective, efficient, script-follower",
-   "difficulty": 2,
-   "gender": "f",
-   "age": 34,
-   "angle": "She blocks anyone who cannot state a clear business reason in ten seconds."
+   "scenario": "first_dial",
+   "role": "owner of a local bakery",
+   "personality": "skeptical small‑biz owner",
+   "difficulty": 1,
+   "gender": "m",
+   "age": 45,
+   "angle": "Busy, sees no need for new software now."
   },
   {
-   "scenario": "first_pitch",
-   "role": "Founder of a digital marketing agency",
-   "personality": "fast-talking, tool-fatigued, growth-focused",
-   "difficulty": 3,
+   "scenario": "first_dial",
+   "role": "owner of a boutique gym",
+   "personality": "time‑pressed fitness coach",
+   "difficulty": 2,
    "gender": "m",
    "age": 38,
-   "angle": "He hears three pitches a day and deletes calendar invites that lack a specific outcome."
+   "angle": "Prioritises member retention over IT."
   },
   {
-   "scenario": "first_pitch",
-   "role": "Owner of a family-run landscaping business",
-   "personality": "practical, non-technical, cash-flow wary",
+   "scenario": "gatekeeper_screen",
+   "role": "owner of a hardware store",
+   "personality": "budget‑focused retailer",
+   "difficulty": 3,
+   "gender": "m",
+   "age": 52,
+   "angle": "Worries about hidden costs of software."
+  },
+  {
+   "scenario": "objection_cluster",
+   "role": "owner of a boutique marketing agency",
+   "personality": "data‑driven decision maker",
    "difficulty": 4,
    "gender": "f",
-   "age": 52,
-   "angle": "She views software as a cost center and needs concrete labor-saving proof."
+   "age": 31,
+   "angle": "Needs proven ROI before investing."
   },
   {
-   "scenario": "price_pushback",
-   "role": "Second-generation plumbing supply distributor",
-   "personality": "numbers-driven, loyal to vendors, risk-averse",
-   "difficulty": 4,
-   "gender": "m",
-   "age": 47,
-   "angle": "He will sign only if the payback period is under six months and terms are month-to-month."
-  },
-  {
-   "scenario": "price_pushback",
-   "role": "Solo attorney modernizing a paper-heavy practice",
-   "personality": "detail-obsessed, skeptical of subscriptions, compliance-mind",
+   "scenario": "objection_cluster",
+   "role": "owner of a neighborhood coffee shop",
+   "personality": "community‑oriented entrepreneur",
    "difficulty": 5,
    "gender": "f",
-   "age": 41,
-   "angle": "She demands data-security addendums and a clause letting her export all data free on exit."
+   "age": 40,
+   "angle": "Protects personal relationships, resists automation."
   }
  ],
  "objections": [
-  "We already use something that works fine",
-  "I don’t have budget for new software right now",
-  "Send me an email and I’ll look at it later",
-  "How are you different from the big platforms?",
-  "I’m the wrong person, you need my partner",
-  "Your pricing page says per user, that adds up fast",
-  "We’ve been burned by long contracts before",
-  "Call me next quarter when things settle down"
+  "We’re not looking to invest in new software right now",
+  "We don’t think we need this kind of tool",
+  "Our current system works fine for us",
+  "We’re too small to justify a software purchase",
+  "I’m not sure this will solve any real problem for us",
+  "We prefer to keep things simple and manual",
+  "We’ve tried similar solutions before and they failed",
+  "We need more proof of results before committing"
  ],
  "rubric": [
   {
-   "id": "gatekeeper_pass",
-   "label": "Gatekeeper pass",
-   "what": "States a crisp business reason and asks for the owner by name without sounding like a telemarketer."
+   "id": "opener_credibility",
+   "label": "Opener credibility",
+   "what": "State your name, company and a relevant reason for the call in the first two sentences."
   },
   {
-   "id": "pattern_interrupt",
-   "label": "Pattern interrupt",
-   "what": "Breaks the owner’s autopilot with a specific, relevant insight in the first fifteen seconds."
+   "id": "permission_ask",
+   "label": "Permission ask",
+   "what": "Explicitly ask for thirty seconds or a brief moment before launching into value."
   },
   {
-   "id": "pain_discovery",
-   "label": "Pain discovery",
-   "what": "Asks two to three targeted questions that surface a measurable operational problem."
+   "id": "objection_curiosity",
+   "label": "Objection curiosity",
+   "what": "Acknowledge each brush-off and follow with an open question that uncovers the real concern."
   },
   {
-   "id": "demo_framing",
-   "label": "Demo framing",
-   "what": "Positions the demo as a working session on their data, not a generic feature tour."
+   "id": "value_tailoring",
+   "label": "Value tailoring",
+   "what": "Connect one concrete outcome to the prospect’s role or industry rather than listing generic features."
   },
   {
-   "id": "value_anchoring",
-   "label": "Value anchoring",
-   "what": "Ties price to a concrete savings or revenue number the owner already agreed matters."
+   "id": "next_step_clarity",
+   "label": "Next step clarity",
+   "what": "Propose a specific, low-friction next meeting with day, time and duration attached."
   },
   {
    "id": "compliance_honesty",
    "label": "Compliance honesty",
-   "what": "Represents pricing, data handling, and contract terms accurately with no omitted fees or auto-renewal surprises."
+   "what": "Identify the call as a sales call, honour do-not-call requests and never misrepresent the product."
   }
  ],
  "live_meters": [
-  "pattern_interrupt",
-  "pain_discovery",
-  "compliance_honesty"
+  "opener_credibility",
+  "objection_curiosity",
+  "next_step_clarity"
  ],
  "pitfalls": [
-  "Reading a script verbatim instead of listening and adapting.",
-  "Promising features the product roadmap does not guarantee.",
-  "Skipping the required TCPA and do-not-call list checks before dialing."
+  "Reading a feature list before confirming the prospect’s pain.",
+  "Pushing for a demo on the first call instead of a discovery conversation.",
+  "Failing to disclose the sales purpose or ignoring a do-not-call request."
  ],
  "id": "ready-cold-calling",
  "line": "Cold calling small business owners for a software company",
  "product": null,
- "researched": false,
+ "researched": true,
+ "research": {
+  "text": "The top five objections in cold calls account for 74% of all objections, with \"no interest or wrong person\" and \"not thinking about it yet\" being common. When faced with these objections, acknowledge them and ask if there's someone else, or frame a follow-up. Cold calling remains effective because it's immediate and personal, cutting through the noise of email and LinkedIn. Handle objections with curiosity, often by asking questions to uncover real concerns. The goal isn't closing a deal on the call but earning the next conversation.",
+  "sources": [
+   {
+    "title": "Cold calling statistics that matter in 2026",
+    "url": "https://leadiq.com/blog/cold-calling-statistics-in-2026"
+   },
+   {
+    "title": "What Is Cold Calling? Tips, Techniques & Tools for Small Businesses | Zoom",
+    "url": "https://www.zoom.com/en/blog/what-is-cold-calling"
+   },
+   {
+    "title": "Cold Calling Strategies That Work: 2026 Best Practices | SalesHive",
+    "url": "https://saleshive.com/blog/cold-calling-strategies-best-practices-calls-2025-2"
+   }
+  ]
+ },
  "personas": [
   {
-   "id": "vanessa_patel-0",
-   "name": "Vanessa Patel",
-   "gender": "f",
-   "age": 34,
-   "scenario": "gatekeeper_screen",
-   "role": "gatekeeper",
-   "personality": "protective efficient script-follower",
-   "background": "Works as an executive assistant for a retail chain owner. She screens many cold calls each day and values concise business justifications.",
-   "cares_about": [
-    "protecting owner’s time",
-    "keeping workflow predictable",
-    "maintaining professional reputation"
-   ],
-   "pushbacks": [
-    "I only handle appointments if you can give me a clear business reason in ten seconds",
-    "We already have a process, no extra calls right now",
-    "Send an email and I’ll review it later if it’s relevant"
-   ],
-   "wins_over": [
-    "solves a real pain point",
-    "offers immediate ROI",
-    "provides a clear follow‑up plan"
-   ],
-   "suggested_difficulty": 2,
-   "appearance": {
-    "skin": "light",
-    "hairStyle": "bob",
-    "hairColor": "darkbrown",
-    "facialHair": "none",
-    "glasses": "square",
-    "lines": 1,
-    "clothes": "#3a3a4a"
-   },
-   "accent": "en-CA"
-  },
-  {
-   "id": "alejandro_rojas-1",
-   "name": "Alejandro Rojas",
+   "id": "victor_alvarez-0",
+   "name": "Victor Alvarez",
    "gender": "m",
-   "age": 38,
-   "scenario": "first_pitch",
-   "role": "founder of digital marketing agency",
-   "personality": "fast-talking tool-fatigued growth-focused",
-   "background": "He runs a lean agency with three employees, juggling client work and ops.",
+   "age": 45,
+   "scenario": "first_dial",
+   "role": "bakery owner",
+   "personality": "skeptical but patient of his time",
+   "background": "Victor runs a neighborhood bakery and handles every part of the business. He values reliable systems that keep the shop running smoothly without extra cost or hassle.",
    "cares_about": [
-    "profitable campaigns",
-    "client retention",
-    "quick wins"
+    "keeping the shop open all day",
+    "not spending money on things he doesn’t need",
+    "getting help only if it really helps sales"
    ],
    "pushbacks": [
-    "We already use something that works fine",
-    "I don’t have budget for new software right now",
-    "Send me an email and i’ll look at it later"
+    "We don’t need more software right now",
+    "Our current tools work just fine for us",
+    "We’re too small to justify a new purchase"
    ],
    "wins_over": [
-    "a clear roi case study",
-    "a done-for-you pilot",
-    "a real industry peer example"
+    "a real time-saver",
+    "clear proof it helps revenue",
+    "a free trial that shows results quickly"
    ],
-   "suggested_difficulty": 3,
-   "appearance": {
-    "skin": "medium",
-    "hairStyle": "short",
-    "hairColor": "brown",
-    "facialHair": "none",
-    "glasses": "none",
-    "lines": 1,
-    "clothes": "#7a3b2e"
-   },
-   "accent": "en-CA"
-  },
-  {
-   "id": "marnie_delaney-2",
-   "name": "Marnie Delaney",
-   "gender": "f",
-   "age": 52,
-   "scenario": "first_pitch",
-   "role": "Owner of a family-run landscaping business",
-   "personality": "practical, non-technical, cash-flow wary",
-   "background": "Marnie runs a three-person crew that handles mowing, planting, and seasonal cleanups for suburban homes. She balances the books herself and watches every dollar because cash flow determines whether she can pay her crew each week.",
-   "cares_about": [
-    "keeping the team busy",
-    "paying crew on time",
-    "avoiding surprise expenses"
-   ],
-   "pushbacks": [
-    "Look, we already use a crew scheduling app that’s worked for ten years",
-    "I don’t have any budget left after paying for equipment maintenance",
-    "Just send me an email. I’ll glance at it when I have a spare five minutes"
-   ],
-   "wins_over": [
-    "real labor savings",
-    "clear ROI in hours saved",
-    "no hidden fees"
-   ],
-   "suggested_difficulty": 4,
-   "appearance": {
-    "skin": "light",
-    "hairStyle": "bob",
-    "hairColor": "darkbrown",
-    "facialHair": "none",
-    "glasses": "none",
-    "lines": 1,
-    "clothes": "#7a5a8a"
-   },
-   "accent": "en-US"
-  },
-  {
-   "id": "kaleb_mendez-3",
-   "name": "Kaleb Mendez",
-   "gender": "m",
-   "age": 47,
-   "scenario": "price_pushback",
-   "role": "b2b sales representative",
-   "personality": "numbers driven, risk averse, loyal to vendors",
-   "background": "Kaleb grew up helping run his family’s plumbing supply shop before taking a sales job to support his own family. He now distributes tools and equipment for contractors across the Midwest.",
-   "cares_about": [
-    "roi clarity",
-    "contract flexibility",
-    "proven results"
-   ],
-   "pushbacks": [
-    "Our payback math says six months minimum, no shortcuts",
-    "I can’t lock into a long contract on an unproven platform",
-    "Show me the numbers, not the marketing"
-   ],
-   "wins_over": [
-    "clear monthly cost breakdown",
-    "no long term commitment",
-    "case studies with similar cash flow"
-   ],
-   "suggested_difficulty": 4,
+   "suggested_difficulty": 1,
    "appearance": {
     "skin": "medium",
     "hairStyle": "short",
@@ -414,47 +337,156 @@
     "facialHair": "stubble",
     "glasses": "none",
     "lines": 1,
-    "clothes": "#3f4f3f"
+    "clothes": "#5c6f4a"
    },
    "accent": "en-US"
   },
   {
-   "id": "waverly_cho-4",
-   "name": "Waverly Cho",
-   "gender": "f",
-   "age": 41,
-   "scenario": "price_pushback",
-   "role": "Solo attorney",
-   "personality": "obsessive about detail",
-   "background": "She runs a boutique law practice. Her work involves tight compliance checks and data handling.",
+   "id": "ari_nathan-1",
+   "name": "Ari Nathan",
+   "gender": "m",
+   "age": 38,
+   "scenario": "first_dial",
+   "role": "owner of a boutique gym",
+   "personality": "time pressed fitness coach",
+   "background": "Ari runs a small, community-focused gym and spends his days coaching members and handling business tasks. He values member experience and retention but admits he’s not tech‑savvy.",
    "cares_about": [
-    "client confidentiality",
-    "seamless contract migration",
-    "predictable costs"
+    "membership fees",
+    "member satisfaction",
+    "community vibe"
    ],
    "pushbacks": [
-    "The platform is cheaper if we ignore security requirements",
-    "Your service works, but it isn’t built for regulated environments",
-    "This pricing does not account for my exit‑costs"
+    "We’re not looking to invest in new software right now",
+    "Our current system works fine for us",
+    "I’m not sure this will solve any real problem for us"
    ],
    "wins_over": [
-    "clear data‑security guarantees",
-    "no‑penalty data‑export clause",
-    "transparent flat‑fee pricing"
+    "better member retention",
+    "simpler admin",
+    "clear ROI"
    ],
-   "suggested_difficulty": 5,
+   "suggested_difficulty": 2,
    "appearance": {
     "skin": "tan",
+    "hairStyle": "short",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#2f5d62"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "micheal_o_connor-2",
+   "name": "Micheal O’Connor",
+   "gender": "m",
+   "age": 52,
+   "scenario": "gatekeeper_screen",
+   "role": "hardware_store_owner",
+   "personality": "budget focused retailer",
+   "background": "He runs a neighborhood hardware shop in a small town. He keeps tight control of expenses and watches every dollar. He prefers tools that pay for themselves quickly.",
+   "cares_about": [
+    "avoiding hidden fees",
+    "getting quick ROI",
+    "keeping staff productive"
+   ],
+   "pushbacks": [
+    "I’m not interested in software that adds hidden costs",
+    "We don’t need another expense right now",
+    "Our current system works fine for us"
+   ],
+   "wins_over": [
+    "demonstrates clear cost savings",
+    "shows a fast payback period",
+    "offers transparent pricing"
+   ],
+   "suggested_difficulty": 3,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "short",
+    "hairColor": "darkbrown",
+    "facialHair": "none",
+    "glasses": "square",
+    "lines": 1,
+    "clothes": "#6b4b6e"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "keira_morton-3",
+   "name": "Keira Morton",
+   "gender": "f",
+   "age": 31,
+   "scenario": "objection_cluster",
+   "role": "owner of a boutique marketing agency",
+   "personality": "pragmatic and analytical",
+   "background": "Keira runs a small agency that relies on measurable growth. She checks every new tool against past results before committing.",
+   "cares_about": [
+    "proven ROI",
+    "clear cost savings",
+    "scalable results"
+   ],
+   "pushbacks": [
+    "Our current dashboards already show the metrics we need",
+    "Show me a case study where this actually drove revenue",
+    "We can’t afford another subscription without clear ROI"
+   ],
+   "wins_over": [
+    "quick ROI proof",
+    "transparent pricing",
+    "custom integration"
+   ],
+   "suggested_difficulty": 4,
+   "appearance": {
+    "skin": "medium",
     "hairStyle": "bob",
     "hairColor": "darkbrown",
     "facialHair": "none",
     "glasses": "round",
     "lines": 1,
-    "clothes": "#2f5d62"
+    "clothes": "#5c6f4a"
+   },
+   "accent": "en-US"
+  },
+  {
+   "id": "wren_whitaker-4",
+   "name": "Wren Whitaker",
+   "gender": "f",
+   "age": 40,
+   "scenario": "objection_cluster",
+   "role": "small-business owner",
+   "personality": "community oriented entrepreneur",
+   "background": "Wren runs a neighborhood coffee shop where regulars feel like family. She values relationships and resists anything that feels like it compromises the human touch.",
+   "cares_about": [
+    "customer relationships",
+    "shop atmosphere",
+    "community trust"
+   ],
+   "pushbacks": [
+    "I already have enough tools that work for me",
+    "Automation would change the vibe here and I don’t want that",
+    "My customers come for the personal connection, not software"
+   ],
+   "wins_over": [
+    "a genuine problem solved",
+    "respect for how we run things",
+    "transparency about impact"
+   ],
+   "suggested_difficulty": 5,
+   "appearance": {
+    "skin": "light",
+    "hairStyle": "bob",
+    "hairColor": "brown",
+    "facialHair": "none",
+    "glasses": "none",
+    "lines": 1,
+    "clothes": "#7a3b2e"
    },
    "accent": "en-US"
   }
  ],
  "builtin": true,
- "order": 6
+ "order": 6,
+ "group": "sales"
 }

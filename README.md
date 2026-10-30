@@ -72,6 +72,14 @@ Details that make it hold together:
 - **Other services:** Tavily (a search call when a World is built, with the sources shown on the page), Azure Speech (optional spoken voices on the hosted demo) and Render (hosting).
   Nebius Token Factory is the only Nebius product used.
 
+## Privacy
+
+- **No accounts.** Each browser gets a random id in a cookie, and that id keeps its history and progress separate from everyone else's.
+- **Conversations are stored on the server** only so you can see your history and the coach can remember your weakest habit. The hosted demo keeps them in temporary storage that is wiped when the service restarts.
+- **What you type or say is sent to outside services to work:** the lines you speak or type go to Nebius Token Factory (the Nemotron models), a search query goes to Tavily when a World is built, and the characters' spoken replies are turned into audio by Azure Speech on the hosted demo.
+- **Please don't enter real personal or client details** on the hosted demo. Practise with made-up names and numbers.
+- Nothing is sold or used for advertising.
+
 ## Run it
 
 You need Python 3.10 or newer and a Nebius Token Factory API key (https://tokenfactory.nebius.com).

@@ -1,14 +1,3 @@
----
-title: Dojo
-emoji: 🥋
-colorFrom: yellow
-colorTo: gray
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
----
-
 # Dojo
 
 **Type your line of work. Dojo builds a whole training world for it, then lets you talk your way through it out loud.**

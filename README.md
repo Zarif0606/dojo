@@ -72,6 +72,17 @@ Details that make it hold together:
 - **Private by default.** Each browser has its own history, progress, worlds and coach memory (a random id in a cookie, no accounts); other people's conversations are not readable.
 - **Twenty ready-made worlds**, twelve sales jobs and eight hard conversations (asking for a raise, a job interview, a landlord, an angry customer and more), so the demo works even when the daily caps are reached.
 
+## How Dojo uses NVIDIA Nemotron and Nebius
+
+- **Models:** `nvidia/Nemotron-3-Ultra-550b-a55b` for the planner (designs each World) and the coach (final report), where reasoning quality matters most.
+  `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B` for the five character writers, the live persona and the live director, which run on every spoken line and need to be fast.
+- **Where Nebius Token Factory helped:** one OpenAI-compatible API gave access to both the large and the small Nemotron model with no GPU setup. That made a
+  per-job model split practical: a World builds in about 7 seconds, the first spoken sentence arrives in about 1.5 seconds and the coach report in about 3 seconds.
+  The app makes a runtime call to the Token Factory inference API on every build, turn and report.
+- **Prompting, not fine-tuning:** thinking is switched off for the live roles (so it is never spoken) and on only for the coach; all output is validated and repaired in code.
+- **Other services:** Tavily (a search call when a World is built, with the sources shown on the page), Azure Speech (optional spoken voices on the hosted demo) and Render (hosting).
+  Nebius Token Factory is the only Nebius product used.
+
 ## Run it
 
 You need Python 3.10 or newer and a Nebius Token Factory API key (https://tokenfactory.nebius.com).

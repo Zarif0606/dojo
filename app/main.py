@@ -111,10 +111,13 @@ def _split_tag(text: str):
     return text, None
 
 
+STRAY_TAG = re.compile(r"\[[a-z][a-z :_'-]{0,24}\]\s*")  # a stage direction the model slipped in, like "[decide]" or "[pause]": never shown or spoken
+
+
 def _split_mood(text: str):
     m = MOOD_RE.search(text)
     mood = m.group(1).lower() if m else "neutral"
-    return MOOD_RE.sub("", text).strip(), mood if mood in MOODS else "neutral"
+    return STRAY_TAG.sub("", MOOD_RE.sub("", text)).strip(), mood if mood in MOODS else "neutral"
 
 
 def _clean_reply(raw: str, p: dict):
@@ -348,14 +351,14 @@ def _stream_turn(session: dict, sid: int, user_entry: dict, seconds: float):
                     continue
                 mood_sent = True
                 mood = m.group(1).lower() if m else "neutral"
-                buf = MOOD_RE.sub("", buf, 1).lstrip()
+                buf = STRAY_TAG.sub("", MOOD_RE.sub("", buf, 1)).lstrip()
                 yield ev({"type": "mood", "mood": mood if mood in MOODS else "neutral"})
             while True:
                 sent, rest = _next_sentence(buf)
                 if sent is None:
                     break
                 buf = rest
-                s = clean(sent)
+                s = STRAY_TAG.sub("", clean(sent)).strip()
                 if s:
                     yield ev({"type": "sentence", "text": s})
     except llm.LLMError as e:

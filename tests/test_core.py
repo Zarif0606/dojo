@@ -170,6 +170,16 @@ class ResearchPack(unittest.TestCase):
         self.assertIsNone(research.text_of(None))
 
 
+class StrayTags(unittest.TestCase):
+    def test_stage_directions_are_never_shown(self):
+        from app import main as _m
+        p = {"name": "Preston Lee"}
+        for raw in ("[decide] So you've seen the deck then?", "[mood:skeptical] [pause] So you've seen the deck then?", "So you've seen the deck [thinking] then?"):
+            text, outcome, mood = _m._clean_reply(raw, p)
+            self.assertNotIn("[", text); self.assertIn("seen the deck", text)
+        self.assertEqual(_m._clean_reply("[mood:annoyed] Not interested. [WALKS AWAY]", p)[1], "walked_away")
+
+
 class OptOut(unittest.TestCase):
     """Skills the user unticks are not graded: not scored live, not in the coach prompt, and at least two always stay."""
     def test_skipped_skills_are_removed(self):

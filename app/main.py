@@ -143,6 +143,7 @@ def _persona_prompt(session: dict, transcript: list[dict], stance: str | None):
     return system, msgs or [{"role": "user", "content": "(The conversation begins. Say your opening line.)"}], p
 
 
+MAX_REPLY_SENTENCES = 3
 ABBREV = {"mr", "mrs", "ms", "dr", "st", "vs", "no"}
 SENT_RE = re.compile(r"(.+?[.!?…]+[\"')\]]*)\s+", re.S)
 
@@ -317,6 +318,7 @@ def start(body: StartIn):
     system, msgs, p = _persona_prompt(session, [], None)
     raw = _llm(lambda: "".join(llm.chat_stream("persona", system, msgs)))
     reply, outcome, mood = _clean_reply(raw, p)
+    reply = " ".join(list(_flush(reply))[:MAX_REPLY_SENTENCES])
     db.update(sid, transcript=[{"role": "assistant", "content": reply, "mood": mood}], **({"outcome": outcome} if outcome else {}))
     return {"id": sid, "persona": persona, "scene": session["world"]["scenario"].get("scene", "office"), "meters": meters_of(session["world"]),
             "scenario": session["world"]["scenario"], "reply": reply, "outcome": outcome, "mood": mood, "memory": db.latest_memory(world["id"]), "research": brief}
@@ -341,8 +343,10 @@ def _stream_turn(session: dict, sid: int, user_entry: dict, seconds: float):
             first = False
         return smart(_split_tag(sent.strip().strip('"'))[0])
 
+    said, capped = [], False
     try:
-        for chunk in llm.chat_stream("persona", system, msgs):
+        stream = llm.chat_stream("persona", system, msgs)
+        for chunk in stream:
             buf += chunk
             full += chunk
             if not mood_sent:
@@ -360,22 +364,33 @@ def _stream_turn(session: dict, sid: int, user_entry: dict, seconds: float):
                 buf = rest
                 s = STRAY_TAG.sub("", clean(sent)).strip()
                 if s:
+                    said.append(s)
                     yield ev({"type": "sentence", "text": s})
+                    if len(said) >= MAX_REPLY_SENTENCES:   # a real person says a line or two; a model that rambles gets cut off
+                        capped = True
+                        break
+            if capped:
+                stream.close()
+                break
     except llm.LLMError as e:
         yield ev({"type": "error", "message": str(e)})
         return
-    text, outcome, mood = _clean_reply(full, p)
+    if capped:
+        text, outcome = " ".join(said), None
+    else:
+        text, outcome, mood = _clean_reply(full, p)
     if not text:
         yield ev({"type": "error", "message": "The model returned an empty reply. Try again."})
         return
-    if not mood_sent:
-        yield ev({"type": "mood", "mood": mood})
-        buf = text
-    else:
-        buf = _split_tag(buf.strip().strip('"'))[0]
-    for sent in _flush(buf):
-        if sent:
-            yield ev({"type": "sentence", "text": smart(sent)})
+    if not capped:
+        if not mood_sent:
+            yield ev({"type": "mood", "mood": mood})
+            buf = text
+        else:
+            buf = _split_tag(buf.strip().strip('"'))[0]
+        for sent in _flush(buf):
+            if sent:
+                yield ev({"type": "sentence", "text": smart(sent)})
     session["transcript"].append(user_entry)
     session["transcript"].append({"role": "assistant", "content": text, "mood": mood})
     turns = (session.get("director") or []) + ([director] if director else [])

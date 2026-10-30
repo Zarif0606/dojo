@@ -170,6 +170,33 @@ class ResearchPack(unittest.TestCase):
         self.assertIsNone(research.text_of(None))
 
 
+class ReplyCap(unittest.TestCase):
+    def test_rambling_reply_is_cut_to_three_sentences(self):
+        import tempfile, importlib, os as _os, json as _json
+        _os.environ["DOJO_DB"] = tempfile.mkdtemp() + "/t.db"
+        from app import db as _db
+        importlib.reload(_db)
+        from app import main as _main
+        importlib.reload(_main)
+        from fastapi.testclient import TestClient
+        c = TestClient(_main.app); w = c.get("/api/worlds").json()[0]; full = c.get(f"/api/worlds/{w['id']}").json()
+        sid = c.post("/api/sessions", json={"world_id": w["id"], "scenario": full["scenarios"][0]["id"], "persona_id": full["personas"][0]["id"], "difficulty": 3}).json()["id"]
+        real = _main.llm.chat_stream
+        def rambling(role, system, messages, **kw):
+            if role != "persona":
+                yield from real(role, system, messages, **kw); return
+            for piece in ("[mood:skeptical] What is the churn? ", "Who are the customers? ", "How fast can you hire? ", "What is your burn? ", "I need to see more. ", "Tell me everything. "):
+                yield piece
+        _main.llm.chat_stream = rambling
+        try:
+            r = c.post(f"/api/sessions/{sid}/turn-stream", json={"text": "We have forty customers and a clear plan to grow.", "seconds": 4})
+        finally:
+            _main.llm.chat_stream = real
+        evs = [_json.loads(x) for x in r.text.splitlines() if x.strip()]
+        self.assertEqual(len([e for e in evs if e["type"] == "sentence"]), 3)
+        self.assertEqual([e for e in evs if e["type"] == "done"][0]["reply"].count("?"), 3)
+
+
 class StrayTags(unittest.TestCase):
     def test_stage_directions_are_never_shown(self):
         from app import main as _m

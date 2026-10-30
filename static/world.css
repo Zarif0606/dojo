@@ -109,3 +109,7 @@
 .chip-note.src { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 #w-research { margin-top: 1rem; }
 #w-research .notes { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+.rubric .rk { display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; }
+.rubric .rk input { accent-color: var(--ink); width: 1rem; height: 1rem; margin: 0; }
+.rubric li.off b, .rubric li.off span { opacity: .45; text-decoration: line-through; }

@@ -115,7 +115,7 @@ def claim_world_build(cap: int) -> bool:
 # ---------- sessions ----------
 
 def create(world: dict, scenario: str, persona: dict, difficulty: int, research=None, product=None):
-    snap = {k: world.get(k) for k in ("id", "title", "you_are", "setting", "objections", "rubric", "live_meters", "pitfalls")}
+    snap = {k: world.get(k) for k in ("id", "title", "you_are", "setting", "objections", "rubric", "live_meters", "pitfalls", "skipped")}
     snap["product"] = product or world.get("product")
     snap["scenario"] = next((s for s in world["scenarios"] if s["id"] == scenario), world["scenarios"][0])
     with conn() as c:

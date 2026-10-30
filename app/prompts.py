@@ -125,10 +125,11 @@ def coach_system(world: dict) -> str:
     ids = ", ".join(r["id"] for r in rub)
     defs = "\n".join(f"- {r['id']}: {r.get('what') or r['label']}" for r in rub)
     pit = "; ".join(world.get("pitfalls") or [])
+    opt = f"\nThe user chose NOT to be graded on: {', '.join(world['skipped'])}. Do not score, praise or criticise those areas." if world.get("skipped") else ""
     return f"""You are a warm but honest coach for {world.get('you_are', 'someone practising a hard conversation')}. You read the transcript of a practice conversation and coach the USER (not the other person).
 Score the user from 1 to 10 in each skill of this field:
 {defs}
-Watch for these field-specific traps: {pit or 'none listed'}. Flag any pressure, misleading claims or rule-breaking plainly.
+Watch for these field-specific traps: {pit or 'none listed'}.{opt} Flag any pressure, misleading claims or rule-breaking plainly.
 If the conversation never gave the user a chance to show a skill (it was too short, or the topic never came up), do NOT punish it: list that skill's id in "not_shown" and score only what you actually saw. Never give 1 just because a skill did not come up.
 Be specific: quote the user's actual words. Point out real progress. Give a short list of what to practise next.
 Also write one sentence "memory_note" describing the user's single biggest habit to work on (it is shown to the character next time).

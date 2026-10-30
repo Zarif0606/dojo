@@ -4,7 +4,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const OUTCOMES = { agreed: "You got to yes", walked_away: "They walked away", ended: "Ended politely, with no result" };
 const DIFF_TEXT = { 1: "Friendly and patient.", 2: "A little guarded, with soft objections.", 3: "Realistic: guarded, with real objections.", 4: "Skeptical, and interrupts when you ramble.", 5: "Brutal: stacked objections, and every claim gets tested." };
 const STANCE_TEXT = { soften: "They’re warming up", hold: "They’re holding firm", harden: "They’re getting firmer" };
-const state = { config: null, worlds: [], world: null, scenarioId: null, personaId: null, difficulty: 3, session: null, busy: false, building: false, face: null, lastReport: null, meters: [] };
+const state = { config: null, worlds: [], world: null, scenarioId: null, personaId: null, difficulty: 3, session: null, busy: false, building: false, face: null, lastReport: null, meters: [], skip: new Set() };
 
 async function api(path, opts = {}) {
   const res = await fetch(path, { headers: { "Content-Type": "application/json" }, ...opts, body: opts.body ? JSON.stringify(opts.body) : undefined });
@@ -131,7 +131,8 @@ function setWorld(w, complete) {
   $("#scenarios").innerHTML = w.scenarios.map((s) => `<button class="scenario" data-s="${esc(s.id)}" aria-pressed="false"><strong>${esc(s.label)}</strong><span>${esc(s.desc)}</span></button>`).join("");
   $("#w-objections").innerHTML = (w.objections || []).map((o) => `<span class="chip-note say">“${esc(o)}”</span>`).join("") || `<span class="muted">Nothing listed.</span>`;
   const live = new Set(w.live_meters || []);
-  $("#w-rubric").innerHTML = (w.rubric || []).map((r) => `<li><b>${esc(r.label)}${live.has(r.id) ? `<span class="live">live</span>` : ""}</b>${r.what ? `<span>${esc(r.what)}</span>` : ""}</li>`).join("")
+  state.skip = new Set();
+  $("#w-rubric").innerHTML = (w.rubric || []).map((r) => `<li><b><label class="rk"><input type="checkbox" data-r="${esc(r.id)}" checked aria-label="Grade me on ${esc(r.label)}"> ${esc(r.label)}</label>${live.has(r.id) ? `<span class="live">live</span>` : ""}</b>${r.what ? `<span>${esc(r.what)}</span>` : ""}</li>`).join("")
     + ((w.pitfalls || []).length ? `<ul class="pitfalls">${w.pitfalls.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : "");
   const rs = w.research; $("#w-research").hidden = !(rs && rs.text); if (rs && rs.text) { $("#w-research-text").textContent = rs.text; $("#w-research-src").innerHTML = srcLinks(rs.sources); }
   if (complete) { renderPeople(w.personas); finishWorld(); }
@@ -571,7 +572,8 @@ async function startSession() {
   const wait = addLine("event", "…");
   try {
     const about = $("#about").value.trim();
-    const r = await api("/api/sessions", { method: "POST", body: { world_id: w.id, scenario: sc.id, persona_id: p.id, difficulty: state.difficulty, about: about || null, product: $("#w-product").value.trim() || null } });
+    const r = await api("/api/sessions", { method: "POST", body: { world_id: w.id, scenario: sc.id, persona_id: p.id, difficulty: state.difficulty, about: about || null, product: $("#w-product").value.trim() || null, skip: [...state.skip] } });
+    resetDirector(r.meters && r.meters.length ? r.meters : live);
     wait.remove(); state.session = { id: r.id, persona: p, scenario: sc.id, scenarioScene: sc.scene, difficulty: state.difficulty };
     const chips = [r.memory ? `<span class="chip-note" title="The coach saved this after your last conversation">Remembers: ${esc(r.memory)}</span>` : "", r.research && r.research.text ? `<span class="chip-note" title="Found with Tavily search">Researched: ${esc(r.research.text.slice(0, 120))}…</span>${srcLinks(r.research.sources)}` : ""];
     $("#s-note").innerHTML = chips.join("");
@@ -700,7 +702,7 @@ function renderReport(s) {
   $("#r-summary").textContent = fb.summary || "";
   countUp($("#r-overall"), s.overall, { decimals: 1, ms: 900 });
   const seen = Object.fromEntries(Object.entries(s.scores || {}).filter(([k]) => !(fb.not_shown || []).includes(k)));
-  $("#r-scores").innerHTML = bars(seen, labels) + ((fb.not_shown || []).length ? `<p class="muted">Not shown this time: ${(fb.not_shown).map((k) => esc(labels[k] || k)).join(", ")}. Not counted in your score.</p>` : "");
+  $("#r-scores").innerHTML = bars(seen, labels) + ((s.skipped || []).length ? `<p class="muted">Not graded, as you chose: ${s.skipped.map(esc).join(", ")}.</p>` : "") + ((fb.not_shown || []).length ? `<p class="muted">Not shown this time: ${(fb.not_shown).map((k) => esc(labels[k] || k)).join(", ")}. Not counted in your score.</p>` : "");
   const da = fb.director_averages || {}, ml = s.meter_labels || {};
   $("#r-director").innerHTML = Object.keys(da).length ? Object.entries(da).map(([k, v]) => `<div class="bar"><span>${esc(ml[k] || labels[k] || k)}</span><div class="track"><div class="fill ${v <= 2 ? "low" : v >= 4 ? "high" : ""}" style="width:${v * 20}%"></div></div><b>${v}</b></div>`).join("") + `<p class="hint">How the character’s director scored your lines as you talked (out of 5).</p>` : `<p class="empty">No live scores for this session.</p>`;
   renderTimeline(s);
@@ -732,6 +734,14 @@ function saveCard() {
   c.toBlob((b) => { const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = "dojo-score-card.png"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); });
 }
 $("#btn-card").onclick = saveCard;
+// Opt out of grading some skills: untick them on the World page. At least two stay on.
+$("#w-rubric").addEventListener("change", (e) => {
+  const box = e.target.closest("input[data-r]"); if (!box) return;
+  const all = [...document.querySelectorAll("#w-rubric input[data-r]")];
+  if (!box.checked && all.filter((b) => b.checked).length < 2) { box.checked = true; toast("Keep at least two skills graded."); return; }
+  state.skip = new Set(all.filter((b) => !b.checked).map((b) => b.dataset.r));
+  box.closest("li").classList.toggle("off", !box.checked);
+});
 $("#btn-again").onclick = async () => {
   const s = state.lastReport;
   try { const w = await api(`/api/worlds/${encodeURIComponent(s.world_id || "general")}`); setWorld(w, true); selectPersona(s.persona_id, false); selectScenario(s.scenario); setDifficulty(s.difficulty); startSession(); }

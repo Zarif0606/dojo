@@ -170,5 +170,27 @@ class ResearchPack(unittest.TestCase):
         self.assertIsNone(research.text_of(None))
 
 
+class OptOut(unittest.TestCase):
+    """Skills the user unticks are not graded: not scored live, not in the coach prompt, and at least two always stay."""
+    def test_skipped_skills_are_removed(self):
+        import tempfile, importlib, os as _os
+        _os.environ["DOJO_DB"] = tempfile.mkdtemp() + "/t.db"
+        from app import db as _db
+        importlib.reload(_db)
+        from app import main as _main
+        importlib.reload(_main)
+        from fastapi.testclient import TestClient
+        c = TestClient(_main.app); w = c.get("/api/worlds").json()[0]; full = c.get(f"/api/worlds/{w['id']}").json()
+        ids = [r["id"] for r in full["rubric"]]; base = {"world_id": w["id"], "scenario": full["scenarios"][0]["id"], "persona_id": full["personas"][0]["id"], "difficulty": 3}
+        sid = c.post("/api/sessions", json={**base, "skip": ids[:2]}).json()["id"]
+        snap = c.get(f"/api/sessions/{sid}").json()
+        self.assertEqual([r["id"] for r in snap["world"]["rubric"]], ids[2:])
+        self.assertEqual(len(snap["skipped"]), 2)
+        self.assertTrue(all(m not in ids[:2] for m in snap["world"]["live_meters"]))
+        self.assertIn("NOT to be graded", __import__("app.prompts", fromlist=["x"]).coach_system(snap["world"]))
+        sid2 = c.post("/api/sessions", json={**base, "skip": ids[:-1]}).json()["id"]           # too many: ignored, all stay graded
+        self.assertEqual(len(c.get(f"/api/sessions/{sid2}").json()["world"]["rubric"]), len(ids))
+
+
 if __name__ == "__main__":
     unittest.main()

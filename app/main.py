@@ -201,6 +201,7 @@ class StartIn(BaseModel):
     difficulty: int = Field(3, ge=1, le=5)
     about: str | None = Field(None, max_length=200)  # optional: who/what you are about to talk to (Tavily research)
     product: str | None = Field(None, max_length=120)  # what the user is selling, so the prospect reacts to the real thing
+    skip: list[str] = Field(default_factory=list, max_length=6)  # rubric ids the user chose not to be graded on
 
 
 class TurnIn(BaseModel):
@@ -301,6 +302,11 @@ def start(body: StartIn):
     if not persona:
         raise HTTPException(404, "Unknown person")
     brief = research.brief(body.about) if body.about else None
+    keep = [r for r in world.get("rubric") or [] if r["id"] not in body.skip]
+    if len(keep) >= 2 and len(keep) < len(world.get("rubric") or []):  # opt out of some skills, but always keep at least two graded
+        kept = {r["id"] for r in keep}
+        world = {**world, "rubric": keep, "live_meters": [m for m in world.get("live_meters") or [] if m in kept],
+                 "skipped": [r["label"] for r in world["rubric"] if r["id"] not in kept]}
     sid = db.create(world, body.scenario, persona, body.difficulty, json.dumps(brief) if brief else None, clean(body.product, "phrase", 120) or None)
     db.bump_plays(world["id"])
     db.add_visitor_world(world["id"])
@@ -414,6 +420,7 @@ def _view(s: dict) -> dict:
     s["meter_labels"] = {m["id"]: m["label"] for m in meters_of(w)} if w else {}
     s["scenario_label"] = (w.get("scenario") or {}).get("label", s["scenario"])
     s["world_title"] = w.get("title", "Hard conversations")
+    s["skipped"] = w.get("skipped") or []
     return s
 
 
